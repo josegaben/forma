@@ -42,6 +42,7 @@ import {
   recommendMixFromBrief,
   recommendPaletteForIdea,
 } from "@/lib/synthesizer";
+import { BeforeAfterShowcase } from "@/components/BeforeAfterShowcase";
 import { CommandExplorerModal } from "@/components/CommandExplorerModal";
 import {
   AgentBadgeRow,
@@ -471,6 +472,13 @@ export function FormaStudio() {
                 ⌘K
               </kbd>
             </button>
+
+            <a
+              href="#proof"
+              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
+            >
+              {lang === "es" ? "Antes / Después" : "Before / After"}
+            </a>
 
             <a
               href="#catalog"
@@ -1049,6 +1057,9 @@ export function FormaStudio() {
             </div>
           </div>
         </section>
+
+        {/* BEFORE VS AFTER VIDEO & INTERACTIVE BENCHMARK */}
+        <BeforeAfterShowcase lang={lang} />
 
         {/* SECTION 2: THE COMPLETE WEB CRAFT COMPENDIUM (Components · Formats · Palettes · Fonts & Assets · Live Radar) */}
         <section id="catalog" className="py-16 px-5 border-t border-[var(--line)]">
