@@ -3,6 +3,12 @@ import {
   CURATED_COLOR_PALETTES,
   type CuratedColorPalette,
 } from "@/data/color-palettes";
+import {
+  CRAFT_TOOLS_AND_ASSETS,
+  RARE_COMPONENTS,
+  type CraftAssetItem,
+  type RareComponentItem,
+} from "@/data/compendium";
 import { WEB_FORMATS, type WebFormat } from "@/data/formats";
 import { recommendMixFromBrief } from "@/lib/composer";
 import type { DiscoveredSite } from "@/lib/scraper";
@@ -211,6 +217,46 @@ export function cycleFormatOption(
 ): string {
   const idx = pool.findIndex((f) => f.id === currentId);
   return pool[(idx + 1) % pool.length].id;
+}
+
+export function recommendComponentsForIdea(
+  idea: string,
+  limit = 4
+): RareComponentItem[] {
+  const q = idea.trim().toLowerCase();
+  return [...RARE_COMPONENTS]
+    .map((comp) => {
+      let score = comp.isNew ? 14 : 10;
+      for (const kw of comp.keywords) {
+        if (q.includes(kw.toLowerCase())) score += 25;
+      }
+      return { comp, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.comp);
+}
+
+export function recommendAssetsForIdea(
+  idea: string,
+  limit = 3
+): CraftAssetItem[] {
+  const q = idea.trim().toLowerCase();
+  return [...CRAFT_TOOLS_AND_ASSETS]
+    .map((asset) => {
+      let score = 10;
+      const hay = `${asset.name} ${asset.kind} ${asset.whyUseIt}`.toLowerCase();
+      if (/(kube|cloud|edge|global|infra)/i.test(q) && asset.id === "asset-cobe") score += 30;
+      if (/(ai|shader|creative|studio|luxury)/i.test(q) && asset.kind === "Shaders & 3D") score += 22;
+      if (/(table|dashboard|saas|fintech)/i.test(q) && asset.id === "asset-radix-icons") score += 24;
+      for (const w of q.split(/\s+/).filter((x) => x.length > 3)) {
+        if (hay.includes(w)) score += 15;
+      }
+      return { asset, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.asset);
 }
 
 export { recommendMixFromBrief };

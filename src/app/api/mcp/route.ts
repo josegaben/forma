@@ -4,6 +4,11 @@ import {
   getContrastRatio,
   hexToOklchString,
 } from "@/data/color-palettes";
+import {
+  CRAFT_TOOLS_AND_ASSETS,
+  RARE_COMPONENTS,
+  TYPOGRAPHY_PAIRINGS,
+} from "@/data/compendium";
 import { GLOBAL_UNSLOP_RULES, WEB_FORMATS } from "@/data/formats";
 import discoveredFeed from "@/data/discovered-feed.json";
 import {
@@ -99,6 +104,26 @@ const MCP_TOOLS = [
       properties: {
         query: { type: "string", description: "Optional industry, mood, or harmony filter (e.g. 'clinic', 'fintech', 'sanzo', 'dark')." },
       },
+    },
+  },
+  {
+    name: "list_ui_components",
+    description:
+      "Search production-ready interactive React/Tailwind components (Rare UI, Vaul, Sonner, cmdk, Origin UI, 21st.dev) with shadcn CLI install commands and single-file TSX code.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Optional keyword or category ('AI Kit', 'Display', 'Navigation', 'Inputs', 'Feedback')." },
+      },
+    },
+  },
+  {
+    name: "list_craft_assets",
+    description:
+      "List curated typography pairings, non-slop icon sets (Phosphor, Radix, Iconoir), WebGL shaders (Paper Shaders, Unicorn Studio, Cobe), and SVG brand logo tools.",
+    inputSchema: {
+      type: "object",
+      properties: {},
     },
   },
   {
@@ -289,6 +314,43 @@ export async function POST(request: Request) {
       }));
       return NextResponse.json(
         { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(palettes, null, 2) }] } },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "list_ui_components") {
+      const q = String(args.query || "").toLowerCase();
+      const comps = RARE_COMPONENTS.filter((c) => {
+        if (!q) return true;
+        return [c.name, c.category, c.provider, c.description, ...c.keywords]
+          .join(" ")
+          .toLowerCase()
+          .includes(q);
+      });
+      return NextResponse.json(
+        { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(comps, null, 2) }] } },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "list_craft_assets") {
+      return NextResponse.json(
+        {
+          jsonrpc: "2.0",
+          id: id ?? 1,
+          result: {
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify(
+                  { typographyPairings: TYPOGRAPHY_PAIRINGS, toolsAndAssets: CRAFT_TOOLS_AND_ASSETS },
+                  null,
+                  2
+                ),
+              },
+            ],
+          },
+        },
         { headers: CORS_HEADERS }
       );
     }

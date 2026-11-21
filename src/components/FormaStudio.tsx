@@ -9,6 +9,7 @@ import {
   Download,
   Loader2,
   RefreshCw,
+  Search,
   Share2,
   Sparkles,
   X,
@@ -17,6 +18,12 @@ import {
   CURATED_COLOR_PALETTES,
   type CuratedColorPalette,
 } from "@/data/color-palettes";
+import {
+  CRAFT_TOOLS_AND_ASSETS,
+  RARE_COMPONENTS,
+  TYPOGRAPHY_PAIRINGS,
+  type RareComponentItem,
+} from "@/data/compendium";
 import { WEB_FORMATS, type WebFormat } from "@/data/formats";
 import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
@@ -31,9 +38,11 @@ import {
   cyclePaletteOption,
   findMatchingScrapedSites,
   generateTailoredPreviewContent,
+  recommendComponentsForIdea,
   recommendMixFromBrief,
   recommendPaletteForIdea,
 } from "@/lib/synthesizer";
+import { CommandExplorerModal } from "@/components/CommandExplorerModal";
 import {
   AgentBadgeRow,
   FormaLogo,
@@ -44,6 +53,7 @@ import {
   MotionCurveMini,
   PaletteVisualThumb,
 } from "@/components/FormatVisualThumb";
+import { InteractiveComponentCard } from "@/components/InteractiveComponentCard";
 import { LiveFormatPreview } from "@/components/LiveFormatPreview";
 
 const GITHUB_REPO_URL = "https://github.com/josegaben/forma";
@@ -84,6 +94,9 @@ export function FormaStudio() {
   const [origin, setOrigin] = useState("https://forma.to");
   const [roleIdx, setRoleIdx] = useState(0);
 
+  // Command Explorer (⌘K) state
+  const [explorerOpen, setExplorerOpen] = useState(false);
+
   // Agent bootstrap bar state
   const [agentTab, setAgentTab] = useState<"llms" | "mcp" | "cli">("llms");
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
@@ -104,15 +117,21 @@ export function FormaStudio() {
   const [motionId, setMotionId] = useState("rauno-craft");
   const [stack, setStack] = useState<TargetStack>("nextjs-tailwind");
 
-  // Visual Gallery state
-  const [galleryTab, setGalleryTab] = useState<"formats" | "palettes" | "scraped">("formats");
+  // Compendium Gallery state
+  const [galleryTab, setGalleryTab] = useState<
+    "components" | "formats" | "palettes" | "assets" | "scraped"
+  >("components");
   const [modeFilter, setModeFilter] = useState<"all" | "light" | "dark">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [showAllGallery, setShowAllGallery] = useState(false);
 
-  // Clean Code / Spec Drawer Modal (<dialog closedby="any">)
+  // Modals: DESIGN.md Spec Modal & Component Code Modal
   const [modalTab, setModalTab] = useState<"prompt" | "rules" | "css" | "mcp">("prompt");
   const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+  const [activeComponentModal, setActiveComponentModal] =
+    useState<RareComponentItem | null>(null);
+  const compDialogRef = useRef<HTMLDialogElement | null>(null);
 
   const allFormats = useMemo(
     () => [...customFormats, ...WEB_FORMATS],
@@ -135,7 +154,18 @@ export function FormaStudio() {
     }
   }, []);
 
-  // Gentle hero role cycling
+  // Global ⌘K / Ctrl+K shortcut for Command Explorer
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setExplorerOpen((v) => !v);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   useEffect(() => {
     const id = setInterval(() => {
       setRoleIdx((i) => (i + 1) % HERO_ROLES.length);
@@ -145,9 +175,8 @@ export function FormaStudio() {
 
   // Modern Web Guidance: Safari fallback for <dialog closedby="any">
   useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    if (!("closedBy" in HTMLDialogElement.prototype)) {
+    const attachFallback = (dialog: HTMLDialogElement | null) => {
+      if (!dialog || "closedBy" in HTMLDialogElement.prototype) return () => {};
       const onBackdropClick = (event: MouseEvent) => {
         if (event.target !== dialog) return;
         const rect = dialog.getBoundingClientRect();
@@ -160,7 +189,14 @@ export function FormaStudio() {
       };
       dialog.addEventListener("click", onBackdropClick);
       return () => dialog.removeEventListener("click", onBackdropClick);
-    }
+    };
+
+    const c1 = attachFallback(dialogRef.current);
+    const c2 = attachFallback(compDialogRef.current);
+    return () => {
+      c1();
+      c2();
+    };
   }, []);
 
   const copyText = async (key: string, value: string) => {
@@ -207,23 +243,31 @@ export function FormaStudio() {
     ]
   );
 
+  const matchedComponents = useMemo(
+    () => recommendComponentsForIdea(ideaInput, 2),
+    [ideaInput]
+  );
+
   const matchedScrapedSiblings = useMemo(
     () =>
       findMatchingScrapedSites(
         ideaInput,
         composed.layers.surface.surface.mode,
-        4
+        2
       ),
     [ideaInput, composed.layers.surface.surface.mode]
   );
 
-  // Unified Smart Action: handles BOTH natural-language ideas AND pasted live URLs!
+  const openComponentModal = (item: RareComponentItem) => {
+    setActiveComponentModal(item);
+    requestAnimationFrame(() => compDialogRef.current?.showModal());
+  };
+
   const handleSynthesize = async (overrideIdea?: string) => {
     const raw = (overrideIdea ?? ideaInput).trim();
     if (overrideIdea !== undefined) setIdeaInput(overrideIdea);
     setScrapeNotice("");
 
-    // Check if the user included a live URL to scrape & cross-remix!
     const urlMatch = raw.match(/https?:\/\/[^\s]+/i);
     if (urlMatch || /^[a-z0-9-]+\.[a-z]{2,}(\/.*)?$/i.test(raw)) {
       const targetUrl = urlMatch ? urlMatch[0] : `https://${raw}`;
@@ -255,7 +299,7 @@ export function FormaStudio() {
           return;
         }
       } catch {
-        // Fall back to semantic brief matching
+        // fallback
       }
       setScrapingUrl(false);
     }
@@ -321,24 +365,41 @@ export function FormaStudio() {
     URL.revokeObjectURL(url);
   };
 
+  const filteredComponents = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return RARE_COMPONENTS.filter((c) => {
+      if (!q) return true;
+      return `${c.name} ${c.category} ${c.provider} ${c.description} ${c.keywords.join(" ")}`
+        .toLowerCase()
+        .includes(q);
+    });
+  }, [searchQuery]);
+
   const filteredFormats = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     const list = allFormats.filter((f) => {
       if (modeFilter !== "all" && f.surface.mode !== modeFilter) return false;
       if (!q) return true;
-      return [
-        f.name,
-        f.category,
-        f.tagline,
-        ...f.keywords,
-        ...f.inspiredBy.map((s) => s.name),
-      ]
-        .join(" ")
+      return `${f.name} ${f.category} ${f.tagline} ${f.keywords.join(" ")} ${f.inspiredBy
+        .map((s) => s.name)
+        .join(" ")}`
         .toLowerCase()
         .includes(q);
     });
     return showAllGallery ? list : list.slice(0, 9);
   }, [allFormats, modeFilter, searchQuery, showAllGallery]);
+
+  const filteredPalettes = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    const list = CURATED_COLOR_PALETTES.filter((p) => {
+      if (modeFilter !== "all" && p.mode !== modeFilter) return false;
+      if (!q) return true;
+      return `${p.name} ${p.nameEs} ${p.harmony} ${p.psychology} ${p.inspiredBy.name}`
+        .toLowerCase()
+        .includes(q);
+    });
+    return showAllGallery ? list : list.slice(0, 9);
+  }, [modeFilter, searchQuery, showAllGallery]);
 
   const filteredScraped = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -358,26 +419,18 @@ export function FormaStudio() {
     cli: `npx forma-xray https://resiz.es --out DESIGN.md`,
   };
 
-  const filteredPalettes = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
-    const list = CURATED_COLOR_PALETTES.filter((p) => {
-      if (modeFilter !== "all" && p.mode !== modeFilter) return false;
-      if (!q) return true;
-      return `${p.name} ${p.nameEs} ${p.harmony} ${p.psychology} ${p.inspiredBy.name} ${p.keywords.join(" ")}`
-        .toLowerCase()
-        .includes(q);
-    });
-    return showAllGallery ? list : list.slice(0, 9);
-  }, [modeFilter, searchQuery, showAllGallery]);
-
-  const totalReferencesCount =
+  const totalAssetsCount =
     WEB_FORMATS.length +
+    RARE_COMPONENTS.length +
     CURATED_COLOR_PALETTES.length +
+    TYPOGRAPHY_PAIRINGS.length +
+    CRAFT_TOOLS_AND_ASSETS.length +
     discoveredFeed.sites.length +
     GLOBAL_DESIGN_DIRECTORIES.length;
 
-  const directoriesRow1 = GLOBAL_DESIGN_DIRECTORIES.slice(0, 38);
-  const directoriesRow2 = GLOBAL_DESIGN_DIRECTORIES.slice(38);
+  const halfDir = Math.ceil(GLOBAL_DESIGN_DIRECTORIES.length / 2);
+  const directoriesRow1 = GLOBAL_DESIGN_DIRECTORIES.slice(0, halfDir);
+  const directoriesRow2 = GLOBAL_DESIGN_DIRECTORIES.slice(halfDir);
 
   const modalCodeContent =
     modalTab === "prompt"
@@ -386,35 +439,46 @@ export function FormaStudio() {
       ? composed.cursorClaudeRules
       : modalTab === "css"
       ? composed.cssTokens
-      : `# 1. Connect forma MCP server in Claude Code:\nclaude mcp add --transport http forma ${origin}/api/mcp\n\n# 2. Or pull this exact custom style into DESIGN.md:\ncurl -fsSL "${origin}/api/compose?surface=${surfaceId}&typography=${typographyId}&layout=${layoutId}&components=${componentsId}&motion=${motionId}&project=${encodeURIComponent(
-          tailoredContent.brandName
-        )}&format=markdown" > DESIGN.md`;
+      : `# 1. Connect forma MCP server in Claude Code / Cursor:\nclaude mcp add --transport http forma ${origin}/api/mcp\n\n# 2. Optional Rare UI shadcn registry in components.json:\n{\n  "registries": {\n    "@rare-ui": "https://raw.githubusercontent.com/swamimalode07/rare-ui/main/public/r/{name}.json"\n  }\n}`;
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* MINIMAL AIRY TOP BAR (Exact treg.to simplicity + Repo link) */}
-      <header className="sticky top-0 z-30 bg-[#fbfbfa]/85 backdrop-blur-md border-b border-[var(--line)]">
+      {/* MINIMAL AIRY TOP BAR (treg.to + Rare UI ⌘K Search + Repo) */}
+      <header className="sticky top-0 z-30 bg-[#fbfbfa]/88 backdrop-blur-md border-b border-[var(--line)]">
         <nav
           aria-label="Primary"
-          className="mx-auto max-w-[1160px] h-[56px] px-5 flex items-center justify-between"
+          className="mx-auto max-w-[1160px] h-[56px] px-5 flex items-center justify-between gap-3"
         >
           <a href="#" aria-label="forma home">
             <FormaLogo size={28} />
           </a>
 
-          <div className="flex items-center gap-5 text-[13.5px] text-[var(--muted)]">
-            <a
-              href="#studio"
-              className="hidden sm:inline hover:text-[var(--ink)] transition-colors"
+          <div className="flex items-center gap-3.5 sm:gap-5 text-[13.5px] text-[var(--muted)] whitespace-nowrap">
+            {/* Rare UI style ⌘K Command Trigger */}
+            <button
+              type="button"
+              onClick={() => setExplorerOpen(true)}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-[12px] text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer transition-colors"
             >
-              {lang === "es" ? "Estudio" : "Studio"}
-            </a>
+              <Search className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">
+                {lang === "es" ? "Buscar todo..." : "Search all..."}
+              </span>
+              <kbd
+                className="px-1.5 py-0.2 rounded bg-[var(--panel)] text-[10px] text-[var(--ink)]"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
+              >
+                ⌘K
+              </kbd>
+            </button>
+
             <a
               href="#catalog"
-              className="hidden sm:inline hover:text-[var(--ink)] transition-colors"
+              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
             >
-              {lang === "es" ? "Galería" : "Gallery"}
+              {lang === "es" ? "Compendio" : "Compendium"}
             </a>
+
             <a
               href={GITHUB_REPO_URL}
               target="_blank"
@@ -436,7 +500,7 @@ export function FormaStudio() {
 
             <a
               href="#agent-bar"
-              className="hidden md:inline-flex px-3.5 py-1.5 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium hover:opacity-90 transition-opacity"
+              className="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium hover:opacity-90 transition-opacity"
             >
               {lang === "es" ? "Conectar agente" : "Connect agent"}
             </a>
@@ -445,10 +509,9 @@ export function FormaStudio() {
       </header>
 
       <main className="flex-1">
-        {/* HERO — Pure treg.to Airy Editorial Clarity */}
+        {/* HERO — Airy Editorial Clarity */}
         <section className="editorial-dot-canvas pt-16 sm:pt-20 pb-16 px-5">
           <div className="mx-auto max-w-[880px] text-center">
-            {/* Top Monospace Pill */}
             <a
               href={GITHUB_REPO_URL}
               target="_blank"
@@ -457,13 +520,12 @@ export function FormaStudio() {
               style={{ fontFamily: "var(--font-mono), monospace" }}
             >
               <span>
-                {totalReferencesCount}+ {lang === "es" ? "referencias" : "references"} ·{" "}
+                {totalAssetsCount}+ {lang === "es" ? "recursos web" : "design assets"} ·{" "}
                 {GLOBAL_DESIGN_DIRECTORIES.length}{" "}
                 {lang === "es" ? "directorios" : "directories"} · open source ↗
               </span>
             </a>
 
-            {/* Editorial Newsreader H1 (matching the uploaded treg.to aesthetic!) */}
             <h1
               className="text-[clamp(2.5rem,5.2vw,4.55rem)] leading-[1.03] tracking-[-0.03em] font-normal text-[#141413]"
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
@@ -473,7 +535,6 @@ export function FormaStudio() {
                 : "OpenRouter for web design"}
             </h1>
 
-            {/* Subtitle with Real Agent Icons */}
             <p
               className="mt-5 text-[clamp(1.25rem,2.3vw,1.7rem)] text-[var(--muted)] font-normal flex flex-wrap items-center justify-center gap-x-2 gap-y-2"
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
@@ -490,7 +551,7 @@ export function FormaStudio() {
               </button>
             </p>
 
-            {/* THE SINGLE EFFORTLESS IDEA INPUT BAR */}
+            {/* SINGLE EFFORTLESS IDEA INPUT BAR */}
             <div className="mt-10 mx-auto max-w-[720px]">
               <div className="p-2 rounded-[20px] bg-white border border-[var(--line-strong)] shadow-[var(--shadow-md)] flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                 <input
@@ -503,7 +564,7 @@ export function FormaStudio() {
                   aria-label="Describe your project idea or paste a URL"
                   placeholder={
                     lang === "es"
-                      ? "Describe tu idea de proyecto (o pega una URL para cruzar su estilo)..."
+                      ? "Describe tu idea de proyecto (o pega cualquier URL para cruzarla)..."
                       : "Describe your project idea (or paste any URL to remix its style)..."
                   }
                   className="flex-1 px-4 py-2.5 text-[14.5px] text-[var(--ink)] bg-transparent focus:outline-none"
@@ -530,7 +591,6 @@ export function FormaStudio() {
                 </button>
               </div>
 
-              {/* 4 Subtle Clickable Idea Starters */}
               <div className="mt-3.5 flex flex-wrap items-center justify-center gap-1.5">
                 {QUICK_IDEAS.map((item) => (
                   <button
@@ -545,7 +605,7 @@ export function FormaStudio() {
               </div>
             </div>
 
-            {/* GIVE THIS TO YOUR AGENT — Compact treg.to Dark Bar */}
+            {/* GIVE THIS TO YOUR AGENT — Compact Dark Bar */}
             <div
               id="agent-bar"
               className="mt-8 mx-auto max-w-[600px] rounded-[16px] bg-[#141413] text-[#fbfbfa] p-3.5 shadow-[var(--shadow-lg)] text-left"
@@ -610,7 +670,7 @@ export function FormaStudio() {
           </div>
         </section>
 
-        {/* SECTION 1: VISUAL CROSSED STYLE STUDIO (Zero Clutter, 100% Visual!) */}
+        {/* SECTION 1: VISUAL CROSSED STYLE & COMPONENT STACK STUDIO */}
         <section id="studio" className="py-12 px-5">
           <div className="mx-auto max-w-[1120px]">
             {scrapeNotice && (
@@ -622,7 +682,6 @@ export function FormaStudio() {
               </div>
             )}
 
-            {/* 4 Visual Crossed-Website Pillars (Click ↻ to cycle any pillar visually!) */}
             <div className="mb-4 flex items-center justify-between">
               <span
                 className="text-[11.5px] tracking-wide uppercase text-[var(--muted)]"
@@ -647,15 +706,16 @@ export function FormaStudio() {
               </button>
             </div>
 
+            {/* 4 Visual Crossed Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
-              {/* Pillar 1: Color Science & 60-30-10 Harmony */}
+              {/* Pillar 1: 60-30-10 Palette */}
               <div className="p-4 rounded-[16px] bg-white border border-[var(--line)] flex flex-col justify-between gap-2.5">
                 <div className="flex items-center justify-between">
                   <span
                     className="text-[10.5px] text-[var(--muted)]"
                     style={{ fontFamily: "var(--font-mono), monospace" }}
                   >
-                    {lang === "es" ? "PALETA 60-30-10 · OKLCH" : "60-30-10 PALETTE · OKLCH"}
+                    60-30-10 PALETTE · OKLCH
                   </span>
                   <button
                     type="button"
@@ -669,28 +729,23 @@ export function FormaStudio() {
                   </button>
                 </div>
 
-                {/* Proportional 60-30-10 Swatch Bar + WCAG Contrast Ratio */}
                 <div className="space-y-1.5">
                   <div className="h-5 w-full rounded-full overflow-hidden flex border border-black/15">
                     <span
                       className="h-full w-[52%]"
                       style={{ backgroundColor: composed.layers.surface.surface.bg }}
-                      title={`60% Canvas: ${composed.layers.surface.surface.bg}`}
                     />
                     <span
                       className="h-full w-[16%]"
                       style={{ backgroundColor: composed.layers.surface.surface.panel }}
-                      title={`Panel: ${composed.layers.surface.surface.panel}`}
                     />
                     <span
                       className="h-full w-[18%]"
                       style={{ backgroundColor: composed.layers.surface.surface.ink }}
-                      title={`30% Ink: ${composed.layers.surface.surface.ink}`}
                     />
                     <span
                       className="h-full w-[14%]"
                       style={{ backgroundColor: composed.layers.surface.surface.accent }}
-                      title={`10% Accent: ${composed.layers.surface.surface.accent}`}
                     />
                   </div>
                   <div
@@ -838,14 +893,14 @@ export function FormaStudio() {
               </div>
             </div>
 
-            {/* FULL-WIDTH LIVE VISUAL PREVIEW OF THE USER'S PROJECT */}
+            {/* FULL-WIDTH LIVE VISUAL PREVIEW */}
             <LiveFormatPreview
               genome={composed}
               content={tailoredContent}
               lang={lang}
             />
 
-            {/* Clean Action Bar Directly Under the Visual Preview */}
+            {/* Clean Action Bar */}
             <div className="mt-4 p-3.5 rounded-[16px] bg-white border border-[var(--line)] shadow-[var(--shadow-sm)] flex flex-wrap items-center justify-between gap-3">
               <div className="flex flex-wrap items-center gap-2">
                 {(
@@ -929,18 +984,46 @@ export function FormaStudio() {
               </div>
             </div>
 
-            {/* Matched Real Websites From Live Crawler (Subtle Visual Strip) */}
+            {/* Matched Components (Rare UI / shadcn) + Matched Live Websites Strip */}
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+              {matchedComponents.map((comp) => (
+                <button
+                  key={comp.id}
+                  type="button"
+                  onClick={() => openComponentModal(comp)}
+                  className="p-3 rounded-[13px] bg-white hover:bg-[var(--panel)] border border-[var(--line)] hover:border-[var(--line-strong)] text-left flex items-center justify-between gap-2 transition-all cursor-pointer group"
+                >
+                  <div className="min-w-0">
+                    <div className="text-[12.5px] font-medium truncate flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#E06D44] shrink-0" />
+                      <span className="truncate">{comp.name}</span>
+                    </div>
+                    <div
+                      className="text-[10.5px] text-[var(--muted)] truncate mt-0.5"
+                      style={{ fontFamily: "var(--font-mono), monospace" }}
+                    >
+                      {comp.cliInstall}
+                    </div>
+                  </div>
+                  <span
+                    className="text-[10.5px] text-[#E06D44] font-medium shrink-0"
+                    style={{ fontFamily: "var(--font-mono), monospace" }}
+                  >
+                    &lt;/&gt;
+                  </span>
+                </button>
+              ))}
+
               {matchedScrapedSiblings.map((site) => (
                 <button
                   key={site.id}
                   type="button"
                   onClick={() => blendDiscoveredSite(site)}
-                  className="p-3 rounded-[13px] bg-white/75 hover:bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-left flex items-center justify-between gap-2 transition-all cursor-pointer group"
+                  className="p-3 rounded-[13px] bg-white/80 hover:bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-left flex items-center justify-between gap-2 transition-all cursor-pointer group"
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <span
-                      className="w-5 h-5 rounded-full border border-black/15 shrink-0"
+                      className="w-4 h-4 rounded-full border border-black/15 shrink-0"
                       style={{ backgroundColor: site.bg }}
                     />
                     <div className="min-w-0">
@@ -967,94 +1050,135 @@ export function FormaStudio() {
           </div>
         </section>
 
-        {/* SECTION 2: VISUAL SHOWCASE GALLERY (Mini-Webpages, Zero Text Clutter!) */}
+        {/* SECTION 2: THE COMPLETE WEB CRAFT COMPENDIUM (Components · Formats · Palettes · Fonts & Assets · Live Radar) */}
         <section id="catalog" className="py-16 px-5 border-t border-[var(--line)]">
           <div className="mx-auto max-w-[1120px]">
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
-              <div className="shrink-0">
-                <h2
-                  className="text-[clamp(1.85rem,3.4vw,2.65rem)] leading-[1.06] tracking-[-0.025em] font-normal"
-                  style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
-                >
-                  {lang === "es"
-                    ? "Explora formatos y webs en vivo"
-                    : "Explore formats & live websites"}
-                </h2>
-              </div>
-
-              <div className="flex flex-wrap lg:flex-nowrap items-center gap-2">
-                <div className="inline-flex p-1 rounded-full bg-[var(--panel)] border border-[var(--line)] text-[12px] whitespace-nowrap shrink-0">
-                  <button
-                    type="button"
-                    onClick={() => setGalleryTab("formats")}
-                    className={`px-3 py-1 rounded-full cursor-pointer transition-colors ${
-                      galleryTab === "formats"
-                        ? "bg-white text-[var(--ink)] font-medium shadow-[var(--shadow-sm)]"
-                        : "text-[var(--muted)]"
-                    }`}
+            <div className="flex flex-col gap-5 mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                  <h2
+                    className="text-[clamp(1.95rem,3.6vw,2.75rem)] leading-[1.06] tracking-[-0.025em] font-normal"
+                    style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
                   >
                     {lang === "es"
-                      ? `Arquetipos (${allFormats.length})`
-                      : `Archetypes (${allFormats.length})`}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setGalleryTab("palettes")}
-                    className={`px-3 py-1 rounded-full cursor-pointer transition-colors ${
-                      galleryTab === "palettes"
-                        ? "bg-white text-[var(--ink)] font-medium shadow-[var(--shadow-sm)]"
-                        : "text-[var(--muted)]"
-                    }`}
-                  >
-                    {lang === "es"
-                      ? `Paletas (${CURATED_COLOR_PALETTES.length})`
-                      : `Palettes (${CURATED_COLOR_PALETTES.length})`}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setGalleryTab("scraped")}
-                    className={`px-3 py-1 rounded-full cursor-pointer transition-colors ${
-                      galleryTab === "scraped"
-                        ? "bg-white text-[var(--ink)] font-medium shadow-[var(--shadow-sm)]"
-                        : "text-[var(--muted)]"
-                    }`}
-                  >
-                    {lang === "es"
-                      ? `Radar (${discoveredFeed.sites.length})`
-                      : `Live Radar (${discoveredFeed.sites.length})`}
-                  </button>
+                      ? "Todo lo necesario para diseñar una web de calidad"
+                      : "Everything needed to craft a standout website"}
+                  </h2>
                 </div>
 
-                <input
-                  type="search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={lang === "es" ? "Filtrar..." : "Filter..."}
-                  aria-label="Filter gallery"
-                  className="h-[34px] px-3.5 rounded-full bg-white border border-[var(--line)] text-[12.5px] w-[150px] focus:outline-none focus:border-[var(--ink)]"
-                />
+                <div className="flex items-center gap-2">
+                  <input
+                    type="search"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder={lang === "es" ? "Filtrar..." : "Filter..."}
+                    aria-label="Filter compendium"
+                    className="h-[34px] px-3.5 rounded-full bg-white border border-[var(--line)] text-[12.5px] w-[155px] focus:outline-none focus:border-[var(--ink)]"
+                  />
 
-                {(["all", "light", "dark"] as const).map((m) => (
-                  <label
-                    key={m}
-                    className="choice-chip px-3 py-1 rounded-full text-[11.5px] cursor-pointer"
-                    style={{ fontFamily: "var(--font-mono), monospace" }}
-                  >
-                    <input
-                      type="radio"
-                      name="gallery-mode"
-                      value={m}
-                      checked={modeFilter === m}
-                      onChange={() => setModeFilter(m)}
-                      className="sr-only"
-                    />
-                    <span>{m === "all" ? (lang === "es" ? "Todos" : "All") : m}</span>
-                  </label>
-                ))}
+                  {galleryTab !== "components" && galleryTab !== "assets" && (
+                    <div className="inline-flex items-center gap-1">
+                      {(["all", "light", "dark"] as const).map((m) => (
+                        <label
+                          key={m}
+                          className="choice-chip px-2.5 py-1 rounded-full text-[11px] cursor-pointer"
+                          style={{ fontFamily: "var(--font-mono), monospace" }}
+                        >
+                          <input
+                            type="radio"
+                            name="gallery-mode"
+                            value={m}
+                            checked={modeFilter === m}
+                            onChange={() => setModeFilter(m)}
+                            className="sr-only"
+                          />
+                          <span>{m === "all" ? (lang === "es" ? "Todos" : "All") : m}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Clean Single-Row Compendium Tabs with Rare UI Bracketed Counts */}
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 whitespace-nowrap">
+                {(
+                  [
+                    {
+                      id: "components",
+                      labelEn: "Rare Components",
+                      labelEs: "Componentes",
+                      count: RARE_COMPONENTS.length,
+                    },
+                    {
+                      id: "formats",
+                      labelEn: "Web Formats",
+                      labelEs: "Formatos Web",
+                      count: allFormats.length,
+                    },
+                    {
+                      id: "palettes",
+                      labelEn: "Color Palettes",
+                      labelEs: "Paletas OKLCH",
+                      count: CURATED_COLOR_PALETTES.length,
+                    },
+                    {
+                      id: "assets",
+                      labelEn: "Fonts, Shaders & Icons",
+                      labelEs: "Fuentes, Shaders e Iconos",
+                      count: TYPOGRAPHY_PAIRINGS.length + CRAFT_TOOLS_AND_ASSETS.length,
+                    },
+                    {
+                      id: "scraped",
+                      labelEn: "Live Scraped Webs",
+                      labelEs: "Webs Escrapeadas",
+                      count: discoveredFeed.sites.length,
+                    },
+                  ] as const
+                ).map((t) => {
+                  const active = galleryTab === t.id;
+                  return (
+                    <button
+                      key={t.id}
+                      type="button"
+                      onClick={() => setGalleryTab(t.id)}
+                      className={`px-4 py-2 rounded-full text-[12.5px] font-medium cursor-pointer transition-all inline-flex items-center gap-1.5 ${
+                        active
+                          ? "bg-[#141413] text-[#fbfbfa] shadow-[var(--shadow-sm)]"
+                          : "bg-white border border-[var(--line)] text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--line-strong)]"
+                      }`}
+                    >
+                      <span>{lang === "es" ? t.labelEs : t.labelEn}</span>
+                      <span
+                        className={`text-[11px] ${
+                          active ? "text-[#E06D44]" : "opacity-65"
+                        }`}
+                        style={{ fontFamily: "var(--font-mono), monospace" }}
+                      >
+                        [{t.count}]
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            {galleryTab === "formats" ? (
+            {/* TAB 1: INTERACTIVE RARE COMPONENTS (Double-Bezel Stage Cards) */}
+            {galleryTab === "components" && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {filteredComponents.map((item) => (
+                  <InteractiveComponentCard
+                    key={item.id}
+                    item={item}
+                    lang={lang}
+                    onInspectCode={openComponentModal}
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* TAB 2: VISUAL WEB FORMATS */}
+            {galleryTab === "formats" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {filteredFormats.map((fmt) => (
                   <article
@@ -1093,7 +1217,10 @@ export function FormaStudio() {
                   </article>
                 ))}
               </div>
-            ) : galleryTab === "palettes" ? (
+            )}
+
+            {/* TAB 3: 60-30-10 COLOR PALETTES */}
+            {galleryTab === "palettes" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {filteredPalettes.map((pal) => (
                   <article
@@ -1129,7 +1256,101 @@ export function FormaStudio() {
                   </article>
                 ))}
               </div>
-            ) : (
+            )}
+
+            {/* TAB 4: TYPOGRAPHY PAIRINGS, SHADERS & ICON PACKS */}
+            {galleryTab === "assets" && (
+              <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {TYPOGRAPHY_PAIRINGS.map((pair) => (
+                    <article
+                      key={pair.id}
+                      className="rounded-[20px] p-2 bg-[#f2f1ed] border border-[var(--line)] flex flex-col justify-between"
+                    >
+                      <div className="rounded-[14px] bg-white border border-[var(--line)] p-4 h-[142px] flex flex-col justify-between">
+                        <span
+                          className="text-[10px] text-[#E06D44]"
+                          style={{ fontFamily: "var(--font-mono), monospace" }}
+                        >
+                          {pair.displayFont} + {pair.monoFont}
+                        </span>
+                        <div
+                          className="text-[22px] leading-[1.1] tracking-[-0.025em]"
+                          style={{
+                            fontFamily: pair.displayFont.includes("Serif") || pair.displayFont.includes("Newsreader") || pair.displayFont.includes("Fraunces")
+                              ? "var(--font-editorial), Georgia, serif"
+                              : "var(--font-geist), sans-serif",
+                          }}
+                        >
+                          {pair.sampleHeading}
+                        </div>
+                        <div className="text-[11px] text-[var(--muted)] truncate">
+                          {lang === "es" ? pair.vibeEs : pair.vibe}
+                        </div>
+                      </div>
+                      <div className="px-2.5 pt-2.5 pb-1 flex items-center justify-between gap-2">
+                        <span className="text-[13px] font-semibold truncate">{pair.name}</span>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            copyText(pair.id, `@import url('${pair.cssImport}');`)
+                          }
+                          className="px-3 py-1 rounded-full bg-white border border-[var(--line)] text-[11px] font-medium cursor-pointer"
+                          style={{ fontFamily: "var(--font-mono), monospace" }}
+                        >
+                          {copiedKey === pair.id ? "✓ @import" : "Copy CSS"}
+                        </button>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {CRAFT_TOOLS_AND_ASSETS.map((asset) => (
+                    <article
+                      key={asset.id}
+                      className="visual-card p-4 flex flex-col justify-between gap-3"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span
+                            className="px-2 py-0.5 rounded-full bg-[var(--panel)] text-[10px] text-[#E06D44] font-medium"
+                            style={{ fontFamily: "var(--font-mono), monospace" }}
+                          >
+                            {asset.kind}
+                          </span>
+                          <a
+                            href={asset.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[var(--muted)] hover:text-[var(--ink)]"
+                          >
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                          </a>
+                        </div>
+                        <h3 className="text-[15px] font-semibold">{asset.name}</h3>
+                        <p className="text-[12.5px] text-[var(--muted)] mt-1 leading-relaxed">
+                          {lang === "es" ? asset.whyUseItEs : asset.whyUseIt}
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => copyText(asset.id, asset.installOrUsage)}
+                        className="w-full px-3 py-1.5 rounded-[9px] bg-[var(--panel)] hover:bg-[#141413] hover:text-white text-[11px] text-left truncate transition-colors cursor-pointer"
+                        style={{ fontFamily: "var(--font-mono), monospace" }}
+                      >
+                        {copiedKey === asset.id
+                          ? "✓ Copied!"
+                          : `$ ${asset.installOrUsage}`}
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* TAB 5: LIVE SCRAPED WEBSITES */}
+            {galleryTab === "scraped" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {filteredScraped.map((site) => {
                   const previewFmt = convertScrapedSiteToFormat(site);
@@ -1187,33 +1408,37 @@ export function FormaStudio() {
               </div>
             )}
 
-            <div className="mt-8 text-center">
-              <button
-                type="button"
-                onClick={() => setShowAllGallery((v) => !v)}
-                className="px-5 py-2.5 rounded-full bg-white border border-[var(--line-strong)] hover:bg-[var(--panel)] text-[12.5px] font-medium cursor-pointer"
-              >
-                {showAllGallery
-                  ? lang === "es"
-                    ? "Mostrar selección compacta"
-                    : "Show compact selection"
-                  : galleryTab === "formats"
-                  ? lang === "es"
-                    ? `Ver los ${allFormats.length} formatos visuales`
-                    : `Browse all ${allFormats.length} visual formats`
-                  : galleryTab === "palettes"
-                  ? lang === "es"
-                    ? `Ver las ${CURATED_COLOR_PALETTES.length} paletas maestras`
-                    : `Browse all ${CURATED_COLOR_PALETTES.length} color systems`
-                  : lang === "es"
-                  ? `Ver las ${discoveredFeed.sites.length} webs escrapeadas`
-                  : `Browse all ${discoveredFeed.sites.length} live-scraped websites`}
-              </button>
-            </div>
+            {(galleryTab === "formats" ||
+              galleryTab === "palettes" ||
+              galleryTab === "scraped") && (
+              <div className="mt-8 text-center">
+                <button
+                  type="button"
+                  onClick={() => setShowAllGallery((v) => !v)}
+                  className="px-5 py-2.5 rounded-full bg-white border border-[var(--line-strong)] hover:bg-[var(--panel)] text-[12.5px] font-medium cursor-pointer"
+                >
+                  {showAllGallery
+                    ? lang === "es"
+                      ? "Mostrar vista compacta"
+                      : "Show compact selection"
+                    : galleryTab === "formats"
+                    ? lang === "es"
+                      ? `Ver los ${allFormats.length} formatos visuales`
+                      : `Browse all ${allFormats.length} visual formats`
+                    : galleryTab === "palettes"
+                    ? lang === "es"
+                      ? `Ver las ${CURATED_COLOR_PALETTES.length} paletas maestras`
+                      : `Browse all ${CURATED_COLOR_PALETTES.length} color systems`
+                    : lang === "es"
+                    ? `Ver las ${discoveredFeed.sites.length} webs escrapeadas`
+                    : `Browse all ${discoveredFeed.sites.length} live-scraped websites`}
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
-        {/* SECTION 3: 58 GLOBAL PUBLISHED DESIGN DIRECTORIES MARQUEE (treg.to provider rows style!) */}
+        {/* SECTION 3: 85 GLOBAL DESIGN DIRECTORIES MARQUEE */}
         <section className="py-16 border-t border-[var(--line)] overflow-hidden bg-white">
           <div className="mx-auto max-w-[820px] text-center px-5 mb-9">
             <h2
@@ -1221,13 +1446,13 @@ export function FormaStudio() {
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
             >
               {lang === "es"
-                ? "Conectado a los 58 directorios mundiales de diseño web."
-                : "Grounded across 58 published web design directories."}
+                ? `Conectado a ${GLOBAL_DESIGN_DIRECTORIES.length} directorios, librerías y archivos de diseño.`
+                : `Unified across ${GLOBAL_DESIGN_DIRECTORIES.length} design directories, component kits & archives.`}
             </h2>
             <p className="mt-2 text-[14px] text-[var(--muted)]">
               {lang === "es"
-                ? "Nuestro motor open-source forma-xray analiza continuamente las mejores galerías, estudios y librerías del mundo."
-                : "Continuously indexed and translated into agent-ready tokens & motion physics via forma-xray."}
+                ? "Desde Rare UI, 21st.dev y Vaul hasta Sanzo Wada, Radix Colors, Awwwards, Godly, P de Pablo y Resiz.es."
+                : "Spanning Rare UI, 21st.dev, Vaul, Sanzo Wada, Radix Colors, Awwwards, Godly, P de Pablo & Resiz.es."}
             </p>
           </div>
 
@@ -1277,7 +1502,7 @@ export function FormaStudio() {
           </div>
         </section>
 
-        {/* CLEAN DARK BOTTOM BAND (treg.to exact cadence) */}
+        {/* DARK CTA BAND */}
         <section className="bg-[#141413] text-[#fbfbfa] py-16 px-5">
           <div className="mx-auto max-w-[780px] text-center">
             <h2
@@ -1285,8 +1510,8 @@ export function FormaStudio() {
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
             >
               {lang === "es"
-                ? "Conecta tu agente a cada referencia visual que necesita."
-                : "Connect your agent to every visual reference it needs."}
+                ? "Todo lo que tu agente necesita para diseñar con buen gusto."
+                : "Every format, palette, and rare component your agent needs."}
             </h2>
 
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
@@ -1316,15 +1541,6 @@ export function FormaStudio() {
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
               </a>
             </div>
-
-            <div
-              className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11.5px] text-[#9a9992]"
-              style={{ fontFamily: "var(--font-mono), monospace" }}
-            >
-              <span>100% open source · MIT</span>
-              <span>MCP + llms.txt + CLI</span>
-              <span>0% AI slop guaranteed</span>
-            </div>
           </div>
         </section>
       </main>
@@ -1352,7 +1568,7 @@ export function FormaStudio() {
         </div>
       </footer>
 
-      {/* Clean Native <dialog closedby="any"> Modal for Inspecting Raw DESIGN.md / CSS / MCP */}
+      {/* 1. Native <dialog closedby="any"> Modal for Compiled DESIGN.md */}
       <dialog
         ref={dialogRef}
         {...({ closedby: "any" } as Record<string, string>)}
@@ -1367,7 +1583,7 @@ export function FormaStudio() {
               </h3>
               <p className="text-[12.5px] text-[var(--muted)]">
                 {lang === "es"
-                  ? "Instrucción completa lista para Claude Code, Cursor, Codex, Lovable o v0"
+                  ? "Especificación completa lista para Claude Code, Cursor, Codex, Lovable o v0"
                   : "Compiled specification ready for Claude Code, Cursor, Codex, Lovable, or v0"}
               </p>
             </div>
@@ -1392,7 +1608,7 @@ export function FormaStudio() {
                   ["prompt", "DESIGN.md"],
                   ["rules", "CLAUDE.md / .cursorrules"],
                   ["css", "tokens.css"],
-                  ["mcp", "MCP / cURL"],
+                  ["mcp", "MCP & Registries"],
                 ] as const
               ).map(([tab, label]) => (
                 <button
@@ -1440,13 +1656,105 @@ export function FormaStudio() {
           </div>
 
           <pre
-            className="p-4 rounded-[14px] bg-[#141413] text-[#eae9e4] text-[12px] leading-[1.6] whitespace-pre-wrap break-words max-h-[460px] overflow-y-auto"
+            className="p-4 rounded-[14px] bg-[#141413] text-[#eae9e4] text-[12px] leading-[1.6] whitespace-pre-wrap break-words max-h-[450px] overflow-y-auto"
             style={{ fontFamily: "var(--font-mono), monospace" }}
           >
             <code>{modalCodeContent}</code>
           </pre>
         </div>
       </dialog>
+
+      {/* 2. Native <dialog closedby="any"> Modal for Single-File Rare Component Code & shadcn CLI */}
+      <dialog
+        ref={compDialogRef}
+        {...({ closedby: "any" } as Record<string, string>)}
+        aria-labelledby="comp-modal-title"
+        className="dna-modal max-w-[740px]"
+      >
+        {activeComponentModal && (
+          <div className="p-6 space-y-4">
+            <div className="flex items-center justify-between gap-4 pb-3 border-b border-[var(--line)]">
+              <div>
+                <div
+                  className="text-[11px] text-[#E06D44] font-medium"
+                  style={{ fontFamily: "var(--font-mono), monospace" }}
+                >
+                  {activeComponentModal.category} · {activeComponentModal.provider}
+                </div>
+                <h3 id="comp-modal-title" className="text-[19px] font-semibold">
+                  {activeComponentModal.name}
+                </h3>
+                <p className="text-[12.5px] text-[var(--muted)]">
+                  {lang === "es"
+                    ? activeComponentModal.descriptionEs
+                    : activeComponentModal.description}
+                </p>
+              </div>
+              <form method="dialog">
+                <button
+                  type="submit"
+                  aria-label="Close"
+                  className="p-2 rounded-full bg-[var(--panel)] hover:bg-[var(--panel-2)] cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+
+            {/* CLI Install Row */}
+            <div className="flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-[12px] bg-[var(--panel)] border border-[var(--line)]">
+              <code
+                className="text-[12px] text-[var(--ink)] truncate"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
+              >
+                $ {activeComponentModal.cliInstall}
+              </code>
+              <button
+                type="button"
+                onClick={() => copyText("comp-cli", activeComponentModal.cliInstall)}
+                className="shrink-0 px-3 py-1 rounded-full bg-[#141413] text-white text-[11.5px] font-medium cursor-pointer"
+              >
+                {copiedKey === "comp-cli" ? "✓ Copied" : "Copy CLI"}
+              </button>
+            </div>
+
+            {/* Self-Contained TSX Source Code */}
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <span
+                  className="text-[11px] text-[var(--muted)]"
+                  style={{ fontFamily: "var(--font-mono), monospace" }}
+                >
+                  SELF-CONTAINED TSX PRIMITIVE (RESPECTS PREFERS-REDUCED-MOTION)
+                </span>
+                <button
+                  type="button"
+                  onClick={() => copyText("comp-code", activeComponentModal.codeSnippet)}
+                  className="text-[11.5px] font-medium underline cursor-pointer"
+                >
+                  {copiedKey === "comp-code" ? "✓ Code copied" : "Copy TSX"}
+                </button>
+              </div>
+              <pre
+                className="p-4 rounded-[14px] bg-[#141413] text-[#eae9e4] text-[12px] leading-[1.6] whitespace-pre-wrap break-words max-h-[320px] overflow-y-auto"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
+              >
+                <code>{activeComponentModal.codeSnippet}</code>
+              </pre>
+            </div>
+          </div>
+        )}
+      </dialog>
+
+      {/* 3. Global ⌘K Split-Preview Command Explorer */}
+      <CommandExplorerModal
+        open={explorerOpen}
+        onClose={() => setExplorerOpen(false)}
+        lang={lang}
+        onSelectFormat={applyFullFormat}
+        onSelectPalette={applyCuratedPalette}
+        onInspectComponent={openComponentModal}
+      />
     </div>
   );
 }

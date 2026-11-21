@@ -4,6 +4,7 @@ import {
   hexToOklchString,
   type CuratedColorPalette,
 } from "@/data/color-palettes";
+import { CRAFT_TOOLS_AND_ASSETS, RARE_COMPONENTS } from "@/data/compendium";
 import {
   GLOBAL_UNSLOP_RULES,
   WEB_FORMATS,
@@ -459,9 +460,21 @@ ${l.sectionBlueprint.map((step, idx) => `${idx + 1}. ${step}`).join("\n")}
 
 ---
 
-## 5. Interactive UI Primitives (${compFmt.name})
+## 5. Interactive UI Primitives & Registry Components (${compFmt.name} + Rare UI)
 - **Signature Above-the-Fold Artifact:** ${compFmt.components.heroArtifact}
 ${primitivesCombined.map((p) => `- **${p.name}** *(${p.sourcePattern})*: ${p.spec}`).join("\n")}
+
+### Recommended Installable Components & Assets (shadcn CLI / npm)
+${RARE_COMPONENTS.filter((rc) =>
+  rc.keywords.some((k) => projectBrief.toLowerCase().includes(k))
+)
+  .slice(0, 3)
+  .concat(RARE_COMPONENTS.slice(0, 2))
+  .filter((v, i, arr) => arr.findIndex((x) => x.id === v.id) === i)
+  .slice(0, 3)
+  .map((rc) => `- **${rc.name}** (${rc.provider}): \`${rc.cliInstall}\` — ${rc.description}`)
+  .join("\n")}
+- **Icons & Visual Assets:** Prefer \`${CRAFT_TOOLS_AND_ASSETS[0].installOrUsage}\` (${CRAFT_TOOLS_AND_ASSETS[0].name}) and \`${CRAFT_TOOLS_AND_ASSETS[2].name}\` (${CRAFT_TOOLS_AND_ASSETS[2].url}) over generic default icon circles.
 
 ---
 

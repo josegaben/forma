@@ -56,8 +56,17 @@ export const GLOBAL_DESIGN_DIRECTORIES: GlobalDesignDirectory[] = [
   { name: "Component.gallery", url: "https://component.gallery", category: "Product & Flows" },
 
   // Components & Motion
+  { name: "Rare UI", url: "https://www.rareui.com", category: "Components & Motion" },
   { name: "21st.dev", url: "https://21st.dev", category: "Components & Motion" },
+  { name: "Origin UI", url: "https://originui.com", category: "Components & Motion" },
   { name: "Motion Primitives", url: "https://motion-primitives.com", category: "Components & Motion" },
+  { name: "Vaul (Drawer)", url: "https://vaul.emilkowal.ski", category: "Components & Motion" },
+  { name: "Sonner (Toast)", url: "https://sonner.emilkowal.ski", category: "Components & Motion" },
+  { name: "cmdk (Command)", url: "https://cmdk.paco.me", category: "Components & Motion" },
+  { name: "Paper Shaders", url: "https://shaders.paper.design", category: "Components & Motion" },
+  { name: "Unicorn Studio", url: "https://www.unicorn.studio", category: "Components & Motion" },
+  { name: "SVGL Logos", url: "https://svgl.app", category: "Components & Motion" },
+  { name: "Phosphor Icons", url: "https://phosphoricons.com", category: "Components & Motion" },
   { name: "Magic UI", url: "https://magicui.design", category: "Components & Motion" },
   { name: "Aceternity UI", url: "https://ui.aceternity.com", category: "Components & Motion" },
   { name: "Cult UI", url: "https://www.cult-ui.com", category: "Components & Motion" },
