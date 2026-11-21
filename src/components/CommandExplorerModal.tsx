@@ -215,9 +215,9 @@ export function CommandExplorerModal({
         </div>
 
         {/* Split Two-Pane Explorer (Rare UI screenshot homage!) */}
-        <div className="grid grid-cols-1 sm:grid-cols-12 min-h-[340px] max-h-[400px]">
+        <div className="grid grid-cols-1 sm:grid-cols-12 h-[360px] overflow-hidden">
           {/* Left Navigable List */}
-          <div className="sm:col-span-6 overflow-y-auto p-2 border-r border-[var(--line)] space-y-0.5">
+          <div className="sm:col-span-6 h-full overflow-y-auto p-2 border-r border-[var(--line)] space-y-0.5">
             {entries.map((entry, idx) => {
               const isSelected = idx === safeIdx;
               const prevGroup = idx > 0 ? entries[idx - 1].group : null;
