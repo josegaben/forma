@@ -18,6 +18,7 @@ import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
 import { composeFormatGenome, type TargetStack } from "@/lib/composer";
 import {
+  cleanFontName,
   convertScrapedSiteToFormat,
   type DiscoveredSite,
 } from "@/lib/scraper";
@@ -429,7 +430,7 @@ export function FormaStudio() {
 
             {/* Editorial Newsreader H1 (matching the uploaded treg.to aesthetic!) */}
             <h1
-              className="text-[clamp(2.9rem,6.8vw,5.35rem)] leading-[1.01] tracking-[-0.03em] font-normal text-[#141413]"
+              className="text-[clamp(2.5rem,5.2vw,4.55rem)] leading-[1.03] tracking-[-0.03em] font-normal text-[#141413]"
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
             >
               {lang === "es"
@@ -896,7 +897,7 @@ export function FormaStudio() {
                         className="text-[10.5px] text-[var(--muted)] truncate"
                         style={{ fontFamily: "var(--font-mono), monospace" }}
                       >
-                        {site.primaryFont} · {site.craftScore}/100
+                        {cleanFontName(site.primaryFont)} · {site.craftScore}/100
                       </div>
                     </div>
                   </div>
@@ -915,19 +916,19 @@ export function FormaStudio() {
         {/* SECTION 2: VISUAL SHOWCASE GALLERY (Mini-Webpages, Zero Text Clutter!) */}
         <section id="catalog" className="py-16 px-5 border-t border-[var(--line)]">
           <div className="mx-auto max-w-[1120px]">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-              <div>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+              <div className="shrink-0">
                 <h2
-                  className="text-[clamp(2rem,3.8vw,2.9rem)] leading-[1.06] tracking-[-0.025em] font-normal"
+                  className="text-[clamp(1.85rem,3.4vw,2.65rem)] leading-[1.06] tracking-[-0.025em] font-normal"
                   style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
                 >
                   {lang === "es"
-                    ? "Explora formatos y webs escrapeadas en vivo"
-                    : "Explore visual formats & live-scraped websites"}
+                    ? "Explora formatos y webs en vivo"
+                    : "Explore formats & live websites"}
                 </h2>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap lg:flex-nowrap items-center gap-2">
                 <div className="inline-flex p-1 rounded-full bg-[var(--panel)] border border-[var(--line)] text-[12px]">
                   <button
                     type="button"
@@ -1065,7 +1066,7 @@ export function FormaStudio() {
                             className="text-[11px] text-[var(--muted)] truncate"
                             style={{ fontFamily: "var(--font-mono), monospace" }}
                           >
-                            {site.primaryFont} · {site.sourceGallery}
+                            {cleanFontName(site.primaryFont)} · {site.sourceGallery}
                           </p>
                         </div>
 

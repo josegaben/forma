@@ -24,8 +24,19 @@ export interface DiscoveredSite {
   honorsReducedMotion: boolean;
 }
 
+export function cleanFontName(raw: string): string {
+  const cleaned = raw
+    .replace(/^__([a-zA-Z0-9]+).*$/, "$1")
+    .replace(/var\(--[^)]*mono[^)]*\)/i, "Monospace")
+    .replace(/var\(--[^)]*\)/i, "Geist Sans")
+    .replace(/\s*Placeholder$/i, "")
+    .trim();
+  return cleaned || "Geist";
+}
+
 export function convertScrapedSiteToFormat(site: DiscoveredSite): WebFormat {
   const cleanHost = site.hostname.replace(/^www\./, "");
+  const displayFontClean = cleanFontName(site.primaryFont);
   const codePrefix = cleanHost
     .replace(/[^a-zA-Z]/g, "")
     .slice(0, 3)
@@ -44,11 +55,11 @@ export function convertScrapedSiteToFormat(site: DiscoveredSite): WebFormat {
 
   return {
     id: site.id,
-    name: `${cleanHost} (Live X-Ray)`,
+    name: cleanHost,
     shortCode: `${codePrefix}-LIVE`,
     category: "Design Engineering",
-    tagline: `Live-scraped genome (${site.craftScore}/100 ${site.grade}) · ${site.primaryFont} · ${feel}.`,
-    taglineEs: `Genoma extraído en vivo (${site.craftScore}/100 ${site.grade}) · ${site.primaryFont} · ${feel}.`,
+    tagline: `Live-scraped genome (${site.craftScore}/100 ${site.grade}) · ${displayFontClean} · ${feel}.`,
+    taglineEs: `Genoma extraído en vivo (${site.craftScore}/100 ${site.grade}) · ${displayFontClean} · ${feel}.`,
     replacesSlop: "Unverified guesswork tokens",
     inspiredBy: [
       {
@@ -84,7 +95,7 @@ export function convertScrapedSiteToFormat(site: DiscoveredSite): WebFormat {
       ],
     },
     typography: {
-      displayFont: `'${site.primaryFont}', 'Geist', sans-serif`,
+      displayFont: `'${displayFontClean}', 'Geist', sans-serif`,
       bodyFont: `'Geist', -apple-system, sans-serif`,
       monoFont: `'DM Mono', 'JetBrains Mono', monospace`,
       googleFontsImport:

@@ -32,7 +32,7 @@ export function generateTailoredPreviewContent(
     idea.match(/(?:called|named|llamad[oa]|marca)\s+([A-Z][a-zA-Z0-9_-]{2,16})/i) ||
     idea.match(/^([A-Z][a-zA-Z0-9]{2,14})\s*[:—-]\s+/);
 
-  if (/\b(clinic|health|salud|medic|dental|doctor|pacient|terapia|wellness)\b/.test(q)) {
+  if (/(clinic|health|salud|medic|dental|doctor|patient|pacient|terapia|wellness)/i.test(q)) {
     const brand = explicitName || calledMatch?.[1] || " ClaraHealth";
     return {
       brandName: brand.trim(),
@@ -56,7 +56,7 @@ export function generateTailoredPreviewContent(
     };
   }
 
-  if (/\b(fintech|pay|pago|bank|banca|crypto|billing|factura|treasury|tesoreria|finance|inversion)\b/.test(q)) {
+  if (/(fintech|pay|pago|bank|banca|crypto|billing|factura|treasury|tesoreria|finance|inversion|payout)/i.test(q)) {
     const brand = explicitName || calledMatch?.[1] || "Meridian";
     return {
       brandName: brand.trim(),
@@ -80,7 +80,7 @@ export function generateTailoredPreviewContent(
     };
   }
 
-  if (/\b(studio|estudio|portfolio|portafolio|agency|agencia|design|diseno|arquitectura|architecture|fashion|moda|luxury|lujo)\b/.test(q)) {
+  if (/(studio|estudio|portfolio|portafolio|agency|agencia|design|diseno|arquitectura|architecture|fashion|moda|luxury|lujo|creative)/i.test(q)) {
     const brand = explicitName || calledMatch?.[1] || "Atelier Norte";
     return {
       brandName: brand.trim(),
@@ -104,7 +104,7 @@ export function generateTailoredPreviewContent(
     };
   }
 
-  if (/\b(kube|k8s|devops|cloud|infra|server|database|sql|rust|cli|sdk|api|security|seguridad|agent|agente)\b/.test(q)) {
+  if (/(kube|k8s|devops|cloud|infra|server|database|sql|rust|cli|sdk|api|security|seguridad|agent|agente|finops)/i.test(q)) {
     const brand = explicitName || calledMatch?.[1] || "Vektor";
     return {
       brandName: brand.trim(),
