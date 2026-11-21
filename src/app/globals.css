@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --panel: #f5f5f2;
+  --panel-2: #ecebe6;
+  --ink: #141413;
+  --muted: #71706b;
+  --muted-2: #9a9891;
+  --line: rgba(20, 20, 19, 0.08);
+  --line-strong: rgba(20, 20, 19, 0.16);
+  --green: #118453;
+  --terracotta: #e06d44;
+  --shadow-sm: 0 1px 2px rgba(20, 20, 18, 0.03);
+  --shadow-md: 0 4px 20px rgba(20, 20, 18, 0.05), 0 1px 3px rgba(20, 20, 18, 0.03);
+  --shadow-lg: 0 12px 44px rgba(20, 20, 18, 0.09), 0 2px 6px rgba(20, 20, 18, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tabular-nums,
+code,
+pre,
+time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Whisper-subtle editorial dot canvas (treg.to homage) */
+.editorial-dot-canvas {
+  background-image: radial-gradient(rgba(20, 20, 19, 0.065) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Modern Web Guidance: Card container queries */
+article.visual-card {
+  container-type: inline-size;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+article.visual-card:hover {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern Web Guidance: Choice chips without layout-shifting border widths */
+label.choice-chip {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+label.choice-chip:has(> input:checked) {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fbfbfa;
+}
+
+label.choice-chip:has(> input:focus-visible) {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Modern Web Guidance: Modal Dialog scroll containment & light-dismiss */
+dialog.dna-modal {
+  margin: auto;
+  max-width: min(860px, calc(100vw - 24px));
+  width: 100%;
+  max-height: calc(100dvh - 36px);
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-lg);
+  padding: 0;
+  overflow: auto;
+}
+
+dialog.dna-modal:modal {
+  overscroll-behavior: contain;
+}
+
+dialog.dna-modal::backdrop {
+  background-color: rgba(16, 16, 15, 0.45);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+/* Smooth directory marquee */
+@keyframes directory-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: directory-marquee 52s linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
