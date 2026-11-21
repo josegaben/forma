@@ -161,7 +161,7 @@ export const CURATED_COLOR_PALETTES: CuratedColorPalette[] = [
     mode: "dark",
     harmony: "OLED High-Contrast",
     inspiredBy: { name: "DarkModeDesign × Resiz.es", url: "https://www.darkmodedesign.com" },
-    psychology: "Zero-glare stepped dark luminance (`#101010` -> `#181818`) for cloud, K8s & security.",
+    psychology: "Zero-glare stepped dark luminance (#101010 → #181818) for cloud, K8s & security.",
     psychologyEs: "Luminancia oscura escalonada sin brillos neón para infraestructura cloud, DevOps y seguridad.",
     keywords: ["kube", "k8s", "devops", "cloud", "infra", "security", "seguridad", "dark", "oscuro", "server", "terminal"],
     tokens: {
@@ -249,8 +249,8 @@ export const CURATED_COLOR_PALETTES: CuratedColorPalette[] = [
     mode: "light",
     harmony: "Tinted Neutral",
     inspiredBy: { name: "Huemint × Teenage Eng.", url: "https://huemint.com" },
-    psychology: "Tactile machined aluminum grey with a single mechanical `#ff4d00` actuator key.",
-    psychologyEs: "Chasis de aluminio anodizado con un único acento mecánico `#ff4d00` de precisión industrial.",
+    psychology: "Tactile machined aluminum grey with a single mechanical #ff4d00 actuator key.",
+    psychologyEs: "Chasis de aluminio anodizado con un único acento mecánico #ff4d00 de precisión industrial.",
     keywords: ["hardware", "robotics", "robotica", "audio", "music", "iot", "industrial", "cli", "rust", "edge", "local"],
     tokens: {
       bg: "#e8e6e1",

@@ -983,7 +983,7 @@ export function FormaStudio() {
               </div>
 
               <div className="flex flex-wrap lg:flex-nowrap items-center gap-2">
-                <div className="inline-flex p-1 rounded-full bg-[var(--panel)] border border-[var(--line)] text-[12px]">
+                <div className="inline-flex p-1 rounded-full bg-[var(--panel)] border border-[var(--line)] text-[12px] whitespace-nowrap shrink-0">
                   <button
                     type="button"
                     onClick={() => setGalleryTab("formats")}
