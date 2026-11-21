@@ -1,0 +1,60 @@
+{
+  "measuredAt": "2026-11-21T23:56:36.393Z",
+  "engine": "Chromium PerformanceObserver + Web Animations API + forma-xray",
+  "withoutForma": {
+    "path": "/demo/without-forma",
+    "craftScore": 68,
+    "grade": "C",
+    "slopWarnings": [
+      "AI Purple-Indigo Gradient",
+      "Numbered Fake Eyebrow (01 //)",
+      "Excessive Bounce/Spin Utility Classes"
+    ],
+    "cls": 0,
+    "lcpMs": 232,
+    "fcpMs": 232,
+    "domNodes": 121,
+    "activeAnimations": 1,
+    "animatedProperties": [
+      "transform",
+      "opacity"
+    ],
+    "nonCompositedCount": 0,
+    "gpuExclusive": true
+  },
+  "withForma": {
+    "path": "/demo/with-forma",
+    "craftScore": 96,
+    "grade": "A+",
+    "slopWarnings": [
+      "Excessive Bounce/Spin Utility Classes"
+    ],
+    "cls": 0,
+    "lcpMs": 76,
+    "fcpMs": 76,
+    "domNodes": 116,
+    "activeAnimations": 0,
+    "animatedProperties": [],
+    "nonCompositedCount": 0,
+    "gpuExclusive": true
+  },
+  "mainPlatform": {
+    "path": "/",
+    "craftScore": 84,
+    "grade": "A",
+    "slopWarnings": [
+      "Generic AI Marketing Buzzwords",
+      "Excessive Bounce/Spin Utility Classes"
+    ],
+    "cls": 0.0003,
+    "lcpMs": 684,
+    "fcpMs": 684,
+    "domNodes": 1462,
+    "activeAnimations": 2,
+    "animatedProperties": [
+      "transform"
+    ],
+    "nonCompositedCount": 0,
+    "gpuExclusive": true
+  }
+}

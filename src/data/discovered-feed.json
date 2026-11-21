@@ -1,6 +1,6 @@
 {
-  "lastCrawlAt": "2026-11-21T22:39:21.554Z",
-  "totalIndexed": 60,
+  "lastCrawlAt": "2026-11-21T23:56:50.577Z",
+  "totalIndexed": 36,
   "galleriesMonitored": [
     "deadsimplesites.com",
     "minimal.gallery",
@@ -9,11 +9,7 @@
     "a1.gallery",
     "darkmodedesign.com",
     "saaslandingpage.com",
-    "lapa.ninja",
-    "onepagelove.com",
-    "brutalistwebsites.com",
-    "bentogrids.com",
-    "footer.design"
+    "lapa.ninja"
   ],
   "sites": [
     {
@@ -143,7 +139,7 @@
       "title": "Agentic Infrastructure - Vercel",
       "description": "The autonomous stack for every app and agent.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:09.306Z",
+      "scrapedAt": "2026-11-21T23:56:47.242Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -202,7 +198,7 @@
       "title": "Mintlify - The documentation platform for agents",
       "description": "Self-updating documentation for startups, enterprises, and agents.",
       "sourceGallery": "curated.design",
-      "scrapedAt": "2026-11-21T22:39:09.482Z",
+      "scrapedAt": "2026-11-21T23:56:46.750Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -260,10 +256,10 @@
       "id": "live-stripe-com",
       "url": "https://stripe.com/",
       "hostname": "stripe.com",
-      "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
-      "description": "Stripe is a financial services platform that helps all types of businesses accept payments, build flexible billing models, and manage money movement.",
+      "title": "Stripe | Infraestructura financiera para tu negocio",
+      "description": "Stripe es una plataforma de servicios financieros que ayuda a todo tipo de empresas a aceptar pagos, crear modelos de facturación flexibles y gestionar el movim",
       "sourceGallery": "awwwards.com",
-      "scrapedAt": "2026-11-21T22:39:09.206Z",
+      "scrapedAt": "2026-11-21T23:56:47.449Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -323,7 +319,7 @@
       "title": "Clerk | Authentication and User Management",
       "description": "The easiest way to add authentication and user management to your application. Purpose-built for React, Next.js, Remix, and “The Modern Web”.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-21T22:39:10.003Z",
+      "scrapedAt": "2026-11-21T23:56:48.205Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -383,7 +379,7 @@
       "title": "Vitrine: your references, ready for you and your AI agent",
       "description": "A Mac canvas for your design references. You and your agent pick from them, so what you build looks like your taste, not the default vibe-coded look.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:11.227Z",
+      "scrapedAt": "2026-11-21T23:56:48.574Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -788,7 +784,7 @@
       "title": "Platform, services, and Resizes AI | Resizes",
       "description": "Resizes is a Gijón platform engineering company. It builds Agentic and Platform, delivers Kubernetes, GitOps, and FinOps services, and publishes Resizes AI.",
       "sourceGallery": "resiz.es",
-      "scrapedAt": "2026-11-21T22:39:07.204Z",
+      "scrapedAt": "2026-11-21T23:56:45.741Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -828,13 +824,73 @@
       "honorsReducedMotion": true
     },
     {
+      "id": "live-dub-co",
+      "url": "https://dub.co/",
+      "hostname": "dub.co",
+      "title": "Dub - The Modern Link Attribution Platform",
+      "description": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
+      "sourceGallery": "landings.dev",
+      "scrapedAt": "2026-11-21T23:56:46.596Z",
+      "craftScore": 98,
+      "grade": "A+",
+      "strengths": [
+        "Custom motion curves (custom cubic-bezier)",
+        "Honors @media (prefers-reduced-motion)",
+        "Uses tabular-nums for numeric alignment",
+        "Modern CSS intrinsic layout (@container / subgrid)",
+        "Tokenized CSS architecture (60+ custom properties)"
+      ],
+      "mode": "light",
+      "bg": "#fff",
+      "ink": "#000",
+      "accent": "#171717",
+      "palette": [
+        "#000",
+        "#fff",
+        "#171717",
+        "#e5e5e5",
+        "#404040"
+      ],
+      "primaryFont": "GeistMono",
+      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
+      "bezierCurves": [
+        {
+          "curve": "cubic-bezier(.4,0,.2,1)",
+          "count": 51,
+          "feel": "custom cubic-bezier"
+        },
+        {
+          "curve": "cubic-bezier(.16,1,.3,1)",
+          "count": 9,
+          "feel": "snappy out-expo (Linear/Vercel grade)"
+        },
+        {
+          "curve": "cubic-bezier(0,0,.2,1)",
+          "count": 4,
+          "feel": "custom cubic-bezier"
+        }
+      ],
+      "keyframes": [
+        "fade-in",
+        "infinite-scroll",
+        "infinite-scroll-y",
+        "ping",
+        "slide-down-fade",
+        "spin"
+      ],
+      "motionEngines": [
+        "Native CSS Scroll-Driven Animations"
+      ],
+      "honorsReducedMotion": true
+    },
+    {
       "id": "live-daylightcomputer-com",
       "url": "https://daylightcomputer.com/",
       "hostname": "daylightcomputer.com",
       "title": "Daylight | A More Caring Computer",
       "description": "Daylight Computer (DC1) is a new kind of calm computer, designed for deep work and health.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T22:39:09.315Z",
+      "scrapedAt": "2026-11-21T23:56:47.647Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -894,7 +950,7 @@
       "title": "kate fm — creative developer",
       "description": "Interfaces you can almost touch. Kate builds precise, tactile interfaces for independent brands, start-ups and online stores.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:20.331Z",
+      "scrapedAt": "2026-11-21T23:56:50.575Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -993,7 +1049,7 @@
       "title": "Zed — Your last next editor",
       "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T22:39:08.795Z",
+      "scrapedAt": "2026-11-21T23:56:46.423Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1012,8 +1068,8 @@
         "#fff",
         "#dadde2",
         "#000",
-        "#dfdfe0",
-        "#101828"
+        "#101828",
+        "#e5e7eb"
       ],
       "primaryFont": "writer",
       "primaryEasing": "cubic-bezier(.16,1,.3,1)",
@@ -1052,7 +1108,7 @@
       "title": "Supabase | The Postgres Development Platform",
       "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:09.276Z",
+      "scrapedAt": "2026-11-21T23:56:47.216Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1172,7 +1228,7 @@
       "title": "Pablo González · Creative Director and Designer",
       "description": "Pablo González is a creative director and designer building brand identities, visual systems and digital products for technology companies. Based in Tenerife, w",
       "sourceGallery": "pdepablo.com",
-      "scrapedAt": "2026-11-21T22:39:07.050Z",
+      "scrapedAt": "2026-11-21T23:56:45.665Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1222,7 +1278,7 @@
       "title": "Midday — The business stack for modern founders",
       "description": "Invoicing, automatic reconciliation, time tracking, documents, and financial exports in one place. The business stack that replaces the tools you&#x27;ve outgro",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T22:39:08.986Z",
+      "scrapedAt": "2026-11-21T23:56:46.383Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1279,7 +1335,7 @@
       "title": "Emil Kowalski",
       "description": "Design engineer working at Linear.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:09.968Z",
+      "scrapedAt": "2026-11-21T23:56:48.435Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1336,7 +1392,7 @@
       "title": "Bryn Taylor · Freelance Product &amp; Website Designer",
       "description": "Freelance product &amp; website designer with 12+ years experience. Worked with Monzo, Pleo, Mastercard &amp; Trustpilot. Based in Copenhagen, available worldwi",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:19.336Z",
+      "scrapedAt": "2026-11-21T23:56:49.999Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1393,7 +1449,7 @@
       "title": "Écouter - Understand your customers",
       "description": "Human and AI-moderated interviews that reveal what people think, why they think it, and what to do next. Results in hours, not weeks.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:19.391Z",
+      "scrapedAt": "2026-11-21T23:56:49.985Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1445,7 +1501,7 @@
       "title": "Cory Etzkorn",
       "description": "Cory Etzkorn is a designer and software engineer in New York City. He was one of Notion’s first 20 employees and now runs small talk labs and Mythical Creature.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T21:26:52.534Z",
+      "scrapedAt": "2026-11-21T23:56:49.022Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1587,73 +1643,13 @@
       "honorsReducedMotion": true
     },
     {
-      "id": "live-dub-co",
-      "url": "https://dub.co/",
-      "hostname": "dub.co",
-      "title": "Dub - The Modern Link Attribution Platform",
-      "description": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
-      "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T22:39:07.044Z",
-      "craftScore": 92,
-      "grade": "A+",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#171717",
-      "palette": [
-        "#000",
-        "#fff",
-        "#171717",
-        "#e5e5e5",
-        "#404040"
-      ],
-      "primaryFont": "GeistMono",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 51,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.16,1,.3,1)",
-          "count": 9,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 4,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "fade-in",
-        "infinite-scroll",
-        "infinite-scroll-y",
-        "ping",
-        "slide-down-fade",
-        "spin"
-      ],
-      "motionEngines": [
-        "Native CSS Scroll-Driven Animations"
-      ],
-      "honorsReducedMotion": true
-    },
-    {
       "id": "live-resend-com",
       "url": "https://resend.com/",
       "hostname": "resend.com",
       "title": "Resend · Email for developers",
       "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:07.416Z",
+      "scrapedAt": "2026-11-21T23:56:46.963Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1715,7 +1711,7 @@
       "title": "Mathias Adolfsson - Independent Creative Engineer",
       "description": "I",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:12.057Z",
+      "scrapedAt": "2026-11-21T23:56:48.809Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1995,7 +1991,7 @@
       "title": "treg.to: OpenRouter for agent tools and data, pay per call",
       "description": "One MCP server, one key: 4,200+ tools across 136 providers for SEO, enrichment, ads, social and scraping data at the provider",
       "sourceGallery": "treg.to",
-      "scrapedAt": "2026-11-21T22:39:07.055Z",
+      "scrapedAt": "2026-11-21T23:56:45.908Z",
       "craftScore": 88,
       "grade": "A",
       "strengths": [
@@ -2046,1031 +2042,6 @@
         "Three.js / WebGL Shader"
       ],
       "honorsReducedMotion": true
-    },
-    {
-      "id": "live-amie-so",
-      "url": "https://amie.so/",
-      "hostname": "amie.so",
-      "title": "Amie - AI Note Taker",
-      "description": "Turn meeting notes into automated workflows. Handle meetings, summaries, todos and emails (soon) with your AI personal assistant.",
-      "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T22:39:10.532Z",
-      "craftScore": 87,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Uses tabular-nums for numeric alignment",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#2e93ff",
-      "accent": "#ececf1",
-      "palette": [
-        "#fff",
-        "#2e93ff",
-        "#ececf1",
-        "#ff6154",
-        "#0c131a"
-      ],
-      "primaryFont": "Inter",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 17,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.2,.7,.64,1.1)",
-          "count": 6,
-          "feel": "overshoot spring"
-        },
-        {
-          "curve": "cubic-bezier(.87,0,.13,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "backgroundAnimate",
-        "pulse",
-        "ring",
-        "scaleBounce",
-        "scaleUp",
-        "scrollX"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-raycast-com",
-      "url": "https://raycast.com/",
-      "hostname": "raycast.com",
-      "title": "Raycast - Your shortcut to everything",
-      "description": "Raycast is your shortcut to everything. Launch apps, search files, manage windows, ask AI and run thousands of free extensions on Mac and Windows.",
-      "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-21T22:39:07.479Z",
-      "craftScore": 86,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#000",
-      "ink": "#fff",
-      "accent": "#ff6363",
-      "palette": [
-        "#fff",
-        "#000",
-        "#ff6363",
-        "#111214",
-        "#0c0d0f"
-      ],
-      "primaryFont": "Inter",
-      "primaryEasing": "cubic-bezier(.23,1,.32,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.23,1,.32,1)",
-          "count": 12,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(.23, 1, .32, 1)",
-          "count": 9,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(.4,0,.22,.96)",
-          "count": 7,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "IS8qgq_nightRider",
-        "j3Kqfa_iconSuccess",
-        "FPj0oG_fadeInUp",
-        "_80EXsG_loadingSweep",
-        "_80EXsG_blink",
-        "NFhuXW_fadeIn"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-limeduo-com",
-      "url": "https://limeduo.com/",
-      "hostname": "limeduo.com",
-      "title": "Calgary web design studio for small business | Lime Duo",
-      "description": "Lime Duo is a Calgary web design studio: custom websites, online stores, branding, SEO and AI chatbots for small businesses across Canada. From $1,499 CAD.",
-      "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:11.295Z",
-      "craftScore": 85,
-      "grade": "A",
-      "strengths": [
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#111",
-      "ink": "#fff",
-      "accent": "#fff",
-      "palette": [
-        "#111",
-        "#fff"
-      ],
-      "primaryFont": "var(--type-control-family)",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "Button-module__ByLyja__spin"
-      ],
-      "motionEngines": [
-        "Lenis Smooth Scroll"
-      ],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-cal-com",
-      "url": "https://cal.com/",
-      "hostname": "cal.com",
-      "title": "Cal.com | Scheduling Software for Online Bookings",
-      "description": "The highest-rated scheduling system that helps you grow your business and better find time.",
-      "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T22:39:09.234Z",
-      "craftScore": 84,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)",
-        "Perceptual OKLCH color space"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#242424",
-      "palette": [
-        "#fff",
-        "#000",
-        "#242424",
-        "#fafafa",
-        "#171717"
-      ],
-      "primaryFont": "calSans",
-      "primaryEasing": "cubic-bezier(.22,1,.36,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.22,1,.36,1)",
-          "count": 15,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(.2,.8,.2,1)",
-          "count": 13,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(.22, 1, .36, 1)",
-          "count": 6,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        }
-      ],
-      "keyframes": [
-        "appear-up",
-        "feature-fly-in",
-        "marquee-x",
-        "notif-cycle",
-        "notif-chip",
-        "value-pop"
-      ],
-      "motionEngines": [
-        "Native CSS View Transitions"
-      ],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-attio-com",
-      "url": "https://attio.com/",
-      "hostname": "attio.com",
-      "title": "Attio: The CRM for agentic revenue",
-      "description": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.",
-      "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T22:39:09.776Z",
-      "craftScore": 84,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)",
-        "Perceptual OKLCH color space"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#266df0",
-      "palette": [
-        "#000",
-        "#fff",
-        "#266df0",
-        "#e4e7ec",
-        "#eeeff1"
-      ],
-      "primaryFont": "JetBrains Mono",
-      "primaryEasing": "cubic-bezier(.65, 0, .35, 1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.65, 0, .35, 1)",
-          "count": 3,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.22,1,.36,1)",
-          "count": 3,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(.23,1,.32,1)",
-          "count": 3,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        }
-      ],
-      "keyframes": [
-        "pipeline-radar-ring-inner",
-        "pipeline-radar-ring-outer",
-        "pipeline-radar-bob",
-        "scroll-edge-reveal",
-        "spin",
-        "ping"
-      ],
-      "motionEngines": [
-        "Native CSS Scroll-Driven Animations"
-      ],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-fey-com",
-      "url": "https://fey.com/",
-      "hostname": "fey.com",
-      "title": "Fey joined Wealthsimple",
-      "description": "Fey, the financial research platform built for the modern investor, has joined Wealthsimple — now helping shape the future of investing and banking.",
-      "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T22:39:09.607Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Honors @media (prefers-reduced-motion)"
-      ],
-      "mode": "light",
-      "bg": "#fafafa",
-      "ink": "#1c1c1c",
-      "accent": "#595959",
-      "palette": [
-        "#fafafa",
-        "#595959",
-        "#1c1c1c"
-      ],
-      "primaryFont": "Wealthsimple Sans Display",
-      "primaryEasing": "cubic-bezier(0.16, 1, 0.3, 1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(0.16, 1, 0.3, 1)",
-          "count": 1,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        }
-      ],
-      "keyframes": [
-        "wordIn",
-        "sigIn",
-        "bgfade",
-        "revealFailsafe"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-rauno-me",
-      "url": "https://rauno.me/",
-      "hostname": "rauno.me",
-      "title": "Rauno Freiberg",
-      "description": "Extracted design & motion genome from rauno.me",
-      "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T22:39:09.789Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fafafa",
-      "ink": "#000",
-      "accent": "#ff484c",
-      "palette": [
-        "#000",
-        "#fafafa",
-        "#ff484c",
-        "#fff",
-        "#ffffff"
-      ],
-      "primaryFont": "X",
-      "primaryEasing": "cubic-bezier(.2, .8, .2, 1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.2, .8, .2, 1)",
-          "count": 1,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        }
-      ],
-      "keyframes": [
-        "fade",
-        "animate",
-        "index_fadeFrames__RAnv2"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-campsite-com",
-      "url": "https://campsite.com/",
-      "hostname": "campsite.com",
-      "title": "Campsite — Work communication for distributed teams",
-      "description": "Campsite is designed for distributed teams to cut through the noise of daily work — move faster with more transparent, organized, and thoughtful conversations.",
-      "sourceGallery": "refero.design",
-      "scrapedAt": "2026-11-21T22:39:10.444Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#171717",
-      "ink": "#fff",
-      "accent": "#737373",
-      "palette": [
-        "#fff",
-        "#171717",
-        "#737373",
-        "#a3a3a3",
-        "#313131"
-      ],
-      "primaryFont": "__Inter_d65c78",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 10,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 4,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4,0,1,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "glitch-animation-1",
-        "glitch-animation-2",
-        "fade",
-        "pulse",
-        "scale-fade",
-        "enter"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-workos-com",
-      "url": "https://workos.com/",
-      "hostname": "workos.com",
-      "title": "WorkOS — Your app, Enterprise Ready.",
-      "description": "Extracted design & motion genome from workos.com",
-      "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T22:39:10.980Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Tokenized CSS architecture (27+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#23f0c3",
-      "accent": "#2b335a",
-      "palette": [
-        "#fff",
-        "#23f0c3",
-        "#2b335a",
-        "#333",
-        "#29363d"
-      ],
-      "primaryFont": "Untitled Fallback",
-      "primaryEasing": "cubic-bezier(.31,-0.01,.55,.99)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.31,-0.01,.55,.99)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.54,1.5,.38,1.11)",
-          "count": 1,
-          "feel": "overshoot spring"
-        }
-      ],
-      "keyframes": [
-        "circuit-bottom",
-        "circuit-top",
-        "marquee-horizontal",
-        "stack",
-        "swiper-preloader-spin",
-        "spin"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-saasinterface-com",
-      "url": "https://saasinterface.com/",
-      "hostname": "saasinterface.com",
-      "title": "The best SaaS app UI and UX examples for design inspiration - Saas Inter",
-      "description": "The largest gallery of SaaS app UI and UX examples for design inspiration.",
-      "sourceGallery": "saaslandingpage.com",
-      "scrapedAt": "2026-11-21T22:39:11.919Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#2563eb",
-      "accent": "#6b7280",
-      "palette": [
-        "#fff",
-        "#6b7280",
-        "#2563eb",
-        "#000",
-        "#38bdf8"
-      ],
-      "primaryFont": "Inter",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 5,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 1,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "slideOutCookie",
-        "slide-y",
-        "spin",
-        "slide",
-        "bg-move"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-bentogrids-com",
-      "url": "https://bentogrids.com/",
-      "hostname": "bentogrids.com",
-      "title": "Bento Grids",
-      "description": "BentoGrids is a curated collection of bento designs for your inspiration.",
-      "sourceGallery": "bentogrids.com",
-      "scrapedAt": "2026-11-21T22:39:19.380Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#111827",
-      "accent": "#9ca3af",
-      "palette": [
-        "#fff",
-        "#111827",
-        "#9ca3af",
-        "#0ea5e9",
-        "#e5e7eb"
-      ],
-      "primaryFont": "Inter",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 7,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4,0,1,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "pulse",
-        "enter",
-        "exit",
-        "skeleton-animation"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-plausible-io",
-      "url": "https://plausible.io/",
-      "hostname": "plausible.io",
-      "title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternat",
-      "description": "Plausible is a lightweight and open-source Google Analytics alternative. Your website data is 100% yours and the privacy of your visitors is respected.",
-      "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-21T22:39:19.326Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#1a202c",
-      "ink": "#e2e8f0",
-      "accent": "#6b7280",
-      "palette": [
-        "#1a202c",
-        "#000",
-        "#6b7280",
-        "#e2e8f0",
-        "#204a87"
-      ],
-      "primaryFont": "inherit",
-      "primaryEasing": "cubic-bezier(0,0,0.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(0,0,0.2,1)",
-          "count": 5,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0.8,0,1,1)",
-          "count": 4,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0.4,0,0.2,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "spin",
-        "ping",
-        "pulse",
-        "bounce"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-www-studioplato-co",
-      "url": "https://www.studioplato.co/",
-      "hostname": "www.studioplato.co",
-      "title": "Studio Plato - Contemporary Interior Design",
-      "description": "Extracted design & motion genome from www.studioplato.co",
-      "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-21T22:39:19.395Z",
-      "craftScore": 82,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Tokenized CSS architecture (17+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#3898ec",
-      "palette": [
-        "#fff",
-        "#000",
-        "#ddd",
-        "#ccc",
-        "#222"
-      ],
-      "primaryFont": "webflow-icons",
-      "primaryEasing": "cubic-bezier(.075, .82, .165, 1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.075, .82, .165, 1)",
-          "count": 2,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        },
-        {
-          "curve": "cubic-bezier(0.645, 0.045, 0.355, 1)",
-          "count": 1,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.165, .84, .44, 1)",
-          "count": 1,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "slInner",
-        "slInnerHorizontal",
-        "scdAnimation",
-        "swiper-preloader-spin",
-        "spin"
-      ],
-      "motionEngines": [
-        "GSAP / ScrollTrigger",
-        "Lenis Smooth Scroll",
-        "Three.js / WebGL Shader",
-        "Lottie Vector Motion"
-      ],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-turso-tech",
-      "url": "https://turso.tech/",
-      "hostname": "turso.tech",
-      "title": "Turso - Millions of Databases. One Architecture.",
-      "description": "Turso is the SQLite-based database architecture for millions of databases. Spin up a database for every user, agent, and tenant, with embedded replication, per-",
-      "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T22:39:10.305Z",
-      "craftScore": 81,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Uses tabular-nums for numeric alignment",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#ff8f40",
-      "ink": "#283945",
-      "accent": "#4ff8d2",
-      "palette": [
-        "#4ff8d2",
-        "#283945",
-        "#111827",
-        "#ff8f40",
-        "#e5e7eb"
-      ],
-      "primaryFont": "__Inter_d8ebd1",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 16,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4,.1,.25,1)",
-          "count": 1,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "ping",
-        "spin",
-        "bounceLinear",
-        "floating"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-nelsonheinemann-com",
-      "url": "http://nelsonheinemann.com/",
-      "hostname": "nelsonheinemann.com",
-      "title": "5 Daftar Game Slot Paling Gacor &amp; di Rekomendasikan - nelsonheineman",
-      "description": "Tagline",
-      "sourceGallery": "brutalistwebsites.com",
-      "scrapedAt": "2026-11-21T22:39:21.542Z",
-      "craftScore": 80,
-      "grade": "A",
-      "strengths": [
-        "Honors @media (prefers-reduced-motion)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#2c3338",
-      "accent": "#f0f0f1",
-      "palette": [
-        "#fff",
-        "#f0f0f1",
-        "#72aee6",
-        "#c3c4c7",
-        "#2c3338"
-      ],
-      "primaryFont": "dashicons",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "spin",
-        "blink"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-linear-app",
-      "url": "https://linear.app/",
-      "hostname": "linear.app",
-      "title": "Linear – The system for product development",
-      "description": "Purpose-built for planning and building products with AI agents.",
-      "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:07.022Z",
-      "craftScore": 79,
-      "grade": "B",
-      "strengths": [
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment"
-      ],
-      "mode": "light",
-      "bg": "#f7f7f5",
-      "ink": "#000",
-      "accent": "#000",
-      "palette": [
-        "#000"
-      ],
-      "primaryFont": "var(--font-monospace)",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "grid-dot-0-0-upDown",
-        "grid-dot-0-1-upDown",
-        "grid-dot-0-2-upDown",
-        "grid-dot-0-3-upDown",
-        "grid-dot-0-4-upDown",
-        "grid-dot-1-0-upDown"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-teenage-engineering",
-      "url": "https://teenage.engineering/",
-      "hostname": "teenage.engineering",
-      "title": "teenage engineering",
-      "description": "teenage engineering creates high quality, well designed, electronic products for all people who love sound and music.",
-      "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-21T22:39:09.183Z",
-      "craftScore": 74,
-      "grade": "B",
-      "strengths": [
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000000",
-      "accent": "#e5e5e5",
-      "palette": [
-        "#fff",
-        "#e5e5e5",
-        "#000000",
-        "#f5f5f5",
-        "#f1f2f2"
-      ],
-      "primaryFont": "te-20",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "bulge"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-www-footer-design",
-      "url": "https://www.footer.design/",
-      "hostname": "www.footer.design",
-      "title": "Footer — The only footer gallery on earth.",
-      "description": "Extracted design & motion genome from www.footer.design",
-      "sourceGallery": "httpster.net",
-      "scrapedAt": "2026-11-21T22:39:11.811Z",
-      "craftScore": 74,
-      "grade": "B",
-      "strengths": [
-        "Tokenized CSS architecture (10+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#222",
-      "ink": "#fff",
-      "accent": "#fafafa",
-      "palette": [
-        "#fff",
-        "#ddd",
-        "#222",
-        "#333",
-        "#ccc"
-      ],
-      "primaryFont": "webflow-icons",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "spin"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-cron-com",
-      "url": "https://cron.com/",
-      "hostname": "cron.com",
-      "title": "Cron Calendar",
-      "description": "Extracted design & motion genome from cron.com",
-      "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T22:39:10.740Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#161412",
-      "accent": "#0f0d0a",
-      "palette": [
-        "#fff",
-        "#161412",
-        "#0f0d0a",
-        "#fa0",
-        "#ccc"
-      ],
-      "primaryFont": "Helvetica Neue",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-read-cv",
-      "url": "https://read.cv/",
-      "hostname": "read.cv",
-      "title": "Deployment Paused",
-      "description": "Extracted design & motion genome from read.cv",
-      "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-21T22:39:10.809Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "dark",
-      "bg": "#000",
-      "ink": "#fff",
-      "accent": "#79ffe1",
-      "palette": [
-        "#000",
-        "#fff",
-        "#79ffe1",
-        "#666",
-        "#a1a1a1"
-      ],
-      "primaryFont": "sf pro text",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-gmpg-org",
-      "url": "https://gmpg.org/",
-      "hostname": "gmpg.org",
-      "title": "Welcome to GMPG",
-      "description": "Extracted design & motion genome from gmpg.org",
-      "sourceGallery": "saaslandingpage.com",
-      "scrapedAt": "2026-11-21T22:39:12.241Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "dark",
-      "bg": "#229",
-      "ink": "#f5f5f4",
-      "accent": "#929",
-      "palette": [
-        "#229",
-        "#929"
-      ],
-      "primaryFont": "Arial",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-www-makingsoftware-com",
-      "url": "https://www.makingsoftware.com/",
-      "hostname": "www.makingsoftware.com",
-      "title": "Vercel Security Checkpoint",
-      "description": "Extracted design & motion genome from www.makingsoftware.com",
-      "sourceGallery": "httpster.net",
-      "scrapedAt": "2026-11-21T22:39:11.779Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "dark",
-      "bg": "#0070f3",
-      "ink": "#fff",
-      "accent": "#a1a1a1",
-      "palette": [
-        "#666",
-        "#fff",
-        "#0070f3",
-        "#a1a1a1",
-        "#0a0a0a"
-      ],
-      "primaryFont": "ui-monospace",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [
-        "spinner-circle-animate"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-brutalistwebsites-com",
-      "url": "http://brutalistwebsites.com/",
-      "hostname": "brutalistwebsites.com",
-      "title": "Brutalist Websites",
-      "description": "Extracted design & motion genome from brutalistwebsites.com",
-      "sourceGallery": "brutalistwebsites.com",
-      "scrapedAt": "2026-11-21T22:39:20.989Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "light",
-      "bg": "#eee",
-      "ink": "#141413",
-      "accent": "#141413",
-      "palette": [
-        "#eee"
-      ],
-      "primaryFont": "monospace",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
-      "id": "live-www-diss-list-com",
-      "url": "http://www.diss-list.com/",
-      "hostname": "www.diss-list.com",
-      "title": "www.diss-list.com",
-      "description": "Extracted design & motion genome from www.diss-list.com",
-      "sourceGallery": "brutalistwebsites.com",
-      "scrapedAt": "2026-11-21T22:39:21.553Z",
-      "craftScore": 68,
-      "grade": "C",
-      "strengths": [],
-      "mode": "light",
-      "bg": "#f7f7f5",
-      "ink": "#141413",
-      "accent": "#141413",
-      "palette": [],
-      "primaryFont": "Geist",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [],
-      "keyframes": [],
-      "motionEngines": [],
-      "honorsReducedMotion": false
     }
   ]
 }

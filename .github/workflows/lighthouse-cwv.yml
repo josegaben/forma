@@ -1,0 +1,30 @@
+name: Core Web Vitals & GPU Compositor CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lighthouse-and-gpu-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Run Lighthouse CI (Assert CLS = 0 & Performance >= 95)
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://localhost:3000/
+            http://localhost:3000/demo/with-forma
+          startServerCommand: "npm run start"
+          budgetPath: ./.lighthouserc-budget.json
+          uploadArtifacts: true

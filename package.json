@@ -10,7 +10,9 @@
     "lint": "tsc --noEmit",
     "crawl": "node scripts/continuous-crawler.mjs",
     "crawl:daemon": "node scripts/continuous-crawler.mjs --watch --interval=1800",
-    "xray": "node forma-xray/bin/cli.mjs"
+    "xray": "node forma-xray/bin/cli.mjs",
+    "cwv:audit": "node scripts/audit-cwv.mjs",
+    "x:kit": "node scripts/generate-x-kit.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.511.0",
