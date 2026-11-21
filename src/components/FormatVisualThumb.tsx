@@ -1,4 +1,8 @@
 import React from "react";
+import {
+  getContrastRatio,
+  type CuratedColorPalette,
+} from "@/data/color-palettes";
 import type { WebFormat } from "@/data/formats";
 
 export function FormatVisualThumb({
@@ -210,5 +214,76 @@ export function MotionCurveMini({ easing }: { easing: string }) {
       <circle cx="8" cy="38" r="2.5" fill="currentColor" fillOpacity="0.4" />
       <circle cx="72" cy="8" r="2.5" fill="#E06D44" />
     </svg>
+  );
+}
+
+export function PaletteVisualThumb({
+  palette,
+  lang,
+}: {
+  palette: CuratedColorPalette;
+  lang: "en" | "es";
+}) {
+  const t = palette.tokens;
+  const ratio = getContrastRatio(t.bg, t.ink);
+
+  return (
+    <div
+      className="relative w-full h-[168px] overflow-hidden rounded-[11px] border p-4 flex flex-col justify-between select-none transition-transform duration-300 group-hover:scale-[1.01]"
+      style={{
+        backgroundColor: t.bg,
+        color: t.ink,
+        borderColor: t.line,
+      }}
+    >
+      {/* Top Harmony & WCAG AAA Badge */}
+      <div className="flex items-center justify-between text-[10px]">
+        <span
+          className="px-2 py-0.5 rounded-full"
+          style={{
+            backgroundColor: t.badgeBg,
+            color: t.ink,
+            fontFamily: "var(--font-mono), monospace",
+          }}
+        >
+          {palette.harmony}
+        </span>
+        <span
+          className="tabular-nums opacity-75"
+          style={{ fontFamily: "var(--font-mono), monospace" }}
+        >
+          {ratio}:1 {ratio >= 7 ? "AAA" : "AA"}
+        </span>
+      </div>
+
+      {/* Live Contextual Mini UI Sample (Happy Hues / Realtime Colors style) */}
+      <div
+        className="p-2.5 rounded-[9px] border flex items-center justify-between gap-2"
+        style={{ backgroundColor: t.surface, borderColor: t.line }}
+      >
+        <div className="min-w-0">
+          <div className="text-[12.5px] font-semibold leading-tight truncate">
+            {lang === "es" ? palette.nameEs : palette.name}
+          </div>
+          <div className="text-[10.5px] truncate" style={{ color: t.muted }}>
+            60% {t.bg} · 10% {t.accent}
+          </div>
+        </div>
+        <span
+          className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-medium"
+          style={{ backgroundColor: t.accent, color: t.accentInk }}
+        >
+          CTA
+        </span>
+      </div>
+
+      {/* Proportional 60-30-10 Color Bar */}
+      <div className="h-3.5 w-full rounded-full overflow-hidden flex border border-black/10">
+        <span className="h-full w-[52%]" style={{ backgroundColor: t.bg }} title="60% Canvas" />
+        <span className="h-full w-[18%]" style={{ backgroundColor: t.panel }} title="Panel" />
+        <span className="h-full w-[18%]" style={{ backgroundColor: t.ink }} title="30% Ink" />
+        <span className="h-full w-[12%]" style={{ backgroundColor: t.accent }} title="10% Accent" />
+      </div>
+    </div>
   );
 }

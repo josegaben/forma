@@ -1,5 +1,5 @@
 {
-  "lastCrawlAt": "2026-11-21T13:56:50.222Z",
+  "lastCrawlAt": "2026-11-21T20:56:52.436Z",
   "totalIndexed": 36,
   "galleriesMonitored": [
     "deadsimplesites.com",
@@ -133,118 +133,13 @@
       "honorsReducedMotion": true
     },
     {
-      "id": "live-vercel-com",
-      "url": "https://vercel.com/",
-      "hostname": "vercel.com",
-      "title": "Agentic Infrastructure - Vercel",
-      "description": "The autonomous stack for every app and agent.",
-      "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T13:56:47.642Z",
-      "craftScore": 99,
-      "grade": "A+",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)",
-        "Perceptual OKLCH color space"
-      ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#eaeaea",
-      "palette": [
-        "#000",
-        "#fff",
-        "#ccc",
-        "#eaeaea",
-        "#333"
-      ],
-      "primaryFont": "Geist Mono",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 8,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4, .04, .04, 1)",
-          "count": 4,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.32,.72,0,1)",
-          "count": 4,
-          "feel": "iOS sheet deceleration"
-        }
-      ],
-      "keyframes": [
-        "soft-fade-in",
-        "show",
-        "hide",
-        "fade-in",
-        "fade-out",
-        "spinner-opacity"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": true
-    },
-    {
-      "id": "live-resiz-es",
-      "url": "https://resiz.es/",
-      "hostname": "resiz.es",
-      "title": "Platform, services, and Resizes AI | Resizes",
-      "description": "Resizes is a Gijón platform engineering company. It builds Agentic and Platform, delivers Kubernetes, GitOps, and FinOps services, and publishes Resizes AI.",
-      "sourceGallery": "resiz.es",
-      "scrapedAt": "2026-11-21T13:56:45.895Z",
-      "craftScore": 98,
-      "grade": "A+",
-      "strengths": [
-        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
-        "Honors @media (prefers-reduced-motion)",
-        "Uses tabular-nums for numeric alignment",
-        "Modern CSS intrinsic layout (@container / subgrid)",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "dark",
-      "bg": "#000",
-      "ink": "#f5f7f3",
-      "accent": "#093344",
-      "palette": [
-        "#000",
-        "#f5f7f3",
-        "#093344",
-        "#b7c0bc",
-        "#b8d9ed"
-      ],
-      "primaryFont": "Redaction 35 Italic",
-      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(0.22, 1, 0.36, 1)",
-          "count": 4,
-          "feel": "snappy out-expo (Linear/Vercel grade)"
-        }
-      ],
-      "keyframes": [
-        "logo-marquee",
-        "nav-entrance"
-      ],
-      "motionEngines": [
-        "Motion (Framer Motion)"
-      ],
-      "honorsReducedMotion": true
-    },
-    {
       "id": "live-mintlify-com",
       "url": "https://mintlify.com/",
       "hostname": "mintlify.com",
       "title": "Mintlify - The documentation platform for agents",
       "description": "Self-updating documentation for startups, enterprises, and agents.",
       "sourceGallery": "curated.design",
-      "scrapedAt": "2026-11-21T13:56:47.262Z",
+      "scrapedAt": "2026-11-21T20:56:48.032Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -305,7 +200,7 @@
       "title": "Stripe | Infraestructura financiera para tu negocio",
       "description": "Stripe es una plataforma de servicios financieros que ayuda a todo tipo de empresas a aceptar pagos, crear modelos de facturación flexibles y gestionar el movim",
       "sourceGallery": "awwwards.com",
-      "scrapedAt": "2026-11-21T13:56:48.014Z",
+      "scrapedAt": "2026-11-21T20:56:48.827Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -365,7 +260,7 @@
       "title": "Clerk | Authentication and User Management",
       "description": "The easiest way to add authentication and user management to your application. Purpose-built for React, Next.js, Remix, and “The Modern Web”.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-21T13:56:48.435Z",
+      "scrapedAt": "2026-11-21T20:56:49.231Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -425,7 +320,7 @@
       "title": "Vitrine: your references, ready for you and your AI agent",
       "description": "A Mac canvas for your design references. You and your agent pick from them, so what you build looks like your taste, not the default vibe-coded look.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T13:56:48.656Z",
+      "scrapedAt": "2026-11-21T20:56:49.546Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -824,64 +719,48 @@
       "honorsReducedMotion": true
     },
     {
-      "id": "live-resend-com",
-      "url": "https://resend.com/",
-      "hostname": "resend.com",
-      "title": "Resend · Email for developers",
-      "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
-      "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T13:56:47.180Z",
+      "id": "live-resiz-es",
+      "url": "https://resiz.es/",
+      "hostname": "resiz.es",
+      "title": "Platform, services, and Resizes AI | Resizes",
+      "description": "Resizes is a Gijón platform engineering company. It builds Agentic and Platform, delivers Kubernetes, GitOps, and FinOps services, and publishes Resizes AI.",
+      "sourceGallery": "resiz.es",
+      "scrapedAt": "2026-11-21T20:56:46.725Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
+        "Custom motion curves (snappy out-expo (Linear/Vercel grade))",
         "Honors @media (prefers-reduced-motion)",
         "Uses tabular-nums for numeric alignment",
         "Modern CSS intrinsic layout (@container / subgrid)",
         "Tokenized CSS architecture (60+ custom properties)"
       ],
-      "mode": "light",
-      "bg": "#fff",
-      "ink": "#000",
-      "accent": "#62ffb3",
+      "mode": "dark",
+      "bg": "#000",
+      "ink": "#f5f7f3",
+      "accent": "#093344",
       "palette": [
-        "#fff",
         "#000",
-        "#111",
-        "#62ffb3",
-        "#8c8c8c"
+        "#f5f7f3",
+        "#093344",
+        "#b7c0bc",
+        "#b8d9ed"
       ],
-      "primaryFont": "Inter Website",
-      "primaryEasing": "cubic-bezier(.4, 0, .2, 1)",
+      "primaryFont": "Redaction 35 Italic",
+      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
       "bezierCurves": [
         {
-          "curve": "cubic-bezier(.4, 0, .2, 1)",
-          "count": 68,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 10,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0, 0, .2, 1)",
-          "count": 9,
-          "feel": "custom cubic-bezier"
+          "curve": "cubic-bezier(0.22, 1, 0.36, 1)",
+          "count": 4,
+          "feel": "snappy out-expo (Linear/Vercel grade)"
         }
       ],
       "keyframes": [
-        "spin",
-        "ping",
-        "pulse",
-        "rejected-shake",
-        "ai-shimmer-text",
-        "scroll-x"
+        "logo-marquee",
+        "nav-entrance"
       ],
       "motionEngines": [
-        "Three.js / WebGL Shader",
-        "Native CSS View Transitions",
-        "Native CSS Scroll-Driven Animations"
+        "Motion (Framer Motion)"
       ],
       "honorsReducedMotion": true
     },
@@ -892,7 +771,7 @@
       "title": "Daylight | A More Caring Computer",
       "description": "Daylight Computer (DC1) is a new kind of calm computer, designed for deep work and health.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T13:56:48.254Z",
+      "scrapedAt": "2026-11-21T20:56:49.134Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -952,7 +831,7 @@
       "title": "kate fm — creative developer",
       "description": "Interfaces you can almost touch. Kate builds precise, tactile interfaces for independent brands, start-ups and online stores.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T13:56:50.145Z",
+      "scrapedAt": "2026-11-21T20:56:52.434Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -1045,13 +924,72 @@
       "honorsReducedMotion": true
     },
     {
+      "id": "live-vercel-com",
+      "url": "https://vercel.com/",
+      "hostname": "vercel.com",
+      "title": "Agentic Infrastructure - Vercel",
+      "description": "The autonomous stack for every app and agent.",
+      "sourceGallery": "a1.gallery",
+      "scrapedAt": "2026-11-21T20:56:48.607Z",
+      "craftScore": 96,
+      "grade": "A+",
+      "strengths": [
+        "Custom motion curves (custom cubic-bezier)",
+        "Honors @media (prefers-reduced-motion)",
+        "Uses tabular-nums for numeric alignment",
+        "Modern CSS intrinsic layout (@container / subgrid)",
+        "Tokenized CSS architecture (60+ custom properties)",
+        "Perceptual OKLCH color space"
+      ],
+      "mode": "light",
+      "bg": "#fff",
+      "ink": "#000",
+      "accent": "#eaeaea",
+      "palette": [
+        "#000",
+        "#fff",
+        "#ccc",
+        "#eaeaea",
+        "#333"
+      ],
+      "primaryFont": "Geist Mono",
+      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
+      "bezierCurves": [
+        {
+          "curve": "cubic-bezier(.4,0,.2,1)",
+          "count": 8,
+          "feel": "custom cubic-bezier"
+        },
+        {
+          "curve": "cubic-bezier(.4, .04, .04, 1)",
+          "count": 4,
+          "feel": "custom cubic-bezier"
+        },
+        {
+          "curve": "cubic-bezier(.32,.72,0,1)",
+          "count": 4,
+          "feel": "iOS sheet deceleration"
+        }
+      ],
+      "keyframes": [
+        "soft-fade-in",
+        "show",
+        "hide",
+        "fade-in",
+        "fade-out",
+        "spinner-opacity"
+      ],
+      "motionEngines": [],
+      "honorsReducedMotion": true
+    },
+    {
       "id": "live-zed-dev",
       "url": "https://zed.dev/",
       "hostname": "zed.dev",
       "title": "Zed — Your last next editor",
       "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T13:56:47.038Z",
+      "scrapedAt": "2026-11-21T20:56:48.238Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1110,7 +1048,7 @@
       "title": "Supabase | The Postgres Development Platform",
       "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T13:56:47.592Z",
+      "scrapedAt": "2026-11-21T20:56:48.788Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1230,7 +1168,7 @@
       "title": "Pablo González · Creative Director and Designer",
       "description": "Pablo González is a creative director and designer building brand identities, visual systems and digital products for technology companies. Based in Tenerife, w",
       "sourceGallery": "pdepablo.com",
-      "scrapedAt": "2026-11-21T13:56:45.833Z",
+      "scrapedAt": "2026-11-21T20:56:46.650Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1280,7 +1218,7 @@
       "title": "Midday — The business stack for modern founders",
       "description": "Invoicing, automatic reconciliation, time tracking, documents, and financial exports in one place. The business stack that replaces the tools you&#x27;ve outgro",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T13:56:46.863Z",
+      "scrapedAt": "2026-11-21T20:56:47.456Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1337,7 +1275,7 @@
       "title": "Emil Kowalski",
       "description": "Design engineer working at Linear.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T13:56:48.631Z",
+      "scrapedAt": "2026-11-21T20:56:50.600Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1394,7 +1332,7 @@
       "title": "Bryn Taylor · Freelance Product &amp; Website Designer",
       "description": "Freelance product &amp; website designer with 12+ years experience. Worked with Monzo, Pleo, Mastercard &amp; Trustpilot. Based in Copenhagen, available worldwi",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T13:56:49.340Z",
+      "scrapedAt": "2026-11-21T20:56:51.971Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1451,7 +1389,7 @@
       "title": "Écouter - Understand your customers",
       "description": "Human and AI-moderated interviews that reveal what people think, why they think it, and what to do next. Results in hours, not weeks.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T13:56:50.028Z",
+      "scrapedAt": "2026-11-21T20:56:51.958Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1503,7 +1441,7 @@
       "title": "Cory Etzkorn",
       "description": "Cory Etzkorn is a designer and software engineer in New York City. He was one of Notion’s first 20 employees and now runs small talk labs and Mythical Creature.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T13:56:49.469Z",
+      "scrapedAt": "2026-11-21T20:56:50.821Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1651,7 +1589,7 @@
       "title": "Dub - The Modern Link Attribution Platform",
       "description": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T13:56:47.193Z",
+      "scrapedAt": "2026-11-21T20:56:47.750Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1705,13 +1643,75 @@
       "honorsReducedMotion": true
     },
     {
+      "id": "live-resend-com",
+      "url": "https://resend.com/",
+      "hostname": "resend.com",
+      "title": "Resend · Email for developers",
+      "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
+      "sourceGallery": "darkmodedesign.com",
+      "scrapedAt": "2026-11-21T20:56:48.156Z",
+      "craftScore": 92,
+      "grade": "A+",
+      "strengths": [
+        "Custom motion curves (custom cubic-bezier)",
+        "Honors @media (prefers-reduced-motion)",
+        "Uses tabular-nums for numeric alignment",
+        "Modern CSS intrinsic layout (@container / subgrid)",
+        "Tokenized CSS architecture (60+ custom properties)"
+      ],
+      "mode": "light",
+      "bg": "#fff",
+      "ink": "#000",
+      "accent": "#62ffb3",
+      "palette": [
+        "#fff",
+        "#000",
+        "#111",
+        "#62ffb3",
+        "#8c8c8c"
+      ],
+      "primaryFont": "Inter Website",
+      "primaryEasing": "cubic-bezier(.4, 0, .2, 1)",
+      "bezierCurves": [
+        {
+          "curve": "cubic-bezier(.4, 0, .2, 1)",
+          "count": 68,
+          "feel": "custom cubic-bezier"
+        },
+        {
+          "curve": "cubic-bezier(.4,0,.2,1)",
+          "count": 10,
+          "feel": "custom cubic-bezier"
+        },
+        {
+          "curve": "cubic-bezier(0, 0, .2, 1)",
+          "count": 9,
+          "feel": "custom cubic-bezier"
+        }
+      ],
+      "keyframes": [
+        "spin",
+        "ping",
+        "pulse",
+        "rejected-shake",
+        "ai-shimmer-text",
+        "scroll-x"
+      ],
+      "motionEngines": [
+        "Three.js / WebGL Shader",
+        "Native CSS View Transitions",
+        "Native CSS Scroll-Driven Animations"
+      ],
+      "honorsReducedMotion": true
+    },
+    {
       "id": "live-mathiasadolfsson-dev",
       "url": "https://mathiasadolfsson.dev/",
       "hostname": "mathiasadolfsson.dev",
       "title": "Mathias Adolfsson - Independent Creative Engineer",
       "description": "I",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T13:56:49.250Z",
+      "scrapedAt": "2026-11-21T20:56:49.591Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1991,7 +1991,7 @@
       "title": "treg.to: OpenRouter for agent tools and data, pay per call",
       "description": "One MCP server, one key: 4,200+ tools across 136 providers for SEO, enrichment, ads, social and scraping data at the provider",
       "sourceGallery": "treg.to",
-      "scrapedAt": "2026-11-21T13:56:46.695Z",
+      "scrapedAt": "2026-11-21T20:56:47.106Z",
       "craftScore": 88,
       "grade": "A",
       "strengths": [

@@ -3,6 +3,7 @@ export interface GlobalDesignDirectory {
   url: string;
   category:
     | "Curated Galleries"
+    | "Color Science & Palettes"
     | "SaaS & Landings"
     | "Product & Flows"
     | "Components & Motion"
@@ -83,4 +84,24 @@ export const GLOBAL_DESIGN_DIRECTORIES: GlobalDesignDirectory[] = [
   { name: "unslop-ui", url: "https://github.com/felipebasurto/unslop-ui", category: "Agent & OSS Specs" },
   { name: "awesome-design-md", url: "https://github.com/VoltAgent/awesome-design-md", category: "Agent & OSS Specs" },
   { name: "forma-xray", url: "https://github.com/josegaben/forma-xray", category: "Agent & OSS Specs" },
+
+  // Color Science & Palettes
+  { name: "Realtime Colors", url: "https://www.realtimecolors.com", category: "Color Science & Palettes" },
+  { name: "Happy Hues", url: "https://www.happyhues.co", category: "Color Science & Palettes" },
+  { name: "Radix Colors", url: "https://www.radix-ui.com/colors", category: "Color Science & Palettes" },
+  { name: "OKLCH.fyi", url: "https://oklch.fyi", category: "Color Science & Palettes" },
+  { name: "OKLCH Picker", url: "https://oklch.com", category: "Color Science & Palettes" },
+  { name: "Atmos.style", url: "https://atmos.style", category: "Color Science & Palettes" },
+  { name: "Huemint", url: "https://huemint.com", category: "Color Science & Palettes" },
+  { name: "Sanzo Wada Colors", url: "https://wada-sanzo-colors.com", category: "Color Science & Palettes" },
+  { name: "Coolors", url: "https://coolors.co", category: "Color Science & Palettes" },
+  { name: "Color Hunt", url: "https://colorhunt.co", category: "Color Science & Palettes" },
+  { name: "UI Colors", url: "https://uicolors.app", category: "Color Science & Palettes" },
+  { name: "Adobe Leonardo", url: "https://leonardocolor.io", category: "Color Science & Palettes" },
+  { name: "Khroma", url: "https://www.khroma.co", category: "Color Science & Palettes" },
+  { name: "Pigment", url: "https://pigment.shapefactory.co", category: "Color Science & Palettes" },
+  { name: "2Colors", url: "https://2colors.colorion.co", category: "Color Science & Palettes" },
+  { name: "Colorffy", url: "https://colorffy.com", category: "Color Science & Palettes" },
+  { name: "SupaPalette", url: "https://www.supapalette.com", category: "Color Science & Palettes" },
+  { name: "Culori", url: "https://culorijs.org", category: "Color Science & Palettes" },
 ];

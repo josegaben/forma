@@ -4,6 +4,7 @@ import {
   recommendMixFromBrief,
   type TargetStack,
 } from "@/lib/composer";
+import { recommendPaletteForIdea } from "@/lib/synthesizer";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -34,6 +35,11 @@ export async function GET(request: Request) {
   const layoutId = searchParams.get("layout") || mixList[2] || mixList[0] || auto.layoutId;
   const componentsId = searchParams.get("components") || mixList[3] || mixList[1] || mixList[0] || auto.componentsId;
   const motionId = searchParams.get("motion") || mixList[4] || mixList[0] || auto.motionId;
+  const paletteId =
+    searchParams.get("palette") ||
+    (brief && !searchParams.get("surface") && !mixList[0]
+      ? recommendPaletteForIdea(brief).id
+      : undefined);
 
   const genome = composeFormatGenome({
     surfaceId,
@@ -41,6 +47,7 @@ export async function GET(request: Request) {
     layoutId,
     componentsId,
     motionId,
+    paletteId,
     projectName: project,
     projectBrief: brief || undefined,
     stack,

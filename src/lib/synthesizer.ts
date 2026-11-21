@@ -1,4 +1,8 @@
 import discoveredFeed from "@/data/discovered-feed.json";
+import {
+  CURATED_COLOR_PALETTES,
+  type CuratedColorPalette,
+} from "@/data/color-palettes";
 import { WEB_FORMATS, type WebFormat } from "@/data/formats";
 import { recommendMixFromBrief } from "@/lib/composer";
 import type { DiscoveredSite } from "@/lib/scraper";
@@ -172,6 +176,33 @@ export function findMatchingScrapedSites(
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
     .map((x) => x.site);
+}
+
+export function recommendPaletteForIdea(idea: string): CuratedColorPalette {
+  const q = idea.trim().toLowerCase();
+  if (!q) return CURATED_COLOR_PALETTES[0];
+
+  const wantsDark = /(dark|oscuro|oscura|negro|night|black|oled|halftone|obsidian|carbon)/i.test(q);
+  const wantsLight = /(light|claro|clara|blanco|white|warm|calido|ivory|linen|alabaster)/i.test(q);
+
+  const scored = CURATED_COLOR_PALETTES.map((pal) => {
+    let score = 10;
+    for (const kw of pal.keywords) {
+      if (q.includes(kw.toLowerCase())) {
+        score += kw.length >= 5 ? 28 : 18;
+      }
+    }
+    if (wantsDark && pal.mode === "dark") score += 22;
+    if (wantsLight && pal.mode === "light") score += 20;
+    return { pal, score };
+  }).sort((a, b) => b.score - a.score);
+
+  return scored[0].pal;
+}
+
+export function cyclePaletteOption(currentPaletteId: string): string {
+  const idx = CURATED_COLOR_PALETTES.findIndex((p) => p.id === currentPaletteId);
+  return CURATED_COLOR_PALETTES[(idx + 1) % CURATED_COLOR_PALETTES.length].id;
 }
 
 export function cycleFormatOption(

@@ -13,6 +13,10 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
+import {
+  CURATED_COLOR_PALETTES,
+  type CuratedColorPalette,
+} from "@/data/color-palettes";
 import { WEB_FORMATS, type WebFormat } from "@/data/formats";
 import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
@@ -24,9 +28,11 @@ import {
 } from "@/lib/scraper";
 import {
   cycleFormatOption,
+  cyclePaletteOption,
   findMatchingScrapedSites,
   generateTailoredPreviewContent,
   recommendMixFromBrief,
+  recommendPaletteForIdea,
 } from "@/lib/synthesizer";
 import {
   AgentBadgeRow,
@@ -36,6 +42,7 @@ import {
 import {
   FormatVisualThumb,
   MotionCurveMini,
+  PaletteVisualThumb,
 } from "@/components/FormatVisualThumb";
 import { LiveFormatPreview } from "@/components/LiveFormatPreview";
 
@@ -90,6 +97,7 @@ export function FormaStudio() {
   const [scrapeNotice, setScrapeNotice] = useState("");
 
   const [surfaceId, setSurfaceId] = useState("resizes-infra");
+  const [paletteId, setPaletteId] = useState<string | undefined>("pal-carbon-halftone");
   const [typographyId, setTypographyId] = useState("resizes-infra");
   const [layoutId, setLayoutId] = useState("pdepablo-studio");
   const [componentsId, setComponentsId] = useState("twentyfirst-craft");
@@ -97,7 +105,7 @@ export function FormaStudio() {
   const [stack, setStack] = useState<TargetStack>("nextjs-tailwind");
 
   // Visual Gallery state
-  const [galleryTab, setGalleryTab] = useState<"formats" | "scraped">("formats");
+  const [galleryTab, setGalleryTab] = useState<"formats" | "palettes" | "scraped">("formats");
   const [modeFilter, setModeFilter] = useState<"all" | "light" | "dark">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [showAllGallery, setShowAllGallery] = useState(false);
@@ -116,6 +124,7 @@ export function FormaStudio() {
       setOrigin(window.location.origin);
       const params = new URLSearchParams(window.location.search);
       if (params.get("surface")) setSurfaceId(params.get("surface")!);
+      if (params.get("palette")) setPaletteId(params.get("palette")!);
       if (params.get("type")) setTypographyId(params.get("type")!);
       if (params.get("layout")) setLayoutId(params.get("layout")!);
       if (params.get("comp")) setComponentsId(params.get("comp")!);
@@ -177,6 +186,7 @@ export function FormaStudio() {
         layoutId,
         componentsId,
         motionId,
+        paletteId,
         projectName: tailoredContent.brandName,
         projectBrief: ideaInput,
         stack,
@@ -189,6 +199,7 @@ export function FormaStudio() {
       layoutId,
       componentsId,
       motionId,
+      paletteId,
       tailoredContent.brandName,
       ideaInput,
       stack,
@@ -229,6 +240,7 @@ export function FormaStudio() {
           setCustomFormats((prev) => [fmt, ...prev.filter((f) => f.id !== fmt.id)]);
           const rec = recommendMixFromBrief(raw);
           setSurfaceId(fmt.id);
+          setPaletteId(undefined);
           setTypographyId(fmt.id);
           setLayoutId(rec.selection.layoutId);
           setComponentsId(rec.selection.componentsId);
@@ -249,7 +261,9 @@ export function FormaStudio() {
     }
 
     const rec = recommendMixFromBrief(raw);
+    const bestPal = recommendPaletteForIdea(raw);
     setSurfaceId(rec.selection.surfaceId);
+    setPaletteId(bestPal.id);
     setTypographyId(rec.selection.typographyId);
     setLayoutId(rec.selection.layoutId);
     setComponentsId(rec.selection.componentsId);
@@ -261,6 +275,7 @@ export function FormaStudio() {
     const fmt = convertScrapedSiteToFormat(site);
     setCustomFormats((prev) => [fmt, ...prev.filter((f) => f.id !== fmt.id)]);
     setSurfaceId(fmt.id);
+    setPaletteId(undefined);
     setTypographyId(fmt.id);
     setMotionId(fmt.id);
     document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
@@ -268,6 +283,7 @@ export function FormaStudio() {
 
   const applyFullFormat = (id: string) => {
     setSurfaceId(id);
+    setPaletteId(undefined);
     setTypographyId(id);
     setLayoutId(id);
     setComponentsId(id);
@@ -275,9 +291,15 @@ export function FormaStudio() {
     document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const applyCuratedPalette = (pal: CuratedColorPalette) => {
+    setPaletteId(pal.id);
+    document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const shareStyleLink = () => {
     const url = new URL(origin);
     url.searchParams.set("surface", surfaceId);
+    if (paletteId) url.searchParams.set("palette", paletteId);
     url.searchParams.set("type", typographyId);
     url.searchParams.set("layout", layoutId);
     url.searchParams.set("comp", componentsId);
@@ -336,13 +358,26 @@ export function FormaStudio() {
     cli: `npx forma-xray https://resiz.es --out DESIGN.md`,
   };
 
+  const filteredPalettes = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    const list = CURATED_COLOR_PALETTES.filter((p) => {
+      if (modeFilter !== "all" && p.mode !== modeFilter) return false;
+      if (!q) return true;
+      return `${p.name} ${p.nameEs} ${p.harmony} ${p.psychology} ${p.inspiredBy.name} ${p.keywords.join(" ")}`
+        .toLowerCase()
+        .includes(q);
+    });
+    return showAllGallery ? list : list.slice(0, 9);
+  }, [modeFilter, searchQuery, showAllGallery]);
+
   const totalReferencesCount =
     WEB_FORMATS.length +
+    CURATED_COLOR_PALETTES.length +
     discoveredFeed.sites.length +
     GLOBAL_DESIGN_DIRECTORIES.length;
 
-  const directoriesRow1 = GLOBAL_DESIGN_DIRECTORIES.slice(0, 29);
-  const directoriesRow2 = GLOBAL_DESIGN_DIRECTORIES.slice(29);
+  const directoriesRow1 = GLOBAL_DESIGN_DIRECTORIES.slice(0, 38);
+  const directoriesRow2 = GLOBAL_DESIGN_DIRECTORIES.slice(38);
 
   const modalCodeContent =
     modalTab === "prompt"
@@ -600,7 +635,7 @@ export function FormaStudio() {
               <button
                 type="button"
                 onClick={() => {
-                  setSurfaceId(cycleFormatOption(surfaceId, allFormats));
+                  setPaletteId(cyclePaletteOption(paletteId || "pal-stone-terracotta"));
                   setLayoutId(cycleFormatOption(layoutId, allFormats));
                   setMotionId(cycleFormatOption(motionId, allFormats));
                 }}
@@ -613,49 +648,68 @@ export function FormaStudio() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
-              {/* Pillar 1: Palette */}
-              <div className="p-4 rounded-[16px] bg-white border border-[var(--line)] flex flex-col justify-between gap-3">
+              {/* Pillar 1: Color Science & 60-30-10 Harmony */}
+              <div className="p-4 rounded-[16px] bg-white border border-[var(--line)] flex flex-col justify-between gap-2.5">
                 <div className="flex items-center justify-between">
                   <span
                     className="text-[10.5px] text-[var(--muted)]"
                     style={{ fontFamily: "var(--font-mono), monospace" }}
                   >
-                    {lang === "es" ? "PALETA Y LUZ" : "PALETTE & SURFACE"}
+                    {lang === "es" ? "PALETA 60-30-10 · OKLCH" : "60-30-10 PALETTE · OKLCH"}
                   </span>
                   <button
                     type="button"
-                    onClick={() => setSurfaceId(cycleFormatOption(surfaceId, allFormats))}
-                    title="Swap palette source"
+                    onClick={() =>
+                      setPaletteId(cyclePaletteOption(paletteId || "pal-stone-terracotta"))
+                    }
+                    title="Cycle curated color palette"
                     className="p-1 rounded-full hover:bg-[var(--panel)] text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                   </button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span
-                    className="w-7 h-7 rounded-full border border-black/15"
-                    style={{ backgroundColor: composed.layers.surface.surface.bg }}
-                  />
-                  <span
-                    className="w-7 h-7 rounded-full border border-black/15"
-                    style={{ backgroundColor: composed.layers.surface.surface.ink }}
-                  />
-                  <span
-                    className="w-7 h-7 rounded-full border border-black/15"
-                    style={{ backgroundColor: composed.layers.surface.surface.accent }}
-                  />
-                  <span
-                    className="ml-auto text-[11px] text-[var(--muted)]"
+
+                {/* Proportional 60-30-10 Swatch Bar + WCAG Contrast Ratio */}
+                <div className="space-y-1.5">
+                  <div className="h-5 w-full rounded-full overflow-hidden flex border border-black/15">
+                    <span
+                      className="h-full w-[52%]"
+                      style={{ backgroundColor: composed.layers.surface.surface.bg }}
+                      title={`60% Canvas: ${composed.layers.surface.surface.bg}`}
+                    />
+                    <span
+                      className="h-full w-[16%]"
+                      style={{ backgroundColor: composed.layers.surface.surface.panel }}
+                      title={`Panel: ${composed.layers.surface.surface.panel}`}
+                    />
+                    <span
+                      className="h-full w-[18%]"
+                      style={{ backgroundColor: composed.layers.surface.surface.ink }}
+                      title={`30% Ink: ${composed.layers.surface.surface.ink}`}
+                    />
+                    <span
+                      className="h-full w-[14%]"
+                      style={{ backgroundColor: composed.layers.surface.surface.accent }}
+                      title={`10% Accent: ${composed.layers.surface.surface.accent}`}
+                    />
+                  </div>
+                  <div
+                    className="flex items-center justify-between text-[10.5px] text-[var(--muted)] tabular-nums"
                     style={{ fontFamily: "var(--font-mono), monospace" }}
                   >
-                    {composed.layers.surface.surface.bg}
-                  </span>
+                    <span>
+                      {composed.layers.surface.surface.bg} → {composed.layers.surface.surface.accent}
+                    </span>
+                    <span className="text-[#118453] font-medium">
+                      {composed.contrastRatioText}:1 {composed.contrastRatioText >= 7 ? "AAA" : "AA"}
+                    </span>
+                  </div>
                 </div>
+
                 <div className="text-[13px] font-medium truncate">
-                  {composed.layers.surface.inspiredBy[0]?.name} ·{" "}
-                  <span className="text-[var(--muted)] font-normal">
-                    {composed.layers.surface.name}
-                  </span>
+                  {composed.activePalette
+                    ? `${lang === "es" ? composed.activePalette.nameEs : composed.activePalette.name}`
+                    : `${composed.layers.surface.inspiredBy[0]?.name} · ${composed.layers.surface.name}`}
                 </div>
               </div>
 
@@ -945,6 +999,19 @@ export function FormaStudio() {
                   </button>
                   <button
                     type="button"
+                    onClick={() => setGalleryTab("palettes")}
+                    className={`px-3 py-1 rounded-full cursor-pointer transition-colors ${
+                      galleryTab === "palettes"
+                        ? "bg-white text-[var(--ink)] font-medium shadow-[var(--shadow-sm)]"
+                        : "text-[var(--muted)]"
+                    }`}
+                  >
+                    {lang === "es"
+                      ? `Paletas (${CURATED_COLOR_PALETTES.length})`
+                      : `Palettes (${CURATED_COLOR_PALETTES.length})`}
+                  </button>
+                  <button
+                    type="button"
                     onClick={() => setGalleryTab("scraped")}
                     className={`px-3 py-1 rounded-full cursor-pointer transition-colors ${
                       galleryTab === "scraped"
@@ -953,7 +1020,7 @@ export function FormaStudio() {
                     }`}
                   >
                     {lang === "es"
-                      ? `Radar en vivo (${discoveredFeed.sites.length})`
+                      ? `Radar (${discoveredFeed.sites.length})`
                       : `Live Radar (${discoveredFeed.sites.length})`}
                   </button>
                 </div>
@@ -1021,6 +1088,42 @@ export function FormaStudio() {
                         className="shrink-0 px-3 py-1.5 rounded-full bg-[var(--panel)] hover:bg-[#141413] hover:text-white text-[11.5px] font-medium transition-colors cursor-pointer"
                       >
                         {lang === "es" ? "Usar" : "Use"}
+                      </button>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : galleryTab === "palettes" ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {filteredPalettes.map((pal) => (
+                  <article
+                    key={pal.id}
+                    className="visual-card p-3 flex flex-col justify-between gap-3 group"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => applyCuratedPalette(pal)}
+                      className="text-left w-full cursor-pointer"
+                    >
+                      <PaletteVisualThumb palette={pal} lang={lang} />
+                    </button>
+
+                    <div className="px-1.5 pb-1 flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <h3 className="text-[14px] font-semibold tracking-[-0.02em] truncate">
+                          {lang === "es" ? pal.nameEs : pal.name}
+                        </h3>
+                        <p className="text-[11.5px] text-[var(--muted)] truncate">
+                          {lang === "es" ? pal.psychologyEs : pal.psychology}
+                        </p>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => applyCuratedPalette(pal)}
+                        className="shrink-0 px-3 py-1.5 rounded-full bg-[var(--panel)] hover:bg-[#141413] hover:text-white text-[11.5px] font-medium transition-colors cursor-pointer"
+                      >
+                        {lang === "es" ? "Aplicar" : "Apply"}
                       </button>
                     </div>
                   </article>
@@ -1098,6 +1201,10 @@ export function FormaStudio() {
                   ? lang === "es"
                     ? `Ver los ${allFormats.length} formatos visuales`
                     : `Browse all ${allFormats.length} visual formats`
+                  : galleryTab === "palettes"
+                  ? lang === "es"
+                    ? `Ver las ${CURATED_COLOR_PALETTES.length} paletas maestras`
+                    : `Browse all ${CURATED_COLOR_PALETTES.length} color systems`
                   : lang === "es"
                   ? `Ver las ${discoveredFeed.sites.length} webs escrapeadas`
                   : `Browse all ${discoveredFeed.sites.length} live-scraped websites`}

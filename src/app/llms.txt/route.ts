@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
-import { WEB_FORMATS, REFERENCE_SOURCES } from "@/data/formats";
+import { CURATED_COLOR_PALETTES, getContrastRatio } from "@/data/color-palettes";
+import { WEB_FORMATS } from "@/data/formats";
+import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
 
 export async function GET(request: Request) {
   const origin = new URL(request.url).origin;
 
   const content = `# forma (${origin})
-> OpenRouter for agentic web formats. 5-layer composable Design DNA (Surface, Typography, Layout, Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), and \`unslop-ui\` guardrails.
+> OpenRouter for Web Design. 5-layer composable Design DNA (60-30-10 OKLCH Color Science, Typography, Layout, Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), and \`unslop-ui\` guardrails.
 
-Catalog: ${WEB_FORMATS.length} composable formats · ${REFERENCE_SOURCES.length} reference canons · ${discoveredFeed.sites.length} continuously scraped live websites.
+Catalog: ${WEB_FORMATS.length} composable formats · ${CURATED_COLOR_PALETTES.length} WCAG/OKLCH color systems · ${GLOBAL_DESIGN_DIRECTORIES.length} design directories · ${discoveredFeed.sites.length} live-scraped websites.
 
 ---
 
@@ -46,11 +48,20 @@ MCP Tools:
 - \`compose_design_spec\` — Compile a complete \`DESIGN.md\`.
 - \`xray_live_website\` — Scrape & extract tokens + animation curves from any live URL.
 - \`list_discovered_designs\` — Browse continuously scraped sites ranked by Anti-Slop Craft Score.
+- \`list_color_palettes\` — Query ${CURATED_COLOR_PALETTES.length} curated 60-30-10 UI color systems (Radix Colors, Sanzo Wada, Happy Hues, Realtime Colors, Atmos OKLCH) with verified WCAG contrast ratios.
 - \`get_unslop_checklist\` — Mandatory subtractive UI audit rules.
 
 ---
 
-## 3. Available Curated Format IDs (${WEB_FORMATS.length})
+## 3. Curated 60-30-10 Color Palette IDs (${CURATED_COLOR_PALETTES.length})
+${CURATED_COLOR_PALETTES.map(
+  (p) =>
+    `- \`${p.id}\` (${p.mode} · ${p.harmony} · ${getContrastRatio(p.tokens.bg, p.tokens.ink)}:1 WCAG): ${p.name} — ${p.psychology}`
+).join("\n")}
+
+---
+
+## 4. Available Curated Format IDs (${WEB_FORMATS.length})
 ${WEB_FORMATS.map(
   (f) => `- \`${f.id}\` (${f.surface.mode} · ${f.category} · motion: \`${f.motion.easing}\`): ${f.name} — ${f.tagline}`
 ).join("\n")}

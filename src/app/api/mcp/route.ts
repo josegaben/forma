@@ -1,4 +1,9 @@
 import { NextResponse } from "next/server";
+import {
+  CURATED_COLOR_PALETTES,
+  getContrastRatio,
+  hexToOklchString,
+} from "@/data/color-palettes";
 import { GLOBAL_UNSLOP_RULES, WEB_FORMATS } from "@/data/formats";
 import discoveredFeed from "@/data/discovered-feed.json";
 import {
@@ -82,6 +87,17 @@ const MCP_TOOLS = [
       properties: {
         minScore: { type: "number", description: "Minimum craft score (0–100), e.g. 90" },
         mode: { type: "string", enum: ["light", "dark"] },
+      },
+    },
+  },
+  {
+    name: "list_color_palettes",
+    description:
+      "List curated 60-30-10 UI color systems (inspired by Radix Colors, Happy Hues, Realtime Colors, Atmos OKLCH & Sanzo Wada) with WCAG contrast ratios and perceptual OKLCH values.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Optional industry, mood, or harmony filter (e.g. 'clinic', 'fintech', 'sanzo', 'dark')." },
       },
     },
   },
@@ -244,6 +260,35 @@ export async function POST(request: Request) {
       });
       return NextResponse.json(
         { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(items, null, 2) }] } },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "list_color_palettes") {
+      const q = String(args.query || "").toLowerCase();
+      const palettes = CURATED_COLOR_PALETTES.filter((p) => {
+        if (!q) return true;
+        return [p.id, p.name, p.harmony, p.psychology, ...p.keywords]
+          .join(" ")
+          .toLowerCase()
+          .includes(q);
+      }).map((p) => ({
+        id: p.id,
+        name: p.name,
+        mode: p.mode,
+        harmony: p.harmony,
+        inspiredBy: p.inspiredBy.name,
+        psychology: p.psychology,
+        contrastText: `${getContrastRatio(p.tokens.bg, p.tokens.ink)}:1`,
+        tokens: p.tokens,
+        oklch: {
+          bg: hexToOklchString(p.tokens.bg),
+          ink: hexToOklchString(p.tokens.ink),
+          accent: hexToOklchString(p.tokens.accent),
+        },
+      }));
+      return NextResponse.json(
+        { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(palettes, null, 2) }] } },
         { headers: CORS_HEADERS }
       );
     }
