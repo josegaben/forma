@@ -194,6 +194,46 @@ const MCP_TOOLS = [
       "Return mandatory subtractive anti-slop UI audit rules (unslop-ui) before shipping UI.",
     inputSchema: { type: "object", properties: {} },
   },
+  {
+    name: "fetch_brand_svg",
+    description:
+      "Search and retrieve official clean light/dark vector brand logos (<svg>) from SVGL (450+ tech, cloud, AI, and payment brands) so you never hallucinate broken brand SVGs.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Brand name (e.g. 'stripe', 'anthropic', 'vercel', 'kubernetes')." },
+        inlineSvg: { type: "boolean", description: "Set true to include raw <svg> markup." },
+      },
+      required: ["query"],
+    },
+  },
+  {
+    name: "fetch_vector_icons",
+    description:
+      "Search and retrieve verified raw <svg> vectors from curated non-slop icon families (Phosphor 'ph', Tabler 'tabler', Iconoir 'iconoir', Radix 'radix-icons') via Iconify.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Icon concept (e.g. 'terminal', 'shield', 'calendar', 'sparkle')." },
+        pack: { type: "string", enum: ["ph", "tabler", "iconoir", "radix-icons"] },
+      },
+      required: ["query"],
+    },
+  },
+  {
+    name: "get_shadcn_and_figma_exports",
+    description:
+      "Generate 1-command `npx shadcn@latest add` custom registry URL and W3C Design Tokens (DTCG JSON for Figma Variables / Tokens Studio) for any forma 5-layer mix.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        brief: { type: "string" },
+        surfaceId: { type: "string" },
+        paletteId: { type: "string" },
+        fontPairingId: { type: "string" },
+      },
+    },
+  },
 ];
 
 export async function OPTIONS() {
@@ -510,6 +550,53 @@ export async function POST(request: Request) {
           id: id ?? 1,
           result: { content: [{ type: "text", text: GLOBAL_UNSLOP_RULES.map((r, i) => `${i + 1}. ${r}`).join("\n") }] },
         },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "fetch_brand_svg") {
+      const origin = new URL(request.url).origin;
+      const q = String(args.query || "vercel");
+      const inline = args.inlineSvg !== false ? "true" : "false";
+      const r = await fetch(
+        `${origin}/api/assets?kind=logos&q=${encodeURIComponent(q)}&limit=6&inline=${inline}`
+      );
+      const data = await r.json();
+      return NextResponse.json(
+        { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] } },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "fetch_vector_icons") {
+      const origin = new URL(request.url).origin;
+      const q = String(args.query || "terminal");
+      const setParam = args.pack ? `&set=${encodeURIComponent(String(args.pack))}` : "";
+      const r = await fetch(
+        `${origin}/api/assets?kind=icons&q=${encodeURIComponent(q)}&limit=8${setParam}`
+      );
+      const data = await r.json();
+      return NextResponse.json(
+        { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(data, null, 2) }] } },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "get_shadcn_and_figma_exports") {
+      const origin = new URL(request.url).origin;
+      const qs = new URLSearchParams();
+      if (args.brief) qs.set("brief", String(args.brief));
+      if (args.surfaceId) qs.set("surface", String(args.surfaceId));
+      if (args.paletteId) qs.set("palette", String(args.paletteId));
+      if (args.fontPairingId) qs.set("font", String(args.fontPairingId));
+      const suffix = qs.toString() ? `?${qs.toString()}` : "";
+      const payload = {
+        shadcnCliCommand: `npx shadcn@latest add "${origin}/r/forma-kit${suffix}"`,
+        shadcnRegistryJsonUrl: `${origin}/r/forma-kit${suffix}`,
+        figmaW3cDesignTokensUrl: `${origin}/api/tokens${suffix}`,
+      };
+      return NextResponse.json(
+        { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(payload, null, 2) }] } },
         { headers: CORS_HEADERS }
       );
     }

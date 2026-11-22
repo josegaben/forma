@@ -238,6 +238,7 @@ export function CommandExplorerModal({
             e.preventDefault();
             setActiveIndex((i) => Math.max(0, i - 1));
           } else if (e.key === "Enter" && activeEntry) {
+            if (e.nativeEvent.isComposing || e.keyCode === 229) return;
             e.preventDefault();
             triggerEntry(activeEntry);
           }

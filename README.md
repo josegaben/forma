@@ -45,9 +45,18 @@ set up forma - https://forma.to/llms.txt
 npx skills add josegaben/forma
 ```
 
-### 3. Streamable HTTP MCP Server (`12 Tools`)
+### 3. Streamable HTTP MCP Server (`15 Tools`) & 1-Click Cursor Install
 ```bash
-claude mcp add --transport http forma https://forma.to/api/mcp
+claude mcp add --transport http forma https://forma-to.vercel.app/api/mcp
+```
+
+### 4. `shadcn/ui` Custom Registry & Figma W3C Design Tokens (`DTCG`)
+```bash
+# 1-Command install: injects OKLCH cssVars + writes DESIGN.md + TSX Bento/Hero scaffold:
+npx shadcn@latest add "https://forma-to.vercel.app/r/forma-kit?surface=resizes-infra&palette=pal-carbon-halftone&font=pair-cabinet-satoshi"
+
+# Export W3C Design Tokens JSON for Figma Variables / Tokens Studio / Penpot:
+curl -fsSL "https://forma-to.vercel.app/api/tokens?surface=treg-gateway&palette=pal-stone-terracotta" > tokens.dtcg.json
 ```
 
 **Available MCP Tools:**
@@ -61,9 +70,11 @@ claude mcp add --transport http forma https://forma.to/api/mcp
 | `list_color_palettes` | Queries 24 curated 60-30-10 `OKLCH` palettes with verified WCAG contrast ratios. |
 | `list_ui_components` | Searches 20 interactive Rare UI / Kokonut UI / COSS UI / Vaul / `shadcn` primitives with CLI install commands. |
 | `list_web_formats` / `list_discovered_designs` / `list_craft_assets` | Explores 30 curated formats, continuously crawled gallery leaders, 18 typography pairings, and WebGL shaders. |
+| `fetch_brand_svg` / `fetch_vector_icons` | Live-connected to **SVGL** (`450+` official brand SVGs) and **Iconify** (`18,000+` Phosphor/Tabler/Iconoir/Radix vectors) so agents never hallucinate SVG paths. |
+| `get_shadcn_and_figma_exports` | Generates 1-command `npx shadcn@latest add` custom registry URLs and W3C DTCG Design Tokens JSON for Figma. |
 | `check_forma_balance` / `get_unslop_checklist` | Inspects prepaid credit balance / BYOK status and mandatory `unslop-ui` subtractive rules. |
 
-### 4. CLI & Multimodal Section Scanner (`forma-xray` v1.2.0)
+### 5. CLI & Multimodal Section Scanner (`forma-xray` v1.2.0)
 ```bash
 # Fast zero-install DESIGN.md extraction (< 1s):
 npx forma-xray https://resiz.es --out DESIGN.md

@@ -10,3 +10,5 @@ next-env.d.ts
 .video_frames_tmp/
 .forma-telemetry.json
 .forma-credits.json
+.vercel
+.env*

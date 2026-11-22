@@ -47,6 +47,22 @@ curl -fsSL "${origin}/api/sections?kind=pricing&limit=6"
 curl -fsSL "${origin}/api/sections?kind=hero&mode=dark"
 \`\`\`
 
+### E. 1-Command shadcn Registry Block + Figma W3C Design Tokens + Live SVGL/Iconify Vectors:
+\`\`\`sh
+# Install complete 5-layer DESIGN.md + OKLCH cssVars + TSX scaffold via shadcn CLI:
+npx shadcn@latest add "${origin}/r/forma-kit?surface=resizes-infra&palette=pal-carbon-halftone&font=pair-cabinet-satoshi"
+
+# Export W3C Design Tokens (DTCG JSON for Figma Variables / Tokens Studio):
+curl -fsSL "${origin}/api/tokens?surface=treg-gateway&palette=pal-stone-terracotta" > tokens.dtcg.json
+
+# Fetch official SVGL brand logos or curated Phosphor/Tabler/Iconoir raw <svg> vectors:
+curl -fsSL "${origin}/api/assets?kind=logos&q=stripe&inline=true"
+curl -fsSL "${origin}/api/assets?kind=icons&q=terminal&set=ph"
+
+# Unified forma-xray Craft + Google PageSpeed Insights v5 CWV Audit:
+curl -fsSL "${origin}/api/audit?url=https://resiz.es"
+\`\`\`
+
 ### E. Prepaid Cloud Credits & $0.00 BYOK Gateway (treg.to Model):
 - All catalog & \`/api/compose\` routes are **$0.00 (free-protocol)**.
 - Cloud Playwright + Vision execution (\`POST /api/sections\`, \`POST /api/cloud\`) starts with **$1.00 free credit** (\`X-Forma-Key\`), supports \`X-Forma-Max-Cost\` safety caps, and runs at **$0.00 unmetered** whenever you pass \`X-Gemini-Key\`:

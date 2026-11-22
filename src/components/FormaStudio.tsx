@@ -44,6 +44,7 @@ import {
 } from "@/lib/synthesizer";
 import { BeforeAfterShowcase } from "@/components/BeforeAfterShowcase";
 import { CommandExplorerModal } from "@/components/CommandExplorerModal";
+import { ConnectedServicesHub } from "@/components/ConnectedServicesHub";
 import {
   AgentBadgeRow,
   FormaLogo,
@@ -140,7 +141,7 @@ export function FormaStudio() {
   const [explorerOpen, setExplorerOpen] = useState(false);
 
   // Agent bootstrap bar state
-  const [agentTab, setAgentTab] = useState<"llms" | "mcp" | "cli">("llms");
+  const [agentTab, setAgentTab] = useState<"llms" | "mcp" | "shadcn" | "cli">("llms");
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   // Core Project Idea & Crossed Genome State
@@ -187,7 +188,7 @@ export function FormaStudio() {
 
   // Modals: DESIGN.md Spec Modal & Component Code Modal
   const [modalTab, setModalTab] = useState<
-    "prompt" | "skeletons" | "rules" | "css" | "mcp"
+    "prompt" | "skeletons" | "rules" | "css" | "figma" | "mcp"
   >("prompt");
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
@@ -559,9 +560,79 @@ export function FormaStudio() {
 
   const sectionVaultCount = getSectionVaultFeed().totalSections;
 
+  const currentMixQuery = useMemo(() => {
+    const qs = new URLSearchParams();
+    qs.set("surface", surfaceId);
+    if (paletteId) qs.set("palette", paletteId);
+    if (fontPairingId) qs.set("font", fontPairingId);
+    qs.set("layout", layoutId);
+    qs.set("motion", motionId);
+    return qs.toString();
+  }, [surfaceId, paletteId, fontPairingId, layoutId, motionId]);
+
+  const shadcnAddCommand = `npx shadcn@latest add "${origin}/r/forma-kit?${currentMixQuery}"`;
+
+  const cursorMcpDeepLink = useMemo(() => {
+    const rawJson = JSON.stringify({ url: `${origin}/api/mcp` });
+    const b64 =
+      typeof window !== "undefined"
+        ? window.btoa(rawJson)
+        : Buffer.from(rawJson, "utf8").toString("base64");
+    return `cursor://anysphere.cursor-deeplink/mcp/install?name=forma&config=${encodeURIComponent(
+      b64
+    )}`;
+  }, [origin]);
+
+  const v0LaunchHref = useMemo(() => {
+    const conciseSpec = `Build ${tailoredContent.brandName} (${ideaInput.slice(
+      0,
+      140
+    )}) strictly following forma [${composed.mixCode}]: bg ${
+      composed.layers.surface.surface.bg
+    }, ink ${composed.layers.surface.surface.ink}, accent ${
+      composed.layers.surface.surface.accent
+    }, font ${composed.layers.typography.typography.displayFont}, ${
+      composed.layers.layout.layout.navStyle
+    } nav, 7/5 asymmetric @container bento, and zero AI-slop purple gradients.`;
+    return `https://v0.dev/chat/api/open?prompt=${encodeURIComponent(conciseSpec)}`;
+  }, [tailoredContent.brandName, ideaInput, composed]);
+
+  const figmaW3cJson = useMemo(() => {
+    const s = composed.layers.surface.surface;
+    const t = composed.layers.typography.typography;
+    return JSON.stringify(
+      {
+        $name: `forma [${composed.mixCode}] — ${tailoredContent.brandName}`,
+        $schema: "https://tr.designtokens.org/format/",
+        color: {
+          bg: { $value: s.bg, $type: "color" },
+          surface: { $value: s.surface, $type: "color" },
+          panel: { $value: s.panel, $type: "color" },
+          ink: { $value: s.ink, $type: "color" },
+          muted: { $value: s.muted, $type: "color" },
+          accent: { $value: s.accent, $type: "color" },
+          accentInk: { $value: s.accentInk, $type: "color" },
+        },
+        typography: {
+          display: { $value: t.displayFont, $type: "fontFamily" },
+          body: { $value: t.bodyFont, $type: "fontFamily" },
+          mono: { $value: t.monoFont, $type: "fontFamily" },
+          h1Scale: { $value: t.h1Scale, $type: "dimension" },
+        },
+        radius: {
+          card: { $value: s.radiusCard, $type: "dimension" },
+          pill: { $value: s.radiusPill, $type: "dimension" },
+        },
+      },
+      null,
+      2
+    );
+  }, [composed, tailoredContent.brandName]);
+
   const agentCommands: Record<typeof agentTab, string> = {
     llms: `set up forma - ${origin}/llms.txt`,
     mcp: `claude mcp add --transport http forma ${origin}/api/mcp`,
+    shadcn: shadcnAddCommand,
     cli: `npx forma-xray balance && npx forma-xray https://resiz.es --out DESIGN.md`,
   };
 
@@ -588,7 +659,9 @@ export function FormaStudio() {
       ? composed.cursorClaudeRules
       : modalTab === "css"
       ? composed.cssTokens
-      : `# 1. Connect forma MCP server in Claude Code / Cursor:\nclaude mcp add --transport http forma ${origin}/api/mcp\n\n# 2. Optional Rare UI shadcn registry in components.json:\n{\n  "registries": {\n    "@rare-ui": "https://raw.githubusercontent.com/swamimalode07/rare-ui/main/public/r/{name}.json"\n  }\n}`;
+      : modalTab === "figma"
+      ? figmaW3cJson
+      : `# 1. Connect forma MCP server (15 tools) in Claude Code / Cursor:\nclaude mcp add --transport http forma ${origin}/api/mcp\n\n# 2. 1-Command shadcn Registry Install (writes DESIGN.md + tokens.css + TSX scaffold):\n${shadcnAddCommand}\n\n# 3. Export W3C Design Tokens JSON (Figma Variables / Tokens Studio):\ncurl -fsSL "${origin}/api/tokens?${currentMixQuery}" > tokens.dtcg.json`;
 
   return (
     <div className="min-h-screen flex flex-col editorial-dot-canvas">
@@ -759,6 +832,7 @@ export function FormaStudio() {
                       [
                         ["llms", "llms.txt"],
                         ["mcp", "MCP"],
+                        ["shadcn", "shadcn"],
                         ["cli", "CLI"],
                       ] as const
                     ).map(([key, label]) => (
@@ -778,7 +852,7 @@ export function FormaStudio() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-3 bg-[#0a0a09] border border-white/10 rounded-[11px] px-3.5 py-2.5">
+                <div className="flex items-center justify-between gap-2 bg-[#0a0a09] border border-white/10 rounded-[11px] px-3.5 py-2.5">
                   <code
                     className="text-[12px] text-[#ededeb] overflow-x-auto whitespace-nowrap"
                     style={{ fontFamily: "var(--font-mono), monospace" }}
@@ -786,40 +860,58 @@ export function FormaStudio() {
                     <span className="text-[#706f69] select-none">$ </span>
                     {agentCommands[agentTab]}
                   </code>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      sendBeaconEvent("copy_bootstrap", { target: agentTab });
-                      copyText("hero", agentCommands[agentTab]);
-                    }}
-                    className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white text-[#141413] text-[11.5px] font-medium hover:bg-[#eae9e4] cursor-pointer"
-                  >
-                    {copiedKey === "hero" ? (
-                      <>
-                        <Check className="w-3.5 h-3.5 text-[#118453]" />
-                        <span>{lang === "es" ? "Copiado" : "Copied"}</span>
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-3 h-3" />
-                        <span>{lang === "es" ? "Copiar" : "Copy"}</span>
-                      </>
+                  <div className="shrink-0 flex items-center gap-1.5">
+                    {agentTab === "mcp" && (
+                      <a
+                        href={cursorMcpDeepLink}
+                        className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full border border-white/20 text-[#ededeb] hover:bg-white/10 text-[11px] font-medium"
+                      >
+                        <span>+ Cursor</span>
+                      </a>
                     )}
-                  </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        sendBeaconEvent("copy_bootstrap", { target: agentTab });
+                        copyText("hero", agentCommands[agentTab]);
+                      }}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white text-[#141413] text-[11.5px] font-medium hover:bg-[#eae9e4] cursor-pointer"
+                    >
+                      {copiedKey === "hero" ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-[#118453]" />
+                          <span>{lang === "es" ? "Copiado" : "Copied"}</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3 h-3" />
+                          <span>{lang === "es" ? "Copiar" : "Copy"}</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              {/* SINGLE PILL IDEA INPUT BAR */}
+              {/* SINGLE PILL IDEA INPUT BAR (Native IME-safe <form>) */}
               <div className="mt-4 mx-auto max-w-[590px]">
-                <div className="p-1.5 rounded-full bg-white border border-[var(--line-strong)] shadow-[var(--shadow-sm)] flex items-center gap-2">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    void handleSynthesize();
+                  }}
+                  className="p-1.5 rounded-full bg-white border border-[var(--line-strong)] shadow-[var(--shadow-sm)] flex items-center gap-2"
+                >
+                  <label htmlFor="hero-idea-input" className="sr-only">
+                    {lang === "es"
+                      ? "Describe tu idea de proyecto o pega una URL"
+                      : "Describe your project idea or paste a URL"}
+                  </label>
                   <input
+                    id="hero-idea-input"
                     type="text"
                     value={ideaInput}
                     onChange={(e) => setIdeaInput(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") handleSynthesize();
-                    }}
-                    aria-label="Describe your project idea or paste a URL"
                     placeholder={
                       lang === "es"
                         ? "O escribe tu idea de proyecto (o URL) para ver el preview..."
@@ -828,10 +920,9 @@ export function FormaStudio() {
                     className="flex-1 min-w-0 px-4 py-2 text-[13.5px] text-[var(--ink)] bg-transparent focus:outline-none"
                   />
                   <button
-                    type="button"
+                    type="submit"
                     disabled={scrapingUrl}
-                    onClick={() => handleSynthesize()}
-                    className="px-4 py-2 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium inline-flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity cursor-pointer shrink-0 disabled:opacity-60"
+                    className="min-h-[2.25rem] px-4 py-2 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium inline-flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity cursor-pointer shrink-0 disabled:opacity-60"
                   >
                     {scrapingUrl ? (
                       <>
@@ -842,7 +933,7 @@ export function FormaStudio() {
                       <span>{lang === "es" ? "Sintetizar →" : "Synthesize →"}</span>
                     )}
                   </button>
-                </div>
+                </form>
 
                 <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
                   {QUICK_IDEAS.map((item) => (
@@ -1174,6 +1265,38 @@ export function FormaStudio() {
                 <button
                   type="button"
                   onClick={() => {
+                    sendBeaconEvent("install_component", {
+                      target: `shadcn-kit:${composed.mixCode}`,
+                      mixCode: composed.mixCode,
+                    });
+                    copyText("shadcn-kit", shadcnAddCommand);
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[var(--line-strong)] bg-white hover:bg-[var(--panel)] text-[12.5px] font-medium cursor-pointer"
+                  style={{ fontFamily: "var(--font-mono), monospace" }}
+                >
+                  {copiedKey === "shadcn-kit" ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-[#118453]" />
+                      <span>shadcn CLI</span>
+                    </>
+                  ) : (
+                    <span>npx shadcn add</span>
+                  )}
+                </button>
+
+                <a
+                  href={v0LaunchHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-full border border-[var(--line-strong)] bg-white hover:bg-[var(--panel)] text-[12.5px] font-medium"
+                >
+                  <span>v0</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                </a>
+
+                <button
+                  type="button"
+                  onClick={() => {
                     setModalTab("prompt");
                     dialogRef.current?.showModal();
                   }}
@@ -1437,9 +1560,11 @@ export function FormaStudio() {
               </div>
             )}
 
-            {/* TAB 4: TYPOGRAPHY PAIRINGS, SHADERS & ICON PACKS */}
+            {/* TAB 4: TYPOGRAPHY PAIRINGS, LIVE SVGL/ICONIFY HUB, SHADERS & ICON PACKS */}
             {galleryTab === "assets" && (
               <div className="space-y-8">
+                <ConnectedServicesHub lang={lang} />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {filteredTypographyPairings.map((pair) => {
                     const isApplied = fontPairingId === pair.id;
@@ -1943,10 +2068,11 @@ export function FormaStudio() {
               {(
                 [
                   ["prompt", "DESIGN.md"],
-                  ["skeletons", "6 Skeletons (HTML/CSS)"],
-                  ["rules", "CLAUDE.md / .cursorrules"],
+                  ["skeletons", "6 Skeletons"],
+                  ["rules", "CLAUDE.md"],
                   ["css", "tokens.css"],
-                  ["mcp", "MCP & Registries"],
+                  ["figma", "Figma W3C (.json)"],
+                  ["mcp", "MCP & shadcn"],
                 ] as const
               ).map(([tab, label]) => (
                 <button
