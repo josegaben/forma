@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { CURATED_COLOR_PALETTES, getContrastRatio } from "@/data/color-palettes";
+import { RARE_COMPONENTS, TYPOGRAPHY_PAIRINGS } from "@/data/compendium";
 import { WEB_FORMATS } from "@/data/formats";
 import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
@@ -12,9 +13,11 @@ export async function GET(request: Request) {
   const vault = getSectionVaultFeed();
 
   const content = `# forma (${origin})
-> OpenRouter for Web Design. 5-layer composable Design DNA (60-30-10 OKLCH Color Science, Typography, Layout, Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), Playwright + Vision Section Blueprints, and \`unslop-ui\` guardrails.
+> OpenRouter for Web Design. 5-layer composable Design DNA (60-30-10 OKLCH Color Science, Fontshare & Google Typography, Layout Skeletons, Interactive Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), Playwright + Vision Section Blueprints, and \`unslop-ui\` guardrails.
 
-Catalog: ${WEB_FORMATS.length} composable formats · ${vault.totalSections} Playwright + Vision section blueprints (Heros, Navbars, Pricing, Bento, Footers) · ${CURATED_COLOR_PALETTES.length} WCAG/OKLCH color systems · ${GLOBAL_DESIGN_DIRECTORIES.length} design directories · ${discoveredFeed.sites.length} live-scraped websites.
+Catalog: ${WEB_FORMATS.length} composable formats · ${vault.totalSections} Playwright + Vision section blueprints · ${CURATED_COLOR_PALETTES.length} WCAG/OKLCH color systems · ${TYPOGRAPHY_PAIRINGS.length} foundry typography pairings · ${RARE_COMPONENTS.length} interactive components · ${GLOBAL_DESIGN_DIRECTORIES.length} design directories · ${discoveredFeed.sites.length} live-scraped websites.
+
+Full single-file inline specification (all tokens, font @imports, and 6 HTML/CSS skeletons): ${origin}/llms-full.txt
 
 ---
 
@@ -87,7 +90,15 @@ ${CURATED_COLOR_PALETTES.map(
 
 ---
 
-## 4. Available Curated Format IDs (${WEB_FORMATS.length})
+## 4. Curated Foundry Typography Pairing IDs (${TYPOGRAPHY_PAIRINGS.length})
+Pass \`--data-urlencode "font=<id>"\` to \`/api/compose\` or \`fontPairingId\` to MCP \`compose_design_spec\`:
+${TYPOGRAPHY_PAIRINGS.map(
+  (tp) => `- \`${tp.id}\` (${tp.foundry}): ${tp.name} — ${tp.vibe}`
+).join("\n")}
+
+---
+
+## 5. Available Curated Format IDs (${WEB_FORMATS.length})
 ${WEB_FORMATS.map(
   (f) => `- \`${f.id}\` (${f.surface.mode} · ${f.category} · motion: \`${f.motion.easing}\`): ${f.name} — ${f.tagline}`
 ).join("\n")}

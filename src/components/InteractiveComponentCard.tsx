@@ -14,6 +14,9 @@ export function ComponentLiveMicroStage({
   const [orbColor, setOrbColor] = useState("#E06D44");
   const [activeNav, setActiveNav] = useState(0);
   const [counterVal, setCounterVal] = useState(98.4);
+  const [approvedState, setApprovedState] = useState<"pending" | "approved" | "denied">("pending");
+  const [bentoOpen, setBentoOpen] = useState(false);
+  const [morphDone, setMorphDone] = useState(false);
 
   const surface = dark ? "#18181b" : "#ffffff";
   const ink = dark ? "#f4f4f5" : "#141413";
@@ -276,6 +279,222 @@ export function ComponentLiveMicroStage({
               <span>Added to DESIGN.md</span>
             </span>
             <span className="opacity-60">140ms</span>
+          </div>
+        </div>
+      );
+
+    case "tool-approval":
+      return (
+        <div
+          className="w-[86%] rounded-[12px] border p-2.5 text-left space-y-2 shadow-xs"
+          style={{ backgroundColor: surface, borderColor: border, color: ink }}
+        >
+          <div
+            className="flex items-center justify-between text-[10px]"
+            style={{ fontFamily: "var(--font-mono), monospace" }}
+          >
+            <span className="font-medium truncate">mcp.deploy_edge</span>
+            <span className="px-1.5 py-0.5 rounded bg-[#E06D44]/15 text-[#c95026] tabular-nums">
+              $0.02
+            </span>
+          </div>
+          <div className="flex items-center justify-between gap-1.5 pt-1 border-t" style={{ borderColor: border }}>
+            <span className="text-[10px]" style={{ color: muted }}>
+              {approvedState === "approved"
+                ? "✓ Approved"
+                : approvedState === "denied"
+                ? "✕ Denied"
+                : "Awaiting human"}
+            </span>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setApprovedState("denied");
+                }}
+                className="px-2 py-0.5 rounded text-[10px] border cursor-pointer"
+                style={{ borderColor: border, color: muted }}
+              >
+                Deny
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setApprovedState("approved");
+                }}
+                className="px-2 py-0.5 rounded bg-[#141413] text-white text-[10px] font-medium cursor-pointer"
+              >
+                Allow ↵
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+
+    case "voice-wave":
+      return (
+        <div
+          className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-full border shadow-xs"
+          style={{
+            backgroundColor: dark ? "#18181b" : "#141413",
+            borderColor: border,
+            color: "#fbfbfa",
+          }}
+        >
+          <span className="w-2 h-2 rounded-full bg-[#E06D44]" />
+          <div className="flex items-center gap-0.5 h-3.5">
+            {[0.38, 0.75, 1, 0.55, 0.85, 0.45, 0.92, 0.6, 0.4, 0.72].map((sc, idx) => (
+              <span
+                key={idx}
+                className="w-[2px] h-full bg-white/90 rounded-full origin-center transition-transform duration-200 group-hover:scale-y-110"
+                style={{ transform: `scaleY(${sc})` }}
+              />
+            ))}
+          </div>
+          <span
+            className="text-[10.5px] tabular-nums opacity-80"
+            style={{ fontFamily: "var(--font-mono), monospace" }}
+          >
+            00:14
+          </span>
+        </div>
+      );
+
+    case "expandable-bento":
+      return (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setBentoOpen((v) => !v);
+          }}
+          className="w-[84%] rounded-[12px] border p-2.5 text-left transition-colors cursor-pointer"
+          style={{ backgroundColor: surface, borderColor: border, color: ink }}
+        >
+          <div className="flex items-center justify-between text-[11px] font-medium">
+            <span>Zero-CLS @container</span>
+            <span style={{ fontFamily: "var(--font-mono), monospace", color: muted }}>
+              {bentoOpen ? "−" : "+"}
+            </span>
+          </div>
+          {bentoOpen ? (
+            <div className="mt-1.5 text-[10px] leading-snug" style={{ color: muted }}>
+              7/5 + 4/8 asymmetric grid · 100% GPU transform
+            </div>
+          ) : (
+            <div className="mt-1 text-[9.5px]" style={{ fontFamily: "var(--font-mono), monospace", color: muted }}>
+              Click to expand spec
+            </div>
+          )}
+        </button>
+      );
+
+    case "popover-form":
+      return (
+        <div
+          className="w-[82%] rounded-[12px] border p-2.5 text-left shadow-xs space-y-1.5"
+          style={{ backgroundColor: surface, borderColor: border, color: ink }}
+        >
+          <div className="text-[10.5px]" style={{ color: muted }}>
+            Ship feedback inline...
+          </div>
+          <div className="flex items-center justify-between pt-1 border-t" style={{ borderColor: border }}>
+            <span className="text-[9.5px]" style={{ fontFamily: "var(--font-mono), monospace", color: muted }}>
+              ESC
+            </span>
+            <span className="px-2 py-0.5 rounded-full bg-[#141413] text-white text-[10px] font-medium">
+              Send
+            </span>
+          </div>
+        </div>
+      );
+
+    case "token-meter":
+      return (
+        <div
+          className="w-[84%] rounded-[12px] border p-2.5 text-left space-y-2"
+          style={{ backgroundColor: surface, borderColor: border, color: ink }}
+        >
+          <div
+            className="flex items-center justify-between text-[10px] tabular-nums"
+            style={{ fontFamily: "var(--font-mono), monospace" }}
+          >
+            <span style={{ color: muted }}>Prepaid Cap</span>
+            <span className="font-semibold">$1.20 / $5.00</span>
+          </div>
+          <div className="h-1.5 rounded-full bg-black/8 overflow-hidden">
+            <div
+              className="h-full bg-[#118453] origin-left transition-transform duration-300 group-hover:scale-x-110"
+              style={{ width: "36%" }}
+            />
+          </div>
+        </div>
+      );
+
+    case "floating-toolbar":
+      return (
+        <div
+          className="inline-flex items-center gap-1 p-1 rounded-full border shadow-sm"
+          style={{
+            backgroundColor: dark ? "#27272a" : "#141413",
+            borderColor: border,
+            color: "#fbfbfa",
+          }}
+        >
+          {[
+            ["Inspect", "I"],
+            ["Tokens", "T"],
+            ["Share", "S"],
+          ].map(([lbl, key]) => (
+            <span
+              key={lbl}
+              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full hover:bg-white/12 text-[10px]"
+            >
+              <span>{lbl}</span>
+              <kbd className="opacity-55 text-[9px]" style={{ fontFamily: "var(--font-mono), monospace" }}>
+                {key}
+              </kbd>
+            </span>
+          ))}
+        </div>
+      );
+
+    case "text-morph":
+      return (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setMorphDone((v) => !v);
+          }}
+          className="px-3.5 py-1.5 rounded-full bg-[#141413] text-[#fbfbfa] text-[11px] font-medium transition-transform active:scale-95 cursor-pointer"
+          style={{ fontFamily: "var(--font-mono), monospace" }}
+        >
+          {morphDone ? "✓ DESIGN.md synced" : "Sync DESIGN.md →"}
+        </button>
+      );
+
+    case "card-stack":
+      return (
+        <div className="relative w-[80%] pt-3 flex flex-col items-center select-none">
+          <div
+            className="w-[86%] h-3 rounded-t-[8px] border border-b-0 opacity-45 transition-transform duration-200 group-hover:-translate-y-1"
+            style={{ backgroundColor: surface, borderColor: border }}
+          />
+          <div
+            className="w-[93%] h-3 rounded-t-[8px] border border-b-0 opacity-70 transition-transform duration-200 group-hover:-translate-y-0.5"
+            style={{ backgroundColor: surface, borderColor: border }}
+          />
+          <div
+            className="w-full rounded-[10px] border px-3 py-2 text-left shadow-xs"
+            style={{ backgroundColor: surface, borderColor: border, color: ink }}
+          >
+            <div className="text-[9.5px]" style={{ fontFamily: "var(--font-mono), monospace", color: "#E06D44" }}>
+              v1.2 · GPU DECK
+            </div>
+            <div className="text-[11px] font-medium truncate">Stepped Scroll Depth</div>
           </div>
         </div>
       );

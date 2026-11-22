@@ -8,8 +8,13 @@ import {
   RARE_COMPONENTS,
   TYPOGRAPHY_PAIRINGS,
   type RareComponentItem,
+  type TypographyPairing,
 } from "@/data/compendium";
 import { WEB_FORMATS, type WebFormat } from "@/data/formats";
+import {
+  GLOBAL_DESIGN_DIRECTORIES,
+  type GlobalDesignDirectory,
+} from "@/data/world-references";
 import {
   FormatVisualThumb,
   PaletteVisualThumb,
@@ -29,7 +34,8 @@ interface ExplorerEntry {
     | "Formats"
     | "Palettes"
     | "Typography"
-    | "Shaders & Icons";
+    | "Shaders & Icons"
+    | "Directories";
   title: string;
   subtitle: string;
   actionLabel: string;
@@ -37,6 +43,8 @@ interface ExplorerEntry {
   paletteRef?: CuratedColorPalette;
   componentRef?: RareComponentItem;
   sectionRef?: VisualSectionItem;
+  fontRef?: TypographyPairing;
+  directoryRef?: GlobalDesignDirectory;
   externalUrl?: string;
   cliCopy?: string;
 }
@@ -49,6 +57,8 @@ export function CommandExplorerModal({
   onSelectPalette,
   onInspectComponent,
   onPinSection,
+  onSelectFontPairing,
+  onXrayUrl,
 }: {
   open: boolean;
   onClose: () => void;
@@ -57,6 +67,8 @@ export function CommandExplorerModal({
   onSelectPalette: (pal: CuratedColorPalette) => void;
   onInspectComponent: (comp: RareComponentItem) => void;
   onPinSection?: (sectionId: string) => void;
+  onSelectFontPairing?: (pairingId: string) => void;
+  onXrayUrl?: (url: string) => void;
 }) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -141,8 +153,9 @@ export function CommandExplorerModal({
         id: `type-${t.id}`,
         group: "Typography" as const,
         title: t.name,
-        subtitle: lang === "es" ? t.vibeEs : t.vibe,
-        actionLabel: t.cssImport,
+        subtitle: `${t.foundry} — ${lang === "es" ? t.vibeEs : t.vibe}`,
+        actionLabel: "Apply live typography pairing to Studio",
+        fontRef: t,
         cliCopy: `@import url('${t.cssImport}');`,
       })),
       ...CRAFT_TOOLS_AND_ASSETS.map((a) => ({
@@ -153,6 +166,15 @@ export function CommandExplorerModal({
         actionLabel: a.installOrUsage,
         externalUrl: a.url,
         cliCopy: a.installOrUsage,
+      })),
+      ...GLOBAL_DESIGN_DIRECTORIES.map((d) => ({
+        id: `dir-${d.name}`,
+        group: "Directories" as const,
+        title: d.name,
+        subtitle: `${d.category} · ${d.url}`,
+        actionLabel: "Live X-Ray into Studio →",
+        directoryRef: d,
+        externalUrl: d.url,
       })),
     ];
 
@@ -183,6 +205,16 @@ export function CommandExplorerModal({
     } else if (entry.paletteRef) {
       onClose();
       onSelectPalette(entry.paletteRef);
+    } else if (entry.fontRef) {
+      onClose();
+      onSelectFontPairing?.(entry.fontRef.id);
+    } else if (entry.directoryRef) {
+      onClose();
+      if (onXrayUrl) {
+        onXrayUrl(entry.directoryRef.url);
+      } else {
+        window.open(entry.directoryRef.url, "_blank", "noreferrer");
+      }
     } else if (entry.cliCopy) {
       navigator.clipboard.writeText(entry.cliCopy).catch(() => {});
       if (entry.externalUrl) window.open(entry.externalUrl, "_blank", "noreferrer");

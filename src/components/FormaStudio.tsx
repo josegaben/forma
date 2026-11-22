@@ -91,19 +91,19 @@ const HERO_JOBS = [
   {
     taskEn: "60-30-10 perceptual OKLCH color harmony",
     taskEs: "Armonía perceptual OKLCH 60-30-10 verificada",
-    refs: "Sanzo Wada · Radix · Happy Hues",
+    refs: "Sanzo Wada · Harmonizer · Radix",
     legacyEn: "Manual contrast math",
     legacyEs: "Cálculo manual",
-    formaRate: "$0.00 · 16 WCAG AAA sets",
+    formaRate: `$0.00 · ${CURATED_COLOR_PALETTES.length} WCAG sets`,
     href: "#catalog",
   },
   {
     taskEn: "Install tactile React & spring primitives",
     taskEs: "Instalar primitivas táctiles React y física spring",
-    refs: "Rare UI · Vaul · 21st.dev · cmdk",
+    refs: "Rare UI · Kokonut · COSS · Vaul",
     legacyEn: "$149 UI kit",
     legacyEs: "UI kit 149 $",
-    formaRate: "$0.00 · shadcn CLI",
+    formaRate: `$0.00 · ${RARE_COMPONENTS.length} CLI items`,
     href: "#catalog",
   },
 ];
@@ -154,11 +154,13 @@ export function FormaStudio() {
   const [surfaceId, setSurfaceId] = useState("resizes-infra");
   const [paletteId, setPaletteId] = useState<string | undefined>("pal-carbon-halftone");
   const [typographyId, setTypographyId] = useState("resizes-infra");
+  const [fontPairingId, setFontPairingId] = useState<string | undefined>(undefined);
   const [layoutId, setLayoutId] = useState("pdepablo-studio");
   const [componentsId, setComponentsId] = useState("twentyfirst-craft");
   const [motionId, setMotionId] = useState("rauno-craft");
   const [stack, setStack] = useState<TargetStack>("nextjs-tailwind");
   const [pinnedSectionIds, setPinnedSectionIds] = useState<string[]>([]);
+  const [pinnedComponentIds, setPinnedComponentIds] = useState<string[]>([]);
 
   const togglePinSection = (sectionId: string) => {
     setPinnedSectionIds((prev) =>
@@ -168,10 +170,17 @@ export function FormaStudio() {
     );
   };
 
+  const togglePinComponent = (compId: string) => {
+    setPinnedComponentIds((prev) =>
+      prev.includes(compId) ? prev.filter((id) => id !== compId) : [...prev, compId]
+    );
+  };
+
   // Compendium Gallery state
   const [galleryTab, setGalleryTab] = useState<
-    "components" | "formats" | "palettes" | "assets" | "scraped"
+    "components" | "formats" | "palettes" | "assets" | "scraped" | "directories"
   >("components");
+  const [dirCategoryFilter, setDirCategoryFilter] = useState<string>("all");
   const [modeFilter, setModeFilter] = useState<"all" | "light" | "dark">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [showAllGallery, setShowAllGallery] = useState(false);
@@ -216,6 +225,7 @@ export function FormaStudio() {
       if (params.get("surface")) setSurfaceId(params.get("surface")!);
       if (params.get("palette")) setPaletteId(params.get("palette")!);
       if (params.get("type")) setTypographyId(params.get("type")!);
+      if (params.get("font")) setFontPairingId(params.get("font")!);
       if (params.get("layout")) setLayoutId(params.get("layout")!);
       if (params.get("comp")) setComponentsId(params.get("comp")!);
       if (params.get("motion")) setMotionId(params.get("motion")!);
@@ -290,6 +300,7 @@ export function FormaStudio() {
       composeFormatGenome({
         surfaceId,
         typographyId,
+        fontPairingId,
         layoutId,
         componentsId,
         motionId,
@@ -300,10 +311,12 @@ export function FormaStudio() {
         enforceUnslop: true,
         customFormats,
         pinnedSectionIds,
+        pinnedComponentIds,
       }),
     [
       surfaceId,
       typographyId,
+      fontPairingId,
       layoutId,
       componentsId,
       motionId,
@@ -313,6 +326,7 @@ export function FormaStudio() {
       stack,
       customFormats,
       pinnedSectionIds,
+      pinnedComponentIds,
     ]
   );
 
@@ -387,15 +401,28 @@ export function FormaStudio() {
     setSurfaceId(rec.selection.surfaceId);
     setPaletteId(bestPal.id);
     setTypographyId(rec.selection.typographyId);
+    setFontPairingId(undefined);
     setLayoutId(rec.selection.layoutId);
     setComponentsId(rec.selection.componentsId);
     setMotionId(rec.selection.motionId);
+    const wordCount = raw.trim().split(/\s+/).filter(Boolean).length;
     sendBeaconEvent("synthesize_idea", {
       mixCode: nextGenome.mixCode,
       paletteId: bestPal.id,
-      target: raw.slice(0, 60),
+      target: `brief:${wordCount}w`,
     });
     document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const applyFontPairing = (pairingId: string) => {
+    setFontPairingId(pairingId);
+    document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const cycleFontPairing = () => {
+    const idx = TYPOGRAPHY_PAIRINGS.findIndex((fp) => fp.id === fontPairingId);
+    const next = TYPOGRAPHY_PAIRINGS[(idx + 1) % TYPOGRAPHY_PAIRINGS.length];
+    setFontPairingId(next.id);
   };
 
   const blendDiscoveredSite = (site: DiscoveredSite) => {
@@ -404,6 +431,7 @@ export function FormaStudio() {
     setSurfaceId(fmt.id);
     setPaletteId(undefined);
     setTypographyId(fmt.id);
+    setFontPairingId(undefined);
     setMotionId(fmt.id);
     document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -412,6 +440,7 @@ export function FormaStudio() {
     setSurfaceId(id);
     setPaletteId(undefined);
     setTypographyId(id);
+    setFontPairingId(undefined);
     setLayoutId(id);
     setComponentsId(id);
     setMotionId(id);
@@ -428,6 +457,7 @@ export function FormaStudio() {
     url.searchParams.set("surface", surfaceId);
     if (paletteId) url.searchParams.set("palette", paletteId);
     url.searchParams.set("type", typographyId);
+    if (fontPairingId) url.searchParams.set("font", fontPairingId);
     url.searchParams.set("layout", layoutId);
     url.searchParams.set("comp", componentsId);
     url.searchParams.set("motion", motionId);
@@ -496,6 +526,38 @@ export function FormaStudio() {
     });
     return showAllGallery ? list : list.slice(0, 9);
   }, [modeFilter, searchQuery, showAllGallery]);
+
+  const filteredTypographyPairings = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return TYPOGRAPHY_PAIRINGS;
+    return TYPOGRAPHY_PAIRINGS.filter((tp) =>
+      `${tp.name} ${tp.foundry} ${tp.vibe} ${tp.vibeEs} ${tp.keywords.join(" ")}`
+        .toLowerCase()
+        .includes(q)
+    );
+  }, [searchQuery]);
+
+  const filteredCraftAssets = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return CRAFT_TOOLS_AND_ASSETS;
+    return CRAFT_TOOLS_AND_ASSETS.filter((a) =>
+      `${a.name} ${a.kind} ${a.whyUseIt} ${a.whyUseItEs}`
+        .toLowerCase()
+        .includes(q)
+    );
+  }, [searchQuery]);
+
+  const filteredDirectories = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    const list = GLOBAL_DESIGN_DIRECTORIES.filter((d) => {
+      if (dirCategoryFilter !== "all" && d.category !== dirCategoryFilter) return false;
+      if (!q) return true;
+      return `${d.name} ${d.category} ${d.url}`.toLowerCase().includes(q);
+    });
+    return showAllGallery ? list : list.slice(0, 18);
+  }, [dirCategoryFilter, searchQuery, showAllGallery]);
+
+  const sectionVaultCount = getSectionVaultFeed().totalSections;
 
   const agentCommands: Record<typeof agentTab, string> = {
     llms: `set up forma - ${origin}/llms.txt`,
@@ -930,8 +992,8 @@ export function FormaStudio() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => setTypographyId(cycleFormatOption(typographyId, allFormats))}
-                    title="Swap typography source"
+                    onClick={cycleFontPairing}
+                    title="Cycle 18 curated foundry pairings"
                     className="p-1 rounded-full hover:bg-[var(--panel)] text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
@@ -942,11 +1004,9 @@ export function FormaStudio() {
                     className="text-[28px] leading-none"
                     style={{
                       fontFamily:
-                        composed.layers.typography.id === "claude-academy" ||
-                        composed.layers.typography.id === "a1-monograph" ||
-                        composed.layers.typography.typography.useItalicAccent
-                          ? "var(--font-editorial), Georgia, serif"
-                          : "var(--font-geist), sans-serif",
+                        composed.layers.typography.typography.displayFont ||
+                        "var(--font-editorial), Georgia, serif",
+                      fontSizeAdjust: "from-font",
                       fontStyle: composed.layers.typography.typography.useItalicAccent
                         ? "italic"
                         : "normal",
@@ -964,10 +1024,9 @@ export function FormaStudio() {
                   </span>
                 </div>
                 <div className="text-[13px] font-medium truncate">
-                  {composed.layers.typography.inspiredBy[0]?.name} ·{" "}
-                  <span className="text-[var(--muted)] font-normal">
-                    {composed.layers.typography.typography.h1Tracking}
-                  </span>
+                  {composed.activeFontPairing
+                    ? `${composed.activeFontPairing.foundry} · ${composed.activeFontPairing.displayFont}`
+                    : `${composed.layers.typography.inspiredBy[0]?.name} · ${composed.layers.typography.typography.h1Tracking}`}
                 </div>
               </div>
 
@@ -1185,30 +1244,32 @@ export function FormaStudio() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder={lang === "es" ? "Filtrar..." : "Filter..."}
                     aria-label="Filter compendium"
-                    className="h-[34px] px-3.5 rounded-full bg-white border border-[var(--line)] text-[12.5px] w-[155px] focus:outline-none focus:border-[var(--ink)]"
+                    className="min-h-[2.125rem] py-1 px-3.5 rounded-full bg-white border border-[var(--line)] text-[12.5px] w-[155px] focus:outline-none focus:border-[var(--ink)]"
                   />
 
-                  {galleryTab !== "components" && galleryTab !== "assets" && (
-                    <div className="inline-flex items-center gap-1">
-                      {(["all", "light", "dark"] as const).map((m) => (
-                        <label
-                          key={m}
-                          className="choice-chip px-2.5 py-1 rounded-full text-[11px] cursor-pointer"
-                          style={{ fontFamily: "var(--font-mono), monospace" }}
-                        >
-                          <input
-                            type="radio"
-                            name="gallery-mode"
-                            value={m}
-                            checked={modeFilter === m}
-                            onChange={() => setModeFilter(m)}
-                            className="sr-only"
-                          />
-                          <span>{m === "all" ? (lang === "es" ? "Todos" : "All") : m}</span>
-                        </label>
-                      ))}
-                    </div>
-                  )}
+                  {galleryTab !== "components" &&
+                    galleryTab !== "assets" &&
+                    galleryTab !== "directories" && (
+                      <div className="inline-flex items-center gap-1">
+                        {(["all", "light", "dark"] as const).map((m) => (
+                          <label
+                            key={m}
+                            className="choice-chip px-2.5 py-1 rounded-full text-[11px] cursor-pointer"
+                            style={{ fontFamily: "var(--font-mono), monospace" }}
+                          >
+                            <input
+                              type="radio"
+                              name="gallery-mode"
+                              value={m}
+                              checked={modeFilter === m}
+                              onChange={() => setModeFilter(m)}
+                              className="sr-only"
+                            />
+                            <span>{m === "all" ? (lang === "es" ? "Todos" : "All") : m}</span>
+                          </label>
+                        ))}
+                      </div>
+                    )}
                 </div>
               </div>
 
@@ -1245,6 +1306,12 @@ export function FormaStudio() {
                       labelEn: "Live Scraped Webs",
                       labelEs: "Webs Escrapeadas",
                       count: discoveredFeed.sites.length,
+                    },
+                    {
+                      id: "directories",
+                      labelEn: "Directories",
+                      labelEs: "Directorios",
+                      count: GLOBAL_DESIGN_DIRECTORIES.length,
                     },
                   ] as const
                 ).map((t) => {
@@ -1374,51 +1441,81 @@ export function FormaStudio() {
             {galleryTab === "assets" && (
               <div className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {TYPOGRAPHY_PAIRINGS.map((pair) => (
-                    <article
-                      key={pair.id}
-                      className="rounded-[20px] p-2 bg-[#f2f1ed] border border-[var(--line)] flex flex-col justify-between"
-                    >
-                      <div className="rounded-[14px] bg-white border border-[var(--line)] p-4 h-[142px] flex flex-col justify-between">
-                        <span
-                          className="text-[10px] text-[#E06D44]"
-                          style={{ fontFamily: "var(--font-mono), monospace" }}
-                        >
-                          {pair.displayFont} + {pair.monoFont}
-                        </span>
-                        <div
-                          className="text-[22px] leading-[1.1] tracking-[-0.025em]"
-                          style={{
-                            fontFamily: pair.displayFont.includes("Serif") || pair.displayFont.includes("Newsreader") || pair.displayFont.includes("Fraunces")
-                              ? "var(--font-editorial), Georgia, serif"
-                              : "var(--font-geist), sans-serif",
-                          }}
-                        >
-                          {pair.sampleHeading}
+                  {filteredTypographyPairings.map((pair) => {
+                    const isApplied = fontPairingId === pair.id;
+                    return (
+                      <article
+                        key={pair.id}
+                        className="rounded-[20px] p-2 bg-[#f2f1ed] border border-[var(--line)] hover:border-[var(--line-strong)] transition-colors flex flex-col justify-between"
+                      >
+                        <link rel="stylesheet" href={pair.cssImport} />
+                        <div className="rounded-[14px] bg-white border border-[var(--line)] p-4 min-h-[9.5rem] flex flex-col justify-between gap-2">
+                          <div className="flex items-center justify-between gap-2">
+                            <span
+                              className="text-[10px] text-[#E06D44] truncate"
+                              style={{ fontFamily: "var(--font-mono), monospace" }}
+                            >
+                              {pair.foundry} · {pair.monoFont}
+                            </span>
+                            <span
+                              className="text-[10px] text-[var(--muted)] shrink-0"
+                              style={{ fontFamily: "var(--font-mono), monospace" }}
+                            >
+                              {pair.h1Tracking}
+                            </span>
+                          </div>
+                          <div
+                            className="text-[1.375rem] leading-[1.12] tracking-[-0.025em]"
+                            style={{
+                              fontFamily: pair.displayStack,
+                              fontSizeAdjust: "from-font",
+                            }}
+                          >
+                            {pair.sampleHeading}
+                          </div>
+                          <div className="text-[11px] text-[var(--muted)] truncate">
+                            {lang === "es" ? pair.vibeEs : pair.vibe}
+                          </div>
                         </div>
-                        <div className="text-[11px] text-[var(--muted)] truncate">
-                          {lang === "es" ? pair.vibeEs : pair.vibe}
+                        <div className="px-2 pt-2.5 pb-1 flex items-center justify-between gap-2">
+                          <span className="text-[12.5px] font-semibold truncate">{pair.name}</span>
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            <button
+                              type="button"
+                              onClick={() => applyFontPairing(pair.id)}
+                              className={`px-2.5 py-1 rounded-full text-[11px] font-medium cursor-pointer transition-colors ${
+                                isApplied
+                                  ? "bg-[#118453] text-white"
+                                  : "bg-[#141413] text-white hover:opacity-90"
+                              }`}
+                            >
+                              {isApplied
+                                ? lang === "es"
+                                  ? "✓ Activa"
+                                  : "✓ Active"
+                                : lang === "es"
+                                ? "Probar"
+                                : "Apply"}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                copyText(pair.id, `@import url('${pair.cssImport}');`)
+                              }
+                              className="px-2.5 py-1 rounded-full bg-white border border-[var(--line)] text-[11px] font-medium cursor-pointer"
+                              style={{ fontFamily: "var(--font-mono), monospace" }}
+                            >
+                              {copiedKey === pair.id ? "✓ @import" : "CSS"}
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                      <div className="px-2.5 pt-2.5 pb-1 flex items-center justify-between gap-2">
-                        <span className="text-[13px] font-semibold truncate">{pair.name}</span>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            copyText(pair.id, `@import url('${pair.cssImport}');`)
-                          }
-                          className="px-3 py-1 rounded-full bg-white border border-[var(--line)] text-[11px] font-medium cursor-pointer"
-                          style={{ fontFamily: "var(--font-mono), monospace" }}
-                        >
-                          {copiedKey === pair.id ? "✓ @import" : "Copy CSS"}
-                        </button>
-                      </div>
-                    </article>
-                  ))}
+                      </article>
+                    );
+                  })}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {CRAFT_TOOLS_AND_ASSETS.map((asset) => (
+                  {filteredCraftAssets.map((asset) => (
                     <article
                       key={asset.id}
                       className="visual-card p-4 flex flex-col justify-between gap-3"
@@ -1520,9 +1617,80 @@ export function FormaStudio() {
               </div>
             )}
 
+            {/* TAB 6: 118 GLOBAL DESIGN DIRECTORIES WITH 1-CLICK LIVE X-RAY */}
+            {galleryTab === "directories" && (
+              <div className="space-y-5">
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 whitespace-nowrap">
+                  {[
+                    "all",
+                    "Curated Galleries",
+                    "Typography & Brand",
+                    "Components & Motion",
+                    "Color Science & Palettes",
+                    "Agent & OSS Specs",
+                    "SaaS & Landings",
+                    "Product & Flows",
+                  ].map((cat) => (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => setDirCategoryFilter(cat)}
+                      className={`px-3 py-1 rounded-full text-[11.5px] cursor-pointer transition-colors ${
+                        dirCategoryFilter === cat
+                          ? "bg-[#141413] text-white font-medium"
+                          : "bg-white border border-[var(--line)] text-[var(--muted)] hover:text-[var(--ink)]"
+                      }`}
+                      style={{ fontFamily: "var(--font-mono), monospace" }}
+                    >
+                      {cat === "all" ? (lang === "es" ? "Todos" : "All") : cat}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                  {filteredDirectories.map((dir) => (
+                    <article
+                      key={dir.name}
+                      className="visual-card p-3.5 flex items-center justify-between gap-3"
+                    >
+                      <div className="min-w-0">
+                        <a
+                          href={dir.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-[14px] font-semibold hover:underline inline-flex items-center gap-1 truncate"
+                        >
+                          <span>{dir.name}</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 opacity-45 shrink-0" />
+                        </a>
+                        <p
+                          className="text-[11px] text-[var(--muted)] truncate mt-0.5"
+                          style={{ fontFamily: "var(--font-mono), monospace" }}
+                        >
+                          {dir.category}
+                        </p>
+                      </div>
+
+                      {!dir.url.includes("github.com") && (
+                        <button
+                          type="button"
+                          onClick={() => handleSynthesize(dir.url)}
+                          className="shrink-0 px-3 py-1.5 rounded-full bg-[var(--panel)] hover:bg-[#141413] hover:text-white text-[11px] font-medium transition-colors cursor-pointer"
+                          style={{ fontFamily: "var(--font-mono), monospace" }}
+                        >
+                          X-Ray →
+                        </button>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {(galleryTab === "formats" ||
               galleryTab === "palettes" ||
-              galleryTab === "scraped") && (
+              galleryTab === "scraped" ||
+              galleryTab === "directories") && (
               <div className="mt-8 text-center">
                 <button
                   type="button"
@@ -1541,6 +1709,10 @@ export function FormaStudio() {
                     ? lang === "es"
                       ? `Ver las ${CURATED_COLOR_PALETTES.length} paletas maestras`
                       : `Browse all ${CURATED_COLOR_PALETTES.length} color systems`
+                    : galleryTab === "directories"
+                    ? lang === "es"
+                      ? `Ver los ${GLOBAL_DESIGN_DIRECTORIES.length} directorios`
+                      : `Browse all ${GLOBAL_DESIGN_DIRECTORIES.length} directories`
                     : lang === "es"
                     ? `Ver las ${discoveredFeed.sites.length} webs escrapeadas`
                     : `Browse all ${discoveredFeed.sites.length} live-scraped websites`}
@@ -1681,6 +1853,9 @@ export function FormaStudio() {
             <a href="/llms.txt" className="hover:text-white">
               llms.txt
             </a>
+            <a href="/llms-full.txt" className="hover:text-white">
+              llms-full.txt
+            </a>
             <a href="/api/mcp" className="hover:text-white">
               MCP
             </a>
@@ -1701,9 +1876,11 @@ export function FormaStudio() {
         </a>
         <a
           href="#section-vault"
-          className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413]"
+          className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413] tabular-nums"
         >
-          {lang === "es" ? "42 Secciones DOM" : "42 DOM Sections"}
+          {lang === "es"
+            ? `${sectionVaultCount} Secciones DOM`
+            : `${sectionVaultCount} DOM Sections`}
         </a>
         <a
           href="#proof"
@@ -1862,21 +2039,36 @@ export function FormaStudio() {
               </form>
             </div>
 
-            {/* CLI Install Row */}
-            <div className="flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-[12px] bg-[var(--panel)] border border-[var(--line)]">
+            {/* CLI Install Row + Pin to DESIGN.md */}
+            <div className="flex flex-wrap items-center justify-between gap-2 px-3.5 py-2.5 rounded-[12px] bg-[var(--panel)] border border-[var(--line)]">
               <code
                 className="text-[12px] text-[var(--ink)] truncate"
                 style={{ fontFamily: "var(--font-mono), monospace" }}
               >
                 $ {activeComponentModal.cliInstall}
               </code>
-              <button
-                type="button"
-                onClick={() => copyText("comp-cli", activeComponentModal.cliInstall)}
-                className="shrink-0 px-3 py-1 rounded-full bg-[#141413] text-white text-[11.5px] font-medium cursor-pointer"
-              >
-                {copiedKey === "comp-cli" ? "✓ Copied" : "Copy CLI"}
-              </button>
+              <div className="flex items-center gap-1.5 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => togglePinComponent(activeComponentModal.id)}
+                  className={`px-3 py-1 rounded-full text-[11.5px] font-medium cursor-pointer transition-colors ${
+                    pinnedComponentIds.includes(activeComponentModal.id)
+                      ? "bg-[#118453] text-white"
+                      : "bg-white border border-[var(--line-strong)] text-[var(--ink)]"
+                  }`}
+                >
+                  {pinnedComponentIds.includes(activeComponentModal.id)
+                    ? "✓ Pinned to DESIGN.md"
+                    : "+ Pin to DESIGN.md"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => copyText("comp-cli", activeComponentModal.cliInstall)}
+                  className="px-3 py-1 rounded-full bg-[#141413] text-white text-[11.5px] font-medium cursor-pointer"
+                >
+                  {copiedKey === "comp-cli" ? "✓ Copied" : "Copy CLI"}
+                </button>
+              </div>
             </div>
 
             {/* Self-Contained TSX Source Code */}
@@ -1916,6 +2108,8 @@ export function FormaStudio() {
         onSelectPalette={applyCuratedPalette}
         onInspectComponent={openComponentModal}
         onPinSection={togglePinSection}
+        onSelectFontPairing={applyFontPairing}
+        onXrayUrl={(u) => handleSynthesize(u)}
       />
     </div>
   );

@@ -51,6 +51,7 @@ export async function GET(request: Request) {
     (brief && !searchParams.get("surface") && !mixList[0]
       ? recommendPaletteForIdea(brief).id
       : undefined);
+  const fontPairingId = searchParams.get("font") || searchParams.get("fontPairingId") || undefined;
 
   const genome = composeFormatGenome({
     surfaceId,
@@ -59,6 +60,7 @@ export async function GET(request: Request) {
     componentsId,
     motionId,
     paletteId,
+    fontPairingId,
     projectName: project,
     projectBrief: brief || undefined,
     stack,
@@ -97,6 +99,9 @@ export async function POST(request: Request) {
     componentsId: body.componentsId || auto.componentsId,
     motionId: body.motionId || auto.motionId,
     paletteId: body.paletteId,
+    fontPairingId: body.fontPairingId,
+    pinnedSectionIds: body.pinnedSectionIds,
+    pinnedComponentIds: body.pinnedComponentIds,
     projectName: body.projectName || body.project || "Acme",
     projectBrief: brief || undefined,
     stack: body.stack || "nextjs-tailwind",

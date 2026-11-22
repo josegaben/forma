@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-22T04:26:25.862Z",
+  "lastVisualScanAt": "2026-11-22T12:04:57.044Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 42,
+  "totalSections": 73,
   "countsByKind": {
-    "pricing": 10,
-    "bento-features": 4,
-    "hero": 10,
-    "cta-footer": 9,
-    "navbar": 9
+    "pricing": 14,
+    "bento-features": 8,
+    "hero": 19,
+    "cta-footer": 15,
+    "navbar": 17
   },
   "sections": [
     {
@@ -181,6 +181,315 @@
       "tags": [
         "ai-agents",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-kokonutui-com-hero",
+      "siteUrl": "https://kokonutui.com",
+      "pageUrl": "https://kokonutui.com/",
+      "hostname": "kokonutui.com",
+      "siteTitle": "Kokonut UI: Open-Source AI Components for React",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:35.782Z",
+      "screenshotUrl": "/section-vault/kokonutui-com-hero.jpg",
+      "dimensions": {
+        "width": 1232,
+        "height": 1304
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1232,
+        "height": 1304,
+        "layoutMode": "grid",
+        "gridColumns": "1 tracks",
+        "gap": "1px",
+        "padding": "0px 0px",
+        "maxWidth": "1232px",
+        "radiusSample": "4px",
+        "headlineFont": "Geist",
+        "headlineSize": "112px",
+        "headlineTracking": "-6.72px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Apple Activity Card",
+          "Search⌘K",
+          "Change/",
+          "Browse sources"
+        ],
+        "activeAnimations": [
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "home-enter",
+            "duration": 300,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"grid cols-1 gap-1px\">\n  <div data-layout=\"grid cols-4 gap-1px\">\n    <p data-layout=\"flex\">Kokonut UI</p>\n    <p data-layout=\"flex\">Components for AI apps</p>\n    <p data-layout=\"flex\">React, Tailwind CSS, Motion</p>\n    <p data-layout=\"flex\">Free and open source</p>\n  </div>\n  <div data-layout=\"grid cols-12 gap-1px\">\n    <div data-layout=\"flex\">\n      <h1 data-type=\"Geist 112px/-6.72px\">AI components that feel right.</h1>\n    </div>\n    <div data-layout=\"grid cols-1 gap-1px\">\n      <div data-layout=\"flex\">\n        <p>Open-source React components for AI chat and agents, and the inputs and cards around them.</p>\n      </div>\n    </div>\n  </div>\n  <div data-layout=\"grid cols-3 gap-1px\">\n    <figure data-layout=\"flex column\">\n      <div data-layout=\"flex gap-16px\">\n        <span>Pick a tool with /, then ask</span>\n      </div>\n    </figure>\n    <figure data-layout=\"flex column\">\n      <div data-layout=\"flex gap-16px\">\n        <span>Pay without leaving the chat</span>\n      </div>\n    </figure>\n    <figure data-layout=\"flex column\">\n      <div data-layout=\"flex gap-16px\">\n        <span>Watch the courier arrive</span>\n      </div>\n    </figure>\n  </div>\n  <div data-layout=\"grid cols-12 gap-1px\">\n    <div data-layout=\"flex column gap-12px\">\n      <p>Ask your agent</p>\n      <button data-layout=\"flex gap-12px\">\n        <span>›</span>\n        <span>Add @kokonutui/ai-checkout to my agent's chat</span>\n      </button>\n    </div>\n    <div data-layout=\"flex column gap-12px\">\n      <p data-layout=\"flex gap-16px\">\n        <span>Connect your editor once</span>\n        <span>shadcn MCP</span>\n      </p>\n      <fieldset data-layout=\"grid cols-3 gap-1px\">\n        <button data-layout=\"flex gap-6px\" data-cta=\"bg:#f4f4f4 r:0px\">Claude Code</button>\n        <button data-layout=\"flex gap-6px\" data-cta=\"bg:#ffffff r:0px\">Cursor</button>\n        <button data-layout=\"flex gap-6px\" data-cta=\"bg:#ffffff r:0px\">VS Code</button>\n        <button data-layout=\"flex gap-6px\" data-cta=\"bg:#ffffff r:0px\">Codex</button>\n      </fieldset>\n      <button data-layout=\"flex gap-10px\">\n        <span>$</span>\n        <span>npx shadcn@latest mcp init --client claude</span>\n      </button>\n    </div>\n    <a data-layout=\"flex gap-16px\" data-cta=\"bg:#ffffff r:0px\">\n      <span data-layout=\"flex column gap-4px\">\n        <span>Backed by</span>\n        <span>Vercel OSS</span>\n      </span>\n    </a>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Agentic Hero with Live CLI / Interactive Surface (centered single-rail)",
+        "summary": "Live-rendered hero from kokonutui.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1232×1304px, padding 0px 0px, gap 1px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 112px (tracking -6.72px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Agentic Hero with Live CLI / Interactive Surface (centered single-rail) inspired by kokonutui.com's hero architecture: use a grid wrapper (max-width 1232px, padding 0px 0px, gap 1px) on background #ffffff with #000000 ink. Set the primary heading in Geist (112px, letter-spacing -6.72px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-attio-com-pricing",
+      "siteUrl": "https://attio.com",
+      "pageUrl": "https://attio.com/",
+      "hostname": "attio.com",
+      "siteTitle": "Attio: The CRM for agentic revenue",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T12:04:50.022Z",
+      "screenshotUrl": "/section-vault/attio-com-pricing.jpg",
+      "dimensions": {
+        "width": 1043,
+        "height": 1412
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#266df0",
+        "width": 1043,
+        "height": 1412,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1043px",
+        "radiusSample": "12px",
+        "headlineFont": "interDisplay",
+        "headlineSize": "24px",
+        "headlineTracking": "-0.24px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "ease-out"
+          },
+          {
+            "name": "pipeline-radar-ring-outer",
+            "duration": 3600,
+            "easing": "linear"
+          },
+          {
+            "name": "pipeline-radar-ring-inner",
+            "duration": 3600,
+            "easing": "linear"
+          },
+          {
+            "name": "enter",
+            "duration": 500,
+            "easing": "linear"
+          },
+          {
+            "name": "pipeline-radar-bob",
+            "duration": 3800,
+            "easing": "linear"
+          },
+          {
+            "name": "enter",
+            "duration": 500,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<article>\n    <h3 data-type=\"interDisplay 24px/-0.24px\">\n      Your team, amplified.\n      <span>Agents prospect and reach out when buyers are looking, building a pipeline of deals ready </span>\n    </h3>\n  <div data-layout=\"grid cols-2\">\n    <div data-layout=\"flex column gap-32px\">\n      <div>\n        <h4 data-type=\"inter 18px/-0.18px\">Free your reps to sell.</h4>\n        <p>Agents handle the research and busywork. Reps focus their time where deals get won.</p>\n      </div>\n    </div>\n    <div data-layout=\"flex column gap-32px\">\n      <div>\n        <h4 data-type=\"inter 18px/-0.18px\">Agents dig. You close.</h4>\n        <p>Every lead is enriched and qualified, so reps know when and why to engage.</p>\n      </div>\n    </div>\n  </div>\n</article>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from attio.com combining airy neutral stone/white surfaces (#ffffff) with disciplined interDisplay hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1043×1412px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in interDisplay at 24px (tracking -0.24px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #266df0 hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing ease-out)."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by attio.com's pricing architecture: use a block wrapper (max-width 1043px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in interDisplay (24px, letter-spacing -0.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-attio-com-bento-features",
+      "siteUrl": "https://attio.com",
+      "pageUrl": "https://attio.com/",
+      "hostname": "attio.com",
+      "siteTitle": "Attio: The CRM for agentic revenue",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T12:04:50.257Z",
+      "screenshotUrl": "/section-vault/attio-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1043,
+        "height": 1382
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#e8ddfe",
+        "width": 1043,
+        "height": 1382,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1043px",
+        "radiusSample": "12px",
+        "headlineFont": "interDisplay",
+        "headlineSize": "24px",
+        "headlineTracking": "-0.24px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "signal-roller-roll",
+            "duration": 24000,
+            "easing": "linear"
+          },
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "ease-out"
+          }
+        ]
+      },
+      "cleanDom": "<article>\n    <h3 data-type=\"interDisplay 24px/-0.24px\">\n      Keep more. Grow more.\n      <span>Agents track the whole book, so you save what's slipping and grow what's rising.</span>\n    </h3>\n  <div data-layout=\"grid cols-2\">\n    <div data-layout=\"flex column gap-32px\">\n      <div>\n        <h4 data-type=\"inter 18px/-0.18px\">Spot the shift early.</h4>\n        <p>Whether an account's climbing or cooling, you'll know weeks before the call.</p>\n      </div>\n    </div>\n    <div data-layout=\"flex column gap-32px\">\n      <div>\n        <h4 data-type=\"inter 18px/-0.18px\">The move's ready. You make the call.</h4>\n        <p>Save, upsell, or renewal, agents draft the play for you to approve and run.</p>\n      </div>\n    </div>\n  </div>\n</article>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from attio.com combining airy neutral stone/white surfaces (#ffffff) with disciplined interDisplay hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1043×1382px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in interDisplay at 24px (tracking -0.24px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #e8ddfe hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by attio.com's bento-features architecture: use a block wrapper (max-width 1043px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in interDisplay (24px, letter-spacing -0.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-clerk-com-pricing",
+      "siteUrl": "https://clerk.com",
+      "pageUrl": "https://clerk.com/",
+      "hostname": "clerk.com",
+      "siteTitle": "Clerk | Authentication and User Management",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T12:04:55.986Z",
+      "screenshotUrl": "/section-vault/clerk-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1164
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#131316",
+        "accent": "#131316",
+        "borderColor": "#eeeef0",
+        "width": 1440,
+        "height": 1164,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "22px",
+        "headlineFont": "geistNumbers",
+        "headlineSize": "56px",
+        "headlineTracking": "-1.96px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Role sets",
+          "All roles"
+        ],
+        "activeAnimations": [
+          {
+            "name": "ynmefG_tabs-fade-start",
+            "duration": 200,
+            "easing": "linear"
+          },
+          {
+            "name": "ynmefG_tabs-fade-end",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from clerk.com combining airy neutral stone/white surfaces (#ffffff) with disciplined geistNumbers hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1164px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in geistNumbers at 56px (tracking -1.96px) paired with #131316 primary ink.",
+          "Zero-clutter structural framing with 22px radii and subtle #eeeef0 hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by clerk.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #131316 ink. Set the primary heading in geistNumbers (56px, letter-spacing -1.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #131316 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -399,6 +708,163 @@
       "tags": [
         "ai-agents",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-attio-com-hero",
+      "siteUrl": "https://attio.com",
+      "pageUrl": "https://attio.com/",
+      "hostname": "attio.com",
+      "siteTitle": "Attio: The CRM for agentic revenue",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:49.750Z",
+      "screenshotUrl": "/section-vault/attio-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1207
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#e5e7eb",
+        "width": 1440,
+        "height": 1207,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "13px",
+        "headlineFont": "interDisplay",
+        "headlineSize": "64px",
+        "headlineTracking": "-1.28px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Talk to sales",
+          "Talk to sales",
+          "Start for free",
+          "Send me a demo"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 550,
+            "easing": "cubic-bezier(0.2, 0, 0, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 900,
+            "easing": "cubic-bezier(0, 0, 0.58, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 1000,
+            "easing": "ease-in-out"
+          },
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "ease-out"
+          },
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from attio.com combining airy neutral stone/white surfaces (#ffffff) with disciplined interDisplay hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1207px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in interDisplay at 64px (tracking -1.28px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 13px radii and subtle #e5e7eb hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing cubic-bezier(0.2, 0, 0, 1))."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by attio.com's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in interDisplay (64px, letter-spacing -1.28px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-clerk-com-hero",
+      "siteUrl": "https://clerk.com",
+      "pageUrl": "https://clerk.com/",
+      "hostname": "clerk.com",
+      "siteTitle": "Clerk | Authentication and User Management",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:55.735Z",
+      "screenshotUrl": "/section-vault/clerk-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1132
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#131316",
+        "accent": "#131316",
+        "borderColor": "#eeeef0",
+        "width": 1440,
+        "height": 1132,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "164px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "22px",
+        "headlineFont": "geistNumbers",
+        "headlineSize": "56px",
+        "headlineTracking": "-1.96px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Role sets",
+          "All roles"
+        ],
+        "activeAnimations": [
+          {
+            "name": "ynmefG_tabs-fade-start",
+            "duration": 200,
+            "easing": "linear"
+          },
+          {
+            "name": "ynmefG_tabs-fade-end",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n    <div data-layout=\"grid cols-4 gap-4px\">\n      <div>\n        <h1 data-type=\"geistNumbers 56px/-1.96px\">Everything you need for authentication</h1>\n        <p>More than APIs. The complete user layer for modern apps.</p>\n      </div>\n    </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from clerk.com combining airy neutral stone/white surfaces (#ffffff) with disciplined geistNumbers hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1132px, padding 164px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in geistNumbers at 56px (tracking -1.96px) paired with #131316 primary ink.",
+          "Zero-clutter structural framing with 22px radii and subtle #eeeef0 hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by clerk.com's hero architecture: use a block wrapper (max-width 1440px, padding 164px 0px, gap normal) on background #ffffff with #131316 ink. Set the primary heading in geistNumbers (56px, letter-spacing -1.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #131316 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
       ]
     },
     {
@@ -1119,6 +1585,235 @@
       ]
     },
     {
+      "id": "sec-rareui-com-bento-features",
+      "siteUrl": "https://www.rareui.com",
+      "pageUrl": "https://www.rareui.com/",
+      "hostname": "rareui.com",
+      "siteTitle": "Rare UI — Rare Animated React Components",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T12:04:31.279Z",
+      "screenshotUrl": "/section-vault/rareui-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1152,
+        "height": 1361
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#121212",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1152,
+        "height": 1361,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "128px 24px",
+        "maxWidth": "1152px",
+        "radiusSample": "32px",
+        "headlineFont": "openRunde",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.9px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Folder component",
+          "Duration Picker",
+          "Fluid Orb",
+          "Gravity Letters"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <header data-layout=\"flex column gap-12px\">\n    <h2 data-type=\"openRunde 36px/-0.9px\">31 + rare and unique components</h2>\n    <p>Just one file for each component. Add it with the shadcn CLI, using any package manager yo</p>\n  </header>\n  <div data-layout=\"grid cols-3 gap-16px\">\n    <a data-layout=\"flex column\" data-cta=\"bg:#121212 r:32px\">\n        <video width=\"711\" height=\"577\" alt=\"visual-asset\" />\n    </a>\n    <a data-layout=\"flex column\" data-cta=\"bg:#121212 r:32px\">\n        <video width=\"337\" height=\"253\" alt=\"visual-asset\" />\n    </a>\n    <a data-layout=\"flex column\" data-cta=\"bg:#121212 r:32px\">\n        <video width=\"337\" height=\"253\" alt=\"visual-asset\" />\n    </a>\n    <a data-layout=\"flex column\" data-cta=\"bg:#121212 r:32px\">\n        <video width=\"337\" height=\"252\" alt=\"visual-asset\" />\n    </a>\n    <a data-layout=\"flex column\" data-cta=\"bg:#121212 r:32px\">\n        <video width=\"337\" height=\"252\" alt=\"visual-asset\" />\n    </a>\n    <a data-layout=\"flex column\" data-cta=\"bg:#fc4c01 r:32px\">\n      <img width=\"320\" height=\"320\" alt=\"visual-asset\" />\n      <span>View all 31 components</span>\n    </a>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from rareui.com combining airy neutral stone/white surfaces (#ffffff) with disciplined openRunde hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1152×1361px, padding 128px 24px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in openRunde at 36px (tracking -0.9px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 32px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by rareui.com's bento-features architecture: use a block wrapper (max-width 1152px, padding 128px 24px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in openRunde (36px, letter-spacing -0.9px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #121212 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-vercel-com-pricing",
+      "siteUrl": "https://vercel.com",
+      "pageUrl": "https://vercel.com/pricing",
+      "hostname": "vercel.com",
+      "siteTitle": "Vercel Pricing: Hobby, Pro, and Enterprise plans",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T12:04:45.624Z",
+      "screenshotUrl": "/section-vault/vercel-com-pricing.jpg",
+      "dimensions": {
+        "width": 1392,
+        "height": 248
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#171717",
+        "accent": "#171717",
+        "borderColor": "#ebebeb",
+        "width": 1392,
+        "height": 248,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "72px",
+        "padding": "144px 0px",
+        "maxWidth": "1392px",
+        "radiusSample": "12px",
+        "headlineFont": "GeistSans",
+        "headlineSize": "64px",
+        "headlineTracking": "-3.84px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column gap-72px\">\n  <div data-layout=\"grid cols-12 gap-24px\">\n    <div data-layout=\"flex column gap-24px\">\n      <h1 data-type=\"GeistSans 64px/-3.84px\">Scale your app, control your costs</h1>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from vercel.com combining airy neutral stone/white surfaces (#fafafa) with disciplined GeistSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1392×248px, padding 144px 0px, gap 72px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in GeistSans at 64px (tracking -3.84px) paired with #171717 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ebebeb hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by vercel.com's pricing architecture: use a flex wrapper (max-width 1392px, padding 144px 0px, gap 72px) on background #fafafa with #171717 ink. Set the primary heading in GeistSans (64px, letter-spacing -3.84px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #171717 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-stripe-com-pricing",
+      "siteUrl": "https://stripe.com",
+      "pageUrl": "https://stripe.com/",
+      "hostname": "stripe.com",
+      "siteTitle": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T12:04:50.664Z",
+      "screenshotUrl": "/section-vault/stripe-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 977
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#061b31",
+        "accent": "#061b31",
+        "borderColor": "#c2c8f1",
+        "width": 1440,
+        "height": 977,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 16px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "sohne-var",
+        "headlineSize": "56px",
+        "headlineTracking": "-1.4px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "135+",
+          "US$1.9tn",
+          "99.999%",
+          "historical uptime"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div>\n    <div data-layout=\"flex column gap-80px\">\n      <h2 data-type=\"sohne-var 56px/-1.4px\">The backbone of global commerce</h2>\n    </div>\n      <div data-layout=\"flex\">\n        <canvas width=\"1234\" height=\"519\" alt=\"visual-asset\" />\n      </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from stripe.com combining airy neutral stone/white surfaces (#ffffff) with disciplined sohne-var hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×977px, padding 0px 16px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in sohne-var at 56px (tracking -1.4px) paired with #061b31 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #c2c8f1 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by stripe.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 16px, gap normal) on background #ffffff with #061b31 ink. Set the primary heading in sohne-var (56px, letter-spacing -1.4px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #061b31 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-stripe-com-bento-features",
+      "siteUrl": "https://stripe.com",
+      "pageUrl": "https://stripe.com/",
+      "hostname": "stripe.com",
+      "siteTitle": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T12:04:50.875Z",
+      "screenshotUrl": "/section-vault/stripe-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 380
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f8fafd",
+        "ink": "#061b31",
+        "accent": "#533afd",
+        "borderColor": "#b9b9f9",
+        "width": 1440,
+        "height": 380,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 16px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "sohne-var",
+        "headlineSize": "32px",
+        "headlineTracking": "-0.64px",
+        "backdropFilter": "none",
+        "childCardCount": 2,
+        "ctaTexts": [
+          "Start now",
+          "Contact sales",
+          "Pricing details",
+          "Integration options"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"grid cols-12 gap-56px\">\n    <div data-layout=\"flex column gap-32px\">\n      <div data-layout=\"flex column gap-16px\">\n        <span>Ready to get started?</span>\n        <p>Create an account instantly, or contact us to design a custom package for your business.</p>\n      </div>\n      <div data-layout=\"flex gap-8px\">\n        <a data-layout=\"flex gap-8px\" data-cta=\"bg:#533afd r:4px\">Start now</a>\n        <a data-layout=\"flex gap-8px\" data-cta=\"ghost r:4px\">Contact sales</a>\n      </div>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from stripe.com combining airy neutral stone/white surfaces (#f8fafd) with disciplined sohne-var hierarchy and 2 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×380px, padding 0px 16px) using 2-column split composition on a crisp editorial light #f8fafd canvas.",
+        "microDetails": [
+          "Display typography set in sohne-var at 32px (tracking -0.64px) paired with #061b31 primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #b9b9f9 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by stripe.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 16px, gap normal) on background #f8fafd with #061b31 ink. Set the primary heading in sohne-var (32px, letter-spacing -0.64px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #533afd strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
       "id": "sec-linear-app-cta-footer",
       "siteUrl": "https://linear.app",
       "pageUrl": "https://linear.app/",
@@ -1556,6 +2251,783 @@
       ]
     },
     {
+      "id": "sec-pdepablo-com-navbar",
+      "siteUrl": "https://pdepablo.com",
+      "pageUrl": "https://pdepablo.com/",
+      "hostname": "pdepablo.com",
+      "siteTitle": "Pablo González · Creative Director and Designer",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:31.029Z",
+      "screenshotUrl": "/section-vault/pdepablo-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 60
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#0a0a0a",
+        "accent": "#f5f5f5",
+        "borderColor": "#0a0a0a",
+        "width": 1440,
+        "height": 60,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "16px 24px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Helvetica Now",
+        "headlineSize": "18px",
+        "headlineTracking": "0.18px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "P de Pablo",
+          "Work",
+          "About",
+          "Contact"
+        ],
+        "activeAnimations": [
+          {
+            "name": "r-idle",
+            "duration": 5000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<header data-layout=\"flex\">\n  <a data-layout=\"flex\" data-cta=\"bg:#f5f5f5 r:999px\">P de Pablo</a>\n  <span data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex\" data-cta=\"bg:#f5f5f5 r:999px\">Work</a>\n    <a data-layout=\"flex\" data-cta=\"bg:#f5f5f5 r:999px\">About</a>\n  </span>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (60px)",
+        "summary": "Live-rendered navbar from pdepablo.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Helvetica Now hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×60px, padding 16px 24px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Helvetica Now at 18px (tracking 0.18px) paired with #0a0a0a primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #0a0a0a hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (60px) inspired by pdepablo.com's navbar architecture: use a flex wrapper (max-width 1440px, padding 16px 24px, gap normal) on background #ffffff with #0a0a0a ink. Set the primary heading in Helvetica Now (18px, letter-spacing 0.18px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f5f5f5 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-rareui-com-hero",
+      "siteUrl": "https://www.rareui.com",
+      "pageUrl": "https://www.rareui.com/",
+      "hostname": "rareui.com",
+      "siteTitle": "Rare UI — Rare Animated React Components",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:31.022Z",
+      "screenshotUrl": "/section-vault/rareui-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "10px 10px",
+        "maxWidth": "1440px",
+        "radiusSample": "45px",
+        "headlineFont": "openRunde",
+        "headlineSize": "72px",
+        "headlineTracking": "-1.8px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Rare UI",
+          "Home",
+          "Components",
+          "Sponsors"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex\">\n    <img width=\"860\" height=\"824\" alt=\"visual-asset\" />\n    <div data-layout=\"flex column gap-16px\">\n      <h1 data-type=\"openRunde 72px/-1.8px\">Tasteful Components, Made to Stand Out.</h1>\n      <p>\n        Rare UI is a free, open-source collection of rare animated React components. Browse them i\n        <a>MCP</a>\n      </p>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from rareui.com combining airy neutral stone/white surfaces (#ffffff) with disciplined openRunde hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×900px, padding 10px 10px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in openRunde at 72px (tracking -1.8px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 45px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by rareui.com's hero architecture: use a block wrapper (max-width 1440px, padding 10px 10px, gap normal) on background #ffffff with #ffffff ink. Set the primary heading in openRunde (72px, letter-spacing -1.8px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-rareui-com-cta-footer",
+      "siteUrl": "https://www.rareui.com",
+      "pageUrl": "https://www.rareui.com/",
+      "hostname": "rareui.com",
+      "siteTitle": "Rare UI — Rare Animated React Components",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:31.517Z",
+      "screenshotUrl": "/section-vault/rareui-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 765
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "rgba(255,255,255,0.1)",
+        "width": 1440,
+        "height": 765,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3px",
+        "headlineFont": "openRunde",
+        "headlineSize": "168px",
+        "headlineTracking": "-4.2px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Rare UI",
+          "Home",
+          "Components",
+          "MCP"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <canvas width=\"1440\" height=\"765\" alt=\"visual-asset\" />\n  <div data-layout=\"flex column\">\n    <div data-layout=\"flex gap-24px\">\n      <a data-layout=\"flex gap-10px\">\n        <img width=\"32\" height=\"32\" alt=\"visual-asset\" />\n        <span>Rare UI</span>\n      </a>\n      <nav data-layout=\"flex gap-8px\">\n        <a>Home</a>\n        <a>Components</a>\n        <a>MCP</a>\n        <a>Sponsors</a>\n        <a>Pricing</a>\n        <span>|</span>\n      </nav>\n    </div>\n    <div data-layout=\"flex\">\n      <h2 data-type=\"openRunde 168px/-4.2px\">Tasteful Components</h2>\n    </div>\n    <div data-layout=\"flex gap-12px\">\n      <span data-layout=\"flex gap-10px\">\n        <span>Rare UI © 2026</span>\n        <span>·</span>\n        <a>Support: swamimalodeofficial@gmail.com</a>\n      </span>\n      <span data-layout=\"flex gap-10px\">\n        <a>Privacy Policy</a>\n        <span>·</span>\n        <a>Terms of Service</a>\n        <span>·</span>\n        <a>Sitemap</a>\n        <span>·</span>\n      </span>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from rareui.com combining high-contrast obsidian surfaces (#000000) with disciplined openRunde hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×765px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in openRunde at 168px (tracking -4.2px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 3px radii and subtle rgba(255,255,255,0.1) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by rareui.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in openRunde (168px, letter-spacing -4.2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-raycast-com-hero",
+      "siteUrl": "https://www.raycast.com",
+      "pageUrl": "https://www.raycast.com/",
+      "hostname": "raycast.com",
+      "siteTitle": "Raycast - Your shortcut to everything",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:43.920Z",
+      "screenshotUrl": "/section-vault/raycast-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 967
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#07080a",
+        "ink": "#ffffff",
+        "accent": "#e6e6e6",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 967,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "Inter",
+        "headlineSize": "64px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Download for Mac",
+          "Install via Homebrew",
+          "Download V1",
+          "Introducing Raycast MCP"
+        ],
+        "activeAnimations": [
+          {
+            "name": "H3BVAa_fade-in-up",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "H3BVAa_fade-in-up",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "ezSJPa_rotating2",
+            "duration": 3000,
+            "easing": "linear"
+          },
+          {
+            "name": "ezSJPa_x",
+            "duration": 3000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n  <div data-layout=\"flex column gap-32px\">\n    <h1 data-type=\"Inter 64px/normal\">Your shortcut to everything.</h1>\n    <p>\n      <span>A collection of powerful productivity tools all within an extendable launcher. Fast, ergon</span>\n    </p>\n  </div>\n  <div data-layout=\"flex column\">\n    <div data-layout=\"flex gap-16px\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#e6e6e6 r:8px\">\n        <span>Download for Mac</span>\n      </a>\n    </div>\n    <p data-layout=\"flex gap-16px\">macOS Tahoe and Apple Silicon required</p>\n    <div data-layout=\"flex gap-25px\">\n      <span>\n        <button data-cta=\"ghost r:4px\">Install via Homebrew</button>\n      </span>\n      <button data-cta=\"ghost r:4px\">Download V1</button>\n    </div>\n  </div>\n  <div data-layout=\"flex\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#130d0e r:1000px\">Introducing Raycast MCP</a>\n  </div>\n        <canvas width=\"1200\" height=\"967\" alt=\"visual-asset\" />\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from raycast.com combining high-contrast obsidian surfaces (#07080a) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×967px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #07080a canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 64px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (4 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by raycast.com's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #07080a with #ffffff ink. Set the primary heading in Inter (64px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #e6e6e6 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-vercel-com-hero",
+      "siteUrl": "https://vercel.com",
+      "pageUrl": "https://vercel.com/",
+      "hostname": "vercel.com",
+      "siteTitle": "Agentic Infrastructure - Vercel",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:43.831Z",
+      "screenshotUrl": "/section-vault/vercel-com-hero.jpg",
+      "dimensions": {
+        "width": 1392,
+        "height": 836
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#171717",
+        "accent": "#171717",
+        "borderColor": "#ebebeb",
+        "width": 1392,
+        "height": 836,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1392px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "GeistSans",
+        "headlineSize": "24px",
+        "headlineTracking": "-0.96px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Deploy now",
+          "Talk to sales"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <div data-layout=\"flex\">\n      <header data-layout=\"flex column gap-32px\">\n        <h1 data-type=\"GeistSans 64px/-3.84px\">Agentic Infrastructure</h1>\n      </header>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from vercel.com combining airy neutral stone/white surfaces (#fafafa) with disciplined GeistSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1392×836px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in GeistSans at 24px (tracking -0.96px) paired with #171717 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #ebebeb hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by vercel.com's hero architecture: use a flex wrapper (max-width 1392px, padding 0px 0px, gap normal) on background #fafafa with #171717 ink. Set the primary heading in GeistSans (24px, letter-spacing -0.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #171717 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-vercel-com-cta-footer",
+      "siteUrl": "https://vercel.com",
+      "pageUrl": "https://vercel.com/",
+      "hostname": "vercel.com",
+      "siteTitle": "Agentic Infrastructure - Vercel",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:44.076Z",
+      "screenshotUrl": "/section-vault/vercel-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 846
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#171717",
+        "accent": "#171717",
+        "borderColor": "#ebebeb",
+        "width": 1440,
+        "height": 846,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "40px 24px",
+        "maxWidth": "1448px",
+        "radiusSample": "4px",
+        "headlineFont": "GeistSans",
+        "headlineSize": "14px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "AI SDK",
+          "AI Gateway",
+          "Sandbox",
+          "Workflows"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 1000,
+            "easing": "ease"
+          }
+        ]
+      },
+      "cleanDom": "<footer>\n  <nav>\n    <div data-layout=\"grid cols-12 gap-24px\">\n        <h2 data-type=\"GeistSans 14px/normal\">Agent Stack</h2>\n        <h2 data-type=\"GeistSans 14px/normal\">Core Platform</h2>\n        <h2 data-type=\"GeistSans 14px/normal\">Security</h2>\n        <h2 data-type=\"GeistSans 14px/normal\">Tools</h2>\n        <h2 data-type=\"GeistSans 14px/normal\">Frameworks</h2>\n        <h2 data-type=\"GeistSans 14px/normal\">SDKs</h2>\n    </div>\n  </nav>\n  <div data-layout=\"flex\">\n    <a data-layout=\"flex\">\n      <div data-layout=\"flex gap-6px\">\n        <p>Loading status…</p>\n      </div>\n    </a>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from vercel.com combining airy neutral stone/white surfaces (#fafafa) with disciplined GeistSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×846px, padding 40px 24px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in GeistSans at 14px (tracking normal) paired with #171717 primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #ebebeb hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing ease)."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by vercel.com's cta-footer architecture: use a block wrapper (max-width 1448px, padding 40px 24px, gap normal) on background #fafafa with #171717 ink. Set the primary heading in GeistSans (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #171717 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-stripe-com-navbar",
+      "siteUrl": "https://stripe.com",
+      "pageUrl": "https://stripe.com/",
+      "hostname": "stripe.com",
+      "siteTitle": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:50.056Z",
+      "screenshotUrl": "/section-vault/stripe-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 76
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#533afd",
+        "borderColor": "#d6d9fc",
+        "width": 1440,
+        "height": 76,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "sohne-var",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Products",
+          "Solutions",
+          "Developers",
+          "Resources"
+        ],
+        "activeAnimations": [
+          {
+            "name": "detect-scroll",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (76px)",
+        "summary": "Live-rendered navbar from stripe.com combining airy neutral stone/white surfaces (#ffffff) with disciplined sohne-var hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×76px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in sohne-var at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #d6d9fc hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (76px) inspired by stripe.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in sohne-var (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #533afd strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-stripe-com-hero",
+      "siteUrl": "https://stripe.com",
+      "pageUrl": "https://stripe.com/",
+      "hostname": "stripe.com",
+      "siteTitle": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:50.370Z",
+      "screenshotUrl": "/section-vault/stripe-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 685
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#81b81a",
+        "accent": "#533afd",
+        "borderColor": "#b9b9f9",
+        "width": 1440,
+        "height": 685,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 16px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "sohne-var",
+        "headlineSize": "48px",
+        "headlineTracking": "-0.96px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Get started",
+          "Sign up with Google"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"grid cols-1\">\n    <div data-layout=\"grid cols-12 gap-40px\">\n        <span>Global GDP running on Stripe:</span>\n      <h1 data-type=\"sohne-var 48px/-0.96px\">\n        <em>Financial infrastructure to grow your revenue.</em>\n        <span>Accept payments, offer financial services and implement custom revenue models – from your </span>\n      </h1>\n      <h1 data-type=\"sohne-var 48px/-0.96px\">\n        <em>Financial infrastructure to grow your revenue.</em>\n        <span>Accept payments, offer financial services and implement custom revenue models – from your </span>\n      </h1>\n      <div data-layout=\"flex gap-8px\">\n        <a data-layout=\"flex gap-8px\" data-cta=\"bg:#533afd r:4px\">Get started</a>\n        <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:4px\">Sign up with Google</a>\n      </div>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from stripe.com combining airy neutral stone/white surfaces (#ffffff) with disciplined sohne-var hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×685px, padding 0px 16px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in sohne-var at 48px (tracking -0.96px) paired with #81b81a primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #b9b9f9 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by stripe.com's hero architecture: use a block wrapper (max-width 1440px, padding 0px 16px, gap normal) on background #ffffff with #81b81a ink. Set the primary heading in sohne-var (48px, letter-spacing -0.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #533afd strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-stripe-com-cta-footer",
+      "siteUrl": "https://stripe.com",
+      "pageUrl": "https://stripe.com/",
+      "hostname": "stripe.com",
+      "siteTitle": "Stripe | Financial Infrastructure to Grow Your Revenue",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:51.084Z",
+      "screenshotUrl": "/section-vault/stripe-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1299
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f8fafd",
+        "ink": "#061b31",
+        "accent": "#533afd",
+        "borderColor": "#d4dee9",
+        "width": 1440,
+        "height": 1299,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 16px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "sohne-var",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Pricing",
+          "Atlas",
+          "Authorization Boost",
+          "Billing"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"flex\">\n        <p>© 2026 Stripe, LLC.</p>\n    </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from stripe.com combining airy neutral stone/white surfaces (#f8fafd) with disciplined sohne-var hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1299px, padding 0px 16px) using centered single-rail composition on a crisp editorial light #f8fafd canvas.",
+        "microDetails": [
+          "Display typography set in sohne-var at 16px (tracking normal) paired with #061b31 primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #d4dee9 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by stripe.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 16px, gap normal) on background #f8fafd with #061b31 ink. Set the primary heading in sohne-var (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #533afd strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-attio-com-navbar",
+      "siteUrl": "https://attio.com",
+      "pageUrl": "https://attio.com/",
+      "hostname": "attio.com",
+      "siteTitle": "Attio: The CRM for agentic revenue",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:49.535Z",
+      "screenshotUrl": "/section-vault/attio-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 116
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 116,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "10px",
+        "headlineFont": "inter",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.16px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Platform",
+          "Resources",
+          "Developers",
+          "Customers"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (116px)",
+        "summary": "Live-rendered navbar from attio.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×116px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in inter at 16px (tracking -0.16px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 10px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (116px) inspired by attio.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in inter (16px, letter-spacing -0.16px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-attio-com-cta-footer",
+      "siteUrl": "https://attio.com",
+      "pageUrl": "https://attio.com/",
+      "hostname": "attio.com",
+      "siteTitle": "Attio: The CRM for agentic revenue",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:50.486Z",
+      "screenshotUrl": "/section-vault/attio-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 713
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 713,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "inter",
+        "headlineSize": "14px",
+        "headlineTracking": "-0.07px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Refer a teamNew",
+          "Changelog",
+          "Gmail extension",
+          "iOS app"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from attio.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×713px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in inter at 14px (tracking -0.07px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by attio.com's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in inter (14px, letter-spacing -0.07px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-clerk-com-navbar",
+      "siteUrl": "https://clerk.com",
+      "pageUrl": "https://clerk.com/",
+      "hostname": "clerk.com",
+      "siteTitle": "Clerk | Authentication and User Management",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:55.369Z",
+      "screenshotUrl": "/section-vault/clerk-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 42
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f8",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#d9d9de",
+        "width": 1440,
+        "height": 42,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "geistNumbers",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Products",
+          "Docs",
+          "Changelog",
+          "Company"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 450,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (42px)",
+        "summary": "Live-rendered navbar from clerk.com combining airy neutral stone/white surfaces (#f7f7f8) with disciplined geistNumbers hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×42px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #f7f7f8 canvas.",
+        "microDetails": [
+          "Display typography set in geistNumbers at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #d9d9de hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing cubic-bezier(0.33, 1, 0.68, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (42px) inspired by clerk.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f7f7f8 with #000000 ink. Set the primary heading in geistNumbers (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -1722,6 +3194,61 @@
       "tags": [
         "devtools",
         "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-clerk-com-bento-features",
+      "siteUrl": "https://clerk.com",
+      "pageUrl": "https://clerk.com/",
+      "hostname": "clerk.com",
+      "siteTitle": "Clerk | Authentication and User Management",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T12:04:56.447Z",
+      "screenshotUrl": "/section-vault/clerk-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 893
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f8",
+        "ink": "#6c47ff",
+        "accent": "#6c47ff",
+        "borderColor": "#9394a1",
+        "width": 1280,
+        "height": 893,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "128px 32px",
+        "maxWidth": "1280px",
+        "radiusSample": "16px",
+        "headlineFont": "geistNumbers",
+        "headlineSize": "13px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Explore Multi-tenancy"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div>\n  <div>\n    <h2 data-type=\"geistNumbers 13px/normal\">Multi-tenancy</h2>\n    <p>Everything your B2B SaaS needs</p>\n    <p>Clerk has all the features you need to onboard and manage the users and organizations of y</p>\n    <a data-layout=\"inline-flex\">Explore Multi-tenancy</a>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from clerk.com combining airy neutral stone/white surfaces (#f7f7f8) with disciplined geistNumbers hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1280×893px, padding 128px 32px) using centered single-rail composition on a crisp editorial light #f7f7f8 canvas.",
+        "microDetails": [
+          "Display typography set in geistNumbers at 13px (tracking normal) paired with #6c47ff primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #9394a1 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by clerk.com's bento-features architecture: use a block wrapper (max-width 1280px, padding 128px 32px, gap normal) on background #f7f7f8 with #6c47ff ink. Set the primary heading in geistNumbers (13px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #6c47ff strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -2645,6 +4172,471 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by footr.substack.com's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f9f9f9 with #363737 ink. Set the primary heading in SF Pro Display (24px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #242424 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-coss-com-navbar",
+      "siteUrl": "https://coss.com",
+      "pageUrl": "https://coss.com/ui",
+      "hostname": "coss.com",
+      "siteTitle": "A modern React UI component library – coss ui",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:35.235Z",
+      "screenshotUrl": "/section-vault/coss-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 64
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 64,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "10px",
+        "headlineFont": "fontSans",
+        "headlineSize": "24px",
+        "headlineTracking": "normal",
+        "backdropFilter": "blur(8px)",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Toggle Menu",
+          "coss.com ui",
+          "Docs",
+          "Particles"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header>\n  <div data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex gap-6px\">\n      coss.com\n      <span>ui</span>\n    </a>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Translucent Frosted Header Rail (64px)",
+        "summary": "Live-rendered navbar from coss.com combining airy neutral stone/white surfaces (#ffffff) with disciplined fontSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×64px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in fontSans at 24px (tracking normal) paired with #141413 primary ink.",
+          "Optical depth via blur(8px) glass layer and hairline rgba(0,0,0,0.08) dividers.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Translucent Frosted Header Rail (64px) inspired by coss.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in fontSans (24px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-coss-com-hero",
+      "siteUrl": "https://coss.com",
+      "pageUrl": "https://coss.com/ui",
+      "hostname": "coss.com",
+      "siteTitle": "A modern React UI component library – coss ui",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:35.426Z",
+      "screenshotUrl": "/section-vault/coss-com-hero.jpg",
+      "dimensions": {
+        "width": 1416,
+        "height": 511
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1416,
+        "height": 511,
+        "layoutMode": "grid",
+        "gridColumns": "2 tracks",
+        "gap": "64px",
+        "padding": "112px 24px",
+        "maxWidth": "1416px",
+        "radiusSample": "10px",
+        "headlineFont": "fontSans",
+        "headlineSize": "61px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Cal.com",
+          "Get started",
+          "Browse 530 particles"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"grid cols-2 gap-64px\">\n  <div data-layout=\"flex column gap-20px\">\n    <h1 data-type=\"fontSans 61px/normal\">A modern React UI component library.</h1>\n    <p>\n      Accessible React components we use to build , powered by Base UI and styled with Tailwind \n      <a>Cal.com</a>\n    </p>\n    <div data-layout=\"flex gap-8px\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"ghost r:10px\">Get started</a>\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:10px\">Browse 530 particles</a>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from coss.com combining airy neutral stone/white surfaces (#ffffff) with disciplined fontSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1416×511px, padding 112px 24px, gap 64px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in fontSans at 61px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 10px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by coss.com's hero architecture: use a grid wrapper (max-width 1416px, padding 112px 24px, gap 64px) on background #ffffff with #141413 ink. Set the primary heading in fontSans (61px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-kokonutui-com-navbar",
+      "siteUrl": "https://kokonutui.com",
+      "pageUrl": "https://kokonutui.com/",
+      "hostname": "kokonutui.com",
+      "siteTitle": "Kokonut UI: Open-Source AI Components for React",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:35.403Z",
+      "screenshotUrl": "/section-vault/kokonutui-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 108
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#0a0a0a",
+        "accent": "#0a0a0a",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 108,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "Geist",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Kokonut UI",
+          "Components",
+          "AI",
+          "Agents"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (108px)",
+        "summary": "Live-rendered navbar from kokonutui.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×108px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 16px (tracking normal) paired with #0a0a0a primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (108px) inspired by kokonutui.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #0a0a0a ink. Set the primary heading in Geist (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0a0a0a strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-kokonutui-com-cta-footer",
+      "siteUrl": "https://kokonutui.com",
+      "pageUrl": "https://kokonutui.com/",
+      "hostname": "kokonutui.com",
+      "siteTitle": "Kokonut UI: Open-Source AI Components for React",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:36.006Z",
+      "screenshotUrl": "/section-vault/kokonutui-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 596
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 596,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Mono",
+        "headlineSize": "12px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Kokonut UI",
+          "Built by Dorian Baffier",
+          "AI components",
+          "Backgrounds components"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"grid cols-1 gap-1px\">\n      <div data-layout=\"flex gap-16px\">\n        <a data-layout=\"flex gap-4px\">Built by</a>\n      </div>\n      <div data-layout=\"flex gap-4px\">\n        <p>© Kokonut UI. Free and open source under the .</p>\n        <p>React, Tailwind CSS, Motion, shadcn/ui</p>\n      </div>\n    </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from kokonutui.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist Mono hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×596px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist Mono at 12px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by kokonutui.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Geist Mono (12px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-motion-primitives-com-navbar",
+      "siteUrl": "https://motion-primitives.com",
+      "pageUrl": "https://motion-primitives.com/",
+      "hostname": "motion-primitives.com",
+      "siteTitle": "Motion-Primitives - UI kit to make beautiful, animated interfaces, fas",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:39.653Z",
+      "screenshotUrl": "/section-vault/motion-primitives-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 64
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#09090b",
+        "accent": "#09090b",
+        "borderColor": "#e4e4e7",
+        "width": 1440,
+        "height": 64,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 32px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "motion-primitivesbeta",
+          "AI",
+          "Advanced",
+          "Build with Mesurer"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header data-layout=\"flex\">\n  <div data-layout=\"flex\">\n    <a data-layout=\"flex\">\n      <div>motion-primitives</div>\n      <span>beta</span>\n    </a>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (64px)",
+        "summary": "Live-rendered navbar from motion-primitives.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×64px, padding 0px 32px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #09090b primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #e4e4e7 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (64px) inspired by motion-primitives.com's navbar architecture: use a flex wrapper (max-width 1440px, padding 0px 32px, gap normal) on background #ffffff with #09090b ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #09090b strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-motion-primitives-com-hero",
+      "siteUrl": "https://motion-primitives.com",
+      "pageUrl": "https://motion-primitives.com/",
+      "hostname": "motion-primitives.com",
+      "siteTitle": "Motion-Primitives - UI kit to make beautiful, animated interfaces, fas",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T12:04:39.837Z",
+      "screenshotUrl": "/section-vault/motion-primitives-com-hero.jpg",
+      "dimensions": {
+        "width": 1392,
+        "height": 334
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#e4e4e7",
+        "width": 1392,
+        "height": 334,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "80px 0px",
+        "maxWidth": "1392px",
+        "radiusSample": "7.6px",
+        "headlineFont": "Inter",
+        "headlineSize": "36px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Explore Docs",
+          "Explore Docs",
+          "GitHubStar on GitHub",
+          "GitHubStar on GitHub"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"Inter 36px/normal\">UI kit to make beautiful, animated interfaces, faster.</h1>\n    <p>Beautifully designed motions components. Easy copy-paste. Customizable. Open Source. Built</p>\n  </div>\n  <div data-layout=\"flex\">\n    <a>\n      <button data-layout=\"inline-flex\" data-cta=\"ghost r:7.6px\">Explore Docs</button>\n    </a>\n    <a>\n      <button data-layout=\"inline-flex\" data-cta=\"ghost r:7.6px\">Star on GitHub</button>\n    </a>\n  </div>\n  <span>Free updates and new components released regularly.</span>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from motion-primitives.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1392×334px, padding 80px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 36px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 7.6px radii and subtle #e4e4e7 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by motion-primitives.com's hero architecture: use a flex wrapper (max-width 1392px, padding 80px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Inter (36px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "docs"
+      ]
+    },
+    {
+      "id": "sec-vercel-com-navbar",
+      "siteUrl": "https://vercel.com",
+      "pageUrl": "https://vercel.com/",
+      "hostname": "vercel.com",
+      "siteTitle": "Agentic Infrastructure - Vercel",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T12:04:43.640Z",
+      "screenshotUrl": "/section-vault/vercel-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 64
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#171717",
+        "accent": "#ffffff",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 64,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "GeistSans",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Copy Wordmark",
+          "Copy Logo",
+          "Download Brand Assets",
+          "Brand Guidelines"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (64px)",
+        "summary": "Live-rendered navbar from vercel.com combining airy neutral stone/white surfaces (#fafafa) with disciplined GeistSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×64px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in GeistSans at 16px (tracking normal) paired with #171717 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (64px) inspired by vercel.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #fafafa with #171717 ink. Set the primary heading in GeistSans (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-clerk-com-cta-footer",
+      "siteUrl": "https://clerk.com",
+      "pageUrl": "https://clerk.com/",
+      "hostname": "clerk.com",
+      "siteTitle": "Clerk | Authentication and User Management",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T12:04:56.886Z",
+      "screenshotUrl": "/section-vault/clerk-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 413
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f8",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#d9d9de",
+        "width": 1440,
+        "height": 413,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "geistNumbers",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Authentication",
+          "Multi-tenancy",
+          "Billing",
+          "MCP server"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"flex\">\n      <p>© 2026 Clerk, Inc.</p>\n    </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from clerk.com combining airy neutral stone/white surfaces (#f7f7f8) with disciplined geistNumbers hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×413px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #f7f7f8 canvas.",
+        "microDetails": [
+          "Display typography set in geistNumbers at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #d9d9de hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by clerk.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f7f7f8 with #000000 ink. Set the primary heading in geistNumbers (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },

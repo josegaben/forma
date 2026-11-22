@@ -27,6 +27,19 @@ const SCREENSHOT_DIR = resolve(__dirname, "../public/section-vault");
 const PRIORITY_VISUAL_SEEDS = [
   "https://treg.to",
   "https://resiz.es",
+  "https://pdepablo.com",
+  "https://www.rareui.com",
+  "https://coss.com/ui",
+  "https://kokonutui.com",
+  "https://motion-primitives.com",
+  "https://deadsimplesites.com",
+  "https://www.raycast.com",
+  "https://vercel.com",
+  "https://stripe.com",
+  "https://attio.com",
+  "https://clerk.com",
+  "https://www.fontshare.com",
+  "https://evilmartians.com",
   "https://linear.app",
   "https://dub.co",
   "https://resend.com",
@@ -51,6 +64,18 @@ function inferDomainTags(hostname, siteTitle, cleanDom) {
 
 async function runVisualVaultPass(limit = 8) {
   console.log(`[forma-visual-vault] Starting Playwright + Vision pass (limit=${limit})...`);
+  const forceRefresh = process.argv.includes("--refresh");
+
+  let existing = [];
+  if (existsSync(VAULT_JSON_PATH)) {
+    try {
+      const prev = JSON.parse(readFileSync(VAULT_JSON_PATH, "utf8"));
+      existing = Array.isArray(prev.sections) ? prev.sections : [];
+    } catch {
+      existing = [];
+    }
+  }
+  const existingHosts = new Set(existing.map((s) => s.hostname.replace(/^www\./, "")));
 
   // Combine priority seeds + highest-scoring sites from discovered-feed.json
   const urls = [...PRIORITY_VISUAL_SEEDS];
@@ -65,7 +90,21 @@ async function runVisualVaultPass(limit = 8) {
     }
   }
 
-  const targets = urls.slice(0, limit);
+  // Prioritize un-scanned flagship references first unless --refresh is passed
+  const prioritized = forceRefresh
+    ? urls
+    : [
+        ...urls.filter((u) => {
+          try {
+            return !existingHosts.has(new URL(u).hostname.replace(/^www\./, ""));
+          } catch {
+            return false;
+          }
+        }),
+        ...urls,
+      ].filter((u, idx, arr) => arr.indexOf(u) === idx);
+
+  const targets = prioritized.slice(0, limit);
   const harvested = [];
 
   // Process 2 sites concurrently so Chromium memory stays featherlight and polite
@@ -104,7 +143,6 @@ async function runVisualVaultPass(limit = 8) {
   }
 
   // Merge with existing vault entries by section id
-  let existing = [];
   if (existsSync(VAULT_JSON_PATH)) {
     try {
       const prev = JSON.parse(readFileSync(VAULT_JSON_PATH, "utf8"));

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { convertScrapedSiteToFormat, type DiscoveredSite } from "@/lib/scraper";
+import { validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
@@ -14,31 +15,14 @@ export async function OPTIONS() {
 }
 
 async function handleScrape(rawUrl: string) {
-  const cleaned = rawUrl.trim();
-  if (!cleaned) {
+  const checked = validatePublicHttpUrl(rawUrl);
+  if (!checked.ok) {
     return NextResponse.json(
-      { error: "Provide a valid `url` parameter." },
+      { error: checked.error },
       { status: 400, headers: CORS_HEADERS }
     );
   }
-
-  let parsed: URL;
-  try {
-    parsed = new URL(cleaned.startsWith("http") ? cleaned : `https://${cleaned}`);
-  } catch {
-    return NextResponse.json(
-      { error: "Invalid URL format." },
-      { status: 400, headers: CORS_HEADERS }
-    );
-  }
-
-  // Block private/loopback SSRF addresses cleanly
-  if (/^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|0\.0\.0\.0)/i.test(parsed.hostname)) {
-    return NextResponse.json(
-      { error: "Only public internet URLs can be analyzed." },
-      { status: 400, headers: CORS_HEADERS }
-    );
-  }
+  const parsed = checked.url;
 
   try {
     const xray = await analyzeWebsiteUrl(parsed.toString(), { timeoutMs: 9000 });

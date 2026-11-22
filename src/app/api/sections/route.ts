@@ -8,6 +8,7 @@ import {
   getSectionVaultFeed,
 } from "@/lib/section-vault";
 import { meterCloudCall } from "@/lib/credits";
+import { validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { scanWebsiteSections } from "../../../../forma-xray/src/section-scanner.mjs";
 
@@ -74,18 +75,19 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const targetUrl = String(body.url || "").trim();
-    if (!targetUrl) {
+    const checked = validatePublicHttpUrl(String(body.url || ""));
+    if (!checked.ok) {
       return NextResponse.json(
-        { error: "Missing `url` in request body." },
+        { error: checked.error },
         { status: 400, headers: CORS_HEADERS }
       );
     }
+    const targetUrl = checked.url.toString();
 
     const metered = meterCloudCall({
       request,
       operation: "scan_live_sections",
-      target: targetUrl.slice(0, 60),
+      target: checked.url.hostname,
       costUsd: 0.04,
     });
 
@@ -99,16 +101,14 @@ export async function POST(request: Request) {
     void recordTelemetryEvent({
       event: "agent_scrape_api",
       request,
-      target: `visual-sections:${targetUrl.slice(0, 60)}`,
+      target: `visual-sections:${checked.url.hostname}`,
     });
 
     const headerByok = request.headers.get("x-gemini-key")?.trim();
-    if (headerByok && !process.env.GEMINI_API_KEY) {
-      process.env.GEMINI_API_KEY = headerByok;
-    }
 
     const result = await scanWebsiteSections(targetUrl, {
       probePricingSubpage: body.probePricing !== false,
+      apiKey: headerByok || undefined,
     });
 
     return NextResponse.json(

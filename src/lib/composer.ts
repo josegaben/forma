@@ -4,7 +4,12 @@ import {
   hexToOklchString,
   type CuratedColorPalette,
 } from "@/data/color-palettes";
-import { CRAFT_TOOLS_AND_ASSETS, RARE_COMPONENTS } from "@/data/compendium";
+import {
+  CRAFT_TOOLS_AND_ASSETS,
+  RARE_COMPONENTS,
+  TYPOGRAPHY_PAIRINGS,
+  type TypographyPairing,
+} from "@/data/compendium";
 import {
   GLOBAL_UNSLOP_RULES,
   WEB_FORMATS,
@@ -35,12 +40,14 @@ export interface MixSelection {
   componentsId: string;
   motionId?: string;
   paletteId?: string;
+  fontPairingId?: string;
   projectName?: string;
   projectBrief?: string;
   stack?: TargetStack;
   enforceUnslop?: boolean;
   customFormats?: WebFormat[];
   pinnedSectionIds?: string[];
+  pinnedComponentIds?: string[];
 }
 
 export interface RecommendationResult {
@@ -69,6 +76,7 @@ export interface ComposedGenome {
   projectBrief: string;
   stack: TargetStack;
   activePalette?: CuratedColorPalette;
+  activeFontPairing?: TypographyPairing;
   contrastRatioText: number;
   contrastRatioCta: number;
   layers: {
@@ -112,6 +120,12 @@ const SYNONYM_SIGNALS: Record<string, string[]> = {
   "refero-product-led": ["refero", "playground", "sandbox", "generator", "plg", "interactive tool"],
   "darkmode-oled": ["darkmodedesign", "oled", "night", "high contrast"],
   "motion-primitives-lab": ["motion-primitives", "magicui", "morph", "stagger", "shared layout", "animaciones"],
+  "kokonut-agentic-workspace": ["kokonut", "approval", "human-in-the-loop", "voice", "voz", "waveform", "tool call"],
+  "coss-particles-minimal": ["coss", "origin", "particles", "shadcn", "billing", "settings", "token meter"],
+  "uilabs-tactile-craft": ["uilabs", "cult", "toolbar", "popover", "canvas", "editor"],
+  "fontshare-swiss-editorial": ["fontshare", "satoshi", "cabinet", "clash display", "fuentes", "tipografia"],
+  "refs-gallery-atelier": ["refs", "atelier", "vino", "wine", "architecture", "arquitectura", "collletttivo"],
+  "designmd-protocol-docs": ["design.md", "llms-full", "cloudscape", "specification", "protocol", "sdk"],
 };
 
 export function getFormatById(id: string, customFormats: WebFormat[] = []): WebFormat {
@@ -273,7 +287,29 @@ export function composeFormatGenome(input: MixSelection): ComposedGenome {
       }
     : rawSurfaceFmt;
 
-  const typeFmt = getFormatById(input.typographyId, custom);
+  const rawTypeFmt = getFormatById(input.typographyId, custom);
+  const matchedFontPairing = input.fontPairingId
+    ? TYPOGRAPHY_PAIRINGS.find((fp) => fp.id === input.fontPairingId)
+    : undefined;
+
+  const typeFmt: WebFormat = matchedFontPairing
+    ? {
+        ...rawTypeFmt,
+        name: matchedFontPairing.name,
+        typography: {
+          ...rawTypeFmt.typography,
+          displayFont: matchedFontPairing.displayStack,
+          bodyFont: matchedFontPairing.bodyStack,
+          monoFont: matchedFontPairing.monoStack,
+          serifAccentFont: matchedFontPairing.serifAccentFont,
+          googleFontsImport: matchedFontPairing.cssImport,
+          h1Scale: matchedFontPairing.h1Scale,
+          h1Tracking: matchedFontPairing.h1Tracking,
+          useItalicAccent: Boolean(matchedFontPairing.useItalicAccent),
+        },
+      }
+    : rawTypeFmt;
+
   const layoutFmt = getFormatById(input.layoutId, custom);
   const compFmt = getFormatById(input.componentsId, custom);
   const motionFmt = getFormatById(input.motionId || input.surfaceId, custom);
@@ -310,6 +346,13 @@ export function composeFormatGenome(input: MixSelection): ComposedGenome {
       name: matchedPalette.inspiredBy.name,
       url: matchedPalette.inspiredBy.url,
       extractedTrait: `${matchedPalette.name} (${matchedPalette.harmony})`,
+    });
+  }
+  if (matchedFontPairing) {
+    uniqueSourcesMap.set(`${matchedFontPairing.foundry} (${matchedFontPairing.displayFont})`, {
+      name: `${matchedFontPairing.foundry} — ${matchedFontPairing.name}`,
+      url: matchedFontPairing.foundry === "Fontshare" ? "https://www.fontshare.com" : "https://fonts.google.com",
+      extractedTrait: matchedFontPairing.vibe,
     });
   }
   if (enforceUnslop) {
@@ -376,8 +419,14 @@ body {
   background-color: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
+  font-size-adjust: from-font; /* Zero-CLS fallback metric normalization */
   line-height: var(--body-leading);
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-size-adjust: from-font;
+  text-wrap: balance;
 }
 
 .hero-canvas {
@@ -476,7 +525,8 @@ ${cssTokens}
 ### Surface & 60-30-10 Color Harmony Rules (Happy Hues / Radix / OKLCH)
 - **60% Neutral Canvas (\`--bg\` / \`--surface\`):** Keep 60%+ of viewport area in calm neutral surfaces (\`${s.bg}\` / \`${bgOklch}\`).
 - **30% Typographic Ink & Hairlines (\`--ink\` / \`--line\`):** Verified WCAG contrast **${contrastRatioText}:1** (\`${s.ink}\` on \`${s.bg}\`).
-- **10% Focal Chromatic Accent (\`--accent\`):** Reserve \`${s.accent}\` (\`${accentOklch}\`, CTA contrast **${contrastRatioCta}:1**) strictly for primary CTAs, active indicators, and key focal states — NEVER flood large section backgrounds with accent color.${
+- **10% Focal Chromatic Accent (\`--accent\`):** Reserve \`${s.accent}\` (\`${accentOklch}\`, CTA contrast **${contrastRatioCta}:1**) strictly for primary CTAs, active indicators, and key focal states — NEVER flood large section backgrounds with accent color.
+- **Safe Tint Mixing (\`oklab\`):** Prefer predefined surface tokens; when mixing tints dynamically with \`color-mix()\`, mix \`in oklab\` (never \`in oklch\` on low-chroma neutrals, which triggers a pink \`0deg\` hue shift in Chromium).${
     matchedPalette ? `\n- **Color Psychology:** ${matchedPalette.psychology}` : ""
   }
 ${s.rules.map((r) => `- ${r}`).join("\n")}
@@ -512,16 +562,20 @@ ${structuralSkeletonsMd}
 ${primitivesCombined.map((p) => `- **${p.name}** *(${p.sourcePattern})*: ${p.spec}`).join("\n")}
 
 ### Recommended Installable Components & Assets (shadcn CLI / npm)
-${RARE_COMPONENTS.filter((rc) =>
-  rc.keywords.some((k) => projectBrief.toLowerCase().includes(k))
-)
-  .slice(0, 3)
+${(input.pinnedComponentIds || [])
+  .map((id) => RARE_COMPONENTS.find((rc) => rc.id === id))
+  .filter((rc): rc is (typeof RARE_COMPONENTS)[number] => Boolean(rc))
+  .concat(
+    RARE_COMPONENTS.filter((rc) =>
+      rc.keywords.some((k) => projectBrief.toLowerCase().includes(k))
+    ).slice(0, 3)
+  )
   .concat(RARE_COMPONENTS.slice(0, 2))
   .filter((v, i, arr) => arr.findIndex((x) => x.id === v.id) === i)
-  .slice(0, 3)
+  .slice(0, 4)
   .map((rc) => `- **${rc.name}** (${rc.provider}): \`${rc.cliInstall}\` — ${rc.description}`)
   .join("\n")}
-- **Icons & Visual Assets:** Prefer \`${CRAFT_TOOLS_AND_ASSETS[0].installOrUsage}\` (${CRAFT_TOOLS_AND_ASSETS[0].name}) and \`${CRAFT_TOOLS_AND_ASSETS[2].name}\` (${CRAFT_TOOLS_AND_ASSETS[2].url}) over generic default icon circles.
+- **Icons & Visual Assets:** Prefer \`npm i @phosphor-icons/react\` (Phosphor Icons) or \`npm i @tabler/icons-react\` (Tabler Icons) and SVGL (\`https://svgl.app\`) over generic default icon circles.
 
 ---
 
@@ -556,6 +610,7 @@ ${GLOBAL_UNSLOP_RULES.slice(0, 6).map((r) => `   - ${r}`).join("\n")}
     projectBrief,
     stack,
     activePalette: matchedPalette,
+    activeFontPairing: matchedFontPairing,
     contrastRatioText,
     contrastRatioCta,
     layers: {

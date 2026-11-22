@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { composeFormatGenome, recommendMixFromBrief } from "@/lib/composer";
 import { meterCloudCall } from "@/lib/credits";
+import { escapeXml, validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recommendPaletteForIdea } from "@/lib/synthesizer";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
@@ -18,8 +19,10 @@ export async function OPTIONS() {
 }
 
 function generateSwissSvgLogo(brandName: string, bg: string, ink: string, accent: string) {
-  const clean = (brandName || "Forma").trim();
-  const initial = (clean[0] || "F").toUpperCase();
+  const raw = (brandName || "Forma").trim().slice(0, 48);
+  const clean = escapeXml(raw);
+  const tsxSafe = raw.replace(/[`$\\{}<>]/g, "");
+  const initial = escapeXml((raw[0] || "F").toUpperCase());
   const svgMark = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32" fill="none" aria-label="${clean} mark">
   <rect width="32" height="32" rx="8" fill="${ink}"/>
   <rect x="7" y="7" width="18" height="4.5" rx="1.25" fill="${bg}"/>
@@ -51,7 +54,7 @@ export default function OpenGraphImage() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "18px", fontSize: 32, fontWeight: 600 }}>
           <div style={{ width: 44, height: 44, borderRadius: 10, background: "${accent}" }} />
-          <span>${clean}</span>
+          <span>${tsxSafe}</span>
         </div>
         <div style={{ fontSize: 74, lineHeight: 1.04, letterSpacing: "-0.03em", maxWidth: "960px" }}>
           Built with precision and human taste.
@@ -76,18 +79,19 @@ export async function POST(request: Request) {
   const tool = String(body.tool || "visual_anti_slop_qa");
 
   if (tool === "visual_anti_slop_qa") {
-    const targetUrl = String(body.url || "").trim();
-    if (!targetUrl) {
+    const checked = validatePublicHttpUrl(String(body.url || ""));
+    if (!checked.ok) {
       return NextResponse.json(
-        { error: "Missing `url` for visual_anti_slop_qa." },
+        { error: checked.error },
         { status: 400, headers: CORS_HEADERS }
       );
     }
+    const targetUrl = checked.url.toString();
 
     const metered = meterCloudCall({
       request,
       operation: "visual_anti_slop_qa",
-      target: targetUrl.slice(0, 60),
+      target: checked.url.hostname,
       costUsd: 0.05,
     });
 

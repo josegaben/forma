@@ -50,9 +50,14 @@ export function LiveFormatPreview({
         }
       : {};
 
-  const headingFontFamily = isSerifHeading
-    ? "var(--font-editorial), Georgia, serif"
-    : "var(--font-geist), sans-serif";
+  const headingFontFamily =
+    t.typography.displayFont ||
+    (isSerifHeading ? "var(--font-editorial), Georgia, serif" : "var(--font-geist), sans-serif");
+  const bodyFontFamily = t.typography.bodyFont || "var(--font-geist), sans-serif";
+  const fontImportHref =
+    t.typography.googleFontsImport && t.typography.googleFontsImport.startsWith("https://")
+      ? t.typography.googleFontsImport
+      : null;
 
   return (
     <div
@@ -61,9 +66,12 @@ export function LiveFormatPreview({
         backgroundColor: s.bg,
         color: s.ink,
         borderColor: s.line,
+        fontFamily: bodyFontFamily,
+        fontSizeAdjust: "from-font",
         ...backgroundPattern,
       }}
     >
+      {fontImportHref && <link rel="stylesheet" href={fontImportHref} />}
       {/* Clean Minimal Window Bar */}
       <div
         className="flex items-center justify-between px-4 py-2.5 border-b text-[11px]"

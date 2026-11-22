@@ -22,6 +22,7 @@ import {
   type SectionKind,
 } from "@/lib/section-vault";
 import { FORMA_CLOUD_PRICING, getOrProvisionWallet } from "@/lib/credits";
+import { validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
@@ -35,7 +36,7 @@ const MCP_TOOLS = [
   {
     name: "list_web_formats",
     description:
-      "List or search all 24 curated 5-layer agentic web formats in forma (Surface, Typography, Layout, Components, Motion Physics).",
+      `List or search all ${WEB_FORMATS.length} curated 5-layer agentic web formats in forma (Surface, Typography, Layout, Components, Motion Physics).`,
     inputSchema: {
       type: "object",
       properties: {
@@ -59,7 +60,7 @@ const MCP_TOOLS = [
   {
     name: "compose_design_spec",
     description:
-      "Compile 1–5 format IDs (Surface, Typography, Layout, Components, Motion) into a complete DESIGN.md agent specification with CSS tokens, motion physics, and unslop-ui rules.",
+      "Compile 1–5 format IDs plus optional OKLCH paletteId and Fontshare/Google fontPairingId into a complete DESIGN.md agent specification with CSS tokens, 6 HTML/CSS skeletons, motion physics, and unslop-ui rules.",
     inputSchema: {
       type: "object",
       properties: {
@@ -70,6 +71,8 @@ const MCP_TOOLS = [
         layoutId: { type: "string" },
         componentsId: { type: "string" },
         motionId: { type: "string" },
+        paletteId: { type: "string", description: "Optional curated OKLCH palette ID (e.g. pal-stone-terracotta)" },
+        fontPairingId: { type: "string", description: "Optional curated typography pairing ID (e.g. pair-cabinet-satoshi)" },
         stack: {
           type: "string",
           enum: ["nextjs-tailwind", "vite-react", "astro-css", "vanilla-html"],
@@ -314,6 +317,8 @@ export async function POST(request: Request) {
         layoutId: String(args.layoutId || auto.layoutId),
         componentsId: String(args.componentsId || auto.componentsId),
         motionId: String(args.motionId || auto.motionId),
+        paletteId: args.paletteId ? String(args.paletteId) : undefined,
+        fontPairingId: args.fontPairingId ? String(args.fontPairingId) : undefined,
         projectName: String(args.projectName || "Acme"),
         projectBrief: brief,
         stack: (args.stack as TargetStack) || "nextjs-tailwind",
@@ -325,9 +330,15 @@ export async function POST(request: Request) {
     }
 
     if (toolName === "xray_live_website") {
-      const targetUrl = String(args.url || "");
+      const checked = validatePublicHttpUrl(String(args.url || ""));
+      if (!checked.ok) {
+        return NextResponse.json(
+          { jsonrpc: "2.0", id: id ?? 1, error: { code: -32602, message: checked.error } },
+          { status: 400, headers: CORS_HEADERS }
+        );
+      }
       try {
-        const xray = await analyzeWebsiteUrl(targetUrl, { timeoutMs: 8500 });
+        const xray = await analyzeWebsiteUrl(checked.url.toString(), { timeoutMs: 8500 });
         return NextResponse.json(
           { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: xray.designMd }] } },
           { headers: CORS_HEADERS }
