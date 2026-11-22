@@ -4,7 +4,7 @@
  * Verifies CLS = 0.000 and ensures zero layout-thrashing animations.
  */
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
@@ -12,7 +12,12 @@ import { analyzeWebsiteUrl } from "../forma-xray/src/analyzer.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_JSON = resolve(__dirname, "../public/x-launch-kit/cwv-benchmark.json");
-const CHROME_PATH = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const CHROME_CANDIDATES = [
+  process.env.CHROME_PATH,
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "/usr/bin/google-chrome",
+  "/usr/bin/chromium-browser",
+].filter(Boolean);
 const BASE_URL = process.env.BASE_URL || "http://localhost:3030";
 
 const LAYOUT_THRASH_PROPS = new Set([
@@ -110,9 +115,11 @@ async function measurePageCwv(browser, pathUrl) {
 }
 
 async function main() {
+  const executablePath = CHROME_CANDIDATES.find((p) => p && existsSync(p));
   const browser = await chromium.launch({
-    executablePath: CHROME_PATH,
+    ...(executablePath ? { executablePath } : {}),
     headless: true,
+    args: ["--no-sandbox"],
   });
 
   try {

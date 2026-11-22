@@ -33,6 +33,9 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://forma.to"
+  ),
   title: "forma — OpenRouter for Web Design",
   description:
     "Connect Claude, Cursor, or Codex. Describe your project and cross the world's best websites into a custom, zero-slop design system.",

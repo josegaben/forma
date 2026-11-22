@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  lighthouse-and-gpu-audit:
+  cwv-and-gpu-audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,15 +16,25 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - run: npm ci
-      - run: npm run build
+      - name: Install dependencies & Chromium
+        run: |
+          npm ci
+          npx playwright-core install --with-deps chromium
 
-      - name: Run Lighthouse CI (Assert CLS = 0 & Performance >= 95)
-        uses: treosh/lighthouse-ci-action@v12
-        with:
-          urls: |
-            http://localhost:3000/
-            http://localhost:3000/demo/with-forma
-          startServerCommand: "npm run start"
-          budgetPath: ./.lighthouserc-budget.json
-          uploadArtifacts: true
+      - name: TypeScript & Production Build Check
+        run: |
+          npm run lint
+          npm run build
+
+      - name: Assert CLS = 0.000 & 100% GPU-Composited Animations
+        run: |
+          npx next start -p 3030 &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3030/ > /dev/null 2>&1; then
+              break
+            fi
+            sleep 1
+          done
+          BASE_URL=http://localhost:3030 node scripts/audit-cwv.mjs
+          kill $SERVER_PID || true

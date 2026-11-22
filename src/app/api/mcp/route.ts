@@ -21,6 +21,7 @@ import {
   getSectionVaultFeed,
   type SectionKind,
 } from "@/lib/section-vault";
+import { FORMA_CLOUD_PRICING, getOrProvisionWallet } from "@/lib/credits";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
@@ -171,6 +172,17 @@ const MCP_TOOLS = [
         },
       },
       required: ["projectBrief"],
+    },
+  },
+  {
+    name: "check_forma_balance",
+    description:
+      "Check your forma prepaid credit balance ($1.00 free starter credit, 0% top-up fee), BYOK status, and per-call cloud Playwright + Vision rates (treg.to model).",
+    inputSchema: {
+      type: "object",
+      properties: {
+        apiKey: { type: "string", description: "Optional sk-forma-... token" },
+      },
     },
   },
   {
@@ -441,6 +453,40 @@ export async function POST(request: Request) {
           jsonrpc: "2.0",
           id: id ?? 1,
           result: { content: [{ type: "text", text: genome.structuralSkeletonsMd }] },
+        },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "check_forma_balance") {
+      const key =
+        (args.apiKey as string | undefined) ||
+        request.headers.get("x-forma-key") ||
+        undefined;
+      const wallet = getOrProvisionWallet(key);
+      return NextResponse.json(
+        {
+          jsonrpc: "2.0",
+          id: id ?? 1,
+          result: {
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify(
+                  {
+                    apiKey: wallet.apiKey,
+                    balanceUsd: wallet.balanceUsd,
+                    dailyLimitUsd: wallet.dailyLimitUsd,
+                    spentTodayUsd: wallet.spentTodayUsd,
+                    hasByokGemini: wallet.hasByokGemini,
+                    pricing: FORMA_CLOUD_PRICING,
+                  },
+                  null,
+                  2
+                ),
+              },
+            ],
+          },
         },
         { headers: CORS_HEADERS }
       );

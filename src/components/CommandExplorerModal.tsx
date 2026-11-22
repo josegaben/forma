@@ -15,16 +15,28 @@ import {
   PaletteVisualThumb,
 } from "@/components/FormatVisualThumb";
 import { ComponentLiveMicroStage } from "@/components/InteractiveComponentCard";
+import {
+  getAllVaultSections,
+  SECTION_KIND_LABELS,
+  type VisualSectionItem,
+} from "@/lib/section-vault";
 
 interface ExplorerEntry {
   id: string;
-  group: "Components" | "Formats" | "Palettes" | "Typography" | "Shaders & Icons";
+  group:
+    | "Components"
+    | "Section Vault"
+    | "Formats"
+    | "Palettes"
+    | "Typography"
+    | "Shaders & Icons";
   title: string;
   subtitle: string;
   actionLabel: string;
   formatRef?: WebFormat;
   paletteRef?: CuratedColorPalette;
   componentRef?: RareComponentItem;
+  sectionRef?: VisualSectionItem;
   externalUrl?: string;
   cliCopy?: string;
 }
@@ -36,6 +48,7 @@ export function CommandExplorerModal({
   onSelectFormat,
   onSelectPalette,
   onInspectComponent,
+  onPinSection,
 }: {
   open: boolean;
   onClose: () => void;
@@ -43,6 +56,7 @@ export function CommandExplorerModal({
   onSelectFormat: (id: string) => void;
   onSelectPalette: (pal: CuratedColorPalette) => void;
   onInspectComponent: (comp: RareComponentItem) => void;
+  onPinSection?: (sectionId: string) => void;
 }) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -99,6 +113,14 @@ export function CommandExplorerModal({
         actionLabel: c.cliInstall,
         componentRef: c,
       })),
+      ...getAllVaultSections().map((s) => ({
+        id: `sec-${s.id}`,
+        group: "Section Vault" as const,
+        title: `[${SECTION_KIND_LABELS[s.kind].badge}] ${s.hostname} — ${s.vision.archetype}`,
+        subtitle: s.vision.layoutMechanics,
+        actionLabel: "Pin real section + Clean DOM into DESIGN.md",
+        sectionRef: s,
+      })),
       ...WEB_FORMATS.map((f) => ({
         id: `fmt-${f.id}`,
         group: "Formats" as const,
@@ -151,6 +173,10 @@ export function CommandExplorerModal({
     if (entry.componentRef) {
       onClose();
       onInspectComponent(entry.componentRef);
+    } else if (entry.sectionRef) {
+      onPinSection?.(entry.sectionRef.id);
+      onClose();
+      document.getElementById("section-vault")?.scrollIntoView({ behavior: "smooth" });
     } else if (entry.formatRef) {
       onClose();
       onSelectFormat(entry.formatRef.id);
@@ -266,6 +292,14 @@ export function CommandExplorerModal({
                         dark={false}
                       />
                     </div>
+                  ) : activeEntry.sectionRef ? (
+                    <img
+                      src={activeEntry.sectionRef.screenshotUrl}
+                      alt={activeEntry.title}
+                      width={340}
+                      height={180}
+                      className="w-full h-full rounded-[10px] object-cover object-top"
+                    />
                   ) : activeEntry.formatRef ? (
                     <FormatVisualThumb
                       format={activeEntry.formatRef}

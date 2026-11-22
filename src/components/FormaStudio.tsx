@@ -542,6 +542,13 @@ export function FormaStudio() {
             </a>
 
             <a
+              href="/credits"
+              className="hidden lg:inline hover:text-[var(--ink)] transition-colors"
+            >
+              {lang === "es" ? "Créditos ($1 gratis)" : "Credits ($1 free)"}
+            </a>
+
+            <a
               href={GITHUB_REPO_URL}
               target="_blank"
               rel="noreferrer"
@@ -1678,6 +1685,9 @@ export function FormaStudio() {
         >
           <span>forma.to · open-source web design router</span>
           <div className="flex items-center gap-5">
+            <a href="/credits" className="hover:text-white">
+              Credits ($1 free)
+            </a>
             <a href="/metrics" className="hover:text-white">
               Metrics
             </a>
@@ -1884,6 +1894,7 @@ export function FormaStudio() {
         onSelectFormat={applyFullFormat}
         onSelectPalette={applyCuratedPalette}
         onInspectComponent={openComponentModal}
+        onPinSection={togglePinSection}
       />
     </div>
   );

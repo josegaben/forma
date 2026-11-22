@@ -7,13 +7,15 @@ import {
   type VisualSectionItem,
   getSectionVaultFeed,
 } from "@/lib/section-vault";
+import { meterCloudCall } from "@/lib/credits";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { scanWebsiteSections } from "../../../../forma-xray/src/section-scanner.mjs";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers":
+    "Content-Type, X-Forma-Key, X-Gemini-Key, X-Forma-Max-Cost, Authorization",
 };
 
 function readFreshVaultFeed(): SectionVaultFeed {
@@ -80,17 +82,46 @@ export async function POST(request: Request) {
       );
     }
 
+    const metered = meterCloudCall({
+      request,
+      operation: "scan_live_sections",
+      target: targetUrl.slice(0, 60),
+      costUsd: 0.04,
+    });
+
+    if (!metered.allowed) {
+      return NextResponse.json(
+        { error: metered.error, balanceUsd: metered.wallet.balanceUsd },
+        { status: 402, headers: { ...CORS_HEADERS, ...metered.headers } }
+      );
+    }
+
     void recordTelemetryEvent({
       event: "agent_scrape_api",
       request,
       target: `visual-sections:${targetUrl.slice(0, 60)}`,
     });
 
+    const headerByok = request.headers.get("x-gemini-key")?.trim();
+    if (headerByok && !process.env.GEMINI_API_KEY) {
+      process.env.GEMINI_API_KEY = headerByok;
+    }
+
     const result = await scanWebsiteSections(targetUrl, {
       probePricingSubpage: body.probePricing !== false,
     });
 
-    return NextResponse.json(result, { headers: CORS_HEADERS });
+    return NextResponse.json(
+      {
+        ...result,
+        billing: {
+          mode: metered.billingMode,
+          chargedUsd: metered.chargedUsd,
+          remainingBalanceUsd: metered.wallet.balanceUsd,
+        },
+      },
+      { headers: { ...CORS_HEADERS, ...metered.headers } }
+    );
   } catch (err) {
     const message = err instanceof Error ? err.message : "Failed to scan visual sections";
     return NextResponse.json({ error: message }, { status: 422, headers: CORS_HEADERS });
