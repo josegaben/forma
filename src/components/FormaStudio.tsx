@@ -138,7 +138,9 @@ export function FormaStudio() {
   const [showAllGallery, setShowAllGallery] = useState(false);
 
   // Modals: DESIGN.md Spec Modal & Component Code Modal
-  const [modalTab, setModalTab] = useState<"prompt" | "rules" | "css" | "mcp">("prompt");
+  const [modalTab, setModalTab] = useState<
+    "prompt" | "skeletons" | "rules" | "css" | "mcp"
+  >("prompt");
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   const [activeComponentModal, setActiveComponentModal] =
@@ -479,6 +481,8 @@ export function FormaStudio() {
   const modalCodeContent =
     modalTab === "prompt"
       ? composed.masterPrompt
+      : modalTab === "skeletons"
+      ? composed.structuralSkeletonsMd
       : modalTab === "rules"
       ? composed.cursorClaudeRules
       : modalTab === "css"
@@ -1010,10 +1014,26 @@ export function FormaStudio() {
 
                 <button
                   type="button"
-                  onClick={() => dialogRef.current?.showModal()}
+                  onClick={() => {
+                    setModalTab("skeletons");
+                    dialogRef.current?.showModal();
+                  }}
                   className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[var(--line-strong)] bg-white hover:bg-[var(--panel)] text-[12.5px] font-medium cursor-pointer"
                 >
                   <Code2 className="w-3.5 h-3.5" />
+                  <span>
+                    {lang === "es" ? "6 Esqueletos HTML/CSS" : "6 HTML/CSS Skeletons"}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setModalTab("prompt");
+                    dialogRef.current?.showModal();
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[var(--line-strong)] bg-white hover:bg-[var(--panel)] text-[12.5px] font-medium cursor-pointer"
+                >
                   <span>{lang === "es" ? "Ver DESIGN.md" : "Inspect DESIGN.md"}</span>
                 </button>
 
@@ -1051,8 +1071,37 @@ export function FormaStudio() {
               </div>
             </div>
 
+            {/* 6 Deterministic Structural Skeletons Strip (Architecture-as-Code) */}
+            <div className="mt-3 px-4 py-2.5 rounded-[14px] bg-white border border-[var(--line)] flex flex-wrap items-center justify-between gap-2">
+              <span
+                className="text-[11px] text-[var(--muted)] uppercase"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
+              >
+                {lang === "es"
+                  ? "6 ESQUELETOS CSS/HTML COMPILADOS EN DESIGN.MD:"
+                  : "6 DETERMINISTIC CSS/HTML SKELETONS IN DESIGN.MD:"}
+              </span>
+              <div className="flex flex-wrap items-center gap-1.5">
+                {composed.structuralSkeletons.map((sk) => (
+                  <button
+                    key={sk.id}
+                    type="button"
+                    onClick={() => {
+                      setModalTab("skeletons");
+                      dialogRef.current?.showModal();
+                    }}
+                    className="px-2.5 py-1 rounded-full bg-[var(--panel)] hover:bg-[var(--panel-2)] text-[11px] text-[var(--ink)] cursor-pointer transition-colors"
+                    style={{ fontFamily: "var(--font-mono), monospace" }}
+                  >
+                    <span className="text-[var(--muted)] mr-1">{sk.step}</span>
+                    <span>{sk.variant}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Matched Components (Rare UI / shadcn) + Matched Live Websites Strip */}
-            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
               {matchedComponents.map((comp) => (
                 <button
                   key={comp.id}
@@ -1686,6 +1735,7 @@ export function FormaStudio() {
               {(
                 [
                   ["prompt", "DESIGN.md"],
+                  ["skeletons", "6 Skeletons (HTML/CSS)"],
                   ["rules", "CLAUDE.md / .cursorrules"],
                   ["css", "tokens.css"],
                   ["mcp", "MCP & Registries"],

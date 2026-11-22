@@ -55,7 +55,8 @@ claude mcp add --transport http forma ${origin}/api/mcp
 MCP Tools:
 - \`list_web_formats\` — Search ${WEB_FORMATS.length} curated 5-layer formats.
 - \`recommend_format_mix\` — Auto-select Surface + Typography + Layout + Components + Motion for a brief.
-- \`compose_design_spec\` — Compile a complete \`DESIGN.md\`.
+- \`compose_design_spec\` — Compile a complete \`DESIGN.md\` with 6 deterministic CSS + HTML/TSX structural skeletons.
+- \`get_structural_skeletons\` — Fetch pure architectural CSS Grid, \`@container\`, and semantic DOM scaffolds (\`01 Nav\` through \`06 Footer\`) so the LLM never guesses layout geometry.
 - \`xray_live_website\` — Scrape & extract tokens + animation curves from any live URL.
 - \`list_discovered_designs\` — Browse continuously scraped sites ranked by Anti-Slop Craft Score.
 - \`search_section_blueprints\` — Query ${vault.totalSections} Playwright + Vision section crops (\`hero\`, \`navbar\`, \`bento-features\`, \`pricing\`, \`cta-footer\`) with Clean Semantic DOM trees & recreation prompts.

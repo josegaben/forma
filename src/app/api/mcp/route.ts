@@ -156,6 +156,24 @@ const MCP_TOOLS = [
     },
   },
   {
+    name: "get_structural_skeletons",
+    description:
+      "Generate 6 deterministic CSS + HTML/TSX structural skeletons (01 Navigation, 02 Hero, 03 Asymmetric 7/5 @container Bento, 04 Tabbed Code/Proof Stage, 05 Tabular 3-Tier Pricing, 06 Colophon Footer) tailored to a project brief and stack.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        projectName: { type: "string" },
+        projectBrief: { type: "string" },
+        layoutId: { type: "string" },
+        stack: {
+          type: "string",
+          enum: ["nextjs-tailwind", "vite-react", "astro-css", "vanilla-html"],
+        },
+      },
+      required: ["projectBrief"],
+    },
+  },
+  {
     name: "get_unslop_checklist",
     description:
       "Return mandatory subtractive anti-slop UI audit rules (unslop-ui) before shipping UI.",
@@ -400,6 +418,29 @@ export async function POST(request: Request) {
           jsonrpc: "2.0",
           id: id ?? 1,
           result: { content: [{ type: "text", text: JSON.stringify(sections, null, 2) }] },
+        },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "get_structural_skeletons") {
+      const brief = String(args.projectBrief || "");
+      const auto = recommendMixFromBrief(brief).selection;
+      const genome = composeFormatGenome({
+        surfaceId: auto.surfaceId,
+        typographyId: auto.typographyId,
+        layoutId: String(args.layoutId || auto.layoutId),
+        componentsId: auto.componentsId,
+        motionId: auto.motionId,
+        projectName: String(args.projectName || "Acme"),
+        projectBrief: brief,
+        stack: (args.stack as TargetStack) || "nextjs-tailwind",
+      });
+      return NextResponse.json(
+        {
+          jsonrpc: "2.0",
+          id: id ?? 1,
+          result: { content: [{ type: "text", text: genome.structuralSkeletonsMd }] },
         },
         { headers: CORS_HEADERS }
       );

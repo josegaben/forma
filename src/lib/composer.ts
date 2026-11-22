@@ -16,6 +16,11 @@ import {
   recommendSectionsForIdea,
   type VisualSectionItem,
 } from "@/lib/section-vault";
+import {
+  buildStructuralSkeletons,
+  renderStructuralSkeletonsMarkdown,
+  type StructuralSkeletonBlock,
+} from "@/lib/structural-skeletons";
 
 export type TargetStack =
   | "nextjs-tailwind"
@@ -75,6 +80,8 @@ export interface ComposedGenome {
   };
   uniqueSources: { name: string; url: string; extractedTrait: string }[];
   matchedVaultSections: VisualSectionItem[];
+  structuralSkeletons: StructuralSkeletonBlock[];
+  structuralSkeletonsMd: string;
   cssTokens: string;
   masterPrompt: string;
   cursorClaudeRules: string;
@@ -430,6 +437,20 @@ body {
 
   const sectionBlueprintsMd = buildSectionBlueprintsMarkdown(matchedVaultSections);
 
+  const structuralSkeletons = buildStructuralSkeletons({
+    projectName,
+    projectBrief,
+    stack,
+    surface: s,
+    typography: t,
+    layout: l,
+    motion: m,
+  });
+  const structuralSkeletonsMd = renderStructuralSkeletonsMarkdown(
+    structuralSkeletons,
+    stack
+  );
+
   const masterPrompt = `# DESIGN.md — 5-Layer Agentic Web Format Specification [${mixCode}]
 > Synthesized via **forma.to** for **${projectName}**
 > Reference DNA: ${uniqueSources.map((src) => `${src.name} (${src.url})`).join(" · ")}
@@ -483,6 +504,9 @@ ${l.sectionBlueprint.map((step, idx) => `${idx + 1}. ${step}`).join("\n")}
 
 ---
 
+${structuralSkeletonsMd}
+---
+
 ## 5. Interactive UI Primitives & Registry Components (${compFmt.name} + Rare UI)
 - **Signature Above-the-Fold Artifact:** ${compFmt.components.heroArtifact}
 ${primitivesCombined.map((p) => `- **${p.name}** *(${p.sourcePattern})*: ${p.spec}`).join("\n")}
@@ -519,7 +543,7 @@ ${guardrailsCombined.map((g) => `- [ ] ${g}`).join("\n")}${sectionBlueprintsMd}`
 
 1. **Tokens:** Use \`--bg: ${s.bg}\`, \`--surface: ${s.surface}\`, \`--panel: ${s.panel}\`, \`--ink: ${s.ink}\`, \`--muted: ${s.muted}\`, \`--line: ${s.line}\`, \`--accent: ${s.accent}\`.
 2. **Typography:** Display ${t.displayFont} (\`${t.h1Tracking}\`); body ${t.bodyFont}; numbers/CLI in ${t.monoFont} with \`tabular-nums\`.
-3. **Layout:** Max width \`${l.maxWidth}\`, \`${l.navStyle}\` navigation, card radius \`${s.radiusCard}\`.
+3. **Structural Architecture (Mandatory):** Max width \`${l.maxWidth}\`, \`${l.navStyle}\` navigation, \`${l.heroLayout}\` hero, and \`7/5 + 4/8\` asymmetric \`@container\` bento cards (\`article.forma-bento-card\`) — NEVER 3 equal-width Lucide icon cards.
 4. **Motion Physics:** Use \`${m.easing}\` (${m.durationScale}) strictly on \`transform\` and \`opacity\`, honoring \`prefers-reduced-motion\`.
 5. **Zero AI Slop:**
 ${GLOBAL_UNSLOP_RULES.slice(0, 6).map((r) => `   - ${r}`).join("\n")}
@@ -543,6 +567,8 @@ ${GLOBAL_UNSLOP_RULES.slice(0, 6).map((r) => `   - ${r}`).join("\n")}
     },
     uniqueSources,
     matchedVaultSections,
+    structuralSkeletons,
+    structuralSkeletonsMd,
     cssTokens,
     masterPrompt,
     cursorClaudeRules,
