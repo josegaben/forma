@@ -521,31 +521,17 @@ export function FormaStudio() {
             </button>
 
             <a
-              href="#proof"
-              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
-            >
-              {lang === "es" ? "Antes / Después" : "Before / After"}
-            </a>
-
-            <a
               href="#catalog"
-              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
+              className="hidden sm:inline hover:text-[var(--ink)] transition-colors"
             >
-              {lang === "es" ? "Compendio" : "Compendium"}
-            </a>
-
-            <a
-              href="#section-vault"
-              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
-            >
-              {lang === "es" ? "Secciones DOM" : "Section Vault"}
+              {lang === "es" ? "Catálogo" : "Catalog"}
             </a>
 
             <a
               href="/credits"
-              className="hidden lg:inline hover:text-[var(--ink)] transition-colors"
+              className="hidden sm:inline hover:text-[var(--ink)] transition-colors"
             >
-              {lang === "es" ? "Créditos ($1 gratis)" : "Credits ($1 free)"}
+              {lang === "es" ? "Créditos" : "Pricing"}
             </a>
 
             <a
@@ -566,13 +552,6 @@ export function FormaStudio() {
             >
               {lang === "en" ? "EN · ES" : "ES · EN"}
             </button>
-
-            <a
-              href="#agent-bar"
-              className="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium hover:opacity-90 transition-opacity"
-            >
-              {lang === "es" ? "Conectar agente" : "Connect agent"}
-            </a>
           </div>
         </nav>
       </header>
@@ -754,15 +733,7 @@ export function FormaStudio() {
               </div>
             )}
 
-            <div className="mb-4 flex items-center justify-between">
-              <span
-                className="text-[11.5px] tracking-wide uppercase text-[var(--muted)]"
-                style={{ fontFamily: "var(--font-mono), monospace" }}
-              >
-                {lang === "es"
-                  ? "ESTILO PERSONALIZADO CRUZANDO ESTAS REFERENCIAS"
-                  : "CUSTOM STYLE CROSSED FROM THESE REFERENCES"}
-              </span>
+            <div className="mb-3 flex items-center justify-end">
               <button
                 type="button"
                 onClick={() => {
@@ -1076,99 +1047,6 @@ export function FormaStudio() {
                   )}
                 </button>
               </div>
-            </div>
-
-            {/* 6 Deterministic Structural Skeletons Strip (Architecture-as-Code) */}
-            <div className="mt-3 px-4 py-2.5 rounded-[14px] bg-white border border-[var(--line)] flex flex-wrap items-center justify-between gap-2">
-              <span
-                className="text-[11px] text-[var(--muted)] uppercase"
-                style={{ fontFamily: "var(--font-mono), monospace" }}
-              >
-                {lang === "es"
-                  ? "6 ESQUELETOS CSS/HTML COMPILADOS EN DESIGN.MD:"
-                  : "6 DETERMINISTIC CSS/HTML SKELETONS IN DESIGN.MD:"}
-              </span>
-              <div className="flex flex-wrap items-center gap-1.5">
-                {composed.structuralSkeletons.map((sk) => (
-                  <button
-                    key={sk.id}
-                    type="button"
-                    onClick={() => {
-                      setModalTab("skeletons");
-                      dialogRef.current?.showModal();
-                    }}
-                    className="px-2.5 py-1 rounded-full bg-[var(--panel)] hover:bg-[var(--panel-2)] text-[11px] text-[var(--ink)] cursor-pointer transition-colors"
-                    style={{ fontFamily: "var(--font-mono), monospace" }}
-                  >
-                    <span className="text-[var(--muted)] mr-1">{sk.step}</span>
-                    <span>{sk.variant}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Matched Components (Rare UI / shadcn) + Matched Live Websites Strip */}
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-              {matchedComponents.map((comp) => (
-                <button
-                  key={comp.id}
-                  type="button"
-                  onClick={() => openComponentModal(comp)}
-                  className="p-3 rounded-[13px] bg-white hover:bg-[var(--panel)] border border-[var(--line)] hover:border-[var(--line-strong)] text-left flex items-center justify-between gap-2 transition-all cursor-pointer group"
-                >
-                  <div className="min-w-0">
-                    <div className="text-[12.5px] font-medium truncate flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#E06D44] shrink-0" />
-                      <span className="truncate">{comp.name}</span>
-                    </div>
-                    <div
-                      className="text-[10.5px] text-[var(--muted)] truncate mt-0.5"
-                      style={{ fontFamily: "var(--font-mono), monospace" }}
-                    >
-                      {comp.cliInstall}
-                    </div>
-                  </div>
-                  <span
-                    className="text-[10.5px] text-[#E06D44] font-medium shrink-0"
-                    style={{ fontFamily: "var(--font-mono), monospace" }}
-                  >
-                    &lt;/&gt;
-                  </span>
-                </button>
-              ))}
-
-              {matchedScrapedSiblings.map((site) => (
-                <button
-                  key={site.id}
-                  type="button"
-                  onClick={() => blendDiscoveredSite(site)}
-                  className="p-3 rounded-[13px] bg-white/80 hover:bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-left flex items-center justify-between gap-2 transition-all cursor-pointer group"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span
-                      className="w-4 h-4 rounded-full border border-black/15 shrink-0"
-                      style={{ backgroundColor: site.bg }}
-                    />
-                    <div className="min-w-0">
-                      <div className="text-[12.5px] font-medium truncate">
-                        {site.hostname.replace(/^www\./, "")}
-                      </div>
-                      <div
-                        className="text-[10.5px] text-[var(--muted)] truncate"
-                        style={{ fontFamily: "var(--font-mono), monospace" }}
-                      >
-                        {cleanFontName(site.primaryFont)} · {site.craftScore}/100
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    className="text-[10.5px] text-[var(--muted)] group-hover:text-[var(--ink)] shrink-0"
-                    style={{ fontFamily: "var(--font-mono), monospace" }}
-                  >
-                    + mix
-                  </span>
-                </button>
-              ))}
             </div>
           </div>
         </section>

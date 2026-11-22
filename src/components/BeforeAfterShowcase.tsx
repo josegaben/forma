@@ -21,14 +21,6 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
       <div className="mx-auto max-w-[1120px]">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-7">
           <div>
-            <div
-              className="text-[11.5px] text-[#E06D44] uppercase tracking-wider mb-1.5"
-              style={{ fontFamily: "var(--font-mono), monospace" }}
-            >
-              {lang === "es"
-                ? "BENCHMARK A/B CIEGO · MISMO PROMPT, MISMO MODELO"
-                : "BLIND A/B BENCHMARK · SAME PROMPT, SAME MODEL"}
-            </div>
             <h2
               className="text-[clamp(1.95rem,3.6vw,2.8rem)] leading-[1.06] tracking-[-0.025em] font-normal"
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
@@ -37,11 +29,6 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
                 ? "El antes y después de una web muy sencilla"
                 : "Before and after on a dead-simple prompt"}
             </h2>
-            <p className="text-[14px] text-[var(--muted)] mt-1.5 max-w-[680px]">
-              {lang === "es"
-                ? "Prompt: «Hazme una web muy sencilla para Kanso, un pequeño tostador de café de especialidad en Madrid con suscripción mensual.»"
-                : "Prompt: “Build a very simple one-page website for Kanso, a small specialty coffee roaster in Madrid with a monthly subscription.”"}
-            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 shrink-0">

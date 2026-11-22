@@ -180,14 +180,9 @@ export function SectionVaultShowcase({
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
             >
               {lang === "es"
-                ? "Arquitectura real por sección: captura + DOM limpio."
-                : "Real section blueprints: live pixels + Clean DOM."}
+                ? "Secciones reales y su DOM limpio"
+                : "Real sections & Clean DOM"}
             </h2>
-            <p className="mt-2 text-[14px] text-[var(--muted)] leading-[1.55]">
-              {lang === "es"
-                ? "Nuestro crawler con Playwright renderiza webs hidratadas en cliente, recorta Heros, Navbars, Bentos y Tablas de Precios reales, destila su esqueleto DOM limpio y lo inyecta en tu instrucción DESIGN.md."
-                : "Our headless Playwright + Vision crawler renders client-hydrated websites, crops real Heros, Navbars, Bento grids, and Pricing matrices, distills their Clean Semantic DOM skeleton, and injects them directly into your AI prompt."}
-            </p>
           </div>
 
           {/* Live URL Section Scanner Form */}
@@ -330,7 +325,7 @@ export function SectionVaultShowcase({
                   }`}
                 />
 
-                <header className="px-4 pt-3.5 flex items-start justify-between gap-2">
+                <header className="px-4 py-3.5 flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <div
                       className="flex items-center gap-2 text-[10.5px] text-[var(--muted)]"
@@ -340,12 +335,8 @@ export function SectionVaultShowcase({
                         {SECTION_KIND_LABELS[sec.kind].badge}
                       </span>
                       <span className="truncate">{sec.hostname}</span>
-                      <span>·</span>
-                      <span className="text-[#118453] tabular-nums">
-                        {sec.vision.visualCraftScore}
-                      </span>
                     </div>
-                    <h3 className="mt-1 text-[14.5px] font-semibold leading-snug line-clamp-1">
+                    <h3 className="mt-1.5 text-[14.5px] font-semibold leading-snug line-clamp-1">
                       {sec.vision.archetype}
                     </h3>
                   </div>
@@ -357,24 +348,7 @@ export function SectionVaultShowcase({
                   />
                 </header>
 
-                <div className="px-4 py-2.5 space-y-2">
-                  <p className="text-[12.5px] text-[var(--muted)] line-clamp-2 leading-[1.45]">
-                    {sec.vision.layoutMechanics}
-                  </p>
-                  <div
-                    className="flex flex-wrap items-center gap-1.5 text-[10.5px] text-[var(--muted)]"
-                    style={{ fontFamily: "var(--font-mono), monospace" }}
-                  >
-                    <span className="px-2 py-0.5 rounded-full bg-[var(--panel)]">
-                      {sec.computedSpec.headlineFont || "System"} · {sec.computedSpec.headlineSize}
-                    </span>
-                    <span className="px-2 py-0.5 rounded-full bg-[var(--panel)]">
-                      {sec.computedSpec.layoutMode}
-                    </span>
-                  </div>
-                </div>
-
-                <footer className="px-4 pb-3.5 pt-2 border-t border-[var(--line)] flex items-center justify-between gap-2">
+                <footer className="px-4 pb-3.5 pt-2.5 border-t border-[var(--line)] flex items-center justify-between gap-2">
                   <button
                     type="button"
                     onClick={() => openInspector(sec)}
