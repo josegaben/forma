@@ -63,10 +63,49 @@ const GITHUB_REPO_URL = "https://github.com/josegaben/forma";
 const GITHUB_XRAY_URL = "https://github.com/josegaben/forma-xray";
 
 const HERO_ROLES = [
-  { en: "a design engineer", es: "un design engineer" },
   { en: "a Swiss brand studio", es: "un estudio de marca suizo" },
-  { en: "a SaaS UI architect", es: "un arquitecto UI SaaS" },
+  { en: "a design engineer", es: "un design engineer" },
   { en: "a motion director", es: "un director de motion" },
+  { en: "a SaaS UI architect", es: "un arquitecto UI SaaS" },
+];
+
+const HERO_JOBS = [
+  {
+    taskEn: "Synthesize a 5-layer brand & UI system",
+    taskEs: "Sintetizar un sistema de marca y UI en 5 capas",
+    refs: "treg.to × resiz.es × pdepablo",
+    legacyEn: "$6,000 agency",
+    legacyEs: "Agencia 6.000 €",
+    formaRate: "$0.00 · /api/compose",
+    href: "#studio",
+  },
+  {
+    taskEn: "Extract real Hero, Navbar & Pricing Clean DOM",
+    taskEs: "Extraer Clean DOM real de Heros, Navbars y Precios",
+    refs: "linear.app · cal.com · resend.com",
+    legacyEn: "$15/mo Mobbin",
+    legacyEs: "15 $/mes Mobbin",
+    formaRate: "$0.04 · Playwright + Vision",
+    href: "#section-vault",
+  },
+  {
+    taskEn: "60-30-10 perceptual OKLCH color harmony",
+    taskEs: "Armonía perceptual OKLCH 60-30-10 verificada",
+    refs: "Sanzo Wada · Radix · Happy Hues",
+    legacyEn: "Manual contrast math",
+    legacyEs: "Cálculo manual",
+    formaRate: "$0.00 · 16 WCAG AAA sets",
+    href: "#catalog",
+  },
+  {
+    taskEn: "Install tactile React & spring primitives",
+    taskEs: "Instalar primitivas táctiles React y física spring",
+    refs: "Rare UI · Vaul · 21st.dev · cmdk",
+    legacyEn: "$149 UI kit",
+    legacyEs: "UI kit 149 $",
+    formaRate: "$0.00 · shadcn CLI",
+    href: "#catalog",
+  },
 ];
 
 const QUICK_IDEAS = [
@@ -490,15 +529,15 @@ export function FormaStudio() {
       : `# 1. Connect forma MCP server in Claude Code / Cursor:\nclaude mcp add --transport http forma ${origin}/api/mcp\n\n# 2. Optional Rare UI shadcn registry in components.json:\n{\n  "registries": {\n    "@rare-ui": "https://raw.githubusercontent.com/swamimalode07/rare-ui/main/public/r/{name}.json"\n  }\n}`;
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* MINIMAL AIRY TOP BAR (treg.to + Rare UI ⌘K Search + Repo) */}
-      <header className="sticky top-0 z-30 bg-[#fbfbfa]/88 backdrop-blur-md border-b border-[var(--line)]">
+    <div className="min-h-screen flex flex-col editorial-dot-canvas">
+      {/* AIRY STATIC TOP BAR (sec-treg-to-navbar — no sticky border noise; bottom dock handles persistent nav) */}
+      <header>
         <nav
           aria-label="Primary"
-          className="mx-auto max-w-[1160px] h-[56px] px-5 flex items-center justify-between gap-3"
+          className="mx-auto max-w-[1120px] px-6 py-4 flex items-center justify-between gap-3"
         >
           <a href="#" aria-label="forma home">
-            <FormaLogo size={28} />
+            <FormaLogo size={27} />
           </a>
 
           <div className="flex items-center gap-3.5 sm:gap-5 text-[13.5px] text-[var(--muted)] whitespace-nowrap">
@@ -506,11 +545,11 @@ export function FormaStudio() {
             <button
               type="button"
               onClick={() => setExplorerOpen(true)}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-[12px] text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer transition-colors"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-[var(--line)] hover:border-[var(--line-strong)] text-[12px] text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer transition-colors"
             >
               <Search className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">
-                {lang === "es" ? "Buscar todo..." : "Search all..."}
+                {lang === "es" ? "Buscar..." : "Search..."}
               </span>
               <kbd
                 className="px-1.5 py-0.2 rounded bg-[var(--panel)] text-[10px] text-[var(--ink)]"
@@ -531,7 +570,7 @@ export function FormaStudio() {
               href="/credits"
               className="hidden sm:inline hover:text-[var(--ink)] transition-colors"
             >
-              {lang === "es" ? "Créditos" : "Pricing"}
+              {lang === "es" ? "Precios" : "Pricing"}
             </a>
 
             <a
@@ -540,183 +579,252 @@ export function FormaStudio() {
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-[var(--ink)] font-medium hover:opacity-75 transition-opacity"
             >
-              <GitHubIcon className="w-[17px] h-[17px]" />
+              <GitHubIcon className="w-4 h-4" />
               <span>Repo</span>
             </a>
 
             <button
               type="button"
               onClick={() => setLang((l) => (l === "en" ? "es" : "en"))}
-              className="px-2.5 py-1 rounded-full border border-[var(--line)] hover:border-[var(--line-strong)] text-[11px] text-[var(--ink)] cursor-pointer"
+              className="px-2.5 py-1 rounded-full bg-white/80 border border-[var(--line)] hover:border-[var(--line-strong)] text-[11px] text-[var(--ink)] cursor-pointer"
               style={{ fontFamily: "var(--font-mono), monospace" }}
             >
               {lang === "en" ? "EN · ES" : "ES · EN"}
             </button>
+
+            <a
+              href="/credits"
+              className="hidden md:inline-flex px-3.5 py-1.5 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium hover:opacity-90 transition-opacity"
+            >
+              {lang === "es" ? "Empezar gratis" : "Start free"}
+            </a>
           </div>
         </nav>
       </header>
 
       <main className="flex-1">
-        {/* HERO — Airy Editorial Clarity */}
-        <section className="editorial-dot-canvas pt-16 sm:pt-20 pb-16 px-5">
-          <div className="mx-auto max-w-[880px] text-center">
-            <a
-              href={GITHUB_REPO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[var(--line)] text-[12px] tracking-wide text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--line-strong)] transition-colors mb-8"
-              style={{ fontFamily: "var(--font-mono), monospace" }}
-            >
-              <span>
-                {totalAssetsCount}+ {lang === "es" ? "recursos web" : "design assets"} ·{" "}
-                {GLOBAL_DESIGN_DIRECTORIES.length}{" "}
-                {lang === "es" ? "directorios" : "directories"} · open source ↗
-              </span>
-            </a>
-
-            <h1
-              className="text-[clamp(2.5rem,5.2vw,4.55rem)] leading-[1.03] tracking-[-0.03em] font-normal text-[#141413]"
-              style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
-            >
-              {lang === "es"
-                ? "OpenRouter para diseño web"
-                : "OpenRouter for web design"}
-            </h1>
-
-            <p
-              className="mt-5 text-[clamp(1.25rem,2.3vw,1.7rem)] text-[var(--muted)] font-normal flex flex-wrap items-center justify-center gap-x-2 gap-y-2"
-              style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
-            >
-              <span>{lang === "es" ? "Convierte" : "Turn"}</span>
-              <AgentBadgeRow />
-              <span>{lang === "es" ? "en" : "into"}</span>
-              <button
-                type="button"
-                onClick={() => setRoleIdx((i) => (i + 1) % HERO_ROLES.length)}
-                className="text-[#141413] underline decoration-black/20 underline-offset-4 hover:decoration-black cursor-pointer"
+        {/* HERO — Pure [TRG+RSZ+PDP] Self-Synthesized Opening Fold */}
+        <section className="pt-4 sm:pt-5 pb-14 px-5">
+          <div className="mx-auto max-w-[1080px]">
+            <div className="max-w-[820px] mx-auto text-center">
+              <a
+                href={GITHUB_REPO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[var(--line)] text-[12px] tracking-wide text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--line-strong)] transition-colors mb-6 tabular-nums"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
               >
-                {lang === "es" ? HERO_ROLES[roleIdx].es : HERO_ROLES[roleIdx].en}
-              </button>
-            </p>
+                <span>
+                  {totalAssetsCount}+ {lang === "es" ? "recursos web" : "design assets"} ·{" "}
+                  {GLOBAL_DESIGN_DIRECTORIES.length}{" "}
+                  {lang === "es" ? "directorios" : "directories"} · open source ↗
+                </span>
+              </a>
 
-            {/* SINGLE EFFORTLESS IDEA INPUT BAR */}
-            <div className="mt-10 mx-auto max-w-[720px]">
-              <div className="p-2 rounded-[20px] bg-white border border-[var(--line-strong)] shadow-[var(--shadow-md)] flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                <input
-                  type="text"
-                  value={ideaInput}
-                  onChange={(e) => setIdeaInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") handleSynthesize();
-                  }}
-                  aria-label="Describe your project idea or paste a URL"
-                  placeholder={
-                    lang === "es"
-                      ? "Describe tu idea de proyecto (o pega cualquier URL para cruzarla)..."
-                      : "Describe your project idea (or paste any URL to remix its style)..."
-                  }
-                  className="flex-1 px-4 py-2.5 text-[14.5px] text-[var(--ink)] bg-transparent focus:outline-none"
-                />
+              <h1
+                className="text-[clamp(2.75rem,5.6vw,4.65rem)] leading-[1.02] tracking-[-0.03em] font-normal text-[#141413]"
+                style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
+              >
+                {lang === "es" ? (
+                  <>
+                    OpenRouter para <span className="italic">diseño web</span>
+                  </>
+                ) : (
+                  <>
+                    OpenRouter for <span className="italic">web design</span>
+                  </>
+                )}
+              </h1>
+
+              <p
+                className="mt-5 text-[clamp(1.25rem,2.3vw,1.75rem)] text-[var(--muted)] font-normal flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2"
+                style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}
+              >
+                <span>{lang === "es" ? "Convierte" : "Turn"}</span>
+                <AgentBadgeRow />
+                <span>{lang === "es" ? "en" : "into"}</span>
                 <button
                   type="button"
-                  disabled={scrapingUrl}
-                  onClick={() => handleSynthesize()}
-                  className="px-5 py-3 rounded-[14px] bg-[#141413] text-[#fbfbfa] text-[13.5px] font-medium inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity cursor-pointer shrink-0 disabled:opacity-60"
+                  onClick={() => setRoleIdx((i) => (i + 1) % HERO_ROLES.length)}
+                  className="text-[#141413] underline decoration-black/20 underline-offset-4 hover:decoration-black cursor-pointer"
                 >
-                  {scrapingUrl ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>{lang === "es" ? "Analizando..." : "Analyzing..."}</span>
-                    </>
-                  ) : (
-                    <>
-                      <Sparkles className="w-4 h-4 text-[#E06D44]" />
-                      <span>
-                        {lang === "es" ? "Crear estilo →" : "Synthesize style →"}
-                      </span>
-                    </>
-                  )}
+                  {lang === "es" ? HERO_ROLES[roleIdx].es : HERO_ROLES[roleIdx].en}
                 </button>
+              </p>
+
+              {/* 3-Node Routing Flow extracted from sec-treg-to-hero Clean DOM */}
+              <div
+                className="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 items-center text-[12px] max-w-[680px] mx-auto py-3 px-5 rounded-[16px] bg-white/80 border border-[var(--line)]"
+                style={{ fontFamily: "var(--font-mono), monospace" }}
+              >
+                <div className="text-left sm:text-center">
+                  <div className="text-[#8a8880] text-[10.5px]">input</div>
+                  <div className="text-[#141413] font-medium mt-0.5">
+                    {lang === "es" ? "tu idea de proyecto" : "your project idea"}
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-[#E06D44] font-medium">
+                  <span>───</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#141413] text-white text-[11px]">
+                    forma
+                  </span>
+                  <span>──▶</span>
+                </div>
+                <div className="text-left sm:text-center">
+                  <div className="text-[#141413] font-medium">DESIGN.md + Clean DOM</div>
+                  <div className="text-[#118453] text-[10.5px] mt-0.5">
+                    {lang === "es" ? "0% AI slop · protocolo $0" : "0% AI slop · $0 protocol"}
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-3.5 flex flex-wrap items-center justify-center gap-1.5">
-                {QUICK_IDEAS.map((item) => (
-                  <button
-                    key={item.labelEn}
-                    type="button"
-                    onClick={() => handleSynthesize(item.idea)}
-                    className="px-3 py-1 rounded-full bg-white/80 hover:bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-[11.5px] text-[var(--muted)] hover:text-[var(--ink)] transition-colors cursor-pointer"
+              {/* GIVE THIS TO YOUR AGENT — Floating Dark Bar */}
+              <div
+                id="agent-bar"
+                className="mt-5 mx-auto max-w-[590px] rounded-[16px] bg-[#141413] text-[#fbfbfa] p-3.5 shadow-[var(--shadow-lg)] text-left"
+              >
+                <div className="flex items-center justify-between gap-2 mb-2 px-1">
+                  <span className="text-[11.5px] text-[#a6a59e]">
+                    {lang === "es"
+                      ? "Dale esto a tu agente"
+                      : "Give this to your agent"}
+                  </span>
+                  <div
+                    className="flex items-center gap-1 text-[10.5px]"
+                    style={{ fontFamily: "var(--font-mono), monospace" }}
                   >
-                    {lang === "es" ? item.labelEs : item.labelEn}
-                  </button>
-                ))}
-              </div>
-            </div>
+                    {(
+                      [
+                        ["llms", "llms.txt"],
+                        ["mcp", "MCP"],
+                        ["cli", "CLI"],
+                      ] as const
+                    ).map(([key, label]) => (
+                      <button
+                        key={key}
+                        type="button"
+                        onClick={() => setAgentTab(key)}
+                        className={`px-2 py-0.5 rounded-full cursor-pointer transition-colors ${
+                          agentTab === key
+                            ? "bg-white/15 text-white"
+                            : "text-[#8a8982] hover:text-white"
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-            {/* GIVE THIS TO YOUR AGENT — Compact Dark Bar */}
-            <div
-              id="agent-bar"
-              className="mt-8 mx-auto max-w-[600px] rounded-[16px] bg-[#141413] text-[#fbfbfa] p-3.5 shadow-[var(--shadow-lg)] text-left"
-            >
-              <div className="flex items-center justify-between gap-2 mb-2 px-1">
-                <span className="text-[12px] text-[#a6a59e] font-medium">
-                  {lang === "es"
-                    ? "O conecta directamente tu agente"
-                    : "Or give this directly to your agent"}
-                </span>
-                <div
-                  className="flex items-center gap-1 text-[10.5px]"
-                  style={{ fontFamily: "var(--font-mono), monospace" }}
-                >
-                  {(
-                    [
-                      ["llms", "llms.txt"],
-                      ["mcp", "MCP"],
-                      ["cli", "CLI"],
-                    ] as const
-                  ).map(([key, label]) => (
+                <div className="flex items-center justify-between gap-3 bg-[#0a0a09] border border-white/10 rounded-[11px] px-3.5 py-2.5">
+                  <code
+                    className="text-[12px] text-[#ededeb] overflow-x-auto whitespace-nowrap"
+                    style={{ fontFamily: "var(--font-mono), monospace" }}
+                  >
+                    <span className="text-[#706f69] select-none">$ </span>
+                    {agentCommands[agentTab]}
+                  </code>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      sendBeaconEvent("copy_bootstrap", { target: agentTab });
+                      copyText("hero", agentCommands[agentTab]);
+                    }}
+                    className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white text-[#141413] text-[11.5px] font-medium hover:bg-[#eae9e4] cursor-pointer"
+                  >
+                    {copiedKey === "hero" ? (
+                      <>
+                        <Check className="w-3.5 h-3.5 text-[#118453]" />
+                        <span>{lang === "es" ? "Copiado" : "Copied"}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3 h-3" />
+                        <span>{lang === "es" ? "Copiar" : "Copy"}</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* SINGLE PILL IDEA INPUT BAR */}
+              <div className="mt-4 mx-auto max-w-[590px]">
+                <div className="p-1.5 rounded-full bg-white border border-[var(--line-strong)] shadow-[var(--shadow-sm)] flex items-center gap-2">
+                  <input
+                    type="text"
+                    value={ideaInput}
+                    onChange={(e) => setIdeaInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") handleSynthesize();
+                    }}
+                    aria-label="Describe your project idea or paste a URL"
+                    placeholder={
+                      lang === "es"
+                        ? "O escribe tu idea de proyecto (o URL) para ver el preview..."
+                        : "Or type your project idea (or URL) to synthesize a live preview..."
+                    }
+                    className="flex-1 min-w-0 px-4 py-2 text-[13.5px] text-[var(--ink)] bg-transparent focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    disabled={scrapingUrl}
+                    onClick={() => handleSynthesize()}
+                    className="px-4 py-2 rounded-full bg-[#141413] text-[#fbfbfa] text-[12.5px] font-medium inline-flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity cursor-pointer shrink-0 disabled:opacity-60"
+                  >
+                    {scrapingUrl ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>{lang === "es" ? "Analizando..." : "Analyzing..."}</span>
+                      </>
+                    ) : (
+                      <span>{lang === "es" ? "Sintetizar →" : "Synthesize →"}</span>
+                    )}
+                  </button>
+                </div>
+
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
+                  {QUICK_IDEAS.map((item) => (
                     <button
-                      key={key}
+                      key={item.labelEn}
                       type="button"
-                      onClick={() => setAgentTab(key)}
-                      className={`px-2 py-0.5 rounded-full cursor-pointer transition-colors ${
-                        agentTab === key
-                          ? "bg-white/15 text-white"
-                          : "text-[#8a8982] hover:text-white"
-                      }`}
+                      onClick={() => handleSynthesize(item.idea)}
+                      className="px-3 py-1 rounded-full bg-white/75 hover:bg-white border border-[var(--line)] hover:border-[var(--line-strong)] text-[11px] text-[var(--muted)] hover:text-[var(--ink)] transition-colors cursor-pointer"
                     >
-                      {label}
+                      {lang === "es" ? item.labelEs : item.labelEn}
                     </button>
                   ))}
                 </div>
               </div>
+            </div>
 
-              <div className="flex items-center justify-between gap-3 bg-[#0a0a09] border border-white/10 rounded-[11px] px-3.5 py-2">
-                <code
-                  className="text-[12px] text-[#ededeb] overflow-x-auto whitespace-nowrap"
-                  style={{ fontFamily: "var(--font-mono), monospace" }}
-                >
-                  <span className="text-[#706f69] select-none">$ </span>
-                  {agentCommands[agentTab]}
-                </code>
-                <button
-                  type="button"
-                  onClick={() => {
-                    sendBeaconEvent("copy_bootstrap", { target: agentTab });
-                    copyText("hero", agentCommands[agentTab]);
-                  }}
-                  className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#141413] text-[11.5px] font-medium hover:bg-[#eae9e4] cursor-pointer"
-                >
-                  {copiedKey === "hero" ? (
-                    <>
-                      <Check className="w-3 h-3 text-[#118453]" />
-                      <span>{lang === "es" ? "Copiado" : "Copied"}</span>
-                    </>
-                  ) : (
-                    <span>{lang === "es" ? "copiar" : "copy"}</span>
-                  )}
-                </button>
-              </div>
+            {/* 4-Column treg.to Strikethrough Legacy Replacement Grid */}
+            <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+              {HERO_JOBS.map((job) => (
+                <a key={job.taskEn} href={job.href} className="block">
+                  <article className="visual-card p-4 h-full flex flex-col justify-between gap-4">
+                    <div>
+                      <h2 className="text-[14.5px] font-medium leading-snug">
+                        {lang === "es" ? job.taskEs : job.taskEn}
+                      </h2>
+                      <p
+                        className="mt-2 text-[11px] text-[#767672]"
+                        style={{ fontFamily: "var(--font-mono), monospace" }}
+                      >
+                        {job.refs}
+                      </p>
+                    </div>
+                    <div
+                      className="pt-3 border-t border-[var(--line)] flex items-center justify-between text-[11px] tabular-nums gap-2"
+                      style={{ fontFamily: "var(--font-mono), monospace" }}
+                    >
+                      <span className="line-through text-[var(--muted-2)]">
+                        {lang === "es" ? job.legacyEs : job.legacyEn}
+                      </span>
+                      <span className="text-[#118453] font-medium">{job.formaRate}</span>
+                    </div>
+                  </article>
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -1551,7 +1659,7 @@ export function FormaStudio() {
         </section>
       </main>
 
-      <footer className="bg-[#0e0e0d] text-[#8a8982] py-6 px-5 border-t border-white/10">
+      <footer className="bg-[#0e0e0d] text-[#8a8982] pt-6 pb-20 px-5 border-t border-white/10">
         <div
           className="mx-auto max-w-[1120px] flex flex-wrap items-center justify-between gap-4 text-[12px]"
           style={{ fontFamily: "var(--font-mono), monospace" }}
@@ -1579,6 +1687,46 @@ export function FormaStudio() {
           </div>
         </div>
       </footer>
+
+      {/* P de Pablo Frosted Swiss Bottom Dock (Single compact persistent bar < 44px) */}
+      <nav
+        aria-label="Quick navigation"
+        className="fixed bottom-4 inset-x-0 mx-auto w-fit max-w-[calc(100dvw-1.5rem)] z-30 px-2.5 py-1.5 rounded-full bg-white/88 backdrop-blur-md border border-black/10 shadow-[var(--shadow-md)] flex items-center gap-1 text-[12px] overflow-x-auto whitespace-nowrap"
+      >
+        <a
+          href="#studio"
+          className="px-3 py-1 rounded-full hover:bg-black/5 font-medium text-[#141413]"
+        >
+          {lang === "es" ? "Studio" : "Interactive Studio"}
+        </a>
+        <a
+          href="#section-vault"
+          className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413]"
+        >
+          {lang === "es" ? "42 Secciones DOM" : "42 DOM Sections"}
+        </a>
+        <a
+          href="#proof"
+          className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413]"
+        >
+          {lang === "es" ? "Antes / Después" : "Before / After"}
+        </a>
+        <button
+          type="button"
+          onClick={() => setExplorerOpen(true)}
+          className="px-2.5 py-1 rounded-full text-[#6e6d68] hover:text-[#141413] cursor-pointer"
+          style={{ fontFamily: "var(--font-mono), monospace" }}
+        >
+          ⌘K
+        </button>
+        <a
+          href="/credits"
+          className="px-3 py-1 rounded-full bg-[#141413] text-white font-medium tabular-nums"
+          style={{ fontFamily: "var(--font-mono), monospace" }}
+        >
+          $1.00 free
+        </a>
+      </nav>
 
       {/* 1. Native <dialog closedby="any"> Modal for Compiled DESIGN.md */}
       <dialog
