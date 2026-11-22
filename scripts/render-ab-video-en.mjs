@@ -7,7 +7,7 @@
  */
 
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
@@ -100,6 +100,10 @@ function buildControlAHtml() {
 }
 
 function buildExperimentalBHtml() {
+  const photoPath = resolve(ROOT, "public/showcase/kanso-editorial.jpg");
+  const photoB64 = existsSync(photoPath)
+    ? `data:image/jpeg;base64,${readFileSync(photoPath).toString("base64")}`
+    : "";
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,51 +116,78 @@ function buildExperimentalBHtml() {
   body { background: #f5f1e8; color: #1f1b18; font-family: 'Geist', sans-serif; padding-bottom: 96px; -webkit-font-smoothing: antialiased; }
   .mono { font-family: 'DM Mono', monospace; font-variant-numeric: tabular-nums; }
   .serif { font-family: 'Newsreader', Georgia, serif; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 28px 24px; max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(31,27,24,0.11); }
-  .pill { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: #e7dfd0; font-size: 11px; margin-bottom: 24px; }
-  h1 { font-size: 56px; line-height: 1.04; letter-spacing: -0.028em; font-weight: 400; max-width: 720px; }
-  .lead { margin-top: 20px; font-size: 16px; line-height: 1.65; max-width: 58ch; color: #6d645b; }
-  .ledger-head { margin-top: 52px; padding-bottom: 12px; border-bottom: 1px solid rgba(31,27,24,0.16); display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #6d645b; }
-  .row { padding: 20px 0; display: grid; grid-template-columns: 110px 1fr 180px 90px; gap: 16px; align-items: baseline; border-bottom: 1px solid rgba(31,27,24,0.11); }
-  .sub-box { margin-top: 44px; padding: 28px; border-radius: 14px; background: #fbf9f4; border: 1px solid rgba(31,27,24,0.11); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .cta { padding: 13px 22px; border-radius: 999px; background: #c4492b; color: #fbf9f4; font-size: 13.5px; font-weight: 500; border: 0; }
-  .dock { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 8px 18px; border-radius: 999px; background: rgba(251,249,244,0.88); border: 1px solid rgba(31,27,24,0.12); backdrop-filter: blur(14px); display: flex; align-items: center; gap: 20px; font-size: 12px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  header { padding: 22px 28px; max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(31,27,24,0.12); }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-top: 44px; }
+  h1 { font-size: 52px; line-height: 1.03; letter-spacing: -0.03em; font-weight: 400; }
+  .lead { margin-top: 18px; font-size: 15.5px; line-height: 1.65; color: #5e554d; }
+  .cta { display: inline-block; padding: 13px 24px; border-radius: 999px; background: #c4492b; color: #fbf9f4; font-size: 13.5px; font-weight: 500; border: 0; }
+  .photo-frame { border-radius: 20px; padding: 10px; background: #fbf9f4; border: 1px solid rgba(31,27,24,0.12); }
+  .photo-inner { position: relative; border-radius: 14px; overflow: hidden; height: 320px; }
+  .photo-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bento-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 24px; margin-top: 44px; }
+  .ledger-card { border-radius: 18px; padding: 26px; background: #fbf9f4; border: 1px solid rgba(31,27,24,0.11); }
+  .row { padding: 16px 0; display: grid; grid-template-columns: 80px 1fr 90px 80px; gap: 12px; align-items: baseline; border-bottom: 1px solid rgba(31,27,24,0.10); }
+  .walnut-card { border-radius: 18px; padding: 28px; background: #1f1b18; color: #fbf9f4; display: flex; flex-direction: column; justify-content: space-between; }
+  .dock { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 8px 18px; border-radius: 999px; background: rgba(251,249,244,0.9); border: 1px solid rgba(31,27,24,0.12); display: flex; align-items: center; gap: 20px; font-size: 12px; }
 </style>
 </head>
 <body>
   <header>
     <div style="display:flex; align-items:baseline; gap:12px;">
-      <span class="serif" style="font-size:22px;">Kanso</span>
-      <span class="mono" style="font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:#6d645b;">Roasters · Madrid</span>
+      <span class="serif" style="font-size:24px;">Kanso</span>
+      <span class="mono" style="font-size:11px; color:#6d645b;">Roasters · Chamberí, Madrid</span>
     </div>
-    <div class="mono" style="display:flex; gap:24px; font-size:12.5px; color:#6d645b;">
-      <span>Current harvest</span><span>C/ Trafalgar 14</span><span style="color:#1f1b18;">Tue–Sun 08:30</span>
+    <div class="mono" style="display:flex; gap:20px; align-items:center; font-size:12px; color:#6d645b;">
+      <span>Nov 2026 Harvest</span><span>C/ Trafalgar 14</span><span style="padding:4px 12px; border-radius:99px; background:#e7dfd0; color:#1f1b18;">Next roast: Tue 07:00</span>
     </div>
   </header>
-  <main class="wrap" style="padding-top:52px;">
-    <div class="pill mono">NEXT ROAST: TUESDAY 07:00 · SHIPS WITHIN 24H</div>
-    <h1 class="serif">Seasonal single-origin coffee roasted every Tuesday in <em>small batches.</em></h1>
-    <p class="lead">We partner directly with three small farms each season. Every batch is roasted on cast-iron drums in Chamberí and dispatched the same afternoon so it arrives at peak degassing rest.</p>
-    <section>
-      <div class="ledger-head mono"><span>November Harvest</span><span>SCA 87.5 — 89.0 pts</span></div>
-      <div class="row"><span class="mono" style="font-size:11.5px; color:#c4492b;">LOT 04</span><div><div style="font-size:16px; font-weight:500;">Finca El Puente · Huila, Colombia</div><div style="font-size:13.5px; color:#6d645b; margin-top:2px;">Red plum, raw panela & dark cacao</div></div><span class="mono" style="font-size:12px; color:#6d645b;">Washed · 1,950 m</span><span class="mono" style="font-size:12.5px; text-align:right; font-weight:500;">250 g</span></div>
-      <div class="row"><span class="mono" style="font-size:11.5px; color:#c4492b;">LOT 05</span><div><div style="font-size:16px; font-weight:500;">Worka Sakaro · Gedeb, Ethiopia</div><div style="font-size:13.5px; color:#6d645b; margin-top:2px;">Bergamot, jasmine & white peach</div></div><span class="mono" style="font-size:12px; color:#6d645b;">Natural · 2,150 m</span><span class="mono" style="font-size:12.5px; text-align:right; font-weight:500;">250 g</span></div>
-      <div class="row"><span class="mono" style="font-size:11.5px; color:#c4492b;">LOT 06</span><div><div style="font-size:16px; font-weight:500;">Los Pirineos · Usulután, El Salvador</div><div style="font-size:13.5px; color:#6d645b; margin-top:2px;">Roasted hazelnut, orange blossom & mandarin</div></div><span class="mono" style="font-size:12px; color:#6d645b;">Honey · 1,480 m</span><span class="mono" style="font-size:12.5px; text-align:right; font-weight:500;">250 g</span></div>
-    </section>
-    <section class="sub-box">
+  <main class="wrap">
+    <section class="hero-grid">
       <div>
-        <div class="mono" style="font-size:11px; color:#6d645b; text-transform:uppercase; letter-spacing:0.06em;">MONTHLY SUBSCRIPTION · CANCEL ANYTIME</div>
-        <h3 class="serif" style="font-size:24px; margin-top:4px; font-weight:400;">Two distinct single-origin bags every month</h3>
-        <p style="font-size:13.5px; color:#6d645b; margin-top:4px;">2 × 250 g whole bean or ground for filter / espresso. Pause or skip in one click.</p>
+        <h1 class="serif">Single-origin coffee roasted every Tuesday in <em style="color:#c4492b;">small batches.</em></h1>
+        <p class="lead">We source three seasonal micro-lots directly from growers in Huila, Gedeb, and Usulután. Roasted on our Loring S15 drum in Madrid and dispatched within 24 hours.</p>
+        <div style="margin-top:24px; display:flex; align-items:center; gap:14px;">
+          <button class="cta">Join Tuesday's roast · €24 →</button>
+          <span style="padding:12px 20px; border-radius:99px; background:#fbf9f4; border:1px solid rgba(31,27,24,0.18); font-size:13px;">Explore 3 origins</span>
+        </div>
+        <div style="margin-top:26px; padding-top:20px; border-top:1px solid rgba(31,27,24,0.12); display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+          <div><div class="serif" style="font-size:22px;">88.5 pts</div><div class="mono" style="font-size:11px; color:#6d645b;">Mean SCA score</div></div>
+          <div><div class="serif" style="font-size:22px;">204.5 °C</div><div class="mono" style="font-size:11px; color:#6d645b;">First crack · 08:42</div></div>
+          <div><div class="serif" style="font-size:22px;">&lt; 24 h</div><div class="mono" style="font-size:11px; color:#6d645b;">Drum to doorstep</div></div>
+        </div>
       </div>
-      <div style="display:flex; align-items:center; gap:20px;">
-        <div style="text-align:right;"><div class="mono" style="font-size:26px; font-weight:600;">€24</div><div class="mono" style="font-size:11px; color:#6d645b;">shipping included</div></div>
-        <button class="cta">Receive Tuesday's roast →</button>
+      <div class="photo-frame">
+        <div class="photo-inner">
+          <img src="${photoB64}" alt="Kanso Madrid Lot 04" />
+          <div style="position:absolute; bottom:12px; left:12px; right:12px; border-radius:11px; padding:10px 14px; background:rgba(251,249,244,0.92); display:flex; justify-content:space-between; align-items:center;">
+            <div><div class="mono" style="font-size:10px; color:#c4492b;">LOT 04 · FINCA EL PUENTE (1,950 M)</div><div style="font-size:13px; font-weight:500;">Red plum · Raw panela · Dark cacao</div></div>
+            <span class="mono" style="font-size:12px; font-weight:600;">SCA 88.5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bento-grid">
+      <div class="ledger-card">
+        <div class="mono" style="padding-bottom:10px; border-bottom:1px solid rgba(31,27,24,0.14); display:flex; justify-content:space-between; font-size:11px; color:#6d645b;"><span>Current harvest menu · 3 farms</span><span>Light–medium omni roast</span></div>
+        <div class="row"><span class="mono" style="font-size:11px; color:#c4492b;">LOT 04</span><div><div style="font-size:15px; font-weight:500;">Finca El Puente · Huila, Colombia</div><div style="font-size:12.5px; color:#6d645b;">Red plum, raw panela & 85% cacao</div></div><span class="mono" style="font-size:11.5px; color:#6d645b;">SCA 88.5</span><span class="mono" style="font-size:13px; text-align:right; font-weight:500;">€14.50</span></div>
+        <div class="row"><span class="mono" style="font-size:11px; color:#c4492b;">LOT 05</span><div><div style="font-size:15px; font-weight:500;">Worka Sakaro · Gedeb, Ethiopia</div><div style="font-size:12.5px; color:#6d645b;">Bergamot, white jasmine & peach</div></div><span class="mono" style="font-size:11.5px; color:#6d645b;">SCA 89.0</span><span class="mono" style="font-size:13px; text-align:right; font-weight:500;">€16.00</span></div>
+        <div class="row" style="border-bottom:0;"><span class="mono" style="font-size:11px; color:#c4492b;">LOT 06</span><div><div style="font-size:15px; font-weight:500;">Los Pirineos · Usulután, El Salvador</div><div style="font-size:12.5px; color:#6d645b;">Hazelnut, orange blossom & mandarin</div></div><span class="mono" style="font-size:11.5px; color:#6d645b;">SCA 87.8</span><span class="mono" style="font-size:13px; text-align:right; font-weight:500;">€14.00</span></div>
+      </div>
+      <div class="walnut-card">
+        <div>
+          <span class="mono" style="display:inline-block; padding:4px 10px; border-radius:99px; background:rgba(251,249,244,0.12); color:#e7dfd0; font-size:10.5px;">Monthly subscription · Cancel anytime</span>
+          <h3 class="serif" style="font-size:27px; line-height:1.1; font-weight:400; margin-top:12px;">Two distinct single-origin bags every first Tuesday.</h3>
+          <p style="font-size:13px; color:#b8afa4; margin-top:10px; line-height:1.55;">2 × 250 g freshly roasted bags with V60 & espresso recipes. Pause or skip in one click.</p>
+        </div>
+        <div style="padding-top:18px; border-top:1px solid rgba(251,249,244,0.12); display:flex; align-items:flex-end; justify-content:space-between;">
+          <div><div class="mono" style="font-size:28px; font-weight:600;">€24</div><div class="mono" style="font-size:11px; color:#b8afa4;">24h shipping included</div></div>
+          <button class="cta">Start subscription →</button>
+        </div>
       </div>
     </section>
   </main>
-  <div class="dock"><span>Harvest</span><span style="color:#6d645b;">Roastery</span><span style="color:#6d645b;">Subscription</span><span class="mono" style="padding:4px 12px; border-radius:99px; background:#1f1b18; color:#fbf9f4; font-size:11px;">€24 / mo</span></div>
+  <div class="dock"><span>Harvest (3)</span><span style="color:#6d645b;">Roastery</span><span style="color:#6d645b;">Subscription</span><span class="mono" style="padding:4px 12px; border-radius:99px; background:#1f1b18; color:#fbf9f4; font-size:11px;">€24 / mo</span></div>
 </body>
 </html>`;
 }

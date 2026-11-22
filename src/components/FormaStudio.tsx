@@ -1342,7 +1342,18 @@ export function FormaStudio() {
         </section>
 
         {/* BEFORE VS AFTER VIDEO & INTERACTIVE BENCHMARK */}
-        <BeforeAfterShowcase lang={lang} />
+        <BeforeAfterShowcase
+          lang={lang}
+          onApplyPreset={(preset) => {
+            setIdeaInput(preset.idea);
+            setSurfaceId(preset.surfaceId);
+            setPaletteId(preset.paletteId);
+            setFontPairingId(preset.fontPairingId);
+            setLayoutId(preset.layoutId);
+            setMotionId(preset.motionId);
+            document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
 
         {/* SECTION 2: THE COMPLETE WEB CRAFT COMPENDIUM (Components · Formats · Palettes · Fonts & Assets · Live Radar) */}
         <section id="catalog" className="py-16 px-5 border-t border-[var(--line)]">
