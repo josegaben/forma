@@ -60,7 +60,7 @@ ${CURATED_COLOR_PALETTES.map(
 ${TYPOGRAPHY_PAIRINGS.map(
   (tp) =>
     `### \`${tp.id}\` — ${tp.name} (${tp.foundry})
-- Vibe: ${tp.vibe}
+- Vibe: ${tp.vibe}${tp.commercialEquivalent ? `\n- Open-Source Twin For: ${tp.commercialEquivalent}` : ""}${tp.openTypeFeatures ? `\n- OpenType Features: \`font-feature-settings: ${tp.openTypeFeatures};\`` : ""}
 - Stacks: Display \`${tp.displayStack}\` (\`${tp.h1Scale}\`, tracking \`${tp.h1Tracking}\`) | Body \`${tp.bodyStack}\` | Mono \`${tp.monoStack}\`
 - CSS Import: \`@import url('${tp.cssImport}');\``
 ).join("\n\n")}

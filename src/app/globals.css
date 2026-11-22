@@ -247,6 +247,55 @@ input[type="range"].forma-split-slider::-moz-range-thumb {
   background: var(--slider-thumb-color);
 }
 
+/* Modern Web Guidance: Native <details>/<summary> Accordion + :user-invalid URL Field */
+summary.doctor-summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6ch;
+  cursor: pointer;
+}
+
+summary.doctor-summary::-webkit-details-marker {
+  display: none;
+}
+
+summary.doctor-summary::before {
+  content: "";
+  inline-size: 0.95em;
+  block-size: 0.95em;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  rotate: -90deg;
+}
+
+summary.doctor-summary:dir(rtl)::before {
+  rotate: 90deg;
+}
+
+details[open] > summary.doctor-summary::before {
+  rotate: 0deg;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  summary.doctor-summary::before {
+    transition: rotate 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+input.doctor-url-input:is(:user-invalid, .user-invalid-fallback) {
+  border-color: #d93025;
+  background-color: #fce8e6;
+}
+
+input.doctor-url-input:user-valid {
+  border-color: #118453;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

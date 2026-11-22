@@ -24,6 +24,7 @@ import {
 import { FORMA_CLOUD_PRICING, getOrProvisionWallet } from "@/lib/credits";
 import { validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recordTelemetryEvent } from "@/lib/telemetry";
+import { generateWebDoctorDiagnosis } from "@/lib/web-doctor";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
 const CORS_HEADERS = {
@@ -232,6 +233,18 @@ const MCP_TOOLS = [
         paletteId: { type: "string" },
         fontPairingId: { type: "string" },
       },
+    },
+  },
+  {
+    name: "suggest_website_improvements",
+    description:
+      "Run Forma Doctor on any live public URL to generate actionable What → Why → Exact CSS/HTML Fix improvements across APCA-W3 perceptual contrast, Rosetta commercial-to-open-source font twins, GoodUI/Hick's Law CTA conversion, Baymard form UX, Checklist.design completeness, and Project Wallace CSS/GPU health.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        url: { type: "string", description: "Public URL to diagnose and improve (e.g. https://example.com)" },
+      },
+      required: ["url"],
     },
   },
 ];
@@ -599,6 +612,29 @@ export async function POST(request: Request) {
         { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: JSON.stringify(payload, null, 2) }] } },
         { headers: CORS_HEADERS }
       );
+    }
+
+    if (toolName === "suggest_website_improvements") {
+      const checked = validatePublicHttpUrl(String(args.url || ""));
+      if (!checked.ok) {
+        return NextResponse.json(
+          { jsonrpc: "2.0", id: id ?? 1, error: { code: -32602, message: checked.error } },
+          { status: 400, headers: CORS_HEADERS }
+        );
+      }
+      try {
+        const xray = await analyzeWebsiteUrl(checked.url.toString(), { timeoutMs: 8500 });
+        const diagnosis = generateWebDoctorDiagnosis(xray, null);
+        return NextResponse.json(
+          { jsonrpc: "2.0", id: id ?? 1, result: { content: [{ type: "text", text: diagnosis.markdownPatch }] } },
+          { headers: CORS_HEADERS }
+        );
+      } catch (err) {
+        return NextResponse.json(
+          { jsonrpc: "2.0", id: id ?? 1, error: { code: -32000, message: err instanceof Error ? err.message : "Audit failed" } },
+          { status: 422, headers: CORS_HEADERS }
+        );
+      }
     }
 
     return NextResponse.json(

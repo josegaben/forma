@@ -45,6 +45,7 @@ import {
 import { BeforeAfterShowcase } from "@/components/BeforeAfterShowcase";
 import { CommandExplorerModal } from "@/components/CommandExplorerModal";
 import { ConnectedServicesHub } from "@/components/ConnectedServicesHub";
+import { FormaDoctorPanel } from "@/components/FormaDoctorPanel";
 import {
   AgentBadgeRow,
   FormaLogo,
@@ -1355,6 +1356,20 @@ export function FormaStudio() {
           }}
         />
 
+        {/* FORMA DOCTOR: LIVE URL UX, APCA CONTRAST, ROSETTA FONT & CSS AUDITOR */}
+        <FormaDoctorPanel
+          lang={lang}
+          onApplyPreset={(preset) => {
+            setIdeaInput(preset.idea);
+            setSurfaceId(preset.surfaceId);
+            setPaletteId(preset.paletteId);
+            setFontPairingId(preset.fontPairingId);
+            setLayoutId(preset.layoutId);
+            setMotionId(preset.motionId);
+            document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
+
         {/* SECTION 2: THE COMPLETE WEB CRAFT COMPENDIUM (Components · Formats · Palettes · Fonts & Assets · Live Radar) */}
         <section id="catalog" className="py-16 px-5 border-t border-[var(--line)]">
           <div className="mx-auto max-w-[1120px]">
@@ -1585,6 +1600,10 @@ export function FormaStudio() {
                         className="rounded-[20px] p-2 bg-[#f2f1ed] border border-[var(--line)] hover:border-[var(--line-strong)] transition-colors flex flex-col justify-between"
                       >
                         <link rel="stylesheet" href={pair.cssImport} />
+                        {pair.secondaryCssImport && (
+                          <link rel="stylesheet" href={pair.secondaryCssImport} />
+                        )}
+                        {pair.fontFaceCss && <style>{pair.fontFaceCss}</style>}
                         <div className="rounded-[14px] bg-white border border-[var(--line)] p-4 min-h-[9.5rem] flex flex-col justify-between gap-2">
                           <div className="flex items-center justify-between gap-2">
                             <span
@@ -1605,10 +1624,20 @@ export function FormaStudio() {
                             style={{
                               fontFamily: pair.displayStack,
                               fontSizeAdjust: "from-font",
+                              fontFeatureSettings: pair.openTypeFeatures,
                             }}
                           >
                             {pair.sampleHeading}
                           </div>
+                          {pair.commercialEquivalent && (
+                            <div
+                              className="text-[10px] text-[#118453] truncate"
+                              style={{ fontFamily: "var(--font-mono), monospace" }}
+                            >
+                              {lang === "es" ? "Gemelo libre de: " : "Open twin for: "}
+                              {pair.commercialEquivalent}
+                            </div>
+                          )}
                           <div className="text-[11px] text-[var(--muted)] truncate">
                             {lang === "es" ? pair.vibeEs : pair.vibe}
                           </div>
@@ -1761,6 +1790,7 @@ export function FormaStudio() {
                     "all",
                     "Curated Galleries",
                     "Typography & Brand",
+                    "UX Critique, CRO & Type Eng",
                     "Components & Motion",
                     "Color Science & Palettes",
                     "Agent & OSS Specs",
@@ -2023,6 +2053,12 @@ export function FormaStudio() {
           className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413]"
         >
           {lang === "es" ? "Antes / Después" : "Before / After"}
+        </a>
+        <a
+          href="#doctor"
+          className="px-3 py-1 rounded-full text-[#6e6d68] hover:text-[#141413]"
+        >
+          Doctor
         </a>
         <button
           type="button"

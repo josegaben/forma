@@ -58,6 +58,9 @@ export function LiveFormatPreview({
     t.typography.googleFontsImport && t.typography.googleFontsImport.startsWith("https://")
       ? t.typography.googleFontsImport
       : null;
+  const secondaryFontHref = genome.activeFontPairing?.secondaryCssImport || null;
+  const customFontFaceCss = genome.activeFontPairing?.fontFaceCss || null;
+  const openTypeSettings = genome.activeFontPairing?.openTypeFeatures;
 
   return (
     <div
@@ -68,10 +71,13 @@ export function LiveFormatPreview({
         borderColor: s.line,
         fontFamily: bodyFontFamily,
         fontSizeAdjust: "from-font",
+        fontFeatureSettings: openTypeSettings,
         ...backgroundPattern,
       }}
     >
       {fontImportHref && <link rel="stylesheet" href={fontImportHref} />}
+      {secondaryFontHref && <link rel="stylesheet" href={secondaryFontHref} />}
+      {customFontFaceCss && <style>{customFontFaceCss}</style>}
       {/* Clean Minimal Window Bar */}
       <div
         className="flex items-center justify-between px-4 py-2.5 border-b text-[11px]"

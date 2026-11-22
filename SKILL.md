@@ -17,9 +17,14 @@ curl -fsSL -G "https://forma.to/api/compose" \
   --data-urlencode "format=markdown" > DESIGN.md
 ```
 
-Or connect via Streamable HTTP MCP (`12` tools):
+Or connect via Streamable HTTP MCP (`16` tools, including `suggest_website_improvements`):
 ```bash
 claude mcp add --transport http forma https://forma.to/api/mcp
+```
+
+### 2. Run Forma Doctor on Any Existing URL (APCA, Rosetta Fonts, GoodUI & CSS Health)
+```bash
+curl -fsSL "https://forma.to/api/audit?url=https://example.com"
 ```
 
 ### 2. Query Real Client-Rendered Section DOM Blueprints

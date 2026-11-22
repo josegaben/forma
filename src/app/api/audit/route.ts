@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { validatePublicHttpUrl } from "@/lib/ssrf-guard";
 import { recordTelemetryEvent } from "@/lib/telemetry";
+import { generateWebDoctorDiagnosis } from "@/lib/web-doctor";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
 const CORS_HEADERS = {
@@ -81,15 +82,29 @@ export async function GET(request: Request) {
         usesContainerQueries: xray.layers.layout.modernPlatform.containerQueries,
       };
 
+  const doctor = generateWebDoctorDiagnosis(
+    xray,
+    lhr
+      ? {
+          performanceScore: Math.round((lhr.categories?.performance?.score ?? 0) * 100),
+          accessibilityScore: Math.round((lhr.categories?.accessibility?.score ?? 0) * 100),
+          lcp: lhr.audits?.["largest-contentful-paint"]?.displayValue || null,
+          cls: lhr.audits?.["cumulative-layout-shift"]?.displayValue || null,
+        }
+      : null
+  );
+
   return NextResponse.json(
     {
       url: xray.url,
       hostname: xray.hostname,
+      title: xray.title,
       craftScore: xray.craftScore,
       antiSlopGrade: xray.antiSlopAudit.grade,
       strengths: xray.antiSlopAudit.strengths,
       warnings: xray.antiSlopAudit.warnings,
       coreWebVitals,
+      doctor,
       tokens: {
         mode: xray.layers.surface.mode,
         bg: xray.layers.surface.bg,

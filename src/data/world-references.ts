@@ -8,6 +8,7 @@ export interface GlobalDesignDirectory {
     | "Product & Flows"
     | "Components & Motion"
     | "Typography & Brand"
+    | "UX Critique, CRO & Type Eng"
     | "Brutalist & Indie"
     | "Agent & OSS Specs";
 }
@@ -152,4 +153,22 @@ export const GLOBAL_DESIGN_DIRECTORIES: GlobalDesignDirectory[] = [
   { name: "Colorffy", url: "https://colorffy.com", category: "Color Science & Palettes" },
   { name: "SupaPalette", url: "https://www.supapalette.com", category: "Color Science & Palettes" },
   { name: "Culori", url: "https://culorijs.org", category: "Color Science & Palettes" },
+
+  // UX Critique, CRO & Type Engineering
+  { name: "Built for Mars", url: "https://builtformars.com", category: "UX Critique, CRO & Type Eng" },
+  { name: "Growth.Design", url: "https://growth.design/case-studies", category: "UX Critique, CRO & Type Eng" },
+  { name: "Laws of UX", url: "https://lawsofux.com", category: "UX Critique, CRO & Type Eng" },
+  { name: "Baymard Institute", url: "https://baymard.com/blog", category: "UX Critique, CRO & Type Eng" },
+  { name: "NN/g Usability", url: "https://www.nngroup.com/articles/ten-usability-heuristics/", category: "UX Critique, CRO & Type Eng" },
+  { name: "Refactoring UI", url: "https://www.refactoringui.com", category: "UX Critique, CRO & Type Eng" },
+  { name: "Utopia.fyi Fluid Scales", url: "https://utopia.fyi", category: "UX Critique, CRO & Type Eng" },
+  { name: "Wakamai Fondue", url: "https://wakamaifondue.com", category: "UX Critique, CRO & Type Eng" },
+  { name: "Project Wallace CSS", url: "https://www.projectwallace.com", category: "UX Critique, CRO & Type Eng" },
+  { name: "Yellow Lab Tools", url: "https://yellowlab.tools", category: "UX Critique, CRO & Type Eng" },
+  { name: "Polypane Browser", url: "https://polypane.app", category: "UX Critique, CRO & Type Eng" },
+  { name: "Unlighthouse", url: "https://unlighthouse.dev", category: "UX Critique, CRO & Type Eng" },
+  { name: "APCA Perceptual Contrast", url: "https://www.myndex.com/APCA/", category: "UX Critique, CRO & Type Eng" },
+  { name: "Fontsource Self-Host", url: "https://fontsource.org", category: "UX Critique, CRO & Type Eng" },
+  { name: "Capsize Font Metrics", url: "https://seek-oss.github.io/capsize/", category: "UX Critique, CRO & Type Eng" },
+  { name: "Practical Typography", url: "https://practicaltypography.com", category: "UX Critique, CRO & Type Eng" },
 ];
