@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-22T12:04:57.044Z",
+  "lastVisualScanAt": "2026-11-22T13:52:43.976Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 73,
+  "totalSections": 91,
   "countsByKind": {
-    "pricing": 14,
-    "bento-features": 8,
-    "hero": 19,
-    "cta-footer": 15,
-    "navbar": 17
+    "pricing": 17,
+    "bento-features": 10,
+    "hero": 24,
+    "cta-footer": 19,
+    "navbar": 21
   },
   "sections": [
     {
@@ -493,6 +493,76 @@
       ]
     },
     {
+      "id": "sec-joinvitrine-com-hero",
+      "siteUrl": "https://www.joinvitrine.com",
+      "pageUrl": "https://www.joinvitrine.com/",
+      "hostname": "joinvitrine.com",
+      "siteTitle": "Vitrine: your references, ready for you and your AI agent",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T13:52:29.329Z",
+      "screenshotUrl": "/section-vault/joinvitrine-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1278
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f6f2",
+        "ink": "#121310",
+        "accent": "#121310",
+        "borderColor": "#121310",
+        "width": 1440,
+        "height": 1278,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "124px 56px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Geist",
+        "headlineSize": "101px",
+        "headlineTracking": "-4.2336px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Download · 7 days free",
+          "See pricing"
+        ],
+        "activeAnimations": [
+          {
+            "name": "mb-drift",
+            "duration": 5500,
+            "easing": "linear"
+          },
+          {
+            "name": "mb-drift",
+            "duration": 5500,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex column\">\n    <p data-layout=\"flex gap-8px\">Mac app</p>\n    <h1 data-type=\"Geist 101px/-4.2336px\">The moodboard your AI can see.</h1>\n    <p>Save any site, screenshot or clip to one board on your Mac. Claude Code and Codex build fr</p>\n    <div data-layout=\"flex column\">\n      <div data-layout=\"flex gap-10px\">\n        <a data-layout=\"flex\" data-cta=\"bg:#ffffff r:999px\">See pricing</a>\n      </div>\n      <p>For Apple Silicon Macs, macOS 15 or later.</p>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Agentic Hero with Live CLI / Interactive Surface (centered single-rail)",
+        "summary": "Live-rendered hero from joinvitrine.com combining airy neutral stone/white surfaces (#f7f6f2) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1278px, padding 124px 56px) using centered single-rail composition on a crisp editorial light #f7f6f2 canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 101px (tracking -4.2336px) paired with #121310 primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #121310 hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Agentic Hero with Live CLI / Interactive Surface (centered single-rail) inspired by joinvitrine.com's hero architecture: use a block wrapper (max-width 1440px, padding 124px 56px, gap normal) on background #f7f6f2 with #121310 ink. Set the primary heading in Geist (101px, letter-spacing -4.2336px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #121310 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas",
+        "docs"
+      ]
+    },
+    {
       "id": "sec-linear-app-hero",
       "siteUrl": "https://linear.app",
       "pageUrl": "https://linear.app/",
@@ -865,6 +935,292 @@
       },
       "tags": [
         "devtools"
+      ]
+    },
+    {
+      "id": "sec-cursor-com-hero",
+      "siteUrl": "https://cursor.com",
+      "pageUrl": "https://cursor.com/",
+      "hostname": "cursor.com",
+      "siteTitle": "AI Coding Agent for Building Ambitious Software | Cursor",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T13:52:34.794Z",
+      "screenshotUrl": "/section-vault/cursor-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1086
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f4",
+        "ink": "#26251e",
+        "accent": "#26251e",
+        "borderColor": "#26251e",
+        "width": 1440,
+        "height": 1086,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "112px 20px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "CursorGothic",
+        "headlineSize": "26px",
+        "headlineTracking": "-0.325px",
+        "backdropFilter": "none",
+        "childCardCount": 2,
+        "ctaTexts": [
+          "Download for macOS⤓",
+          "Get started→",
+          "Request a demo→",
+          "Get Cursor"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          {
+            "name": "shimmer",
+            "duration": 2500,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n      <h1 data-type=\"CursorGothic 26px/-0.325px\">Cursor is your coding agent for building ambitious software.</h1>\n</section>",
+      "vision": {
+        "archetype": "Asymmetric Split Editorial Hero (2-column split)",
+        "summary": "Live-rendered hero from cursor.com combining airy neutral stone/white surfaces (#f7f7f4) with disciplined CursorGothic hierarchy and 2 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×1086px, padding 112px 20px) using 2-column split composition on a crisp editorial light #f7f7f4 canvas.",
+        "microDetails": [
+          "Display typography set in CursorGothic at 26px (tracking -0.325px) paired with #26251e primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #26251e hairlines.",
+          "GPU-friendly motion choreography (5 live WAAPI timelines, primary easing cubic-bezier(0.4, 0, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Asymmetric Split Editorial Hero (2-column split) inspired by cursor.com's hero architecture: use a block wrapper (max-width 1440px, padding 112px 20px, gap normal) on background #f7f7f4 with #26251e ink. Set the primary heading in CursorGothic (26px, letter-spacing -0.325px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #26251e strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-cosmos-so-hero",
+      "siteUrl": "https://cosmos.so",
+      "pageUrl": "https://cosmos.so/",
+      "hostname": "cosmos.so",
+      "siteTitle": "Cosmos",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T13:52:41.872Z",
+      "screenshotUrl": "/section-vault/cosmos-so-hero.jpg",
+      "dimensions": {
+        "width": 1430,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1430,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 16px",
+        "maxWidth": "1430px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "cosmosOracle",
+        "headlineSize": "72px",
+        "headlineTracking": "-2.88px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "lamp with character",
+          "Join Cosmos for free",
+          "Download app"
+        ],
+        "activeAnimations": [
+          {
+            "name": "Yd-VhW_mask-shimmer",
+            "duration": 1500,
+            "easing": "linear"
+          },
+          {
+            "name": "scale-in",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n        <canvas width=\"1440\" height=\"900\" alt=\"visual-asset\" />\n  <div data-layout=\"flex column gap-16px\">\n    <h1 data-type=\"cosmosOracle 72px/-2.88px\">\n      <span>Find your next</span>\n    </h1>\n  </div>\n  <div data-layout=\"flex column\">\n    <span data-layout=\"flex gap-6px\">Get the app</span>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from cosmos.so combining airy neutral stone/white surfaces (#ffffff) with disciplined cosmosOracle hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1430×900px, padding 0px 16px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in cosmosOracle at 72px (tracking -2.88px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by cosmos.so's hero architecture: use a flex wrapper (max-width 1430px, padding 0px 16px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in cosmosOracle (72px, letter-spacing -2.88px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-cosmos-so-cta-footer",
+      "siteUrl": "https://cosmos.so",
+      "pageUrl": "https://cosmos.so/",
+      "hostname": "cosmos.so",
+      "siteTitle": "Cosmos",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T13:52:42.210Z",
+      "screenshotUrl": "/section-vault/cosmos-so-cta-footer.jpg",
+      "dimensions": {
+        "width": 1430,
+        "height": 438
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1430,
+        "height": 438,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "80px 72px",
+        "maxWidth": "1430px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "cosmosOracle",
+        "headlineSize": "72px",
+        "headlineTracking": "-2.88px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Download app",
+          "Sign up",
+          "Log in",
+          "Sequence"
+        ],
+        "activeAnimations": [
+          {
+            "name": "scale-in",
+            "duration": 200,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n  <div data-layout=\"grid cols-3 gap-64px\">\n    <div data-layout=\"flex column gap-32px\">\n      <h2 data-type=\"cosmosOracle 72px/-2.88px\">Discover what’s next</h2>\n    </div>\n    <div data-layout=\"grid cols-2 gap-normal\">\n      <nav data-layout=\"flex column gap-24px\">\n        <h3 data-type=\"cosmosOracle 20px/-0.8px\">Follow us</h3>\n        <a>Sequence</a>\n        <a>Instagram</a>\n        <a>TikTok</a>\n        <a>X</a>\n      </nav>\n      <nav data-layout=\"flex column gap-24px\">\n        <h3 data-type=\"cosmosOracle 20px/-0.8px\">Info</h3>\n        <a>Careers</a>\n        <a>Terms</a>\n        <a>Privacy</a>\n        <a>Copyright</a>\n        <a>Contact</a>\n      </nav>\n    </div>\n    <div data-layout=\"flex column\">\n      <span data-layout=\"flex gap-6px\">Get the app</span>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from cosmos.so combining airy neutral stone/white surfaces (#ffffff) with disciplined cosmosOracle hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1430×438px, padding 80px 72px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in cosmosOracle at 72px (tracking -2.88px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by cosmos.so's cta-footer architecture: use a flex wrapper (max-width 1430px, padding 80px 72px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in cosmosOracle (72px, letter-spacing -2.88px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-neon-tech-hero",
+      "siteUrl": "https://neon.tech",
+      "pageUrl": "https://neon.tech/",
+      "hostname": "neon.tech",
+      "siteTitle": "Neon — Postgres backends for apps and agents",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T13:52:41.314Z",
+      "screenshotUrl": "/section-vault/neon-tech-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 741
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#61646b",
+        "width": 1440,
+        "height": 741,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "Inter",
+        "headlineSize": "56px",
+        "headlineTracking": "-2.24px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Lakebase",
+          "Get started",
+          "Read the docs"
+        ],
+        "activeAnimations": [
+          {
+            "name": "infinityScroll",
+            "duration": 60000,
+            "easing": "linear"
+          },
+          {
+            "name": "infinityScroll",
+            "duration": 60000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div>\n    <a>\n      <div data-layout=\"flex gap-8px\">\n        <img width=\"16\" height=\"16\" alt=\"Databricks logo\" />\n        <span>NEON IS PART OF THE DATABRICKS PLATFORM</span>\n      </div>\n    </a>\n    <h1 data-type=\"Inter 56px/-2.24px\">\n      The backend for apps and agents, built to scale on Postgres.\n      <a>Lakebase</a>\n    </h1>\n    <div data-layout=\"flex gap-normal\">\n      <a data-layout=\"flex\" data-cta=\"bg:#ffffff r:3.35544e+07px\">Get started</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:3.35544e+07px\">Read the docs</a>\n    </div>\n  </div>\n    <div>\n      <img width=\"1920\" height=\"832\" alt=\"visual-asset\" />\n      <video width=\"1920\" height=\"832\" alt=\"visual-asset\" />\n    </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from neon.tech combining high-contrast obsidian surfaces (#000000) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×741px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 56px (tracking -2.24px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #61646b hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by neon.tech's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (56px, letter-spacing -2.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "docs"
       ]
     },
     {
@@ -1810,6 +2166,284 @@
       },
       "tags": [
         "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-cursor-com-bento-features",
+      "siteUrl": "https://cursor.com",
+      "pageUrl": "https://cursor.com/",
+      "hostname": "cursor.com",
+      "siteTitle": "AI Coding Agent for Building Ambitious Software | Cursor",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T13:52:35.290Z",
+      "screenshotUrl": "/section-vault/cursor-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 700
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f4",
+        "ink": "#26251e",
+        "accent": "#26251e",
+        "borderColor": "#26251e",
+        "width": 1440,
+        "height": 700,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "67px 20px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "CursorGothic",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.72px",
+        "backdropFilter": "none",
+        "childCardCount": 6,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n      <h2 data-type=\"CursorGothic 36px/-0.72px\">The new way to build software.</h2>\n</section>",
+      "vision": {
+        "archetype": "Modular 6-Cell Bento Architecture",
+        "summary": "Live-rendered bento-features from cursor.com combining airy neutral stone/white surfaces (#f7f7f4) with disciplined CursorGothic hierarchy and 6 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×700px, padding 67px 20px) using 4-column composition on a crisp editorial light #f7f7f4 canvas.",
+        "microDetails": [
+          "Display typography set in CursorGothic at 36px (tracking -0.72px) paired with #26251e primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #26251e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Modular 6-Cell Bento Architecture inspired by cursor.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 67px 20px, gap normal) on background #f7f7f4 with #26251e ink. Set the primary heading in CursorGothic (36px, letter-spacing -0.72px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #26251e strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-cursor-com-pricing",
+      "siteUrl": "https://cursor.com",
+      "pageUrl": "https://cursor.com/pricing",
+      "hostname": "cursor.com",
+      "siteTitle": "Cursor · Pricing",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T13:52:37.109Z",
+      "screenshotUrl": "/section-vault/cursor-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 697
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f2f1ed",
+        "ink": "#26251e",
+        "accent": "#26251e",
+        "borderColor": "#26251e",
+        "width": 1440,
+        "height": 697,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "90px 20px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "CursorGothic",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.72px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "What is the right plan for me?↓↑",
+          "What are my payment options?↓↑",
+          "contact us",
+          "How do usage limits work?↓↑"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from cursor.com combining airy neutral stone/white surfaces (#f2f1ed) with disciplined CursorGothic hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×697px, padding 90px 20px) using centered single-rail composition on a crisp editorial light #f2f1ed canvas.",
+        "microDetails": [
+          "Display typography set in CursorGothic at 36px (tracking -0.72px) paired with #26251e primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #26251e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by cursor.com's pricing architecture: use a block wrapper (max-width 1440px, padding 90px 20px, gap normal) on background #f2f1ed with #26251e ink. Set the primary heading in CursorGothic (36px, letter-spacing -0.72px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #26251e strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-plain-com-pricing",
+      "siteUrl": "https://plain.com",
+      "pageUrl": "https://plain.com/pricing",
+      "hostname": "plain.com",
+      "siteTitle": "Plain Pricing — Plans from $45/user/month | 7-Day Free Trial",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T13:52:35.945Z",
+      "screenshotUrl": "/section-vault/plain-com-pricing.jpg",
+      "dimensions": {
+        "width": 1200,
+        "height": 142
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#252d2a",
+        "accent": "#252d2a",
+        "borderColor": "#000000",
+        "width": 1200,
+        "height": 142,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "24px",
+        "padding": "0px 0px",
+        "maxWidth": "1200px",
+        "radiusSample": "12px",
+        "headlineFont": "ABC Favorit Regular",
+        "headlineSize": "64px",
+        "headlineTracking": "-1.28px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex column gap-24px\">\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"ABC Favorit Regular 64px/-1.28px\">Pricing</h1>\n  </div>\n  <div data-layout=\"flex column\">\n    <p>Support for teams that ship. Start today, no credit card required.</p>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from plain.com combining airy neutral stone/white surfaces (#ffffff) with disciplined ABC Favorit Regular hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1200×142px, padding 0px 0px, gap 24px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in ABC Favorit Regular at 64px (tracking -1.28px) paired with #252d2a primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by plain.com's pricing architecture: use a flex wrapper (max-width 1200px, padding 0px 0px, gap 24px) on background #ffffff with #252d2a ink. Set the primary heading in ABC Favorit Regular (64px, letter-spacing -1.28px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #252d2a strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-neon-tech-bento-features",
+      "siteUrl": "https://neon.tech",
+      "pageUrl": "https://neon.tech/",
+      "hostname": "neon.tech",
+      "siteTitle": "Neon — Postgres backends for apps and agents",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T13:52:41.611Z",
+      "screenshotUrl": "/section-vault/neon-tech-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 638
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 638,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "44px",
+        "headlineTracking": "-1.76px",
+        "backdropFilter": "none",
+        "childCardCount": 5,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n    <div data-layout=\"grid cols-2\">\n        <span>01</span>\n      <h2 data-type=\"Inter 44px/-1.76px\">\n        <span>Not just a Database.</span>\n        <span>Neon is a complete backend platform with Authentication, Object Storage, Functions and an </span>\n      </h2>\n    </div>\n</section>",
+      "vision": {
+        "archetype": "Modular 5-Cell Bento Architecture",
+        "summary": "Live-rendered bento-features from neon.tech combining high-contrast obsidian surfaces (#000000) with disciplined Inter hierarchy and 5 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×638px, padding 0px 0px) using 4-column composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 44px (tracking -1.76px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Modular 5-Cell Bento Architecture inspired by neon.tech's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (44px, letter-spacing -1.76px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-neon-tech-pricing",
+      "siteUrl": "https://neon.tech",
+      "pageUrl": "https://neon.tech/pricing",
+      "hostname": "neon.tech",
+      "siteTitle": "Neon Pricing: Free Plan With 100 Projects, Typical Spend $15/Month",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T13:52:43.824Z",
+      "screenshotUrl": "/section-vault/neon-tech-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1343
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#131415",
+        "borderColor": "#494b50",
+        "width": 1440,
+        "height": 1343,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "160px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "Inter",
+        "headlineSize": "60px",
+        "headlineTracking": "-2.4px",
+        "backdropFilter": "none",
+        "childCardCount": 3,
+        "ctaTexts": [
+          "Try Neon",
+          "Intermittent load, 1 GB",
+          "Get started",
+          "High load, 100 GB"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"Inter 60px/-2.4px\">Neon pricing</h1>\n    <p>Get started for free. Pay per usage as you grow.</p>\n      <div>\n        <h2 data-type=\"Inter 24px/-0.48px\">Special programs</h2>\n        <img width=\"590\" height=\"73\" alt=\"visual-asset\" />\n      </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "3-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from neon.tech combining high-contrast obsidian surfaces (#000000) with disciplined Inter hierarchy and 3 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×1343px, padding 160px 0px) using 3-column composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 60px (tracking -2.4px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #494b50 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a 3-Tier Transparent Pricing Matrix inspired by neon.tech's pricing architecture: use a block wrapper (max-width 1440px, padding 160px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (60px, letter-spacing -2.4px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #131415 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
         "fintech-saas"
       ]
     },
@@ -3025,6 +3659,133 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-evilmartians-com-hero",
+      "siteUrl": "https://evilmartians.com",
+      "pageUrl": "https://evilmartians.com/",
+      "hostname": "evilmartians.com",
+      "siteTitle": "Evil Martians — product development consultancy for developer tools",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T13:52:29.018Z",
+      "screenshotUrl": "/section-vault/evilmartians-com-hero.jpg",
+      "dimensions": {
+        "width": 945,
+        "height": 326
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#18000f",
+        "ink": "#f5f5f5",
+        "accent": "#f5f5f5",
+        "borderColor": "rgba(255,255,255,0.1)",
+        "width": 945,
+        "height": 326,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "945px",
+        "radiusSample": "50%",
+        "headlineFont": "Martian Mono",
+        "headlineSize": "30px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Target #2Improve user retention",
+          "Hire Martians"
+        ],
+        "activeAnimations": [
+          {
+            "name": "_sweep_dmsz9_15",
+            "duration": 4000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n    <div data-layout=\"flex\">\n      <h2 data-type=\"Martian Mono 18px/normal\">\n        Design and engineering consultancy\n        <span>for developer tools, AI and cybersecurity startups</span>\n      </h2>\n      <div data-layout=\"flex\">\n        <button>Hire Martians</button>\n      </div>\n    </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from evilmartians.com combining high-contrast obsidian surfaces (#18000f) with disciplined Martian Mono hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (945×326px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #18000f canvas.",
+        "microDetails": [
+          "Display typography set in Martian Mono at 30px (tracking normal) paired with #f5f5f5 primary ink.",
+          "Zero-clutter structural framing with 50% radii and subtle rgba(255,255,255,0.1) hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by evilmartians.com's hero architecture: use a block wrapper (max-width 945px, padding 0px 0px, gap normal) on background #18000f with #f5f5f5 ink. Set the primary heading in Martian Mono (30px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f5f5f5 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-cursor-com-navbar",
+      "siteUrl": "https://cursor.com",
+      "pageUrl": "https://cursor.com/",
+      "hostname": "cursor.com",
+      "siteTitle": "AI Coding Agent for Building Ambitious Software | Cursor",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T13:52:34.318Z",
+      "screenshotUrl": "/section-vault/cursor-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 52
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f4",
+        "ink": "#26251e",
+        "accent": "#26251e",
+        "borderColor": "#26251e",
+        "width": 1440,
+        "height": 52,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 20px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "CursorGothic",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 1,
+        "ctaTexts": [
+          "Skip to content",
+          "Cursor",
+          "Models",
+          "Grok"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        ]
+      },
+      "cleanDom": "<header>\n  <div data-layout=\"grid cols-3\">\n    <a data-cta=\"bg:#26251e r:3.35544e+07px\">Skip to content</a>\n    <div data-layout=\"flex gap-7.5px\">\n      <a data-layout=\"flex\">Sign in</a>\n      <a data-layout=\"flex\" data-cta=\"bg:#26251e r:3.35544e+07px\">Download</a>\n    </div>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (52px)",
+        "summary": "Live-rendered navbar from cursor.com combining airy neutral stone/white surfaces (#f7f7f4) with disciplined CursorGothic hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×52px, padding 0px 20px) using centered single-rail composition on a crisp editorial light #f7f7f4 canvas.",
+        "microDetails": [
+          "Display typography set in CursorGothic at 16px (tracking normal) paired with #26251e primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #26251e hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0.4, 0, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (52px) inspired by cursor.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 20px, gap normal) on background #f7f7f4 with #26251e ink. Set the primary heading in CursorGothic (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #26251e strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     },
     {
@@ -4642,6 +5403,359 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-joinvitrine-com-navbar",
+      "siteUrl": "https://www.joinvitrine.com",
+      "pageUrl": "https://www.joinvitrine.com/",
+      "hostname": "joinvitrine.com",
+      "siteTitle": "Vitrine: your references, ready for you and your AI agent",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T13:52:28.962Z",
+      "screenshotUrl": "/section-vault/joinvitrine-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 81
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f6f2",
+        "ink": "#f3f3f1",
+        "accent": "#121310",
+        "borderColor": "#f3f3f1",
+        "width": 1440,
+        "height": 81,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 56px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Geist",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Vitrine",
+          "The board",
+          "Pricing",
+          "Questions"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header data-layout=\"flex\">\n  <a data-layout=\"flex gap-9px\">\n    <span>Vitrine</span>\n  </a>\n  <nav data-layout=\"flex gap-2px\">\n    <a data-cta=\"ghost r:999px\">The board</a>\n    <a data-cta=\"ghost r:999px\">Pricing</a>\n    <a data-cta=\"ghost r:999px\">Questions</a>\n  </nav>\n  <a data-layout=\"flex\" data-cta=\"bg:#121310 r:18.7787px\">\n    <span data-layout=\"flex\">Download · 7 days free</span>\n  </a>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (81px)",
+        "summary": "Live-rendered navbar from joinvitrine.com combining airy neutral stone/white surfaces (#f7f6f2) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×81px, padding 0px 56px) using centered single-rail composition on a crisp editorial light #f7f6f2 canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 16px (tracking normal) paired with #f3f3f1 primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #f3f3f1 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (81px) inspired by joinvitrine.com's navbar architecture: use a flex wrapper (max-width 1440px, padding 0px 56px, gap normal) on background #f7f6f2 with #f3f3f1 ink. Set the primary heading in Geist (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #121310 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas",
+        "docs"
+      ]
+    },
+    {
+      "id": "sec-joinvitrine-com-cta-footer",
+      "siteUrl": "https://www.joinvitrine.com",
+      "pageUrl": "https://www.joinvitrine.com/",
+      "hostname": "joinvitrine.com",
+      "siteTitle": "Vitrine: your references, ready for you and your AI agent",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T13:52:29.595Z",
+      "screenshotUrl": "/section-vault/joinvitrine-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1100,
+        "height": 177
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#060708",
+        "ink": "#85877e",
+        "accent": "#85877e",
+        "borderColor": "#ffffff",
+        "width": 1100,
+        "height": 177,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 56px",
+        "maxWidth": "1100px",
+        "radiusSample": "4px",
+        "headlineFont": "Geist",
+        "headlineSize": "13px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Terms and refunds",
+          "Privacy",
+          "harry@joinvitrine.com",
+          "English"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div data-layout=\"flex gap-10px\">\n    <p data-layout=\"flex gap-4px\">\n      <span>© 2026 Vitrine</span>\n    </p>\n    <nav data-layout=\"flex gap-8px\">\n      <a data-cta=\"ghost r:4px\">Terms and refunds</a>\n      <a data-cta=\"ghost r:4px\">Privacy</a>\n      <a data-cta=\"ghost r:4px\">harry@joinvitrine.com</a>\n    </nav>\n  </div>\n  <div data-layout=\"flex gap-10px\">\n    <p>References and motion studies belong to their creators. Page captures and notes come from </p>\n    <nav data-layout=\"flex\">\n      <span data-layout=\"flex\">\n        <a>English</a>\n      </span>\n      <span data-layout=\"flex\">\n        <a>Українська</a>\n      </span>\n    </nav>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from joinvitrine.com combining high-contrast obsidian surfaces (#060708) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1100×177px, padding 0px 56px) using centered single-rail composition on a deep low-glare dark #060708 canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 13px (tracking normal) paired with #85877e primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by joinvitrine.com's cta-footer architecture: use a block wrapper (max-width 1100px, padding 0px 56px, gap normal) on background #060708 with #85877e ink. Set the primary heading in Geist (13px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #85877e strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "docs"
+      ]
+    },
+    {
+      "id": "sec-cursor-com-cta-footer",
+      "siteUrl": "https://cursor.com",
+      "pageUrl": "https://cursor.com/",
+      "hostname": "cursor.com",
+      "siteTitle": "AI Coding Agent for Building Ambitious Software | Cursor",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T13:52:35.557Z",
+      "screenshotUrl": "/section-vault/cursor-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 526
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f2f1ed",
+        "ink": "#141413",
+        "accent": "#e6e5e0",
+        "borderColor": "#26251e",
+        "width": 1440,
+        "height": 526,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "67px 20px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "CursorGothic",
+        "headlineSize": "14px",
+        "headlineTracking": "0.14px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Agents",
+          "Teams",
+          "Enterprise",
+          "Pricing"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div data-layout=\"flex gap-44.8px\">\n    <div data-layout=\"flex gap-15px\">\n      <small>\n        © 2026\n        <a>Anysphere, Inc.</a>\n      </small>\n      <small>\n        🛡\n        <a>SOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified</a>\n      </small>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from cursor.com combining airy neutral stone/white surfaces (#f2f1ed) with disciplined CursorGothic hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×526px, padding 67px 20px) using centered single-rail composition on a crisp editorial light #f2f1ed canvas.",
+        "microDetails": [
+          "Display typography set in CursorGothic at 14px (tracking 0.14px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #26251e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by cursor.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 67px 20px, gap normal) on background #f2f1ed with #141413 ink. Set the primary heading in CursorGothic (14px, letter-spacing 0.14px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #e6e5e0 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-cosmos-so-navbar",
+      "siteUrl": "https://cosmos.so",
+      "pageUrl": "https://cosmos.so/",
+      "hostname": "cosmos.so",
+      "siteTitle": "Cosmos",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T13:52:41.541Z",
+      "screenshotUrl": "/section-vault/cosmos-so-navbar.jpg",
+      "dimensions": {
+        "width": 1430,
+        "height": 92
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1430,
+        "height": 92,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "72px",
+        "padding": "24px 32px",
+        "maxWidth": "1430px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "cosmosOracle",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "MenuOpen",
+          "Explore",
+          "Sequence",
+          "Shop"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (92px)",
+        "summary": "Live-rendered navbar from cosmos.so combining airy neutral stone/white surfaces (#ffffff) with disciplined cosmosOracle hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1430×92px, padding 24px 32px, gap 72px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in cosmosOracle at 16px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (92px) inspired by cosmos.so's navbar architecture: use a flex wrapper (max-width 1430px, padding 24px 32px, gap 72px) on background #ffffff with #141413 ink. Set the primary heading in cosmosOracle (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-neon-tech-navbar",
+      "siteUrl": "https://neon.tech",
+      "pageUrl": "https://neon.tech/",
+      "hostname": "neon.tech",
+      "siteTitle": "Neon — Postgres backends for apps and agents",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T13:52:41.060Z",
+      "screenshotUrl": "/section-vault/neon-tech-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 64
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#18191b",
+        "width": 1440,
+        "height": 64,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 8,
+        "ctaTexts": [
+          "Neon",
+          "Product",
+          "Solutions",
+          "Docs"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (64px)",
+        "summary": "Live-rendered navbar from neon.tech combining high-contrast obsidian surfaces (#000000) with disciplined Inter hierarchy and 8 structured sub-modules.",
+        "layoutMechanics": "FLEX container (1440×64px, padding 0px 0px) using 4-column composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #18191b hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (64px) inspired by neon.tech's navbar architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-neon-tech-cta-footer",
+      "siteUrl": "https://neon.tech",
+      "pageUrl": "https://neon.tech/",
+      "hostname": "neon.tech",
+      "siteTitle": "Neon — Postgres backends for apps and agents",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T13:52:41.960Z",
+      "screenshotUrl": "/section-vault/neon-tech-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 430
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#303236",
+        "width": 1440,
+        "height": 430,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Apache Software Foundation",
+          "About",
+          "Blog",
+          "Careers"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"flex gap-normal\">\n      <div data-layout=\"flex column\">\n        <p>© Neon 2026. All rights reserved. Apache, Apache Spark, Spark, the Spark Logo, Apache Iceb</p>\n      </div>\n    </div>\n    <div data-layout=\"flex gap-20px\">\n      <a data-layout=\"flex gap-normal\" data-cta=\"ghost r:4px\">\n        <span>Neon status loading...</span>\n      </a>\n    </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from neon.tech combining high-contrast obsidian surfaces (#000000) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×430px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #303236 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by neon.tech's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
       ]
     }
   ]
