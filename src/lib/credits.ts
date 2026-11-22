@@ -129,9 +129,59 @@ function saveStore(store: CreditsStore) {
   }
 }
 
-export function getOrProvisionWallet(apiKey?: string | null): CreditWallet {
-  const store = loadStore();
+async function readWalletFromKv(key: string): Promise<CreditWallet | null> {
+  const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!kvUrl || !kvToken) return null;
+
+  try {
+    const res = await fetch(`${kvUrl.replace(/\/$/, "")}/get/${encodeURIComponent(`forma:wallet:${key}`)}`, {
+      headers: { Authorization: `Bearer ${kvToken}` },
+      cache: "no-store",
+      signal: AbortSignal.timeout(2000),
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { result?: string | null };
+    if (!data?.result) return null;
+    return JSON.parse(data.result) as CreditWallet;
+  } catch {
+    return null;
+  }
+}
+
+async function writeWalletToKv(wallet: CreditWallet): Promise<void> {
+  const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!kvUrl || !kvToken) return;
+
+  try {
+    await fetch(`${kvUrl.replace(/\/$/, "")}/pipeline`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${kvToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([["SET", `forma:wallet:${wallet.apiKey}`, JSON.stringify(wallet)]]),
+      signal: AbortSignal.timeout(2000),
+    });
+  } catch {
+    // Non-blocking fallback
+  }
+}
+
+export async function getOrProvisionWallet(apiKey?: string | null): Promise<CreditWallet> {
   const key = (apiKey || "").trim() || DEFAULT_DEMO_KEY;
+  const kvExisting = await readWalletFromKv(key);
+  if (kvExisting) {
+    if (kvExisting.spentDayKey !== todayKey()) {
+      kvExisting.spentDayKey = todayKey();
+      kvExisting.spentTodayUsd = 0;
+      await writeWalletToKv(kvExisting);
+    }
+    return kvExisting;
+  }
+
+  const store = loadStore();
   if (!store.wallets[key]) {
     store.wallets[key] = createStarterWallet(key);
     saveStore(store);
@@ -141,25 +191,27 @@ export function getOrProvisionWallet(apiKey?: string | null): CreditWallet {
     wallet.spentDayKey = todayKey();
     wallet.spentTodayUsd = 0;
   }
+  await writeWalletToKv(wallet);
   return wallet;
 }
 
-export function createNewWallet(): CreditWallet {
+export async function createNewWallet(): Promise<CreditWallet> {
   const store = loadStore();
   const newKey = `sk-forma-${randomBytes(8).toString("hex")}`;
   const wallet = createStarterWallet(newKey);
   store.wallets[newKey] = wallet;
   saveStore(store);
+  await writeWalletToKv(wallet);
   return wallet;
 }
 
-export function topUpWallet(
+export async function topUpWallet(
   apiKey: string | undefined,
   amountUsd: number,
   dailyLimitUsd?: number
-): CreditWallet {
+): Promise<CreditWallet> {
   const store = loadStore();
-  const wallet = getOrProvisionWallet(apiKey);
+  const wallet = await getOrProvisionWallet(apiKey);
   const cleanAmount = Math.max(0, Math.min(500, Number(amountUsd) || 0));
 
   if (cleanAmount > 0) {
@@ -182,16 +234,17 @@ export function topUpWallet(
 
   store.wallets[wallet.apiKey] = wallet;
   saveStore(store);
+  await writeWalletToKv(wallet);
   return wallet;
 }
 
-export function configureWalletByok(
+export async function configureWalletByok(
   apiKey: string | undefined,
   geminiKey: string | null,
   dailyLimitUsd?: number
-): CreditWallet {
+): Promise<CreditWallet> {
   const store = loadStore();
-  const wallet = getOrProvisionWallet(apiKey);
+  const wallet = await getOrProvisionWallet(apiKey);
   const trimmed = (geminiKey || "").trim();
 
   if (trimmed.length >= 8) {
@@ -208,22 +261,23 @@ export function configureWalletByok(
 
   store.wallets[wallet.apiKey] = wallet;
   saveStore(store);
+  await writeWalletToKv(wallet);
   return wallet;
 }
 
-export function meterCloudCall(input: {
+export async function meterCloudCall(input: {
   request?: Request;
   operation: string;
   target: string;
   costUsd: number;
-}): {
+}): Promise<{
   allowed: boolean;
   error?: string;
   billingMode: "byok-unmetered" | "prepaid-credit";
   chargedUsd: number;
   wallet: CreditWallet;
   headers: Record<string, string>;
-} {
+}> {
   const store = loadStore();
   const headerKey =
     input.request?.headers.get("x-forma-key") ||
@@ -232,7 +286,7 @@ export function meterCloudCall(input: {
   const headerByok = input.request?.headers.get("x-gemini-key")?.trim();
   const maxCostHeader = input.request?.headers.get("x-forma-max-cost");
 
-  const wallet = getOrProvisionWallet(headerKey);
+  const wallet = await getOrProvisionWallet(headerKey);
   const isByok = Boolean(headerByok || wallet.hasByokGemini);
 
   if (isByok) {
@@ -248,6 +302,7 @@ export function meterCloudCall(input: {
     wallet.ledger = wallet.ledger.slice(0, 30);
     store.wallets[wallet.apiKey] = wallet;
     saveStore(store);
+    await writeWalletToKv(wallet);
 
     return {
       allowed: true,
@@ -327,6 +382,7 @@ export function meterCloudCall(input: {
   wallet.ledger = wallet.ledger.slice(0, 30);
   store.wallets[wallet.apiKey] = wallet;
   saveStore(store);
+  await writeWalletToKv(wallet);
 
   return {
     allowed: true,

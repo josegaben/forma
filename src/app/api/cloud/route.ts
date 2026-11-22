@@ -90,7 +90,7 @@ export async function POST(request: Request) {
     }
     const targetUrl = checked.url.toString();
 
-    const metered = meterCloudCall({
+    const metered = await meterCloudCall({
       request,
       operation: "visual_anti_slop_qa",
       target: checked.url.hostname,
@@ -157,7 +157,7 @@ export async function POST(request: Request) {
       body.projectBrief || "Modern software product engineered with restraint."
     ).trim();
 
-    const metered = meterCloudCall({
+    const metered = await meterCloudCall({
       request,
       operation: "generate_brand_kit",
       target: projectName.slice(0, 40),

@@ -25,12 +25,16 @@ export async function GET(request: Request) {
     request.headers.get("x-forma-key") ||
     request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
 
-  const wallet = getOrProvisionWallet(key);
+  const wallet = await getOrProvisionWallet(key);
   return NextResponse.json(
     {
       philosophy:
         "Zero subscriptions, 0% top-up fee, $1.00 free starter credit, and $0.00 unmetered BYOK (treg.to model).",
       stripeLiveEnabled: Boolean(process.env.STRIPE_SECRET_KEY),
+      storageBackend:
+        process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL
+          ? "vercel-kv-redis"
+          : "local-persistent-json",
       wallet,
       pricing: FORMA_CLOUD_PRICING,
     },
@@ -47,7 +51,7 @@ export async function POST(request: Request) {
     undefined;
 
   if (action === "provision") {
-    const wallet = createNewWallet();
+    const wallet = await createNewWallet();
     return NextResponse.json(
       { wallet, pricing: FORMA_CLOUD_PRICING },
       { headers: CORS_HEADERS }
@@ -55,7 +59,7 @@ export async function POST(request: Request) {
   }
 
   if (action === "byok") {
-    const wallet = configureWalletByok(
+    const wallet = await configureWalletByok(
       apiKey,
       body.geminiKey !== undefined ? String(body.geminiKey) : null,
       body.dailyLimitUsd !== undefined ? Number(body.dailyLimitUsd) : undefined
@@ -66,7 +70,7 @@ export async function POST(request: Request) {
   const amountUsd = Math.max(1, Math.min(500, Number(body.amountUsd || 5)));
   const dailyLimitUsd =
     body.dailyLimitUsd !== undefined ? Number(body.dailyLimitUsd) : undefined;
-  const wallet = getOrProvisionWallet(apiKey);
+  const wallet = await getOrProvisionWallet(apiKey);
 
   // If STRIPE_SECRET_KEY is configured in Vercel production, create a real 0%-fee Stripe Checkout Session
   const stripeSecret = process.env.STRIPE_SECRET_KEY;
@@ -111,6 +115,6 @@ export async function POST(request: Request) {
     }
   }
 
-  const updated = topUpWallet(wallet.apiKey, amountUsd, dailyLimitUsd);
+  const updated = await topUpWallet(wallet.apiKey, amountUsd, dailyLimitUsd);
   return NextResponse.json({ wallet: updated }, { headers: CORS_HEADERS });
 }

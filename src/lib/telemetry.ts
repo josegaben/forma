@@ -136,12 +136,110 @@ export function classifyClientFromHeaders(
   return { actor: "agent", client: "External Agent" };
 }
 
+function parseRedisHashList(arr: unknown): Record<string, number> {
+  const out: Record<string, number> = {};
+  if (!Array.isArray(arr)) return out;
+  for (let i = 0; i + 1 < arr.length; i += 2) {
+    const k = String(arr[i] ?? "");
+    const v = Number(arr[i + 1] ?? 0);
+    if (k && Number.isFinite(v)) out[k] = v;
+  }
+  return out;
+}
+
+async function readFromVercelKvIfConfigured(): Promise<TelemetryStoreData | null> {
+  const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!kvUrl || !kvToken) return null;
+
+  const pipeline = [
+    ["GET", "forma:started_at"],
+    ["HGETALL", "forma:counters"],
+    ["HGETALL", "forma:clients"],
+    ["HGETALL", "forma:mcp_tools"],
+    ["HGETALL", "forma:mixes"],
+    ["HGETALL", "forma:palettes"],
+    ["HGETALL", "forma:components"],
+    ["LRANGE", "forma:recent", 0, 34],
+  ];
+
+  try {
+    const res = await fetch(`${kvUrl.replace(/\/$/, "")}/pipeline`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${kvToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(pipeline),
+      cache: "no-store",
+      signal: AbortSignal.timeout(2500),
+    });
+    if (!res.ok) return null;
+    const rows = (await res.json()) as { result?: unknown }[];
+    if (!Array.isArray(rows) || rows.length < 8) return null;
+
+    const startedAt =
+      typeof rows[0]?.result === "string" && rows[0].result
+        ? rows[0].result
+        : new Date().toISOString();
+    const rawCounters = parseRedisHashList(rows[1]?.result);
+    const counters: Record<TelemetryEventType, number> = { ...DEFAULT_COUNTERS };
+    for (const [k, v] of Object.entries(rawCounters)) {
+      if (k in counters) counters[k as TelemetryEventType] = v;
+    }
+
+    const agentClients = parseRedisHashList(rows[2]?.result);
+    const mcpTools = parseRedisHashList(rows[3]?.result);
+    const rawMixes = parseRedisHashList(rows[4]?.result);
+    const topMixes: Record<string, { views: number; copies: number; shares: number }> = {};
+    for (const [compoundKey, count] of Object.entries(rawMixes)) {
+      const idx = compoundKey.lastIndexOf(":");
+      if (idx <= 0) continue;
+      const mixCode = compoundKey.slice(0, idx);
+      const metric = compoundKey.slice(idx + 1);
+      const entry = topMixes[mixCode] || { views: 0, copies: 0, shares: 0 };
+      if (metric === "copies") entry.copies += count;
+      else if (metric === "shares") entry.shares += count;
+      else entry.views += count;
+      topMixes[mixCode] = entry;
+    }
+
+    const topPalettes = parseRedisHashList(rows[5]?.result);
+    const topComponents = parseRedisHashList(rows[6]?.result);
+    const recentRaw = Array.isArray(rows[7]?.result) ? rows[7].result : [];
+    const recentEvents: TelemetryEventRecord[] = [];
+    for (const item of recentRaw) {
+      if (typeof item === "string") {
+        try {
+          recentEvents.push(JSON.parse(item) as TelemetryEventRecord);
+        } catch {
+          // skip malformed entry
+        }
+      }
+    }
+
+    return {
+      startedAt,
+      counters,
+      agentClients,
+      mcpTools,
+      topMixes,
+      topPalettes,
+      topComponents,
+      recentEvents,
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function pushToVercelKvIfConfigured(record: TelemetryEventRecord) {
   const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
   const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!kvUrl || !kvToken) return;
 
   const pipeline: (string | number)[][] = [
+    ["SETNX", "forma:started_at", record.ts],
     ["HINCRBY", "forma:counters", record.event, 1],
     ["HINCRBY", "forma:clients", record.client, 1],
     ["LPUSH", "forma:recent", JSON.stringify(record)],
@@ -246,11 +344,10 @@ export async function recordTelemetryEvent(params: {
 }
 
 export async function getTelemetrySummary() {
-  const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-  const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
-  const storageBackend = kvUrl && kvToken ? "vercel-kv-redis" : "local-persistent-json";
+  const kvStore = await readFromVercelKvIfConfigured();
+  const storageBackend = kvStore ? "vercel-kv-redis" : "local-persistent-json";
 
-  const store = readLocalStore();
+  const store = kvStore || readLocalStore();
   const c = store.counters;
 
   const totalAgentPulls =

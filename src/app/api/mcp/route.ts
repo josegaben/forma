@@ -529,7 +529,7 @@ export async function POST(request: Request) {
         (args.apiKey as string | undefined) ||
         request.headers.get("x-forma-key") ||
         undefined;
-      const wallet = getOrProvisionWallet(key);
+      const wallet = await getOrProvisionWallet(key);
       return NextResponse.json(
         {
           jsonrpc: "2.0",

@@ -86,7 +86,7 @@ export async function POST(request: Request) {
     }
     const targetUrl = checked.url.toString();
 
-    const metered = meterCloudCall({
+    const metered = await meterCloudCall({
       request,
       operation: "scan_live_sections",
       target: checked.url.hostname,
