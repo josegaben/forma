@@ -94,6 +94,7 @@ MCP Tools:
 - \`list_discovered_designs\` — Browse continuously scraped sites ranked by Anti-Slop Craft Score.
 - \`search_section_blueprints\` — Query ${vault.totalSections} Playwright + Vision section crops (\`hero\`, \`navbar\`, \`bento-features\`, \`pricing\`, \`cta-footer\`) with Clean Semantic DOM trees & recreation prompts.
 - \`list_color_palettes\` — Query ${CURATED_COLOR_PALETTES.length} curated 60-30-10 UI color systems (Radix Colors, Sanzo Wada, Happy Hues, Realtime Colors, Atmos OKLCH) with verified WCAG contrast ratios.
+- \`suggest_website_improvements\` — Run Forma Doctor on any live URL (APCA-W3 perceptual contrast, Rosetta commercial-to-open-source font twins, GoodUI/Hick's Law CTA conversion, Baymard form UX, Project Wallace CSS/GPU patches).
 - \`get_unslop_checklist\` — Mandatory subtractive UI audit rules.
 
 ---

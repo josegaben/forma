@@ -11,7 +11,7 @@ Activate `forma` **before** scaffolding or redesigning any landing page, SaaS ma
 
 ### 1. Compose a Tailored `DESIGN.md` from the User's Brief
 ```bash
-curl -fsSL -G "https://forma.to/api/compose" \
+curl -fsSL -G "https://forma-to.vercel.app/api/compose" \
   --data-urlencode "brief=<describe product, audience, and mood>" \
   --data-urlencode "project=<BrandName>" \
   --data-urlencode "format=markdown" > DESIGN.md
@@ -19,18 +19,18 @@ curl -fsSL -G "https://forma.to/api/compose" \
 
 Or connect via Streamable HTTP MCP (`16` tools, including `suggest_website_improvements`):
 ```bash
-claude mcp add --transport http forma https://forma.to/api/mcp
+claude mcp add --transport http forma https://forma-to.vercel.app/api/mcp
 ```
 
 ### 2. Run Forma Doctor on Any Existing URL (APCA, Rosetta Fonts, GoodUI & CSS Health)
 ```bash
-curl -fsSL "https://forma.to/api/audit?url=https://example.com"
+curl -fsSL "https://forma-to.vercel.app/api/audit?url=https://example.com"
 ```
 
-### 2. Query Real Client-Rendered Section DOM Blueprints
+### 3. Query Real Client-Rendered Section DOM Blueprints
 ```bash
-curl -fsSL "https://forma.to/api/sections?kind=hero&limit=4"
-curl -fsSL "https://forma.to/api/sections?kind=pricing&limit=4"
+curl -fsSL "https://forma-to.vercel.app/api/sections?kind=hero&limit=4"
+curl -fsSL "https://forma-to.vercel.app/api/sections?kind=pricing&limit=4"
 ```
 
 ### 3. Live X-Ray Any Reference URL Shared by the User

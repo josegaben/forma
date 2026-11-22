@@ -27,6 +27,8 @@ import { recordTelemetryEvent } from "@/lib/telemetry";
 import { generateWebDoctorDiagnosis } from "@/lib/web-doctor";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
+export const maxDuration = 60;
+
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",

@@ -41,6 +41,7 @@ export default function CreditsWalletPage() {
   const [copiedKey, setCopiedKey] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [siteOrigin, setSiteOrigin] = useState("https://forma-to.vercel.app");
 
   const loadWallet = useCallback(async (customKey?: string) => {
     const storedKey =
@@ -64,6 +65,7 @@ export default function CreditsWalletPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      setSiteOrigin(window.location.origin);
       const params = new URLSearchParams(window.location.search);
       const checkout = params.get("checkout");
       const amt = Number(params.get("amount") || 0);
@@ -367,7 +369,7 @@ export default function CreditsWalletPage() {
               style={{ fontFamily: "var(--font-mono), monospace" }}
             >
               <code>{`# Cloud Playwright + Vision scan using your prepaid token ($0.04):
-curl -X POST https://forma.to/api/sections \\
+curl -X POST ${siteOrigin}/api/sections \\
   -H "X-Forma-Key: ${wallet?.apiKey || "sk-forma-..."}" \\
   -H "Content-Type: application/json" \\
   -d '{"url":"https://stripe.com"}'`}</code>

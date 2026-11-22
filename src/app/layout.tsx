@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Newsreader, Instrument_Serif, DM_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -34,7 +35,7 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://forma.to"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://forma-to.vercel.app"
   ),
   title: "forma — OpenRouter for Web Design",
   description:
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

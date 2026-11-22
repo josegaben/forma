@@ -100,7 +100,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span style={{ fontFamily: "monospace" }}>
-            $ set up forma - https://forma.to/llms.txt
+            $ set up forma - https://forma-to.vercel.app/llms.txt
           </span>
           <span
             style={{
