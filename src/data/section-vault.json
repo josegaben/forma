@@ -1,5 +1,5 @@
 {
-  "lastVisualScanAt": "2026-11-22T00:17:34.250Z",
+  "lastVisualScanAt": "2026-11-22T04:26:25.862Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
   "totalSections": 42,
   "countsByKind": {
@@ -17,7 +17,7 @@
       "hostname": "resend.com",
       "siteTitle": "Pricing · Resend",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:13.759Z",
+      "capturedAt": "2026-11-22T04:26:05.637Z",
       "screenshotUrl": "/section-vault/resend-com-pricing.jpg",
       "dimensions": {
         "width": 1440,
@@ -103,10 +103,10 @@
       "hostname": "mintlify.com",
       "siteTitle": "Mintlify - The documentation platform for agents",
       "kind": "bento-features",
-      "capturedAt": "2026-11-22T00:17:19.828Z",
+      "capturedAt": "2026-11-22T04:26:23.326Z",
       "screenshotUrl": "/section-vault/mintlify-com-bento-features.jpg",
       "dimensions": {
-        "width": 1440,
+        "width": 1425,
         "height": 608
       },
       "computedSpec": {
@@ -115,13 +115,13 @@
         "ink": "#141413",
         "accent": "#141413",
         "borderColor": "#f1f0ee",
-        "width": 1440,
+        "width": 1425,
         "height": 608,
         "layoutMode": "block",
         "gridColumns": null,
         "gap": "normal",
         "padding": "0px 0px",
-        "maxWidth": "1440px",
+        "maxWidth": "1425px",
         "radiusSample": "4px",
         "headlineFont": "inter",
         "headlineSize": "24px",
@@ -143,9 +143,24 @@
             "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
           },
           {
-            "name": "stats-scroll",
-            "duration": 40000,
-            "easing": "linear"
+            "name": "transition",
+            "duration": 700,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
           }
         ]
       },
@@ -153,13 +168,13 @@
       "vision": {
         "archetype": "Editorial Feature Showcase Split",
         "summary": "Live-rendered bento-features from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×608px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "layoutMechanics": "BLOCK container (1425×608px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
         "microDetails": [
           "Display typography set in inter at 24px (tracking -0.24px) paired with #141413 primary ink.",
           "Zero-clutter structural framing with 4px radii and subtle #f1f0ee hairlines.",
-          "GPU-friendly motion choreography (3 live WAAPI timelines, primary easing cubic-bezier(0.22, 1, 0.36, 1))."
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing cubic-bezier(0.22, 1, 0.36, 1))."
         ],
-        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by mintlify.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in inter (24px, letter-spacing -0.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by mintlify.com's bento-features architecture: use a block wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in inter (24px, letter-spacing -0.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
         "visualCraftScore": 97,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -175,7 +190,7 @@
       "hostname": "linear.app",
       "siteTitle": "Linear – The system for product development",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:06.174Z",
+      "capturedAt": "2026-11-22T04:25:31.731Z",
       "screenshotUrl": "/section-vault/linear-app-hero.jpg",
       "dimensions": {
         "width": 1344,
@@ -229,13 +244,8 @@
           },
           {
             "name": "transition",
-            "duration": 1500,
-            "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)"
-          },
-          {
-            "name": "transition",
-            "duration": 1500,
-            "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)"
+            "duration": 1300,
+            "easing": "ease-out"
           }
         ]
       },
@@ -247,7 +257,7 @@
         "microDetails": [
           "Display typography set in Inter Variable at 64px (tracking -1.408px) paired with #f7f8f8 primary ink.",
           "Zero-clutter structural framing with 6px radii and subtle #ffffff hairlines.",
-          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+          "GPU-friendly motion choreography (5 live WAAPI timelines, primary easing linear)."
         ],
         "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by linear.app's hero architecture: use a block wrapper (max-width 1344px, padding 0px 0px, gap normal) on background #08090a with #f7f8f8 ink. Set the primary heading in Inter Variable (64px, letter-spacing -1.408px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f7f8f8 strictly for the primary focal action.",
         "visualCraftScore": 95,
@@ -264,7 +274,7 @@
       "hostname": "resend.com",
       "siteTitle": "Resend · Email for developers",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:12.144Z",
+      "capturedAt": "2026-11-22T04:26:02.331Z",
       "screenshotUrl": "/section-vault/resend-com-hero.jpg",
       "dimensions": {
         "width": 1280,
@@ -327,66 +337,68 @@
       ]
     },
     {
-      "id": "sec-zed-dev-hero",
-      "siteUrl": "https://zed.dev",
-      "pageUrl": "https://zed.dev/",
-      "hostname": "zed.dev",
-      "siteTitle": "Zed — Your last next editor",
+      "id": "sec-mintlify-com-hero",
+      "siteUrl": "https://mintlify.com",
+      "pageUrl": "https://mintlify.com/",
+      "hostname": "mintlify.com",
+      "siteTitle": "Mintlify - The documentation platform for agents",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:19.079Z",
-      "screenshotUrl": "/section-vault/zed-dev-hero.jpg",
+      "capturedAt": "2026-11-22T04:26:19.393Z",
+      "screenshotUrl": "/section-vault/mintlify-com-hero.jpg",
       "dimensions": {
-        "width": 1440,
-        "height": 448
+        "width": 1425,
+        "height": 992
       },
       "computedSpec": {
         "mode": "light",
         "bg": "#ffffff",
         "ink": "#141413",
         "accent": "#141413",
-        "borderColor": "rgba(0,0,0,0.08)",
-        "width": 1440,
-        "height": 448,
-        "layoutMode": "flex",
+        "borderColor": "#1fa77a",
+        "width": 1425,
+        "height": 992,
+        "layoutMode": "block",
         "gridColumns": null,
         "gap": "normal",
         "padding": "0px 0px",
-        "maxWidth": "1440px",
-        "radiusSample": "4px",
-        "headlineFont": "plexSerif",
-        "headlineSize": "48px",
-        "headlineTracking": "-0.96px",
+        "maxWidth": "1425px",
+        "radiusSample": "2px",
+        "headlineFont": "arizonaFlare",
+        "headlineSize": "50px",
+        "headlineTracking": "-2px",
         "backdropFilter": "none",
         "childCardCount": 0,
         "ctaTexts": [
-          "Download nowD",
-          "Clone sourceC"
+          "Agent traffic78.7456.%",
+          "Get started",
+          "Sign up with Google",
+          "Set up with agents"
         ],
         "activeAnimations": [
           {
-            "name": "spin",
-            "duration": 50000,
-            "easing": "linear"
+            "name": "transition",
+            "duration": 700,
+            "easing": "cubic-bezier(0.22, 1, 0.36, 1)"
           }
         ]
       },
-      "cleanDom": "<section data-layout=\"flex\">\n    <div data-layout=\"flex column gap-32px\">\n      <div data-layout=\"flex column gap-8px\">\n        <h1 data-type=\"plexSerif 48px/-0.96px\">Your last next editor</h1>\n        <p>Zed is a minimal code editor crafted for speed and collaboration with humans and AI.</p>\n      </div>\n      <div data-layout=\"flex column gap-12px\">\n        <p data-layout=\"flex gap-8px\">Available for macOS, Linux, and Windows</p>\n      </div>\n    </div>\n</section>",
+      "cleanDom": "<section>\n  <canvas width=\"1425\" height=\"992\" alt=\"visual-asset\" />\n  <div data-layout=\"grid cols-24 gap-0px\">\n    <div data-layout=\"flex column gap-16px\">\n      <a data-layout=\"flex gap-6px\" data-cta=\"ghost r:2px\">\n        <span>Agent traffic</span>\n      </a>\n      <h1 data-type=\"arizonaFlare 50px/-2px\">The intelligent documentation platform</h1>\n      <p>\n        Self-updating documentation for , , and .\n        <span>startups</span>\n        <span>enterprises</span>\n        <span>agents</span>\n      </p>\n    </div>\n    <div data-layout=\"flex column gap-8px\">\n      <div data-layout=\"flex gap-8px\">\n        <a data-layout=\"flex gap-4px\" data-cta=\"ghost r:4px\">Get started</a>\n        <a data-layout=\"flex gap-6px\" data-cta=\"ghost r:4px\">Sign up with Google</a>\n      </div>\n      <div data-layout=\"flex\">\n        <button data-layout=\"flex gap-8px\" data-cta=\"ghost r:4px\">Set up with agents</button>\n      </div>\n    </div>\n  </div>\n</section>",
       "vision": {
         "archetype": "High-Contrast Centered Display Hero",
-        "summary": "Live-rendered hero from zed.dev combining airy neutral stone/white surfaces (#ffffff) with disciplined plexSerif hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "FLEX container (1440×448px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "summary": "Live-rendered hero from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined arizonaFlare hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1425×992px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
         "microDetails": [
-          "Display typography set in plexSerif at 48px (tracking -0.96px) paired with #141413 primary ink.",
-          "Zero-clutter structural framing with 4px radii and subtle rgba(0,0,0,0.08) hairlines.",
-          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+          "Display typography set in arizonaFlare at 50px (tracking -2px) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 2px radii and subtle #1fa77a hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0.22, 1, 0.36, 1))."
         ],
-        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by zed.dev's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in plexSerif (48px, letter-spacing -0.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by mintlify.com's hero architecture: use a block wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in arizonaFlare (50px, letter-spacing -2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
         "visualCraftScore": 95,
         "analysisEngine": "playwright-computed-geometry"
       },
       "tags": [
         "ai-agents",
-        "devtools"
+        "docs"
       ]
     },
     {
@@ -396,7 +408,7 @@
       "hostname": "treg.to",
       "siteTitle": "treg.to: OpenRouter for agent tools and data, pay per call",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:16:59.714Z",
+      "capturedAt": "2026-11-22T04:25:22.677Z",
       "screenshotUrl": "/section-vault/treg-to-hero.jpg",
       "dimensions": {
         "width": 1440,
@@ -460,7 +472,7 @@
           }
         ]
       },
-      "cleanDom": "<section>\n  <canvas width=\"1440\" height=\"910\" alt=\"visual-asset\" />\n  <div data-layout=\"flex column\">\n    <span>\n      ·\n      <a>4,200+ endpoints · 136 providers</a>\n      <a>open source ↗</a>\n    </span>\n    <h1 data-type=\"Geist Pixel 55px/normal\">\n      <span>OpenRouter for agent tools</span>\n      <span>\n        <span>Turn</span>\n        <span>into</span>\n      </span>\n    </h1>\n    <div data-layout=\"grid cols-3 gap-72px\">\n      <div data-layout=\"flex column gap-9px\">\n        <div>agent</div>\n      </div>\n      <div data-layout=\"flex column gap-6px\">\n        <div>treg call</div>\n      </div>\n      <div data-layout=\"flex column gap-9px\">\n        <div>the seo toolbelt</div>\n        <div>· cents per call</div>\n      </div>\n    </div>\n    <div>\n      <div data-layout=\"flex gap-8px\">Give this to your agent</div>\n      <div data-layout=\"flex gap-10px\">\n        <span>$</span>\n        <code>set up treg - https://treg.to/llms.txt</code>\n      </div>\n    </div>\n  </div>\n</section>",
+      "cleanDom": "<section>\n  <div data-layout=\"flex column\">\n    <span>\n      ·\n      <a>4,200+ endpoints · 136 providers</a>\n      <a>open source ↗</a>\n    </span>\n    <h1 data-type=\"Geist Pixel 55px/normal\">\n      <span>OpenRouter for agent tools</span>\n      <span>\n        <span>Turn</span>\n        <span>into</span>\n      </span>\n    </h1>\n    <div data-layout=\"grid cols-3 gap-72px\">\n      <div data-layout=\"flex column gap-9px\">\n        <div>agent</div>\n      </div>\n      <div data-layout=\"flex column gap-6px\">\n        <div>treg call</div>\n      </div>\n      <div data-layout=\"flex column gap-9px\">\n        <div>the seo toolbelt</div>\n        <div>· cents per call</div>\n      </div>\n    </div>\n    <div>\n      <div data-layout=\"flex gap-8px\">Give this to your agent</div>\n      <div data-layout=\"flex gap-10px\">\n        <span>$</span>\n        <code>set up treg - https://treg.to/llms.txt</code>\n      </div>\n    </div>\n  </div>\n</section>",
       "vision": {
         "archetype": "Agentic Hero with Live CLI / Interactive Surface (centered single-rail)",
         "summary": "Live-rendered hero from treg.to combining airy neutral stone/white surfaces (#f8f8f8) with disciplined Geist Pixel hierarchy and focused single-axis alignment.",
@@ -486,7 +498,7 @@
       "hostname": "treg.to",
       "siteTitle": "Pricing — pay per call, no markup, first $1.00 free | treg.to",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:01.737Z",
+      "capturedAt": "2026-11-22T04:25:24.921Z",
       "screenshotUrl": "/section-vault/treg-to-pricing.jpg",
       "dimensions": {
         "width": 1104,
@@ -544,7 +556,7 @@
       "hostname": "resiz.es",
       "siteTitle": "Products | Resizes",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:00.413Z",
+      "capturedAt": "2026-11-22T04:25:24.299Z",
       "screenshotUrl": "/section-vault/resiz-es-pricing.jpg",
       "dimensions": {
         "width": 900,
@@ -598,7 +610,7 @@
       "hostname": "linear.app",
       "siteTitle": "Pricing – Linear",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:08.109Z",
+      "capturedAt": "2026-11-22T04:25:34.202Z",
       "screenshotUrl": "/section-vault/linear-app-pricing.jpg",
       "dimensions": {
         "width": 1436,
@@ -656,7 +668,7 @@
       "hostname": "dub.co",
       "siteTitle": "Dub - The Modern Link Attribution Platform",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:05.846Z",
+      "capturedAt": "2026-11-22T04:25:30.835Z",
       "screenshotUrl": "/section-vault/dub-co-hero.jpg",
       "dimensions": {
         "width": 1080,
@@ -734,7 +746,7 @@
       "hostname": "dub.co",
       "siteTitle": "Pricing | Dub",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:07.535Z",
+      "capturedAt": "2026-11-22T04:25:33.342Z",
       "screenshotUrl": "/section-vault/dub-co-pricing.jpg",
       "dimensions": {
         "width": 1080,
@@ -805,7 +817,7 @@
       "hostname": "cal.com",
       "siteTitle": "Cal.com | Scheduling Software for Online Bookings",
       "kind": "bento-features",
-      "capturedAt": "2026-11-22T00:17:12.691Z",
+      "capturedAt": "2026-11-22T04:25:39.979Z",
       "screenshotUrl": "/section-vault/cal-com-bento-features.jpg",
       "dimensions": {
         "width": 856,
@@ -858,7 +870,7 @@
       "hostname": "cal.com",
       "siteTitle": "Pricing | Cal.com",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:14.830Z",
+      "capturedAt": "2026-11-22T04:25:42.316Z",
       "screenshotUrl": "/section-vault/cal-com-pricing.jpg",
       "dimensions": {
         "width": 1320,
@@ -914,10 +926,10 @@
       "hostname": "mintlify.com",
       "siteTitle": "Mintlify - The documentation platform for agents",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:19.592Z",
+      "capturedAt": "2026-11-22T04:26:19.998Z",
       "screenshotUrl": "/section-vault/mintlify-com-pricing.jpg",
       "dimensions": {
-        "width": 1440,
+        "width": 1425,
         "height": 853
       },
       "computedSpec": {
@@ -926,13 +938,13 @@
         "ink": "#121715",
         "accent": "#121715",
         "borderColor": "#f1f0ee",
-        "width": 1440,
+        "width": 1425,
         "height": 853,
         "layoutMode": "block",
         "gridColumns": null,
         "gap": "normal",
         "padding": "0px 0px",
-        "maxWidth": "1440px",
+        "maxWidth": "1425px",
         "radiusSample": "4px",
         "headlineFont": "inter",
         "headlineSize": "36px",
@@ -948,13 +960,13 @@
       "vision": {
         "archetype": "Structured Usage & Plan Comparison Grid",
         "summary": "Live-rendered pricing from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×853px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "layoutMechanics": "BLOCK container (1425×853px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
         "microDetails": [
           "Display typography set in inter at 36px (tracking -0.72px) paired with #121715 primary ink.",
           "Zero-clutter structural framing with 4px radii and subtle #f1f0ee hairlines.",
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
-        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by mintlify.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #121715 ink. Set the primary heading in inter (36px, letter-spacing -0.72px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #121715 strictly for the primary focal action.",
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by mintlify.com's pricing architecture: use a block wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #ffffff with #121715 ink. Set the primary heading in inter (36px, letter-spacing -0.72px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #121715 strictly for the primary focal action.",
         "visualCraftScore": 94,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -1113,7 +1125,7 @@
       "hostname": "linear.app",
       "siteTitle": "Linear – The system for product development",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:17:06.382Z",
+      "capturedAt": "2026-11-22T04:25:32.344Z",
       "screenshotUrl": "/section-vault/linear-app-cta-footer.jpg",
       "dimensions": {
         "width": 1440,
@@ -1171,7 +1183,7 @@
       "hostname": "dub.co",
       "siteTitle": "Dub - The Modern Link Attribution Platform",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:17:06.074Z",
+      "capturedAt": "2026-11-22T04:25:31.480Z",
       "screenshotUrl": "/section-vault/dub-co-cta-footer.jpg",
       "dimensions": {
         "width": 1024,
@@ -1235,7 +1247,7 @@
       "hostname": "cal.com",
       "siteTitle": "Cal.com | Scheduling Software for Online Bookings",
       "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:12.263Z",
+      "capturedAt": "2026-11-22T04:25:39.550Z",
       "screenshotUrl": "/section-vault/cal-com-hero.jpg",
       "dimensions": {
         "width": 1320,
@@ -1268,7 +1280,7 @@
         ],
         "activeAnimations": []
       },
-      "cleanDom": "<section>\n  <div data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:8px\">\n      <span data-layout=\"flex\">New</span>\n      <span>Cal.com launches v7</span>\n    </a>\n  </div>\n  <h1 data-type=\"calSans 80px/-0.8px\">\n    Where people find the time to meet\n    <span>\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n    </span>\n    <span>\n      <span data-layout=\"flex gap-6.4px\">\n        <span>MAD</span>\n      </span>\n    </span>\n  </h1>\n  <p>Making time for millions of people every month.</p>\n  <div data-layout=\"flex column gap-16px\">\n    <div data-layout=\"flex gap-16px\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#242424 r:14px\">\n        Sign up with Google\n        <img width=\"20\" height=\"20\" alt=\"visual-asset\" />\n      </a>\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:14px\">\n        Sign up with Microsoft\n        <img width=\"20\" height=\"20\" alt=\"visual-asset\" />\n      </a>\n    </div>\n    <p>\n      No credit card required.\n      <a>Sign up with email.</a>\n    </p>\n  </div>\n</section>",
+      "cleanDom": "<section>\n  <div data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:8px\">\n      <span data-layout=\"flex\">New</span>\n      <span>Cal.com launches v7</span>\n    </a>\n  </div>\n  <h1 data-type=\"calSans 80px/-0.8px\">\n    Where people find the time to meet\n    <span>\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n      <canvas width=\"120\" height=\"69\" alt=\"visual-asset\" />\n    </span>\n    <span>\n      <span data-layout=\"flex gap-6.4px\">\n        <span>UTC</span>\n      </span>\n    </span>\n  </h1>\n  <p>Making time for millions of people every month.</p>\n  <div data-layout=\"flex column gap-16px\">\n    <div data-layout=\"flex gap-16px\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#242424 r:14px\">\n        Sign up with Google\n        <img width=\"20\" height=\"20\" alt=\"visual-asset\" />\n      </a>\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:14px\">\n        Sign up with Microsoft\n        <img width=\"20\" height=\"20\" alt=\"visual-asset\" />\n      </a>\n    </div>\n    <p>\n      No credit card required.\n      <a>Sign up with email.</a>\n    </p>\n  </div>\n</section>",
       "vision": {
         "archetype": "High-Contrast Centered Display Hero",
         "summary": "Live-rendered hero from cal.com combining airy neutral stone/white surfaces (#ffffff) with disciplined calSans hierarchy and focused single-axis alignment.",
@@ -1288,75 +1300,16 @@
       ]
     },
     {
-      "id": "sec-mintlify-com-hero",
-      "siteUrl": "https://mintlify.com",
-      "pageUrl": "https://mintlify.com/",
-      "hostname": "mintlify.com",
-      "siteTitle": "Mintlify - The documentation platform for agents",
-      "kind": "hero",
-      "capturedAt": "2026-11-22T00:17:19.323Z",
-      "screenshotUrl": "/section-vault/mintlify-com-hero.jpg",
-      "dimensions": {
-        "width": 1440,
-        "height": 992
-      },
-      "computedSpec": {
-        "mode": "light",
-        "bg": "#ffffff",
-        "ink": "#141413",
-        "accent": "#141413",
-        "borderColor": "#1fa77a",
-        "width": 1440,
-        "height": 992,
-        "layoutMode": "block",
-        "gridColumns": null,
-        "gap": "normal",
-        "padding": "0px 0px",
-        "maxWidth": "1440px",
-        "radiusSample": "2px",
-        "headlineFont": "arizonaFlare",
-        "headlineSize": "50px",
-        "headlineTracking": "-2px",
-        "backdropFilter": "none",
-        "childCardCount": 0,
-        "ctaTexts": [
-          "Agent traffic78.7060.%",
-          "Get started",
-          "Sign up with Google",
-          "Set up with agents"
-        ],
-        "activeAnimations": []
-      },
-      "cleanDom": "<section>\n  <canvas width=\"1440\" height=\"992\" alt=\"visual-asset\" />\n  <div data-layout=\"grid cols-24 gap-0px\">\n    <div data-layout=\"flex column gap-16px\">\n      <a data-layout=\"flex gap-6px\" data-cta=\"ghost r:2px\">\n        <span>Agent traffic</span>\n      </a>\n      <h1 data-type=\"arizonaFlare 50px/-2px\">The intelligent documentation platform</h1>\n      <p>\n        Self-updating documentation for , , and .\n        <span>startups</span>\n        <span>enterprises</span>\n        <span>agents</span>\n      </p>\n    </div>\n    <div data-layout=\"flex column gap-8px\">\n      <div data-layout=\"flex gap-8px\">\n        <a data-layout=\"flex gap-4px\" data-cta=\"ghost r:4px\">Get started</a>\n        <a data-layout=\"flex gap-6px\" data-cta=\"ghost r:4px\">Sign up with Google</a>\n      </div>\n      <div data-layout=\"flex\">\n        <button data-layout=\"flex gap-8px\" data-cta=\"ghost r:4px\">Set up with agents</button>\n      </div>\n    </div>\n  </div>\n</section>",
-      "vision": {
-        "archetype": "High-Contrast Centered Display Hero",
-        "summary": "Live-rendered hero from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined arizonaFlare hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×992px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
-        "microDetails": [
-          "Display typography set in arizonaFlare at 50px (tracking -2px) paired with #141413 primary ink.",
-          "Zero-clutter structural framing with 2px radii and subtle #1fa77a hairlines.",
-          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
-        ],
-        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by mintlify.com's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in arizonaFlare (50px, letter-spacing -2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
-        "visualCraftScore": 92,
-        "analysisEngine": "playwright-computed-geometry"
-      },
-      "tags": [
-        "ai-agents",
-        "docs"
-      ]
-    },
-    {
       "id": "sec-mintlify-com-cta-footer",
       "siteUrl": "https://mintlify.com",
       "pageUrl": "https://mintlify.com/",
       "hostname": "mintlify.com",
       "siteTitle": "Mintlify - The documentation platform for agents",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:17:20.049Z",
+      "capturedAt": "2026-11-22T04:26:25.767Z",
       "screenshotUrl": "/section-vault/mintlify-com-cta-footer.jpg",
       "dimensions": {
-        "width": 1440,
+        "width": 1425,
         "height": 677
       },
       "computedSpec": {
@@ -1365,13 +1318,13 @@
         "ink": "#969e9b",
         "accent": "#fefdfb",
         "borderColor": "#f1f0ee",
-        "width": 1440,
+        "width": 1425,
         "height": 677,
         "layoutMode": "block",
         "gridColumns": null,
         "gap": "normal",
         "padding": "104px 0px",
-        "maxWidth": "1440px",
+        "maxWidth": "1425px",
         "radiusSample": "4px",
         "headlineFont": "inter",
         "headlineSize": "14px",
@@ -1401,13 +1354,13 @@
       "vision": {
         "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
         "summary": "Live-rendered cta-footer from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×677px, padding 104px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "layoutMechanics": "BLOCK container (1425×677px, padding 104px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
         "microDetails": [
           "Display typography set in inter at 14px (tracking normal) paired with #969e9b primary ink.",
           "Zero-clutter structural framing with 4px radii and subtle #f1f0ee hairlines.",
           "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
         ],
-        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by mintlify.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 104px 0px, gap normal) on background #ffffff with #969e9b ink. Set the primary heading in inter (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #fefdfb strictly for the primary focal action.",
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by mintlify.com's cta-footer architecture: use a block wrapper (max-width 1425px, padding 104px 0px, gap normal) on background #ffffff with #969e9b ink. Set the primary heading in inter (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #fefdfb strictly for the primary focal action.",
         "visualCraftScore": 92,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -1538,6 +1491,71 @@
       ]
     },
     {
+      "id": "sec-resend-com-navbar",
+      "siteUrl": "https://resend.com",
+      "pageUrl": "https://resend.com/",
+      "hostname": "resend.com",
+      "siteTitle": "Resend · Email for developers",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T04:25:54.449Z",
+      "screenshotUrl": "/section-vault/resend-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 58
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#f0f0f0",
+        "accent": "#f0f0f0",
+        "borderColor": "#f0f0f0",
+        "width": 1440,
+        "height": 58,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "Inter Website",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Open main menu",
+          "Features",
+          "Company",
+          "Enterprise"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (58px)",
+        "summary": "Live-rendered navbar from resend.com combining high-contrast obsidian surfaces (#000000) with disciplined Inter Website hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×58px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Inter Website at 16px (tracking normal) paired with #f0f0f0 primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #f0f0f0 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0.4, 0, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (58px) inspired by resend.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #f0f0f0 ink. Set the primary heading in Inter Website (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f0f0f0 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -1602,7 +1620,7 @@
       "hostname": "zed.dev",
       "siteTitle": "Zed — Pricing",
       "kind": "pricing",
-      "capturedAt": "2026-11-22T00:17:21.298Z",
+      "capturedAt": "2026-11-22T04:26:17.634Z",
       "screenshotUrl": "/section-vault/zed-dev-pricing.jpg",
       "dimensions": {
         "width": 1440,
@@ -1707,13 +1725,66 @@
       ]
     },
     {
+      "id": "sec-zed-dev-hero",
+      "siteUrl": "https://zed.dev",
+      "pageUrl": "https://zed.dev/",
+      "hostname": "zed.dev",
+      "siteTitle": "Zed — Your last next editor",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T04:26:15.217Z",
+      "screenshotUrl": "/section-vault/zed-dev-hero.jpg",
+      "dimensions": {
+        "width": 1022,
+        "height": 138
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eee7e7",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1022,
+        "height": 138,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "40px 16px",
+        "maxWidth": "1022px",
+        "radiusSample": "12px",
+        "headlineFont": "plexSerif",
+        "headlineSize": "26px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <h1 data-type=\"plexSerif 26px/normal\">Zed Industries</h1>\n  <p>Advancing the state of the art for collaborative software development.</p>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from zed.dev combining airy neutral stone/white surfaces (#eee7e7) with disciplined plexSerif hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1022×138px, padding 40px 16px) using centered single-rail composition on a crisp editorial light #eee7e7 canvas.",
+        "microDetails": [
+          "Display typography set in plexSerif at 26px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by zed.dev's hero architecture: use a block wrapper (max-width 1022px, padding 40px 16px, gap normal) on background #eee7e7 with #141413 ink. Set the primary heading in plexSerif (26px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
       "id": "sec-treg-to-navbar",
       "siteUrl": "https://treg.to",
       "pageUrl": "https://treg.to/",
       "hostname": "treg.to",
       "siteTitle": "treg.to: OpenRouter for agent tools and data, pay per call",
       "kind": "navbar",
-      "capturedAt": "2026-11-22T00:16:59.511Z",
+      "capturedAt": "2026-11-22T04:25:22.338Z",
       "screenshotUrl": "/section-vault/treg-to-navbar.jpg",
       "dimensions": {
         "width": 1440,
@@ -1771,7 +1842,7 @@
       "hostname": "treg.to",
       "siteTitle": "treg.to: OpenRouter for agent tools and data, pay per call",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:16:59.944Z",
+      "capturedAt": "2026-11-22T04:25:22.991Z",
       "screenshotUrl": "/section-vault/treg-to-cta-footer.jpg",
       "dimensions": {
         "width": 1440,
@@ -1832,7 +1903,7 @@
       "hostname": "resiz.es",
       "siteTitle": "Platform, services, and Resizes AI | Resizes",
       "kind": "navbar",
-      "capturedAt": "2026-11-22T00:16:58.516Z",
+      "capturedAt": "2026-11-22T04:25:22.165Z",
       "screenshotUrl": "/section-vault/resiz-es-navbar.jpg",
       "dimensions": {
         "width": 1440,
@@ -1890,7 +1961,7 @@
       "hostname": "resiz.es",
       "siteTitle": "Platform, services, and Resizes AI | Resizes",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:16:58.840Z",
+      "capturedAt": "2026-11-22T04:25:22.517Z",
       "screenshotUrl": "/section-vault/resiz-es-cta-footer.jpg",
       "dimensions": {
         "width": 1440,
@@ -1949,7 +2020,7 @@
       "hostname": "linear.app",
       "siteTitle": "Linear – The system for product development",
       "kind": "navbar",
-      "capturedAt": "2026-11-22T00:17:05.865Z",
+      "capturedAt": "2026-11-22T04:25:30.941Z",
       "screenshotUrl": "/section-vault/linear-app-navbar.jpg",
       "dimensions": {
         "width": 1440,
@@ -2001,72 +2072,13 @@
       ]
     },
     {
-      "id": "sec-resend-com-navbar",
-      "siteUrl": "https://resend.com",
-      "pageUrl": "https://resend.com/",
-      "hostname": "resend.com",
-      "siteTitle": "Resend · Email for developers",
-      "kind": "navbar",
-      "capturedAt": "2026-11-22T00:17:11.901Z",
-      "screenshotUrl": "/section-vault/resend-com-navbar.jpg",
-      "dimensions": {
-        "width": 1440,
-        "height": 58
-      },
-      "computedSpec": {
-        "mode": "dark",
-        "bg": "#000000",
-        "ink": "#f0f0f0",
-        "accent": "#f0f0f0",
-        "borderColor": "#f0f0f0",
-        "width": 1440,
-        "height": 58,
-        "layoutMode": "block",
-        "gridColumns": null,
-        "gap": "normal",
-        "padding": "0px 0px",
-        "maxWidth": "1440px",
-        "radiusSample": "6px",
-        "headlineFont": "Inter Website",
-        "headlineSize": "16px",
-        "headlineTracking": "normal",
-        "backdropFilter": "none",
-        "childCardCount": 0,
-        "ctaTexts": [
-          "Open main menu",
-          "Features",
-          "Company",
-          "Enterprise"
-        ],
-        "activeAnimations": []
-      },
-      "cleanDom": "",
-      "vision": {
-        "archetype": "Minimal Hairline Top Navigation Bar (58px)",
-        "summary": "Live-rendered navbar from resend.com combining high-contrast obsidian surfaces (#000000) with disciplined Inter Website hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×58px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
-        "microDetails": [
-          "Display typography set in Inter Website at 16px (tracking normal) paired with #f0f0f0 primary ink.",
-          "Zero-clutter structural framing with 6px radii and subtle #f0f0f0 hairlines.",
-          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
-        ],
-        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (58px) inspired by resend.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #f0f0f0 ink. Set the primary heading in Inter Website (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f0f0f0 strictly for the primary focal action.",
-        "visualCraftScore": 89,
-        "analysisEngine": "playwright-computed-geometry"
-      },
-      "tags": [
-        "ai-agents",
-        "devtools"
-      ]
-    },
-    {
       "id": "sec-cal-com-navbar",
       "siteUrl": "https://cal.com",
       "pageUrl": "https://cal.com/",
       "hostname": "cal.com",
       "siteTitle": "Cal.com | Scheduling Software for Online Bookings",
       "kind": "navbar",
-      "capturedAt": "2026-11-22T00:17:11.903Z",
+      "capturedAt": "2026-11-22T04:25:39.118Z",
       "screenshotUrl": "/section-vault/cal-com-navbar.jpg",
       "dimensions": {
         "width": 1320,
@@ -2124,10 +2136,10 @@
       "hostname": "mintlify.com",
       "siteTitle": "Mintlify - The documentation platform for agents",
       "kind": "navbar",
-      "capturedAt": "2026-11-22T00:17:19.111Z",
+      "capturedAt": "2026-11-22T04:26:18.905Z",
       "screenshotUrl": "/section-vault/mintlify-com-navbar.jpg",
       "dimensions": {
-        "width": 1440,
+        "width": 1425,
         "height": 65
       },
       "computedSpec": {
@@ -2136,13 +2148,13 @@
         "ink": "#000000",
         "accent": "#000000",
         "borderColor": "#f1f0ee",
-        "width": 1440,
+        "width": 1425,
         "height": 65,
         "layoutMode": "block",
         "gridColumns": null,
         "gap": "normal",
         "padding": "0px 0px",
-        "maxWidth": "1440px",
+        "maxWidth": "1425px",
         "radiusSample": "4px",
         "headlineFont": "inter",
         "headlineSize": "16px",
@@ -2161,13 +2173,13 @@
       "vision": {
         "archetype": "Minimal Hairline Top Navigation Bar (65px)",
         "summary": "Live-rendered navbar from mintlify.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
-        "layoutMechanics": "BLOCK container (1440×65px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "layoutMechanics": "BLOCK container (1425×65px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
         "microDetails": [
           "Display typography set in inter at 16px (tracking normal) paired with #000000 primary ink.",
           "Zero-clutter structural framing with 4px radii and subtle #f1f0ee hairlines.",
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
-        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (65px) inspired by mintlify.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (65px) inspired by mintlify.com's navbar architecture: use a block wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -2241,7 +2253,7 @@
       "hostname": "cal.com",
       "siteTitle": "Cal.com | Scheduling Software for Online Bookings",
       "kind": "cta-footer",
-      "capturedAt": "2026-11-22T00:17:13.269Z",
+      "capturedAt": "2026-11-22T04:25:40.380Z",
       "screenshotUrl": "/section-vault/cal-com-cta-footer.jpg",
       "dimensions": {
         "width": 1440,
