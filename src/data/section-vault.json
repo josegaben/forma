@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-22T13:52:43.976Z",
+  "lastVisualScanAt": "2026-11-22T23:04:30.815Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 91,
+  "totalSections": 113,
   "countsByKind": {
-    "pricing": 17,
-    "bento-features": 10,
-    "hero": 24,
-    "cta-footer": 19,
-    "navbar": 21
+    "pricing": 20,
+    "bento-features": 13,
+    "hero": 30,
+    "cta-footer": 25,
+    "navbar": 25
   },
   "sections": [
     {
@@ -560,6 +560,95 @@
         "devtools",
         "fintech-saas",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-luckyairballoon-com-bento-features",
+      "siteUrl": "https://luckyairballoon.com",
+      "pageUrl": "https://luckyairballoon.com/",
+      "hostname": "luckyairballoon.com",
+      "siteTitle": "Lucky Air Balloon — Build Roblox games with AI",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T23:03:39.297Z",
+      "screenshotUrl": "/section-vault/luckyairballoon-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1296,
+        "height": 642
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#1e1e1e",
+        "width": 1296,
+        "height": 642,
+        "layoutMode": "grid",
+        "gridColumns": "2 tracks",
+        "gap": "16px",
+        "padding": "80px 0px",
+        "maxWidth": "1368px",
+        "radiusSample": "16px",
+        "headlineFont": "Greed Narrow",
+        "headlineSize": "42px",
+        "headlineTracking": "-0.42px",
+        "backdropFilter": "none",
+        "childCardCount": 4,
+        "ctaTexts": [
+          "Lava obby with a speedrun timer",
+          "Red vs blue in a desert city",
+          "Spelling race with daily rewards"
+        ],
+        "activeAnimations": [
+          {
+            "name": "pill-bob",
+            "duration": 5000,
+            "easing": "linear"
+          },
+          {
+            "name": "pill-bob",
+            "duration": 6000,
+            "easing": "linear"
+          },
+          {
+            "name": "pill-bob",
+            "duration": 7000,
+            "easing": "linear"
+          },
+          {
+            "name": "pill-bob",
+            "duration": 5000,
+            "easing": "linear"
+          },
+          {
+            "name": "pill-bob",
+            "duration": 6000,
+            "easing": "linear"
+          },
+          {
+            "name": "pill-bob",
+            "duration": 7000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"grid cols-2 gap-16px\">\n  <div>\n    <h2 data-type=\"Greed Narrow 42px/-0.42px\">From idea to Roblox in minutes</h2>\n    <p>The AI tools changing how games get made, in your hands. You call the shots. The AI does t</p>\n  </div>\n  <div data-layout=\"grid cols-3 gap-16px\">\n    <article>\n      <h3 data-type=\"Inter Display 16px/0.016px\">Pick a proven format</h3>\n      <p>Start from a game type players already grind: tycoon, obby, tag. Then tell the AI your twi</p>\n    </article>\n    <article>\n      <h3 data-type=\"Inter Display 16px/0.016px\">Level it up</h3>\n      <p>Add shops, upgrades, characters and new modes. Every change is one prompt. Playtest, tweak</p>\n    </article>\n    <article>\n      <h3 data-type=\"Inter Display 16px/0.016px\">Ship it to Roblox</h3>\n      <p>Publish to your own Roblox account, send the link to your friends and watch the visits cli</p>\n    </article>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Modular 4-Cell Bento Architecture",
+        "summary": "Live-rendered bento-features from luckyairballoon.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Greed Narrow hierarchy and 4 structured sub-modules.",
+        "layoutMechanics": "GRID container (1296×642px, padding 80px 0px, gap 16px) using 4-column composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Greed Narrow at 42px (tracking -0.42px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #1e1e1e hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Modular 4-Cell Bento Architecture inspired by luckyairballoon.com's bento-features architecture: use a grid wrapper (max-width 1368px, padding 80px 0px, gap 16px) on background #ffffff with #000000 ink. Set the primary heading in Greed Narrow (42px, letter-spacing -0.42px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
       ]
     },
     {
@@ -1221,6 +1310,70 @@
         "ai-agents",
         "devtools",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-liveblocks-io-hero",
+      "siteUrl": "https://liveblocks.io",
+      "pageUrl": "https://liveblocks.io/",
+      "hostname": "liveblocks.io",
+      "siteTitle": "Liveblocks | Realtime and sync for the agentic web",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:04:27.252Z",
+      "screenshotUrl": "/section-vault/liveblocks-io-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 385
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#fdfcfc",
+        "width": 1440,
+        "height": 385,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "48px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "suisse",
+        "headlineSize": "60px",
+        "headlineTracking": "-1.2px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "NewIntroducing Liveblocks Sync",
+          "Get started for free",
+          "Install with AI",
+          "Get started for free"
+        ],
+        "activeAnimations": [
+          {
+            "name": "mask-flare-loop",
+            "duration": 3400,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from liveblocks.io combining high-contrast obsidian surfaces (#000000) with disciplined suisse hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×385px, padding 48px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in suisse at 60px (tracking -1.2px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #fdfcfc hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by liveblocks.io's hero architecture: use a block wrapper (max-width 1440px, padding 48px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (60px, letter-spacing -1.2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     },
     {
@@ -2440,6 +2593,154 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a 3-Tier Transparent Pricing Matrix inspired by neon.tech's pricing architecture: use a block wrapper (max-width 1440px, padding 160px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in Inter (60px, letter-spacing -2.4px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #131415 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-supabase-com-bento-features",
+      "siteUrl": "https://supabase.com",
+      "pageUrl": "https://supabase.com/",
+      "hostname": "supabase.com",
+      "siteTitle": "Supabase | The Postgres Development Platform",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T23:03:59.727Z",
+      "screenshotUrl": "/section-vault/supabase-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 949
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "#3fcf8e",
+        "width": 1440,
+        "height": 949,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "16px",
+        "headlineFont": "Manrope",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "marquee",
+            "duration": 35000,
+            "easing": "linear"
+          },
+          {
+            "name": "marquee",
+            "duration": 35000,
+            "easing": "linear"
+          },
+          {
+            "name": "pulse",
+            "duration": 600,
+            "easing": "linear"
+          },
+          {
+            "name": "pulse",
+            "duration": 600,
+            "easing": "linear"
+          },
+          {
+            "name": "pulse",
+            "duration": 600,
+            "easing": "linear"
+          },
+          {
+            "name": "pulse",
+            "duration": 600,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from supabase.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Manrope hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×949px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Manrope at 16px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #3fcf8e hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by supabase.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Manrope (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-supabase-com-pricing",
+      "siteUrl": "https://supabase.com",
+      "pageUrl": "https://supabase.com/pricing",
+      "hostname": "supabase.com",
+      "siteTitle": "Pricing & Fees | Supabase",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T23:04:02.363Z",
+      "screenshotUrl": "/section-vault/supabase-com-pricing.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 957
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1280,
+        "height": 957,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 48px",
+        "maxWidth": "1280px",
+        "radiusSample": "16px",
+        "headlineFont": "Source Code Pro",
+        "headlineSize": "22px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start for Free",
+          "Get Started",
+          "See how pricing scales",
+          "Get Started"
+        ],
+        "activeAnimations": [
+          {
+            "name": "tw-shimmer",
+            "duration": 2000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from supabase.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Source Code Pro hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1280×957px, padding 0px 48px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Source Code Pro at 22px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by supabase.com's pricing architecture: use a flex wrapper (max-width 1280px, padding 0px 48px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Source Code Pro (22px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
         "visualCraftScore": 94,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -3789,6 +4090,363 @@
       ]
     },
     {
+      "id": "sec-luckyairballoon-com-hero",
+      "siteUrl": "https://luckyairballoon.com",
+      "pageUrl": "https://luckyairballoon.com/",
+      "hostname": "luckyairballoon.com",
+      "siteTitle": "Lucky Air Balloon — Build Roblox games with AI",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:03:33.494Z",
+      "screenshotUrl": "/section-vault/luckyairballoon-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 807
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#0059ff",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 807,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "14px",
+        "headlineFont": "Greed Narrow",
+        "headlineSize": "107px",
+        "headlineTracking": "-2.664px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Fly for rare items",
+          "Pizza tycoon",
+          "Lava obby",
+          "Zombie tag"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div>\n    <h1 data-type=\"Greed Narrow 107px/-2.664px\">\n      Build Roblox games in\n      <span>Minutes</span>\n    </h1>\n    <p>Describe your game. LAB’s AI builds it. You publish it on Roblox. Zero code.</p>\n      <form data-layout=\"flex gap-12px\">\n        <input></input>\n      </form>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from luckyairballoon.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Greed Narrow hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×807px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Greed Narrow at 107px (tracking -2.664px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 14px radii and subtle #1e1e1e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by luckyairballoon.com's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in Greed Narrow (107px, letter-spacing -2.664px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0059ff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-zzmax-icu-hero",
+      "siteUrl": "https://zzmax.icu",
+      "pageUrl": "https://zzmax.icu/",
+      "hostname": "zzmax.icu",
+      "siteTitle": "Jimmy ZZ",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:03:23.624Z",
+      "screenshotUrl": "/section-vault/zzmax-icu-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f7",
+        "ink": "#0b0b0b",
+        "accent": "#f5f5f0",
+        "borderColor": "#b9bec0",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "50%",
+        "headlineFont": "Apfel Grotezk",
+        "headlineSize": "15px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "home-loader-module__A3terW__logoFrames",
+            "duration": 2100,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n        <canvas width=\"1440\" height=\"900\" alt=\"visual-asset\" />\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from zzmax.icu combining airy neutral stone/white surfaces (#f7f7f7) with disciplined Apfel Grotezk hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×900px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #f7f7f7 canvas.",
+        "microDetails": [
+          "Display typography set in Apfel Grotezk at 15px (tracking normal) paired with #0b0b0b primary ink.",
+          "Zero-clutter structural framing with 50% radii and subtle #b9bec0 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by zzmax.icu's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f7f7f7 with #0b0b0b ink. Set the primary heading in Apfel Grotezk (15px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f5f5f0 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-daylightcomputer-com-hero",
+      "siteUrl": "https://daylightcomputer.com",
+      "pageUrl": "https://daylightcomputer.com/",
+      "hostname": "daylightcomputer.com",
+      "siteTitle": "Daylight | A More Caring Computer",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:03:52.668Z",
+      "screenshotUrl": "/section-vault/daylightcomputer-com-hero.jpg",
+      "dimensions": {
+        "width": 1024,
+        "height": 864
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#ffffff",
+        "accent": "#ff9d00",
+        "borderColor": "#e5e7eb",
+        "width": 1024,
+        "height": 864,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "96px 33px",
+        "maxWidth": "1024px",
+        "radiusSample": "16px",
+        "headlineFont": "abcArizonaFlareFont",
+        "headlineSize": "60px",
+        "headlineTracking": "-4.2px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"__abcArizonaFlareFont_498f8e 60px/-4.2px\">\n      The computer,\n      <span>de-invented</span>\n    </h1>\n    <p>Meet DC-1. A new kind of computer, designed for deep focus and wellbeing.</p>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from daylightcomputer.com combining airy neutral stone/white surfaces (#ffffff) with disciplined abcArizonaFlareFont hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1024×864px, padding 96px 33px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in abcArizonaFlareFont at 60px (tracking -4.2px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #e5e7eb hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by daylightcomputer.com's hero architecture: use a flex wrapper (max-width 1024px, padding 96px 33px, gap normal) on background #ffffff with #ffffff ink. Set the primary heading in abcArizonaFlareFont (60px, letter-spacing -4.2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ff9d00 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-daylightcomputer-com-cta-footer",
+      "siteUrl": "https://daylightcomputer.com",
+      "pageUrl": "https://daylightcomputer.com/",
+      "hostname": "daylightcomputer.com",
+      "siteTitle": "Daylight | A More Caring Computer",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:03:54.297Z",
+      "screenshotUrl": "/section-vault/daylightcomputer-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1004
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#18190f",
+        "ink": "#ffffff",
+        "accent": "#ff9d00",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 1004,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "14.5px",
+        "headlineFont": "abcArizonaFlareFont",
+        "headlineSize": "92px",
+        "headlineTracking": "-6.44px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Order now",
+          "Privacy Policy",
+          "Terms of Service",
+          "Home"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex\">\n  <div data-layout=\"flex column gap-96px\">\n    <section>\n      <img width=\"1440\" height=\"580\" alt=\"a person holding the product\" />\n    </section>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from daylightcomputer.com combining high-contrast obsidian surfaces (#18190f) with disciplined abcArizonaFlareFont hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×1004px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #18190f canvas.",
+        "microDetails": [
+          "Display typography set in abcArizonaFlareFont at 92px (tracking -6.44px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 14.5px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by daylightcomputer.com's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #18190f with #ffffff ink. Set the primary heading in abcArizonaFlareFont (92px, letter-spacing -6.44px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ff9d00 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-supabase-com-navbar",
+      "siteUrl": "https://supabase.com",
+      "pageUrl": "https://supabase.com/",
+      "hostname": "supabase.com",
+      "siteTitle": "Supabase | The Postgres Development Platform",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T23:03:58.887Z",
+      "screenshotUrl": "/section-vault/supabase-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 65
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 65,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "blur(4px)",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Product",
+          "Developers",
+          "Solutions",
+          "Pricing"
+        ],
+        "activeAnimations": [
+          {
+            "name": "fadeIn",
+            "duration": 300,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Translucent Frosted Header Rail (65px)",
+        "summary": "Live-rendered navbar from supabase.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×65px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #141413 primary ink.",
+          "Optical depth via blur(4px) glass layer and hairline rgba(0,0,0,0.08) dividers.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Translucent Frosted Header Rail (65px) inspired by supabase.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-liveblocks-io-navbar",
+      "siteUrl": "https://liveblocks.io",
+      "pageUrl": "https://liveblocks.io/",
+      "hostname": "liveblocks.io",
+      "siteTitle": "Liveblocks | Realtime and sync for the agentic web",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T23:04:17.571Z",
+      "screenshotUrl": "/section-vault/liveblocks-io-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 80
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#fdfcfc",
+        "width": 1440,
+        "height": 80,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "suisse",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Product",
+          "Product",
+          "Use cases",
+          "Use cases"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (80px)",
+        "summary": "Live-rendered navbar from liveblocks.io combining high-contrast obsidian surfaces (#000000) with disciplined suisse hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×80px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in suisse at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #fdfcfc hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0, 0, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (80px) inspired by liveblocks.io's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -4010,6 +4668,180 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-planetscale-com-pricing",
+      "siteUrl": "https://planetscale.com",
+      "pageUrl": "https://planetscale.com/pricing",
+      "hostname": "planetscale.com",
+      "siteTitle": "Pricing and plans — PlanetScale",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T23:03:53.294Z",
+      "screenshotUrl": "/section-vault/planetscale-com-pricing.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 5022
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#ebebeb",
+        "borderColor": "#0b6ec5",
+        "width": 1280,
+        "height": 5022,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 96px",
+        "maxWidth": "1280px",
+        "radiusSample": "12px",
+        "headlineFont": "ui-monospace",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 1,
+        "ctaTexts": [
+          "pricing.md",
+          "pricing.md",
+          "Request another region",
+          "AWS us-east-1"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<main>\n  <section>\n    <h1 data-type=\"ui-monospace 16px/normal\">Pricing</h1>\n    <div>\n      <p>\n        You and your agent can query Vitess, Neki, and Postgres cluster pricing using SQL. Instruc\n        <a>pricing.md</a>\n      </p>\n      <details>\n        <summary>Connect to pricing database</summary>\n      </details>\n    </div>\n    <div data-layout=\"flex gap-24px\">\n      <aside>\n        <h2 data-type=\"ui-monospace 16px/normal\">Vitess</h2>\n        <p>MySQL-compatible with horizontal sharding for massive scale. Runs on network-attached stor</p>\n        <h2 data-type=\"ui-monospace 16px/normal\">Neki</h2>\n        <p>Postgres with horizontal sharding for massive scale. Runs on network-attached storage or P</p>\n        <h2 data-type=\"ui-monospace 16px/normal\">PlanetScale Postgres</h2>\n        <h3 data-type=\"ui-monospace 16px/normal\">Single node</h3>\n      </aside>\n    </div>\n    <div data-layout=\"grid cols-2\">\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">Database expertise</h3>\n        <p>Augment your team with our database experts, including the majority of the core Vitess mai</p>\n      </div>\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">Migration assistance</h3>\n        <p>Hands-on, proactive assistance in migrating your workload with no downtime</p>\n      </div>\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">Slack-based support</h3>\n        <p>Private shared Slack channel for fast communication</p>\n      </div>\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">More deployment options</h3>\n        <p>Multi-tenant, single-tenant, or in your own AWS / GCP account</p>\n      </div>\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">Business support included</h3>\n        <p>Enhanced response times from support engineers</p>\n      </div>\n      <div>\n        <h3 data-type=\"ui-monospace 16px/normal\">Architecture consultation</h3>\n        <p>Work with our Solutions team to optimize your database design</p>\n      </div>\n    </div>\n    <section>\n      <div>\n        <h2 data-type=\"ui-monospace 16px/normal\">Base Plan</h2>\n        <p>The Base plan is what you get when you . No contract or sales interaction required. Pricin</p>\n        <h3 data-type=\"ui-monospace 16px/normal\">Vitess</h3>\n        <p>MySQL-compatible databases with horizontal sharding. Pricing based on cluster size, VTGate</p>\n        <h3 data-type=\"ui-monospace 16px/normal\">Neki</h3>\n        <p>Postgres databases with horizontal sharding. Pricing is based on shard size and count, rou</p>\n      </div>\n      <hr></hr>\n      <div>\n        <h2 data-type=\"ui-monospace 16px/normal\">Enterprise</h2>\n        <p>Our Enterprise plan comes with all of the same platform features you get with the Base pla</p>\n        <h3 data-type=\"ui-monospace 16px/normal\">PlanetScale Managed pricing model</h3>\n        <p>If you choose to deploy PlanetScale in your own AWS or GCP account, the required infrastru</p>\n        <p>This allows you to take advantage of the PlanetScale platform (branching, deploy requests,</p>\n      </div>\n    </section>\n  </section>\n</main>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from planetscale.com combining airy neutral stone/white surfaces (#ffffff) with disciplined ui-monospace hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1280×5022px, padding 0px 96px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in ui-monospace at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #0b6ec5 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by planetscale.com's pricing architecture: use a block wrapper (max-width 1280px, padding 0px 96px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in ui-monospace (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ebebeb strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-liveblocks-io-bento-features",
+      "siteUrl": "https://liveblocks.io",
+      "pageUrl": "https://liveblocks.io/",
+      "hostname": "liveblocks.io",
+      "siteTitle": "Liveblocks | Realtime and sync for the agentic web",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-22T23:04:28.586Z",
+      "screenshotUrl": "/section-vault/liveblocks-io-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 963
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 963,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "suisse",
+        "headlineSize": "20px",
+        "headlineTracking": "0.08px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from liveblocks.io combining high-contrast obsidian surfaces (#000000) with disciplined suisse hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×963px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in suisse at 20px (tracking 0.08px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by liveblocks.io's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (20px, letter-spacing 0.08px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-liveblocks-io-pricing",
+      "siteUrl": "https://liveblocks.io",
+      "pageUrl": "https://liveblocks.io/pricing",
+      "hostname": "liveblocks.io",
+      "siteTitle": "Pricing | Liveblocks",
+      "kind": "pricing",
+      "capturedAt": "2026-11-22T23:04:30.743Z",
+      "screenshotUrl": "/section-vault/liveblocks-io-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1050
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#fdfcfc",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 1050,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "196px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "suisse",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Monthly",
+          "Annual2 months free",
+          "Free monthly credits",
+          "Realtime infrastructure"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n      <div data-layout=\"flex column\">\n        <p>Liveblocks provides the realtime infrastructure to power human-AI collaboration at any sca</p>\n      </div>\n</section>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from liveblocks.io combining high-contrast obsidian surfaces (#000000) with disciplined suisse hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1050px, padding 196px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in suisse at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by liveblocks.io's pricing architecture: use a block wrapper (max-width 1440px, padding 196px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #fdfcfc strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas"
       ]
     },
     {
@@ -5756,6 +6588,526 @@
       "tags": [
         "ai-agents",
         "devtools"
+      ]
+    },
+    {
+      "id": "sec-luckyairballoon-com-navbar",
+      "siteUrl": "https://luckyairballoon.com",
+      "pageUrl": "https://luckyairballoon.com/",
+      "hostname": "luckyairballoon.com",
+      "siteTitle": "Lucky Air Balloon — Build Roblox games with AI",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T23:03:29.736Z",
+      "screenshotUrl": "/section-vault/luckyairballoon-com-navbar.jpg",
+      "dimensions": {
+        "width": 1380,
+        "height": 53
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#ff7fc4",
+        "borderColor": "#000000",
+        "width": 1380,
+        "height": 53,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "48px",
+        "padding": "0px 16px",
+        "maxWidth": "1380px",
+        "radiusSample": "16px",
+        "headlineFont": "Inter Display",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Info",
+          "Builders",
+          "Discord",
+          "Parents"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header data-layout=\"flex gap-48px\">\n  <a>\n    <img width=\"65\" height=\"12\" alt=\"visual-asset\" />\n  </a>\n  <nav data-layout=\"flex gap-4px\">\n    <a data-layout=\"flex\" data-cta=\"ghost r:16px\">Info</a>\n    <a data-layout=\"flex\" data-cta=\"ghost r:16px\">Builders</a>\n    <a data-layout=\"flex\" data-cta=\"ghost r:16px\">Discord</a>\n  </nav>\n  <div data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex\" data-cta=\"bg:#ff7fc4 r:16px\">Parents</a>\n    <a data-layout=\"flex\" data-cta=\"bg:#000000 r:16px\">Sign in</a>\n    <a data-layout=\"flex\" data-cta=\"ghost r:16px\">\n      <span>Try it</span>\n    </a>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (53px)",
+        "summary": "Live-rendered navbar from luckyairballoon.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Inter Display hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1380×53px, padding 0px 16px, gap 48px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Inter Display at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (53px) inspired by luckyairballoon.com's navbar architecture: use a flex wrapper (max-width 1380px, padding 0px 16px, gap 48px) on background #ffffff with #000000 ink. Set the primary heading in Inter Display (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ff7fc4 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-luckyairballoon-com-cta-footer",
+      "siteUrl": "https://luckyairballoon.com",
+      "pageUrl": "https://luckyairballoon.com/",
+      "hostname": "luckyairballoon.com",
+      "siteTitle": "Lucky Air Balloon — Build Roblox games with AI",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:03:44.875Z",
+      "screenshotUrl": "/section-vault/luckyairballoon-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1164
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#1e1e1e",
+        "accent": "#1e1e1e",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 1164,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "366px 72px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter Display",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "How it works",
+          "Builders",
+          "Discord",
+          "Privacy"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div>\n    <a>\n      <img width=\"49\" height=\"43\" alt=\"LAB\" />\n    </a>\n    <nav data-layout=\"flex column\">\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">How it works</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">Builders</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">Discord</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">Privacy</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">Your data</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:12px\">Terms</a>\n    </nav>\n    <div>\n      <small>© 2026 Valor Studio LTD</small>\n      <p>\n        Lucky Air Balloon is where you learn AI by building real Roblox games. Build it, ship it, \n        <img width=\"42\" height=\"8\" alt=\"LAB\" />\n      </p>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from luckyairballoon.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Inter Display hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1164px, padding 366px 72px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Inter Display at 16px (tracking normal) paired with #1e1e1e primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #1e1e1e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by luckyairballoon.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 366px 72px, gap normal) on background #ffffff with #1e1e1e ink. Set the primary heading in Inter Display (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #1e1e1e strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-zzmax-icu-navbar",
+      "siteUrl": "https://zzmax.icu",
+      "pageUrl": "https://zzmax.icu/",
+      "hostname": "zzmax.icu",
+      "siteTitle": "Jimmy ZZ",
+      "kind": "navbar",
+      "capturedAt": "2026-11-22T23:03:23.303Z",
+      "screenshotUrl": "/section-vault/zzmax-icu-navbar.jpg",
+      "dimensions": {
+        "width": 1423,
+        "height": 48
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f7",
+        "ink": "#0b0b0b",
+        "accent": "#0b0b0b",
+        "borderColor": "#0b0b0b",
+        "width": 1423,
+        "height": 48,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1423px",
+        "radiusSample": "12px",
+        "headlineFont": "Apfel Grotezk",
+        "headlineSize": "15px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Jimmy.zz",
+          "ContactContact"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (48px)",
+        "summary": "Live-rendered navbar from zzmax.icu combining airy neutral stone/white surfaces (#f7f7f7) with disciplined Apfel Grotezk hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1423×48px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #f7f7f7 canvas.",
+        "microDetails": [
+          "Display typography set in Apfel Grotezk at 15px (tracking normal) paired with #0b0b0b primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #0b0b0b hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (48px) inspired by zzmax.icu's navbar architecture: use a block wrapper (max-width 1423px, padding 0px 0px, gap normal) on background #f7f7f7 with #0b0b0b ink. Set the primary heading in Apfel Grotezk (15px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0b0b0b strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-zzmax-icu-cta-footer",
+      "siteUrl": "https://zzmax.icu",
+      "pageUrl": "https://zzmax.icu/",
+      "hostname": "zzmax.icu",
+      "siteTitle": "Jimmy ZZ",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:03:32.355Z",
+      "screenshotUrl": "/section-vault/zzmax-icu-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f7f7f7",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Apfel Grotezk",
+        "headlineSize": "15px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Back to top"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n    <canvas width=\"1440\" height=\"738\" alt=\"visual-asset\" />\n  <div>\n    <p>\n      Made with curiosity\n      <span>100% CARE</span>\n    </p>\n    <p>\n      Designed & built by Always exploring.\n      <span>JIMMYZZ</span>\n    </p>\n  </div>\n  <div data-layout=\"grid cols-3 gap-24px\">\n    <p>Visual design & creative code</p>\n    <p>©2026 Jimmyzz. All rights reserved.</p>\n    <a data-layout=\"flex gap-12px\">Back to top</a>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from zzmax.icu combining airy neutral stone/white surfaces (#f7f7f7) with disciplined Apfel Grotezk hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #f7f7f7 canvas.",
+        "microDetails": [
+          "Display typography set in Apfel Grotezk at 15px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by zzmax.icu's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f7f7f7 with #000000 ink. Set the primary heading in Apfel Grotezk (15px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-planetscale-com-hero",
+      "siteUrl": "https://planetscale.com",
+      "pageUrl": "https://planetscale.com/",
+      "hostname": "planetscale.com",
+      "siteTitle": "PlanetScale - the world’s fastest and most scalable cloud hosting for ",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:03:50.659Z",
+      "screenshotUrl": "/section-vault/planetscale-com-hero.jpg",
+      "dimensions": {
+        "width": 1088,
+        "height": 7389
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#111111",
+        "borderColor": "#414141",
+        "width": 1088,
+        "height": 7389,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "24px normal",
+        "padding": "0px 0px",
+        "maxWidth": "1088px",
+        "radiusSample": "12px",
+        "headlineFont": "ui-monospace",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "fastest databases",
+          "NVMe drives",
+          "deployment options",
+          "PlanetScale Managed"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex column gap-24px\">\n  <div>\n    <h1 data-type=\"ui-monospace 16px/normal\">The world’s fastest and most scalable cloud databases</h1>\n    <p>\n      PlanetScale brings you the available in the cloud, built for exceptional speed and reliabi\n      <a>fastest databases</a>\n    </p>\n    <p>\n      Our blazing fast unlock , bringing data center performance to the cloud. We offer a range \n      <a>NVMe drives</a>\n      <strong>unlimited IOPS</strong>\n      <a>deployment options</a>\n      <a>PlanetScale Managed</a>\n    </p>\n    <p>\n      PlanetScale powers at:\n      <a>Tier 0 databases</a>\n    </p>\n    <div data-layout=\"grid cols-5\">\n      <a data-layout=\"flex\">\n        <span>Read case study</span>\n      </a>\n      <a data-layout=\"flex\">\n        <span>Read case study</span>\n      </a>\n    </div>\n    <blockquote>We chose PlanetScale to host our most demanding Vitess and Postgres workloads, doing milli</blockquote>\n  </div>\n  <div data-layout=\"flex column gap-24px\">\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">\n        <a>Performance</a>\n      </h2>\n      <p>\n        allows you to run your database on the fastest servers available in the cloud. Our blazing\n        <a>PlanetScale Metal</a>\n      </p>\n      <figure>\n        <figcaption>The graph above displays the p50, p95, and p99 change after moving a database to Metal. Se</figcaption>\n        <blockquote>We are very happy with our decision to migrate to PlanetScale Metal which enabled us to ac</blockquote>\n        <p>– Aaron Young @ Cash App</p>\n      </figure>\n    </div>\n    <hr></hr>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">\n        <a>Uptime</a>\n      </h2>\n      <p>\n        Ensuring your database is always running and your data is always safe is our number one pr\n        <a>SLA commitment</a>\n      </p>\n      <p>PlanetScale’s platform far exceeds the reliability of database services like Amazon Aurora</p>\n      <ul data-layout=\"flex column gap-8px\">\n        <li>Online MySQL and Vitess version updates</li>\n      </ul>\n      <p>\n        You can check out our track record on our .\n        <a>status page</a>\n      </p>\n      <blockquote>We knew how deeply the PlanetScale team understands database services, and they were liter</blockquote>\n    </div>\n    <hr></hr>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">\n        <a>Cost</a>\n      </h2>\n      <p>\n        At PlanetScale we believe cost is a unit of scale. Our product is less expensive than RDS \n        <a>reach out to us</a>\n      </p>\n      <ul data-layout=\"flex column gap-8px\">\n        <li>No matter the size of your workload, PlanetScale Metal has the best price to performance r</li>\n        <li>Bring your own cloud with</li>\n        <li>Purchase through the or the</li>\n        <li>Customers running Metal on PlanetScale Managed can through Reserved Instances or Savings P</li>\n      </ul>\n    </div>\n    <hr></hr>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from planetscale.com combining airy neutral stone/white surfaces (#ffffff) with disciplined ui-monospace hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1088×7389px, padding 0px 0px, gap 24px normal) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in ui-monospace at 16px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #414141 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by planetscale.com's hero architecture: use a flex wrapper (max-width 1088px, padding 0px 0px, gap 24px normal) on background #ffffff with #000000 ink. Set the primary heading in ui-monospace (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #111111 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-planetscale-com-cta-footer",
+      "siteUrl": "https://planetscale.com",
+      "pageUrl": "https://planetscale.com/",
+      "hostname": "planetscale.com",
+      "siteTitle": "PlanetScale - the world’s fastest and most scalable cloud hosting for ",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:03:50.955Z",
+      "screenshotUrl": "/section-vault/planetscale-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 384
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#414141",
+        "accent": "#414141",
+        "borderColor": "#414141",
+        "width": 1280,
+        "height": 384,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 40px",
+        "maxWidth": "1280px",
+        "radiusSample": "12px",
+        "headlineFont": "ui-monospace",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "About",
+          "Brand",
+          "Blog",
+          "Changelog"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <nav data-layout=\"grid cols-5\">\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">Company</h2>\n      <a>About</a>\n      <a>Brand</a>\n      <a>Blog</a>\n      <a>Changelog</a>\n      <a>Careers</a>\n    </div>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">Product</h2>\n      <a>Case studies</a>\n      <a>Enterprise</a>\n      <a>Pricing</a>\n      <a>Benchmarks</a>\n    </div>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">Resources</h2>\n      <a>Documentation</a>\n      <a>Migrate</a>\n      <a>Support</a>\n      <a>Status</a>\n      <a>Trust Center</a>\n    </div>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">Courses</h2>\n      <a>MySQL for Developers</a>\n      <a>Database Scaling</a>\n      <a>Learn Vitess</a>\n    </div>\n    <div>\n      <h2 data-type=\"ui-monospace 16px/normal\">Open source</h2>\n      <a>Vitess</a>\n      <a>Vitess community</a>\n      <a>GitHub</a>\n    </div>\n  </nav>\n  <div>\n    <p>\n      <a>Privacy</a>\n      <span role=\"presentation\">|</span>\n      <a>Terms</a>\n      <span role=\"presentation\">|</span>\n      <a>Cookies</a>\n      <span role=\"presentation\">|</span>\n    </p>\n    <p>© 2026 PlanetScale, Inc. All rights reserved.</p>\n  </div>\n  <p>\n    <a>GitHub</a>\n    <span role=\"presentation\">|</span>\n    <a>X</a>\n    <span role=\"presentation\">|</span>\n    <a>LinkedIn</a>\n    <span role=\"presentation\">|</span>\n  </p>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from planetscale.com combining airy neutral stone/white surfaces (#ffffff) with disciplined ui-monospace hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1280×384px, padding 0px 40px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in ui-monospace at 16px (tracking normal) paired with #414141 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #414141 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by planetscale.com's cta-footer architecture: use a block wrapper (max-width 1280px, padding 0px 40px, gap normal) on background #ffffff with #414141 ink. Set the primary heading in ui-monospace (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #414141 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools",
+        "fintech-saas",
+        "docs"
+      ]
+    },
+    {
+      "id": "sec-supabase-com-hero",
+      "siteUrl": "https://supabase.com",
+      "pageUrl": "https://supabase.com/",
+      "hostname": "supabase.com",
+      "siteTitle": "Supabase | The Postgres Development Platform",
+      "kind": "hero",
+      "capturedAt": "2026-11-22T23:03:59.227Z",
+      "screenshotUrl": "/section-vault/supabase-com-hero.jpg",
+      "dimensions": {
+        "width": 1088,
+        "height": 162
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1088,
+        "height": 162,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "32px",
+        "padding": "0px 0px",
+        "maxWidth": "1088px",
+        "radiusSample": "9.29231px",
+        "headlineFont": "Manrope",
+        "headlineSize": "46px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start your project",
+          "Request a demo"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex column gap-32px\">\n  <div data-layout=\"grid cols-2 gap-16px\">\n    <h1 data-type=\"Manrope 46px/normal\">\n      <span>Build in a weekend</span>\n      <span>Scale to millions</span>\n    </h1>\n    <p>Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions</p>\n  </div>\n  <div data-layout=\"flex gap-8px\">\n    <a data-layout=\"flex\" data-cta=\"ghost r:9.29231px\">\n      <span>Start your project</span>\n    </a>\n    <a data-layout=\"flex\" data-cta=\"ghost r:9.29231px\">\n      <span>Request a demo</span>\n    </a>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from supabase.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Manrope hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1088×162px, padding 0px 0px, gap 32px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Manrope at 46px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 9.29231px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by supabase.com's hero architecture: use a flex wrapper (max-width 1088px, padding 0px 0px, gap 32px) on background #ffffff with #141413 ink. Set the primary heading in Manrope (46px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-supabase-com-cta-footer",
+      "siteUrl": "https://supabase.com",
+      "pageUrl": "https://supabase.com/",
+      "hostname": "supabase.com",
+      "siteTitle": "Supabase | The Postgres Development Platform",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:04:00.066Z",
+      "screenshotUrl": "/section-vault/supabase-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1097
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#141413",
+        "accent": "#141413",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1440,
+        "height": 1097,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "Manrope",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "More on Security",
+          "Twitter",
+          "GitHub",
+          "Discord"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"flex gap-112px\">\n      <div data-layout=\"flex gap-8px\">\n        We protect your data.\n        <a>More on Security</a>\n      </div>\n      <ul data-layout=\"flex gap-32px\">\n        <li data-layout=\"flex gap-8px\">SOC2 Type 2</li>\n        <li data-layout=\"flex gap-8px\">HIPAA</li>\n        <li data-layout=\"flex gap-8px\">ISO 27001</li>\n      </ul>\n    </div>\n    <div data-layout=\"flex\">\n      <div data-layout=\"flex gap-12px\">\n        <small>© Supabase Inc</small>\n        <span>—</span>\n      </div>\n    </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from supabase.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Manrope hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1097px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Manrope at 16px (tracking normal) paired with #141413 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by supabase.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Manrope (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-liveblocks-io-cta-footer",
+      "siteUrl": "https://liveblocks.io",
+      "pageUrl": "https://liveblocks.io/",
+      "hostname": "liveblocks.io",
+      "siteTitle": "Liveblocks | Realtime and sync for the agentic web",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-22T23:04:28.863Z",
+      "screenshotUrl": "/section-vault/liveblocks-io-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 976
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 976,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "suisse",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 4,
+        "ctaTexts": [
+          "Sync",
+          "Comments",
+          "Notifications",
+          "Realtime Infrastructure"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from liveblocks.io combining high-contrast obsidian surfaces (#000000) with disciplined suisse hierarchy and 4 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×976px, padding 0px 0px) using 4-column composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in suisse at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by liveblocks.io's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     }
   ]
