@@ -7,6 +7,12 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
   const [viewMode, setViewMode] = useState<"video" | "slider">("video");
   const [splitPct, setSplitPct] = useState(46);
 
+  const videoSrc = lang === "en" ? "/forma-ab-demo-en.mp4" : "/forma-ab-demo.mp4";
+  const videoDownloadName =
+    lang === "en" ? "forma-before-after-en.mp4" : "forma-before-after-es.mp4";
+  const withoutHref = lang === "en" ? "/demo/en/without-forma" : "/demo/without-forma";
+  const withHref = lang === "en" ? "/demo/en/with-forma" : "/demo/with-forma";
+
   return (
     <section
       id="proof"
@@ -67,12 +73,12 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
             </div>
 
             <a
-              href="/forma-ab-demo.mp4"
-              download="forma-before-after-demo.mp4"
+              href={videoSrc}
+              download={videoDownloadName}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-[var(--line-strong)] hover:bg-[var(--panel)] text-[12px] font-medium"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>{lang === "es" ? "Descargar MP4" : "Download MP4"}</span>
+              <span>{lang === "es" ? "Descargar MP4 (ES)" : "Download MP4 (EN)"}</span>
             </a>
           </div>
         </div>
@@ -82,7 +88,8 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
           {viewMode === "video" ? (
             <div className="rounded-[16px] overflow-hidden bg-[#fbfbfa] border border-[var(--line)] aspect-video">
               <video
-                src="/forma-ab-demo.mp4"
+                key={videoSrc}
+                src={videoSrc}
                 autoPlay
                 muted
                 loop
@@ -96,7 +103,7 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
               <div className="relative h-[510px] rounded-[16px] overflow-hidden border border-[var(--line)] select-none">
                 {/* Right / Base Layer: WITH FORMA */}
                 <iframe
-                  src="/demo/with-forma"
+                  src={withHref}
                   title="With forma"
                   className="absolute inset-0 w-full h-full border-0 pointer-events-none"
                 />
@@ -107,7 +114,7 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
                   style={{ width: `${splitPct}%` }}
                 >
                   <iframe
-                    src="/demo/without-forma"
+                    src={withoutHref}
                     title="Without forma"
                     className="w-[1096px] h-full border-0 pointer-events-none"
                   />
@@ -152,23 +159,23 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
           <div className="mt-3 px-2 py-1 flex flex-wrap items-center justify-between gap-3 text-[12px]">
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="/demo/without-forma"
+                href={withoutHref}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-[var(--muted)] hover:text-[var(--ink)]"
                 style={{ fontFamily: "var(--font-mono), monospace" }}
               >
-                <span>/demo/without-forma (34/100)</span>
+                <span>{withoutHref} (34/100)</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <a
-                href="/demo/with-forma"
+                href={withHref}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-[#118453] font-medium hover:underline"
                 style={{ fontFamily: "var(--font-mono), monospace" }}
               >
-                <span>/demo/with-forma (98/100 A+)</span>
+                <span>{withHref} (98/100 A+)</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>

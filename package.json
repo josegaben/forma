@@ -14,7 +14,9 @@
     "crawl:visual:daemon": "node scripts/visual-section-crawler.mjs --watch --interval=3600",
     "xray": "node forma-xray/bin/cli.mjs",
     "cwv:audit": "node scripts/audit-cwv.mjs",
-    "x:kit": "node scripts/generate-x-kit.mjs"
+    "x:kit": "node scripts/generate-x-kit.mjs",
+    "video:es": "node scripts/render-ab-video.mjs",
+    "video:en": "node scripts/render-ab-video-en.mjs"
   },
   "dependencies": {
     "@google/genai": "^3.6.1",
