@@ -1575,11 +1575,6 @@ export function FormaStudio() {
                 ? `Conectado a ${GLOBAL_DESIGN_DIRECTORIES.length} directorios, librerías y archivos de diseño.`
                 : `Unified across ${GLOBAL_DESIGN_DIRECTORIES.length} design directories, component kits & archives.`}
             </h2>
-            <p className="mt-2 text-[14px] text-[var(--muted)]">
-              {lang === "es"
-                ? "Desde Rare UI, 21st.dev y Vaul hasta Sanzo Wada, Radix Colors, Awwwards, Godly, P de Pablo y Resiz.es."
-                : "Spanning Rare UI, 21st.dev, Vaul, Sanzo Wada, Radix Colors, Awwwards, Godly, P de Pablo & Resiz.es."}
-            </p>
           </div>
 
           <div className="space-y-3">

@@ -175,15 +175,6 @@ export function SectionVaultShowcase({
         {/* Header & Live Playwright Scanner Bar */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
           <div className="max-w-[650px]">
-            <div
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--line)] text-[11px] text-[var(--muted)] mb-3"
-              style={{ fontFamily: "var(--font-mono), monospace" }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#118453]" />
-              <span>
-                PLAYWRIGHT + VISION VAULT · {allSections.length} REAL CLIENT-RENDERED SECTIONS
-              </span>
-            </div>
             <h2
               className="text-[clamp(1.9rem,3.4vw,2.65rem)] leading-[1.08] tracking-[-0.02em] font-normal"
               style={{ fontFamily: "var(--font-editorial), Georgia, serif" }}

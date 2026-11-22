@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowUpRight, Download, Play, SlidersHorizontal } from "lucide-react";
+import { Download, Play, SlidersHorizontal } from "lucide-react";
 
 export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
   const [viewMode, setViewMode] = useState<"video" | "slider">("video");
@@ -154,38 +154,6 @@ export function BeforeAfterShowcase({ lang }: { lang: "en" | "es" }) {
               </div>
             </div>
           )}
-
-          {/* Direct Links to Both Full-Screen Benchmark Pages */}
-          <div className="mt-3 px-2 py-1 flex flex-wrap items-center justify-between gap-3 text-[12px]">
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href={withoutHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-[var(--muted)] hover:text-[var(--ink)]"
-                style={{ fontFamily: "var(--font-mono), monospace" }}
-              >
-                <span>{withoutHref} (34/100)</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-              <a
-                href={withHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-[#118453] font-medium hover:underline"
-                style={{ fontFamily: "var(--font-mono), monospace" }}
-              >
-                <span>{withHref} (98/100 A+)</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
-            <span
-              className="text-[11px] text-[var(--muted)]"
-              style={{ fontFamily: "var(--font-mono), monospace" }}
-            >
-              Sanzo Wada #142 + Newsreader + DeadSimple × P de Pablo
-            </span>
-          </div>
         </div>
       </div>
     </section>
