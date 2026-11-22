@@ -41,7 +41,7 @@ export default function CreditsWalletPage() {
   const [copiedKey, setCopiedKey] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [siteOrigin, setSiteOrigin] = useState("https://forma-to.vercel.app");
+  const [siteOrigin, setSiteOrigin] = useState("https://forma.zaxworld.com");
 
   const loadWallet = useCallback(async (customKey?: string) => {
     const storedKey =

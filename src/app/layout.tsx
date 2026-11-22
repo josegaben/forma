@@ -35,7 +35,7 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://forma-to.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://forma.zaxworld.com"
   ),
   title: "forma — OpenRouter for Web Design",
   description:

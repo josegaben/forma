@@ -135,7 +135,7 @@ const QUICK_IDEAS = [
 
 export function FormaStudio() {
   const [lang, setLang] = useState<"en" | "es">("en");
-  const [origin, setOrigin] = useState("https://forma-to.vercel.app");
+  const [origin, setOrigin] = useState("https://forma.zaxworld.com");
   const [roleIdx, setRoleIdx] = useState(0);
 
   // Command Explorer (⌘K) state
