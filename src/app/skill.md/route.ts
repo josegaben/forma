@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { WEB_FORMATS } from "@/data/formats";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 
 export async function GET(request: Request) {
+  void recordTelemetryEvent({ event: "agent_skill_md", request, target: "/skill.md" });
   const origin = new URL(request.url).origin;
 
   const skill = `---

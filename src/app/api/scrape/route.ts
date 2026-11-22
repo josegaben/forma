@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { convertScrapedSiteToFormat, type DiscoveredSite } from "@/lib/scraper";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
 const CORS_HEADERS = {
@@ -41,6 +42,7 @@ async function handleScrape(rawUrl: string) {
 
   try {
     const xray = await analyzeWebsiteUrl(parsed.toString(), { timeoutMs: 9000 });
+    void recordTelemetryEvent({ event: "agent_scrape_api", target: parsed.hostname });
     const site: DiscoveredSite = {
       id: `live-${xray.hostname.replace(/[^a-z0-9]/gi, "-").toLowerCase()}`,
       url: xray.url,

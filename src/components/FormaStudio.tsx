@@ -139,9 +139,27 @@ export function FormaStudio() {
     [customFormats]
   );
 
+  const sendBeaconEvent = (
+    event:
+      | "human_visit"
+      | "synthesize_idea"
+      | "copy_spec"
+      | "copy_bootstrap"
+      | "share_mix"
+      | "install_component",
+    extra?: { target?: string; mixCode?: string; paletteId?: string }
+  ) => {
+    void fetch("/api/telemetry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event, ...extra }),
+    }).catch(() => {});
+  };
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setOrigin(window.location.origin);
+      sendBeaconEvent("human_visit", { mixCode: "RSZ+PDP+21D+RNO", paletteId: "pal-carbon-halftone" });
       const params = new URLSearchParams(window.location.search);
       if (params.get("surface")) setSurfaceId(params.get("surface")!);
       if (params.get("palette")) setPaletteId(params.get("palette")!);
@@ -307,12 +325,22 @@ export function FormaStudio() {
 
     const rec = recommendMixFromBrief(raw);
     const bestPal = recommendPaletteForIdea(raw);
+    const nextGenome = composeFormatGenome({
+      ...rec.selection,
+      paletteId: bestPal.id,
+      customFormats,
+    });
     setSurfaceId(rec.selection.surfaceId);
     setPaletteId(bestPal.id);
     setTypographyId(rec.selection.typographyId);
     setLayoutId(rec.selection.layoutId);
     setComponentsId(rec.selection.componentsId);
     setMotionId(rec.selection.motionId);
+    sendBeaconEvent("synthesize_idea", {
+      mixCode: nextGenome.mixCode,
+      paletteId: bestPal.id,
+      target: raw.slice(0, 60),
+    });
     document.getElementById("studio")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -353,6 +381,7 @@ export function FormaStudio() {
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", url.toString());
     }
+    sendBeaconEvent("share_mix", { mixCode: composed.mixCode, paletteId });
     copyText("share", url.toString());
   };
 
@@ -661,7 +690,10 @@ export function FormaStudio() {
                 </code>
                 <button
                   type="button"
-                  onClick={() => copyText("hero", agentCommands[agentTab])}
+                  onClick={() => {
+                    sendBeaconEvent("copy_bootstrap", { target: agentTab });
+                    copyText("hero", agentCommands[agentTab]);
+                  }}
                   className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-[#141413] text-[11.5px] font-medium hover:bg-[#eae9e4] cursor-pointer"
                 >
                   {copiedKey === "hero" ? (
@@ -966,7 +998,13 @@ export function FormaStudio() {
 
                 <button
                   type="button"
-                  onClick={() => copyText("main-spec", composed.masterPrompt)}
+                  onClick={() => {
+                    sendBeaconEvent("copy_spec", {
+                      mixCode: composed.mixCode,
+                      paletteId,
+                    });
+                    copyText("main-spec", composed.masterPrompt);
+                  }}
                   className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#141413] text-[#fbfbfa] text-[13px] font-medium hover:opacity-90 transition-opacity cursor-pointer"
                 >
                   {copiedKey === "main-spec" ? (
@@ -1563,6 +1601,9 @@ export function FormaStudio() {
         >
           <span>forma.to · open-source web design router</span>
           <div className="flex items-center gap-5">
+            <a href="/metrics" className="hover:text-white">
+              Metrics
+            </a>
             <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="hover:text-white">
               Repo
             </a>

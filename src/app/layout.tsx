@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Newsreader, Instrument_Serif, DM_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -59,7 +60,10 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${newsreader.variable} ${instrumentSerif.variable} ${dmMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

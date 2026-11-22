@@ -16,6 +16,7 @@ import {
   recommendMixFromBrief,
   type TargetStack,
 } from "@/lib/composer";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
 const CORS_HEADERS = {
@@ -204,6 +205,11 @@ export async function POST(request: Request) {
   if (method === "tools/call") {
     const toolName = String(params?.name || "");
     const args = (params?.arguments || {}) as Record<string, unknown>;
+    void recordTelemetryEvent({
+      event: "agent_mcp_call",
+      request,
+      target: toolName,
+    });
 
     if (toolName === "list_web_formats") {
       const q = String(args.query || "").toLowerCase();

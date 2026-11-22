@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import discoveredFeed from "@/data/discovered-feed.json";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 
 export async function GET(request: Request) {
+  void recordTelemetryEvent({ event: "agent_discover_api", request, target: "/api/discover" });
   const { searchParams } = new URL(request.url);
   const mode = searchParams.get("mode");
   const minScore = Number(searchParams.get("minScore") || 0);

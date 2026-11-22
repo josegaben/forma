@@ -5,6 +5,7 @@ import {
   type TargetStack,
 } from "@/lib/composer";
 import { recommendPaletteForIdea } from "@/lib/synthesizer";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -30,10 +31,17 @@ export async function GET(request: Request) {
 
   const auto = recommendMixFromBrief(brief).selection;
 
-  const surfaceId = searchParams.get("surface") || mixList[0] || auto.surfaceId;
-  const typographyId = searchParams.get("typography") || mixList[1] || mixList[0] || auto.typographyId;
+  const surfaceId =
+    searchParams.get("surface") || searchParams.get("primary") || mixList[0] || auto.surfaceId;
+  const typographyId =
+    searchParams.get("typography") ||
+    searchParams.get("overlay") ||
+    mixList[1] ||
+    mixList[0] ||
+    auto.typographyId;
   const layoutId = searchParams.get("layout") || mixList[2] || mixList[0] || auto.layoutId;
-  const componentsId = searchParams.get("components") || mixList[3] || mixList[1] || mixList[0] || auto.componentsId;
+  const componentsId =
+    searchParams.get("components") || mixList[3] || mixList[1] || mixList[0] || auto.componentsId;
   const motionId = searchParams.get("motion") || mixList[4] || mixList[0] || auto.motionId;
   const paletteId =
     searchParams.get("palette") ||
@@ -52,6 +60,14 @@ export async function GET(request: Request) {
     projectBrief: brief || undefined,
     stack,
     enforceUnslop: searchParams.get("unslop") !== "false",
+  });
+
+  void recordTelemetryEvent({
+    event: "agent_compose_api",
+    request,
+    target: outputFormat,
+    mixCode: genome.mixCode,
+    paletteId,
   });
 
   if (outputFormat === "markdown" || outputFormat === "md") {
@@ -77,10 +93,19 @@ export async function POST(request: Request) {
     layoutId: body.layoutId || auto.layoutId,
     componentsId: body.componentsId || auto.componentsId,
     motionId: body.motionId || auto.motionId,
+    paletteId: body.paletteId,
     projectName: body.projectName || body.project || "Acme",
     projectBrief: brief || undefined,
     stack: body.stack || "nextjs-tailwind",
     enforceUnslop: body.enforceUnslop !== false,
+  });
+
+  void recordTelemetryEvent({
+    event: "agent_compose_api",
+    request,
+    target: "post_json",
+    mixCode: genome.mixCode,
+    paletteId: body.paletteId,
   });
 
   return NextResponse.json(genome, { headers: CORS_HEADERS });

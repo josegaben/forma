@@ -313,6 +313,11 @@ export function InteractiveComponentCard({
       await navigator.clipboard.writeText(item.cliInstall);
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
+      void fetch("/api/telemetry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ event: "install_component", target: item.id }),
+      }).catch(() => {});
     } catch {
       // ignore
     }

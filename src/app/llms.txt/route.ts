@@ -3,8 +3,10 @@ import { CURATED_COLOR_PALETTES, getContrastRatio } from "@/data/color-palettes"
 import { WEB_FORMATS } from "@/data/formats";
 import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
+import { recordTelemetryEvent } from "@/lib/telemetry";
 
 export async function GET(request: Request) {
+  void recordTelemetryEvent({ event: "agent_llms_txt", request, target: "/llms.txt" });
   const origin = new URL(request.url).origin;
 
   const content = `# forma (${origin})
