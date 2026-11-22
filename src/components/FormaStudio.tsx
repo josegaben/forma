@@ -461,7 +461,7 @@ export function FormaStudio() {
   const agentCommands: Record<typeof agentTab, string> = {
     llms: `set up forma - ${origin}/llms.txt`,
     mcp: `claude mcp add --transport http forma ${origin}/api/mcp`,
-    cli: `npx forma-xray https://resiz.es --out DESIGN.md`,
+    cli: `npx forma-xray balance && npx forma-xray https://resiz.es --out DESIGN.md`,
   };
 
   const totalAssetsCount =

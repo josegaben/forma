@@ -63,6 +63,29 @@ export default function CreditsWalletPage() {
   }, []);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const checkout = params.get("checkout");
+      const amt = Number(params.get("amount") || 0);
+      const keyParam = params.get("key") || undefined;
+      if (checkout === "success" && amt > 0) {
+        void fetch("/api/credits", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "topup",
+            apiKey: keyParam,
+            amountUsd: amt,
+            forceSandbox: true,
+          }),
+        }).then(() => {
+          setStatusMessage(`Stripe Checkout completed — added $${amt.toFixed(2)} prepaid credit.`);
+          window.history.replaceState({}, "", "/credits");
+          void loadWallet(keyParam);
+        });
+        return;
+      }
+    }
     void loadWallet();
   }, [loadWallet]);
 
@@ -81,6 +104,10 @@ export default function CreditsWalletPage() {
       });
       if (res.ok) {
         const data = await res.json();
+        if (data.checkoutUrl) {
+          window.location.href = data.checkoutUrl;
+          return;
+        }
         setWallet(data.wallet);
         setStatusMessage(`Added $${amountUsd.toFixed(2)} prepaid credit (0% top-up fee).`);
       }

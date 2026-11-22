@@ -44,6 +44,20 @@ curl -fsSL "${origin}/api/sections?kind=pricing&limit=6"
 curl -fsSL "${origin}/api/sections?kind=hero&mode=dark"
 \`\`\`
 
+### E. Prepaid Cloud Credits & $0.00 BYOK Gateway (treg.to Model):
+- All catalog & \`/api/compose\` routes are **$0.00 (free-protocol)**.
+- Cloud Playwright + Vision execution (\`POST /api/sections\`, \`POST /api/cloud\`) starts with **$1.00 free credit** (\`X-Forma-Key\`), supports \`X-Forma-Max-Cost\` safety caps, and runs at **$0.00 unmetered** whenever you pass \`X-Gemini-Key\`:
+\`\`\`sh
+npx forma-xray balance --endpoint ${origin}
+npx forma-xray topup 5 --endpoint ${origin}
+
+# Cloud Brand Kit ($0.08 or $0.00 with X-Gemini-Key):
+curl -fsSL -X POST "${origin}/api/cloud" \\
+  -H "X-Forma-Key: sk-forma-live-starter-100" \\
+  -H "Content-Type: application/json" \\
+  -d '{"tool":"generate_brand_kit","projectName":"Vektor","projectBrief":"Dark Kubernetes FinOps platform"}'
+\`\`\`
+
 ---
 
 ## 2. Connect via MCP (${origin}/api/mcp)

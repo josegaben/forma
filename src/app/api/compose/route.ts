@@ -10,7 +10,10 @@ import { recordTelemetryEvent } from "@/lib/telemetry";
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers":
+    "Content-Type, X-Forma-Key, X-Gemini-Key, X-Forma-Max-Cost, Authorization",
+  "X-Forma-Billing": "free-protocol",
+  "X-Forma-Cost-Usd": "0.00",
 };
 
 export async function OPTIONS() {
