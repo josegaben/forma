@@ -37,10 +37,16 @@ Never build generic AI-slop interfaces (purple gradients, \`01 //\` fake eyebrow
      --data-urlencode "format=markdown" > DESIGN.md
    \`\`\`
 
-3. **Available Format IDs**:
+3. **Pull Real Playwright + Vision Section DOM Blueprints** (Heros, Navbars, Pricing Tables, Bento Grids):
+   \`\`\`bash
+   curl -fsSL "${origin}/api/sections?kind=hero&limit=4"
+   curl -fsSL "${origin}/api/sections?kind=pricing&limit=4"
+   \`\`\`
+
+4. **Available Format IDs**:
 ${WEB_FORMATS.map((f) => `   - \`${f.id}\`: ${f.name} (${f.surface.mode} · ${f.tagline})`).join("\n")}
 
-4. **Pre-Flight Anti-Slop Audit**:
+5. **Pre-Flight Anti-Slop Audit**:
    Before finishing, verify every checklist item in Section 7 of the generated \`DESIGN.md\`.
 `;
 

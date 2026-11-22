@@ -1,5 +1,5 @@
 {
-  "lastCrawlAt": "2026-11-21T23:56:50.577Z",
+  "lastCrawlAt": "2026-11-22T00:26:50.339Z",
   "totalIndexed": 36,
   "galleriesMonitored": [
     "deadsimplesites.com",
@@ -139,7 +139,7 @@
       "title": "Agentic Infrastructure - Vercel",
       "description": "The autonomous stack for every app and agent.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T23:56:47.242Z",
+      "scrapedAt": "2026-11-22T00:26:47.400Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -198,7 +198,7 @@
       "title": "Mintlify - The documentation platform for agents",
       "description": "Self-updating documentation for startups, enterprises, and agents.",
       "sourceGallery": "curated.design",
-      "scrapedAt": "2026-11-21T23:56:46.750Z",
+      "scrapedAt": "2026-11-22T00:26:46.902Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -259,7 +259,7 @@
       "title": "Stripe | Infraestructura financiera para tu negocio",
       "description": "Stripe es una plataforma de servicios financieros que ayuda a todo tipo de empresas a aceptar pagos, crear modelos de facturación flexibles y gestionar el movim",
       "sourceGallery": "awwwards.com",
-      "scrapedAt": "2026-11-21T23:56:47.449Z",
+      "scrapedAt": "2026-11-22T00:26:47.618Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -319,7 +319,7 @@
       "title": "Clerk | Authentication and User Management",
       "description": "The easiest way to add authentication and user management to your application. Purpose-built for React, Next.js, Remix, and “The Modern Web”.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-21T23:56:48.205Z",
+      "scrapedAt": "2026-11-22T00:26:47.982Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -379,7 +379,7 @@
       "title": "Vitrine: your references, ready for you and your AI agent",
       "description": "A Mac canvas for your design references. You and your agent pick from them, so what you build looks like your taste, not the default vibe-coded look.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T23:56:48.574Z",
+      "scrapedAt": "2026-11-22T00:26:49.089Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -784,7 +784,7 @@
       "title": "Platform, services, and Resizes AI | Resizes",
       "description": "Resizes is a Gijón platform engineering company. It builds Agentic and Platform, delivers Kubernetes, GitOps, and FinOps services, and publishes Resizes AI.",
       "sourceGallery": "resiz.es",
-      "scrapedAt": "2026-11-21T23:56:45.741Z",
+      "scrapedAt": "2026-11-22T00:26:45.804Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -830,7 +830,7 @@
       "title": "Dub - The Modern Link Attribution Platform",
       "description": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-21T23:56:46.596Z",
+      "scrapedAt": "2026-11-22T00:26:46.709Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -890,7 +890,7 @@
       "title": "Daylight | A More Caring Computer",
       "description": "Daylight Computer (DC1) is a new kind of calm computer, designed for deep work and health.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T23:56:47.647Z",
+      "scrapedAt": "2026-11-22T00:26:48.028Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -950,7 +950,7 @@
       "title": "kate fm — creative developer",
       "description": "Interfaces you can almost touch. Kate builds precise, tactile interfaces for independent brands, start-ups and online stores.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T23:56:50.575Z",
+      "scrapedAt": "2026-11-22T00:26:50.338Z",
       "craftScore": 97,
       "grade": "A+",
       "strengths": [
@@ -1049,7 +1049,7 @@
       "title": "Zed — Your last next editor",
       "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T23:56:46.423Z",
+      "scrapedAt": "2026-11-22T00:26:46.641Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1108,7 +1108,7 @@
       "title": "Supabase | The Postgres Development Platform",
       "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T23:56:47.216Z",
+      "scrapedAt": "2026-11-22T00:26:47.377Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1228,7 +1228,7 @@
       "title": "Pablo González · Creative Director and Designer",
       "description": "Pablo González is a creative director and designer building brand identities, visual systems and digital products for technology companies. Based in Tenerife, w",
       "sourceGallery": "pdepablo.com",
-      "scrapedAt": "2026-11-21T23:56:45.665Z",
+      "scrapedAt": "2026-11-22T00:26:45.710Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1278,7 +1278,7 @@
       "title": "Midday — The business stack for modern founders",
       "description": "Invoicing, automatic reconciliation, time tracking, documents, and financial exports in one place. The business stack that replaces the tools you&#x27;ve outgro",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-21T23:56:46.383Z",
+      "scrapedAt": "2026-11-22T00:26:46.472Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1335,7 +1335,7 @@
       "title": "Emil Kowalski",
       "description": "Design engineer working at Linear.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T23:56:48.435Z",
+      "scrapedAt": "2026-11-22T00:26:48.281Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1392,7 +1392,7 @@
       "title": "Bryn Taylor · Freelance Product &amp; Website Designer",
       "description": "Freelance product &amp; website designer with 12+ years experience. Worked with Monzo, Pleo, Mastercard &amp; Trustpilot. Based in Copenhagen, available worldwi",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T23:56:49.999Z",
+      "scrapedAt": "2026-11-22T00:26:49.167Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1449,7 +1449,7 @@
       "title": "Écouter - Understand your customers",
       "description": "Human and AI-moderated interviews that reveal what people think, why they think it, and what to do next. Results in hours, not weeks.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-21T23:56:49.985Z",
+      "scrapedAt": "2026-11-22T00:26:49.771Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1501,7 +1501,7 @@
       "title": "Cory Etzkorn",
       "description": "Cory Etzkorn is a designer and software engineer in New York City. He was one of Notion’s first 20 employees and now runs small talk labs and Mythical Creature.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-21T23:56:49.022Z",
+      "scrapedAt": "2026-11-22T00:26:48.258Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -1649,7 +1649,7 @@
       "title": "Resend · Email for developers",
       "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T23:56:46.963Z",
+      "scrapedAt": "2026-11-22T00:26:47.135Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1711,7 +1711,7 @@
       "title": "Mathias Adolfsson - Independent Creative Engineer",
       "description": "I",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-21T23:56:48.809Z",
+      "scrapedAt": "2026-11-22T00:26:49.705Z",
       "craftScore": 92,
       "grade": "A+",
       "strengths": [
@@ -1991,7 +1991,7 @@
       "title": "treg.to: OpenRouter for agent tools and data, pay per call",
       "description": "One MCP server, one key: 4,200+ tools across 136 providers for SEO, enrichment, ads, social and scraping data at the provider",
       "sourceGallery": "treg.to",
-      "scrapedAt": "2026-11-21T23:56:45.908Z",
+      "scrapedAt": "2026-11-22T00:26:46.256Z",
       "craftScore": 88,
       "grade": "A",
       "strengths": [

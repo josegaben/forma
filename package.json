@@ -10,11 +10,14 @@
     "lint": "tsc --noEmit",
     "crawl": "node scripts/continuous-crawler.mjs",
     "crawl:daemon": "node scripts/continuous-crawler.mjs --watch --interval=1800",
+    "crawl:visual": "node scripts/visual-section-crawler.mjs",
+    "crawl:visual:daemon": "node scripts/visual-section-crawler.mjs --watch --interval=3600",
     "xray": "node forma-xray/bin/cli.mjs",
     "cwv:audit": "node scripts/audit-cwv.mjs",
     "x:kit": "node scripts/generate-x-kit.mjs"
   },
   "dependencies": {
+    "@google/genai": "^3.6.1",
     "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.511.0",
     "next": "^15.3.2",

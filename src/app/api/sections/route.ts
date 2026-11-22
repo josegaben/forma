@@ -1,0 +1,98 @@
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { NextResponse } from "next/server";
+import {
+  type SectionKind,
+  type SectionVaultFeed,
+  type VisualSectionItem,
+  getSectionVaultFeed,
+} from "@/lib/section-vault";
+import { recordTelemetryEvent } from "@/lib/telemetry";
+import { scanWebsiteSections } from "../../../../forma-xray/src/section-scanner.mjs";
+
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+function readFreshVaultFeed(): SectionVaultFeed {
+  try {
+    const filePath = resolve(process.cwd(), "src/data/section-vault.json");
+    if (existsSync(filePath)) {
+      return JSON.parse(readFileSync(filePath, "utf8")) as SectionVaultFeed;
+    }
+  } catch {
+    // fallback to bundled JSON
+  }
+  return getSectionVaultFeed();
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: CORS_HEADERS });
+}
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const kind = (searchParams.get("kind") || "all") as SectionKind | "all";
+  const query = (searchParams.get("q") || "").trim().toLowerCase();
+  const mode = (searchParams.get("mode") || "all") as "light" | "dark" | "all";
+  const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") || 24)));
+
+  void recordTelemetryEvent({
+    event: "agent_discover_api",
+    request,
+    target: `sections:${kind}`,
+  });
+
+  const feed = readFreshVaultFeed();
+  const filtered = (feed.sections || [])
+    .filter((sec: VisualSectionItem) => {
+      if (kind !== "all" && sec.kind !== kind) return false;
+      if (mode !== "all" && sec.computedSpec.mode !== mode) return false;
+      if (!query) return true;
+      const hay = `${sec.hostname} ${sec.siteTitle} ${sec.kind} ${sec.vision.archetype} ${sec.vision.summary} ${sec.tags.join(" ")}`.toLowerCase();
+      return query.split(/\s+/).every((tok) => hay.includes(tok));
+    })
+    .slice(0, limit);
+
+  return NextResponse.json(
+    {
+      lastVisualScanAt: feed.lastVisualScanAt,
+      visionEngine: feed.visionEngine,
+      totalInVault: feed.totalSections,
+      countsByKind: feed.countsByKind,
+      returned: filtered.length,
+      sections: filtered,
+    },
+    { headers: CORS_HEADERS }
+  );
+}
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const targetUrl = String(body.url || "").trim();
+    if (!targetUrl) {
+      return NextResponse.json(
+        { error: "Missing `url` in request body." },
+        { status: 400, headers: CORS_HEADERS }
+      );
+    }
+
+    void recordTelemetryEvent({
+      event: "agent_scrape_api",
+      request,
+      target: `visual-sections:${targetUrl.slice(0, 60)}`,
+    });
+
+    const result = await scanWebsiteSections(targetUrl, {
+      probePricingSubpage: body.probePricing !== false,
+    });
+
+    return NextResponse.json(result, { headers: CORS_HEADERS });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Failed to scan visual sections";
+    return NextResponse.json({ error: message }, { status: 422, headers: CORS_HEADERS });
+  }
+}

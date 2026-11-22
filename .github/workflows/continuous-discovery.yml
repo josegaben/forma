@@ -1,8 +1,8 @@
-name: Continuous Web Format & Motion Discovery
+name: Continuous Web Format, Section DOM & Vision Discovery
 
 on:
   schedule:
-    # Scrape curated galleries & benchmark designs every 6 hours
+    # Scrape curated galleries + deep Playwright & Vision section blueprints every 6 hours
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
@@ -20,14 +20,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
 
-      - name: Run forma-xray Continuous Gallery Crawler
+      - name: Install dependencies & headless Chromium
+        run: |
+          npm ci
+          npx playwright-core install --with-deps chromium
+
+      - name: Run forma-xray Fast CSS & Motion Gallery Crawler
         run: node scripts/continuous-crawler.mjs
 
-      - name: Commit newly discovered high-craft formats
+      - name: Run Playwright + Gemini Vision Section Vault Crawler
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/visual-section-crawler.mjs --limit=8
+
+      - name: Commit newly discovered formats & visual section blueprints
         run: |
           git config user.name "forma-discovery-bot"
           git config user.email "bot@forma.to"
-          git add src/data/discovered-feed.json
-          git diff --staged --quiet || git commit -m "chore(radar): update continuously scraped web formats & motion telemetry"
+          git add src/data/discovered-feed.json src/data/section-vault.json public/section-vault
+          git diff --staged --quiet || git commit -m "chore(vault): update continuously scraped web formats, Playwright section crops & Clean DOM blueprints"
           git push

@@ -16,6 +16,11 @@ import {
   recommendMixFromBrief,
   type TargetStack,
 } from "@/lib/composer";
+import {
+  filterVaultSections,
+  getSectionVaultFeed,
+  type SectionKind,
+} from "@/lib/section-vault";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 import { analyzeWebsiteUrl } from "../../../../forma-xray/src/analyzer.mjs";
 
@@ -128,6 +133,29 @@ const MCP_TOOLS = [
     },
   },
   {
+    name: "search_section_blueprints",
+    description:
+      "Query forma's proprietary Playwright + Vision Section Vault (real client-rendered Heros, Navbars, Bento/Features, Pricing Tables & Footers with Clean Semantic DOM Skeletons, getComputedStyle tokens, and Vision recreation prompts).",
+    inputSchema: {
+      type: "object",
+      properties: {
+        kind: {
+          type: "string",
+          enum: ["all", "hero", "navbar", "bento-features", "pricing", "cta-footer"],
+          description: "Filter by canonical UI section category.",
+        },
+        query: {
+          type: "string",
+          description: "Optional domain, font, or reference site filter (e.g. 'linear', 'pricing', 'agents', 'cal.com').",
+        },
+        mode: {
+          type: "string",
+          enum: ["all", "light", "dark"],
+        },
+      },
+    },
+  },
+  {
     name: "get_unslop_checklist",
     description:
       "Return mandatory subtractive anti-slop UI audit rules (unslop-ui) before shipping UI.",
@@ -151,6 +179,7 @@ export async function GET(request: Request) {
       openSourceXray: "forma-xray (included in /forma-xray)",
       catalogSize: WEB_FORMATS.length,
       discoveredRadarSize: discoveredFeed.sites.length,
+      sectionVaultSize: getSectionVaultFeed().totalSections,
       tools: MCP_TOOLS.map((t) => ({ name: t.name, description: t.description })),
     },
     { headers: CORS_HEADERS }
@@ -356,6 +385,21 @@ export async function POST(request: Request) {
               },
             ],
           },
+        },
+        { headers: CORS_HEADERS }
+      );
+    }
+
+    if (toolName === "search_section_blueprints") {
+      const kind = (args.kind as SectionKind | "all" | undefined) || "all";
+      const query = String(args.query || "");
+      const mode = (args.mode as "light" | "dark" | "all" | undefined) || "all";
+      const sections = filterVaultSections({ kind, query, mode, limit: 10 });
+      return NextResponse.json(
+        {
+          jsonrpc: "2.0",
+          id: id ?? 1,
+          result: { content: [{ type: "text", text: JSON.stringify(sections, null, 2) }] },
         },
         { headers: CORS_HEADERS }
       );

@@ -3,16 +3,18 @@ import { CURATED_COLOR_PALETTES, getContrastRatio } from "@/data/color-palettes"
 import { WEB_FORMATS } from "@/data/formats";
 import { GLOBAL_DESIGN_DIRECTORIES } from "@/data/world-references";
 import discoveredFeed from "@/data/discovered-feed.json";
+import { getSectionVaultFeed } from "@/lib/section-vault";
 import { recordTelemetryEvent } from "@/lib/telemetry";
 
 export async function GET(request: Request) {
   void recordTelemetryEvent({ event: "agent_llms_txt", request, target: "/llms.txt" });
   const origin = new URL(request.url).origin;
+  const vault = getSectionVaultFeed();
 
   const content = `# forma (${origin})
-> OpenRouter for Web Design. 5-layer composable Design DNA (60-30-10 OKLCH Color Science, Typography, Layout, Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), and \`unslop-ui\` guardrails.
+> OpenRouter for Web Design. 5-layer composable Design DNA (60-30-10 OKLCH Color Science, Typography, Layout, Primitives, Motion Physics), live URL X-Ray scraping (\`forma-xray\`), Playwright + Vision Section Blueprints, and \`unslop-ui\` guardrails.
 
-Catalog: ${WEB_FORMATS.length} composable formats · ${CURATED_COLOR_PALETTES.length} WCAG/OKLCH color systems · ${GLOBAL_DESIGN_DIRECTORIES.length} design directories · ${discoveredFeed.sites.length} live-scraped websites.
+Catalog: ${WEB_FORMATS.length} composable formats · ${vault.totalSections} Playwright + Vision section blueprints (Heros, Navbars, Pricing, Bento, Footers) · ${CURATED_COLOR_PALETTES.length} WCAG/OKLCH color systems · ${GLOBAL_DESIGN_DIRECTORIES.length} design directories · ${discoveredFeed.sites.length} live-scraped websites.
 
 ---
 
@@ -36,6 +38,12 @@ curl -fsSL -G "${origin}/api/scrape" --data-urlencode "url=https://linear.app"
 curl -fsSL "${origin}/api/discover?minScore=90"
 \`\`\`
 
+### D. Query Real Playwright + Vision Section Blueprints & Clean DOM Skeletons:
+\`\`\`sh
+curl -fsSL "${origin}/api/sections?kind=pricing&limit=6"
+curl -fsSL "${origin}/api/sections?kind=hero&mode=dark"
+\`\`\`
+
 ---
 
 ## 2. Connect via MCP (${origin}/api/mcp)
@@ -50,6 +58,7 @@ MCP Tools:
 - \`compose_design_spec\` — Compile a complete \`DESIGN.md\`.
 - \`xray_live_website\` — Scrape & extract tokens + animation curves from any live URL.
 - \`list_discovered_designs\` — Browse continuously scraped sites ranked by Anti-Slop Craft Score.
+- \`search_section_blueprints\` — Query ${vault.totalSections} Playwright + Vision section crops (\`hero\`, \`navbar\`, \`bento-features\`, \`pricing\`, \`cta-footer\`) with Clean Semantic DOM trees & recreation prompts.
 - \`list_color_palettes\` — Query ${CURATED_COLOR_PALETTES.length} curated 60-30-10 UI color systems (Radix Colors, Sanzo Wada, Happy Hues, Realtime Colors, Atmos OKLCH) with verified WCAG contrast ratios.
 - \`get_unslop_checklist\` — Mandatory subtractive UI audit rules.
 

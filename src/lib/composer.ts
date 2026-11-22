@@ -10,6 +10,12 @@ import {
   WEB_FORMATS,
   type WebFormat,
 } from "@/data/formats";
+import {
+  buildSectionBlueprintsMarkdown,
+  getAllVaultSections,
+  recommendSectionsForIdea,
+  type VisualSectionItem,
+} from "@/lib/section-vault";
 
 export type TargetStack =
   | "nextjs-tailwind"
@@ -29,6 +35,7 @@ export interface MixSelection {
   stack?: TargetStack;
   enforceUnslop?: boolean;
   customFormats?: WebFormat[];
+  pinnedSectionIds?: string[];
 }
 
 export interface RecommendationResult {
@@ -67,6 +74,7 @@ export interface ComposedGenome {
     motion: WebFormat;
   };
   uniqueSources: { name: string; url: string; extractedTrait: string }[];
+  matchedVaultSections: VisualSectionItem[];
   cssTokens: string;
   masterPrompt: string;
   cursorClaudeRules: string;
@@ -407,6 +415,21 @@ body {
     ),
   ].slice(0, 5);
 
+  const allVault = getAllVaultSections();
+  const pinnedSections = (input.pinnedSectionIds || [])
+    .map((id) => allVault.find((sec) => sec.id === id))
+    .filter((sec): sec is VisualSectionItem => Boolean(sec));
+  const autoSections = recommendSectionsForIdea(projectBrief, s.mode);
+  const matchedVaultSections = [
+    ...pinnedSections,
+    ...autoSections.filter(
+      (auto) =>
+        !pinnedSections.some((p) => p.id === auto.id || p.kind === auto.kind)
+    ),
+  ].slice(0, 4);
+
+  const sectionBlueprintsMd = buildSectionBlueprintsMarkdown(matchedVaultSections);
+
   const masterPrompt = `# DESIGN.md — 5-Layer Agentic Web Format Specification [${mixCode}]
 > Synthesized via **forma.to** for **${projectName}**
 > Reference DNA: ${uniqueSources.map((src) => `${src.name} (${src.url})`).join(" · ")}
@@ -490,8 +513,7 @@ ${m.rules.map((r) => `- ${r}`).join("\n")}
 ## 7. Brand Copy Voice & Mandatory Anti-Slop Guardrails (unslop-ui)
 - **Copy Formula:** ${layoutFmt.copyVoice.formula}
 - **CTA Phrasing:** ${surfaceFmt.copyVoice.ctaStyle}
-${guardrailsCombined.map((g) => `- [ ] ${g}`).join("\n")}
-`;
+${guardrailsCombined.map((g) => `- [ ] ${g}`).join("\n")}${sectionBlueprintsMd}`;
 
   const cursorClaudeRules = `# UI, Motion & Anti-Slop Rules (${projectName} — forma.to/${mixCode})
 
@@ -520,6 +542,7 @@ ${GLOBAL_UNSLOP_RULES.slice(0, 6).map((r) => `   - ${r}`).join("\n")}
       motion: motionFmt,
     },
     uniqueSources,
+    matchedVaultSections,
     cssTokens,
     masterPrompt,
     cursorClaudeRules,

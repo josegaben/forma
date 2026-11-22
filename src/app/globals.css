@@ -78,6 +78,29 @@ label.choice-chip:has(> input:focus-visible) {
   outline-offset: 2px;
 }
 
+/* Modern Web Guidance: Accessible single-row tabs with pseudo-element border indicator */
+.vault-tab {
+  position: relative;
+  flex: none;
+  color: var(--muted);
+  transition: color 150ms ease;
+}
+
+.vault-tab:hover {
+  color: var(--ink);
+}
+
+.vault-tab[aria-selected="true"] {
+  color: var(--ink);
+}
+
+.vault-tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  border-block-end: 2px solid var(--ink);
+}
+
 /* Modern Web Guidance: Modal Dialog scroll containment & light-dismiss */
 dialog.dna-modal {
   margin: auto;

@@ -56,6 +56,8 @@ import {
 } from "@/components/FormatVisualThumb";
 import { InteractiveComponentCard } from "@/components/InteractiveComponentCard";
 import { LiveFormatPreview } from "@/components/LiveFormatPreview";
+import { SectionVaultShowcase } from "@/components/SectionVaultShowcase";
+import { getSectionVaultFeed } from "@/lib/section-vault";
 
 const GITHUB_REPO_URL = "https://github.com/josegaben/forma";
 const GITHUB_XRAY_URL = "https://github.com/josegaben/forma-xray";
@@ -117,6 +119,15 @@ export function FormaStudio() {
   const [componentsId, setComponentsId] = useState("twentyfirst-craft");
   const [motionId, setMotionId] = useState("rauno-craft");
   const [stack, setStack] = useState<TargetStack>("nextjs-tailwind");
+  const [pinnedSectionIds, setPinnedSectionIds] = useState<string[]>([]);
+
+  const togglePinSection = (sectionId: string) => {
+    setPinnedSectionIds((prev) =>
+      prev.includes(sectionId)
+        ? prev.filter((id) => id !== sectionId)
+        : [...prev, sectionId]
+    );
+  };
 
   // Compendium Gallery state
   const [galleryTab, setGalleryTab] = useState<
@@ -247,6 +258,7 @@ export function FormaStudio() {
         stack,
         enforceUnslop: true,
         customFormats,
+        pinnedSectionIds,
       }),
     [
       surfaceId,
@@ -259,6 +271,7 @@ export function FormaStudio() {
       ideaInput,
       stack,
       customFormats,
+      pinnedSectionIds,
     ]
   );
 
@@ -456,6 +469,7 @@ export function FormaStudio() {
     TYPOGRAPHY_PAIRINGS.length +
     CRAFT_TOOLS_AND_ASSETS.length +
     discoveredFeed.sites.length +
+    getSectionVaultFeed().totalSections +
     GLOBAL_DESIGN_DIRECTORIES.length;
 
   const halfDir = Math.ceil(GLOBAL_DESIGN_DIRECTORIES.length / 2);
@@ -514,6 +528,13 @@ export function FormaStudio() {
               className="hidden md:inline hover:text-[var(--ink)] transition-colors"
             >
               {lang === "es" ? "Compendio" : "Compendium"}
+            </a>
+
+            <a
+              href="#section-vault"
+              className="hidden md:inline hover:text-[var(--ink)] transition-colors"
+            >
+              {lang === "es" ? "Secciones DOM" : "Section Vault"}
             </a>
 
             <a
@@ -1550,6 +1571,13 @@ export function FormaStudio() {
             </div>
           </div>
         </section>
+
+        {/* PLAYWRIGHT + VISION PROPRIETARY SECTION VAULT */}
+        <SectionVaultShowcase
+          lang={lang}
+          pinnedSectionIds={pinnedSectionIds}
+          onTogglePinSection={togglePinSection}
+        />
 
         {/* DARK CTA BAND */}
         <section className="bg-[#141413] text-[#fbfbfa] py-16 px-5">
