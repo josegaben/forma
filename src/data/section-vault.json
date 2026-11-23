@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-22T23:04:30.815Z",
+  "lastVisualScanAt": "2026-11-23T05:03:46.903Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 113,
+  "totalSections": 120,
   "countsByKind": {
-    "pricing": 20,
-    "bento-features": 13,
-    "hero": 30,
-    "cta-footer": 25,
-    "navbar": 25
+    "pricing": 21,
+    "bento-features": 14,
+    "hero": 32,
+    "cta-footer": 27,
+    "navbar": 26
   },
   "sections": [
     {
@@ -1369,6 +1369,158 @@
           "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
         ],
         "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by liveblocks.io's hero architecture: use a block wrapper (max-width 1440px, padding 48px 0px, gap normal) on background #000000 with #ffffff ink. Set the primary heading in suisse (60px, letter-spacing -1.2px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-railway-com-hero",
+      "siteUrl": "https://railway.com",
+      "pageUrl": "https://railway.com/",
+      "hostname": "railway.com",
+      "siteTitle": "Railway | The all-in-one intelligent cloud provider",
+      "kind": "hero",
+      "capturedAt": "2026-11-23T05:01:14.388Z",
+      "screenshotUrl": "/section-vault/railway-com-hero.jpg",
+      "dimensions": {
+        "width": 1400,
+        "height": 1562
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#13111c",
+        "ink": "#ffffff",
+        "accent": "#553f83",
+        "borderColor": "#ffffff",
+        "width": 1400,
+        "height": 1562,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1696px",
+        "radiusSample": "16px",
+        "headlineFont": "IBM Plex Serif",
+        "headlineSize": "54px",
+        "headlineTracking": "-1.96px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "agents",
+          "Deploy →",
+          "Agents",
+          "Deploy"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 150,
+            "easing": "cubic-bezier(0, 0, 0.2, 1)"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n    <img width=\"1400\" height=\"1562\" alt=\"visual-asset\" />\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"IBM Plex Serif 54px/-1.96px\">Let agents ship products as fast as they write code</h1>\n    <p>\n      Build, test, deploy, and improve your entire product in one loop, with your .\n      <a>agents</a>\n    </p>\n    <div data-layout=\"flex gap-12px\">\n      <a data-cta=\"bg:#553f83 r:8px\">Deploy →</a>\n      <a data-cta=\"bg:#000000 r:8px\">Agents</a>\n    </div>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from railway.com combining high-contrast obsidian surfaces (#13111c) with disciplined IBM Plex Serif hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1400×1562px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #13111c canvas.",
+        "microDetails": [
+          "Display typography set in IBM Plex Serif at 54px (tracking -1.96px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0, 0, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by railway.com's hero architecture: use a flex wrapper (max-width 1696px, padding 0px 0px, gap normal) on background #13111c with #ffffff ink. Set the primary heading in IBM Plex Serif (54px, letter-spacing -1.96px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #553f83 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-arc-net-hero",
+      "siteUrl": "https://arc.net",
+      "pageUrl": "https://arc.net/",
+      "hostname": "arc.net",
+      "siteTitle": "A farewell to Arc",
+      "kind": "hero",
+      "capturedAt": "2026-11-23T05:03:44.056Z",
+      "screenshotUrl": "/section-vault/arc-net-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 2764
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0b0b0b",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 2764,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "60px",
+        "headlineFont": "Exposure VAR",
+        "headlineSize": "76px",
+        "headlineTracking": "-2.432px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Read more",
+          "Dia"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 700,
+            "easing": "ease"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex column\">\n      <div>\n        <img width=\"254\" height=\"222\" alt=\"visual-asset\" />\n        <img width=\"228\" height=\"195\" alt=\"visual-asset\" />\n      </div>\n    <h1 data-type=\"Exposure VAR 76px/-2.432px\">A farewell to Arc</h1>\n    <p>Arc is sunsetting on December 22, 2026. Scroll to read what’s happening and see what’s nex</p>\n    <a data-layout=\"flex gap-12px\" data-cta=\"bg:#ffffff r:60px\">Read more</a>\n  </div>\n    <article>\n      <h2 data-type=\"ABC Oracle 38px/-1.14px\">We’ve decided to sunset Arc on December 22, 2026</h2>\n      <p>That’s not an easy sentence to write. We spent years building Arc and celebrating each and</p>\n      <p>\n        Our priority is to deliver best-in-class security for our members. Keeping a browser secur\n        <a>Dia</a>\n        <span>our engineering and security</span>\n      </p>\n      <p>We’ve worked to make switching to Dia as easy as possible for Arc members. Here’s how:</p>\n      <ul>\n        <li>Your passwords, bookmarks, extensions and history come over to Dia seamlessly.</li>\n        <li>Spaces, Folders, and Tab Groups are in Dia and import over with your data intact.</li>\n        <li>Dia now surpasses Arc benchmarks in stability, speed, and security.</li>\n      </ul>\n      <p>The browser features you use in Arc are free in Dia, and the AI is optional.</p>\n    </article>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from arc.net combining high-contrast obsidian surfaces (#0b0b0b) with disciplined Exposure VAR hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×2764px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #0b0b0b canvas.",
+        "microDetails": [
+          "Display typography set in Exposure VAR at 76px (tracking -2.432px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 60px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing ease)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by arc.net's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #0b0b0b with #ffffff ink. Set the primary heading in Exposure VAR (76px, letter-spacing -2.432px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
         "visualCraftScore": 95,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -2741,6 +2893,117 @@
           "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
         ],
         "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by supabase.com's pricing architecture: use a flex wrapper (max-width 1280px, padding 0px 48px, gap normal) on background #ffffff with #141413 ink. Set the primary heading in Source Code Pro (22px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #141413 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-arc-net-bento-features",
+      "siteUrl": "https://arc.net",
+      "pageUrl": "https://arc.net/",
+      "hostname": "arc.net",
+      "siteTitle": "A farewell to Arc",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-23T05:03:44.302Z",
+      "screenshotUrl": "/section-vault/arc-net-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 655
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 655,
+        "layoutMode": "grid",
+        "gridColumns": "2 tracks",
+        "gap": "83.52px normal",
+        "padding": "158px 185px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Exposure VAR",
+        "headlineSize": "64px",
+        "headlineTracking": "-1.92px",
+        "backdropFilter": "none",
+        "childCardCount": 3,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"grid cols-2 gap-83.52px\">\n  <div data-layout=\"flex column gap-20px\">\n    <h2 data-type=\"Exposure VAR 64px/-1.92px\">Timeline</h2>\n  </div>\n  <ol>\n    <li>\n      <p>October 22</p>\n      <p>New Arc accounts can no longer be created. For existing Arc members, nothing will change y</p>\n    </li>\n    <li>\n      <p>November 23</p>\n      <p>On iOS and Android, Browse for Me and other AI features will be disabled. Arc Search will </p>\n    </li>\n    <li>\n      <p>December 22</p>\n      <p>You will no longer be able to access or use Arc on macOS or Windows. Arc accounts will be </p>\n    </li>\n  </ol>\n</section>",
+      "vision": {
+        "archetype": "Modular 3-Cell Bento Architecture",
+        "summary": "Live-rendered bento-features from arc.net combining airy neutral stone/white surfaces (#ffffff) with disciplined Exposure VAR hierarchy and 3 structured sub-modules.",
+        "layoutMechanics": "GRID container (1440×655px, padding 158px 185px, gap 83.52px normal) using 3-column composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Exposure VAR at 64px (tracking -1.92px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Modular 3-Cell Bento Architecture inspired by arc.net's bento-features architecture: use a grid wrapper (max-width 1440px, padding 158px 185px, gap 83.52px normal) on background #ffffff with #000000 ink. Set the primary heading in Exposure VAR (64px, letter-spacing -1.92px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-onepagelove-com-pricing",
+      "siteUrl": "https://onepagelove.com",
+      "pageUrl": "https://onepagelove.com/pricing",
+      "hostname": "onepagelove.com",
+      "siteTitle": "Pricing table: Meaning & Website Examples | One Page Love",
+      "kind": "pricing",
+      "capturedAt": "2026-11-23T05:03:46.849Z",
+      "screenshotUrl": "/section-vault/onepagelove-com-pricing.jpg",
+      "dimensions": {
+        "width": 1360,
+        "height": 557
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#2d251f",
+        "accent": "#f7f4f3",
+        "borderColor": "#ded5cf",
+        "width": 1360,
+        "height": 557,
+        "layoutMode": "grid",
+        "gridColumns": "2 tracks",
+        "gap": "60px",
+        "padding": "60px 40px",
+        "maxWidth": "1360px",
+        "radiusSample": "8px",
+        "headlineFont": "Geist",
+        "headlineSize": "36px",
+        "headlineTracking": "-1.08px",
+        "backdropFilter": "none",
+        "childCardCount": 4,
+        "ctaTexts": [
+          "Glossary",
+          "Page layouts",
+          "Browse more examples →",
+          "Hustla↗"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"grid cols-2 gap-60px\">\n  <div>\n    <nav data-layout=\"flex gap-8px\">\n      <a>Glossary</a>\n      <span>/</span>\n      <a>Page layouts</a>\n    </nav>\n    <h1 data-type=\"Geist 36px/-1.08px\">Pricing table</h1>\n    <p>A pricing table presents plans or packages in a structure that makes their prices and diff</p>\n    <a>Browse more examples →</a>\n  </div>\n  <figure>\n    <div>\n      <a data-cta=\"bg:#f7f4f3 r:8px\">\n        <img width=\"425\" height=\"283\" alt=\"visual-asset\" />\n      </a>\n      <a data-cta=\"bg:#f7f4f3 r:8px\">\n        <img width=\"456\" height=\"333\" alt=\"visual-asset\" />\n      </a>\n      <a data-cta=\"bg:#f7f4f3 r:8px\">\n        <img width=\"456\" height=\"333\" alt=\"visual-asset\" />\n      </a>\n    </div>\n    <figcaption>\n      <span>From the collection</span>\n      <div data-layout=\"flex gap-8px\">\n        <a data-layout=\"flex gap-4px\">Hustla</a>\n        <a data-layout=\"flex gap-4px\">Tapdaa</a>\n        <a data-layout=\"flex gap-4px\">Voxt</a>\n      </div>\n    </figcaption>\n  </figure>\n</div>",
+      "vision": {
+        "archetype": "4-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from onepagelove.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist hierarchy and 4 structured sub-modules.",
+        "layoutMechanics": "GRID container (1360×557px, padding 60px 40px, gap 60px) using 4-column composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 36px (tracking -1.08px) paired with #2d251f primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #ded5cf hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a 4-Tier Transparent Pricing Matrix inspired by onepagelove.com's pricing architecture: use a grid wrapper (max-width 1360px, padding 60px 40px, gap 60px) on background #ffffff with #2d251f ink. Set the primary heading in Geist (36px, letter-spacing -1.08px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f7f4f3 strictly for the primary focal action.",
         "visualCraftScore": 94,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -4444,6 +4707,64 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-onepagelove-com-cta-footer",
+      "siteUrl": "https://onepagelove.com",
+      "pageUrl": "https://onepagelove.com/",
+      "hostname": "onepagelove.com",
+      "siteTitle": "One Page Love — One Page Website Inspiration and Templates",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-23T05:03:44.559Z",
+      "screenshotUrl": "/section-vault/onepagelove-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 357
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeeae7",
+        "ink": "#7e6858",
+        "accent": "#7e6858",
+        "borderColor": "#ded5cf",
+        "width": 1440,
+        "height": 357,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "50%",
+        "headlineFont": "Geist Mono",
+        "headlineSize": "12px",
+        "headlineTracking": "-0.4px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Websites",
+          "Page sections",
+          "Typefaces",
+          "Templates"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer role=\"contentinfo\">\n  <div>\n    <div data-layout=\"grid cols-4 gap-40px\">\n      <nav>\n        <h2 data-type=\"Geist Mono 12px/-0.4px\">Explore</h2>\n      </nav>\n      <nav>\n        <h2 data-type=\"Geist Mono 12px/-0.4px\">Resources</h2>\n      </nav>\n      <nav>\n        <h2 data-type=\"Geist Mono 12px/-0.4px\">One Page Love</h2>\n      </nav>\n        <h2 data-type=\"Geist Mono 12px/-0.4px\">Follow along</h2>\n    </div>\n    <div data-layout=\"flex gap-8px\">\n      <p>One Page Love · Hand-picked since 2008</p>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from onepagelove.com combining airy neutral stone/white surfaces (#eeeae7) with disciplined Geist Mono hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×357px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeeae7 canvas.",
+        "microDetails": [
+          "Display typography set in Geist Mono at 12px (tracking -0.4px) paired with #7e6858 primary ink.",
+          "Zero-clutter structural framing with 50% radii and subtle #ded5cf hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by onepagelove.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #eeeae7 with #7e6858 ink. Set the primary heading in Geist Mono (12px, letter-spacing -0.4px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #7e6858 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -7108,6 +7429,123 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-railway-com-cta-footer",
+      "siteUrl": "https://railway.com",
+      "pageUrl": "https://railway.com/",
+      "hostname": "railway.com",
+      "siteTitle": "Railway | The all-in-one intelligent cloud provider",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-23T05:01:20.391Z",
+      "screenshotUrl": "/section-vault/railway-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1432,
+        "height": 652
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#13111c",
+        "ink": "#f7f7f8",
+        "accent": "#1c1a29",
+        "borderColor": "#312c45",
+        "width": 1432,
+        "height": 652,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1432px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Features",
+          "Mobile app",
+          "Pricing",
+          "Agents"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div data-layout=\"grid cols-12 gap-20px\">\n    <a data-layout=\"flex gap-16px\" data-cta=\"bg:#1c1a29 r:12px\">\n      <span>The peaceful way to ship software is here</span>\n      <span data-layout=\"flex gap-4px\">Watch the film</span>\n    </a>\n    <a data-layout=\"flex gap-16px\" data-cta=\"bg:#1c1a29 r:12px\">\n      <span>The Railway app is now on iOS and Android</span>\n      <span data-layout=\"flex gap-4px\">Download now</span>\n    </a>\n  </div>\n  <div data-layout=\"grid cols-12 gap-40px\">\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Product</h3>\n    </div>\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Compare</h3>\n    </div>\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Resources</h3>\n    </div>\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Company</h3>\n    </div>\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Contact</h3>\n    </div>\n    <div data-layout=\"flex column\">\n      <h3 data-type=\"Inter 13px/normal\">Legal</h3>\n    </div>\n  </div>\n  <div data-layout=\"grid cols-12 gap-24px\">\n    <div data-layout=\"flex gap-8px\">\n      <a>Privacy Policy</a>\n      <a>Terms of Service</a>\n      <button>Cookies</button>\n    </div>\n    <div data-layout=\"flex\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#252134 r:9999px\">All systems operational</a>\n    </div>\n    <p>© 2026 Railway Corp. All rights reserved.</p>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from railway.com combining high-contrast obsidian surfaces (#13111c) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1432×652px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #13111c canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #f7f7f8 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #312c45 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by railway.com's cta-footer architecture: use a block wrapper (max-width 1432px, padding 0px 0px, gap normal) on background #13111c with #f7f7f8 ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #1c1a29 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-onepagelove-com-navbar",
+      "siteUrl": "https://onepagelove.com",
+      "pageUrl": "https://onepagelove.com/",
+      "hostname": "onepagelove.com",
+      "siteTitle": "One Page Love — One Page Website Inspiration and Templates",
+      "kind": "navbar",
+      "capturedAt": "2026-11-23T05:03:44.307Z",
+      "screenshotUrl": "/section-vault/onepagelove-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 86
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#7e6858",
+        "accent": "#efefef",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 86,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Geist",
+        "headlineSize": "13px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "One Page Love",
+          "Menu",
+          "Menu",
+          "🏠 Home"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (86px)",
+        "summary": "Live-rendered navbar from onepagelove.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×86px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 13px (tracking normal) paired with #7e6858 primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (86px) inspired by onepagelove.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #7e6858 ink. Set the primary heading in Geist (13px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #efefef strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     }
   ]
