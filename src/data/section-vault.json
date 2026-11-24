@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-23T17:03:19.155Z",
+  "lastVisualScanAt": "2026-11-24T03:43:33.484Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 129,
+  "totalSections": 138,
   "countsByKind": {
-    "pricing": 23,
-    "bento-features": 15,
-    "hero": 34,
-    "cta-footer": 29,
-    "navbar": 28
+    "pricing": 25,
+    "bento-features": 16,
+    "hero": 36,
+    "cta-footer": 31,
+    "navbar": 30
   },
   "sections": [
     {
@@ -649,6 +649,72 @@
       "tags": [
         "ai-agents",
         "devtools"
+      ]
+    },
+    {
+      "id": "sec-inngest-com-pricing",
+      "siteUrl": "https://inngest.com",
+      "pageUrl": "https://inngest.com/pricing",
+      "hostname": "inngest.com",
+      "siteTitle": "Pricing | Inngest",
+      "kind": "pricing",
+      "capturedAt": "2026-11-24T03:43:33.395Z",
+      "screenshotUrl": "/section-vault/inngest-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1852
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c1c1c",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#cdcdcd",
+        "width": 1440,
+        "height": 1852,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "40px",
+        "padding": "144px 32px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "Whyte Inktrap",
+        "headlineSize": "58px",
+        "headlineTracking": "-0.58px",
+        "backdropFilter": "none",
+        "childCardCount": 4,
+        "ctaTexts": [
+          "Start Free",
+          "Start Free",
+          "Start Free",
+          "Contact Us"
+        ],
+        "activeAnimations": [
+          {
+            "name": "v1-logo-marquee",
+            "duration": 40000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"flex column gap-40px\">\n  <div data-layout=\"flex column gap-16px\">\n    <h1 data-type=\"Whyte Inktrap 58px/-0.58px\">\n      <span>Pricing that scales with you</span>\n    </h1>\n    <h2 data-type=\"CircularXX 18px/-0.18px\">Inngest is an open source SDK for orchestrating event-driven apps and agents. Start locall</h2>\n  </div>\n  <div role=\"region\">\n    <p>Trusted by 100k+ developers at logos you actually know.</p>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "4-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from inngest.com combining high-contrast obsidian surfaces (#1c1c1c) with disciplined Whyte Inktrap hierarchy and 4 structured sub-modules.",
+        "layoutMechanics": "FLEX container (1440×1852px, padding 144px 32px, gap 40px) using 4-column composition on a deep low-glare dark #1c1c1c canvas.",
+        "microDetails": [
+          "Display typography set in Whyte Inktrap at 58px (tracking -0.58px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #cdcdcd hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a 4-Tier Transparent Pricing Matrix inspired by inngest.com's pricing architecture: use a flex wrapper (max-width 1440px, padding 144px 32px, gap 40px) on background #1c1c1c with #ffffff ink. Set the primary heading in Whyte Inktrap (58px, letter-spacing -0.58px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas"
       ]
     },
     {
@@ -1526,6 +1592,97 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-inngest-com-hero",
+      "siteUrl": "https://inngest.com",
+      "pageUrl": "https://inngest.com/",
+      "hostname": "inngest.com",
+      "siteTitle": "Durable Execution for Workflows & AI | Inngest",
+      "kind": "hero",
+      "capturedAt": "2026-11-24T03:43:31.040Z",
+      "screenshotUrl": "/section-vault/inngest-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c1c1c",
+        "ink": "#ffffff",
+        "accent": "#f65c4f",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "WhyteV1",
+        "headlineSize": "72px",
+        "headlineTracking": "-1.44px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "npm install inngestCopied",
+          "Start free",
+          "Read the case study",
+          "Read the case study"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 420,
+            "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 420,
+            "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 320,
+            "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 360,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 360,
+            "easing": "ease"
+          },
+          {
+            "name": "transition",
+            "duration": 360,
+            "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <div data-layout=\"flex gap-64px\">\n      <div data-layout=\"flex column gap-32px\">\n        <p>Open source durable execution</p>\n        <h1 data-type=\"WhyteV1 72px/-1.44px\">make every backend</h1>\n        <p>Inngest is the fastest way to orchestrate all your async code. Wrap functions in steps to </p>\n      </div>\n    </div>\n  </div>\n      <p>Trusted in production by</p>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from inngest.com combining high-contrast obsidian surfaces (#1c1c1c) with disciplined WhyteV1 hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #1c1c1c canvas.",
+        "microDetails": [
+          "Display typography set in WhyteV1 at 72px (tracking -1.44px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing cubic-bezier(0.2, 0.8, 0.2, 1))."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by inngest.com's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #1c1c1c with #ffffff ink. Set the primary heading in WhyteV1 (72px, letter-spacing -1.44px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f65c4f strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "productivity"
       ]
     },
     {
@@ -3189,6 +3346,63 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-inngest-com-bento-features",
+      "siteUrl": "https://inngest.com",
+      "pageUrl": "https://inngest.com/",
+      "hostname": "inngest.com",
+      "siteTitle": "Durable Execution for Workflows & AI | Inngest",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-24T03:43:31.363Z",
+      "screenshotUrl": "/section-vault/inngest-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 871
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c1c1c",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#e5e7eb",
+        "width": 1440,
+        "height": 871,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "WhyteV1",
+        "headlineSize": "64px",
+        "headlineTracking": "-2.24px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "View case study",
+          "View all"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n    <canvas width=\"1640\" height=\"1049\" alt=\"visual-asset\" />\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from inngest.com combining high-contrast obsidian surfaces (#1c1c1c) with disciplined WhyteV1 hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×871px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #1c1c1c canvas.",
+        "microDetails": [
+          "Display typography set in WhyteV1 at 64px (tracking -2.24px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #e5e7eb hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by inngest.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #1c1c1c with #ffffff ink. Set the primary heading in WhyteV1 (64px, letter-spacing -2.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
       ]
     },
     {
@@ -5213,6 +5427,186 @@
       ]
     },
     {
+      "id": "sec-furnitureconnect-com-hero",
+      "siteUrl": "https://www.furnitureconnect.com",
+      "pageUrl": "https://www.furnitureconnect.com/",
+      "hostname": "furnitureconnect.com",
+      "siteTitle": "The Agentic Catalog for Furniture Brands | Furniture Connect",
+      "kind": "hero",
+      "capturedAt": "2026-11-24T03:41:20.030Z",
+      "screenshotUrl": "/section-vault/furnitureconnect-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1048
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fdfcfc",
+        "ink": "#190b0c",
+        "accent": "#7246e1",
+        "borderColor": "#7246e1",
+        "width": 1440,
+        "height": 1048,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "bbhHegarty",
+        "headlineSize": "88px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 8,
+        "ctaTexts": [
+          "Start building your catalog"
+        ],
+        "activeAnimations": [
+          {
+            "name": "marquee",
+            "duration": 30000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex column gap-32px\">\n    <h1 data-type=\"bbhHegarty 88px/normal\">Show & Sell more furniture</h1>\n    <p>An Agentic Catalog that turns supplier PDFs, spreadsheets and missing dimensions into prod</p>\n    <a data-layout=\"flex gap-6px\" data-cta=\"bg:#7246e1 r:3.35544e+07px\">\n      <span data-layout=\"flex gap-6px\">Start building your catalog</span>\n    </a>\n  </div>\n  <section>\n    <p>Trusted by 100+ furniture teams</p>\n  </section>\n  <div data-layout=\"grid cols-4 gap-24px\">\n    <a data-layout=\"flex column gap-16px\" data-cta=\"ghost r:16px\">\n      <span>\n        <img width=\"306\" height=\"305\" alt=\"visual-asset\" />\n      </span>\n      <span data-layout=\"flex column gap-6px\">\n        <span data-layout=\"flex gap-8px\">Studio</span>\n        <span>Photoreal product and room imagery, without the studio day.</span>\n      </span>\n    </a>\n    <a data-layout=\"flex column gap-16px\" data-cta=\"ghost r:16px\">\n      <span>\n        <img width=\"306\" height=\"305\" alt=\"visual-asset\" />\n      </span>\n      <span data-layout=\"flex column gap-6px\">\n        <span data-layout=\"flex gap-8px\">Catalog</span>\n        <span>Supplier files in, complete product records out.</span>\n      </span>\n    </a>\n    <a data-layout=\"flex column gap-16px\" data-cta=\"ghost r:16px\">\n      <span>\n        <img width=\"306\" height=\"305\" alt=\"visual-asset\" />\n      </span>\n      <span data-layout=\"flex column gap-6px\">\n        <span data-layout=\"flex gap-8px\">AI Search</span>\n        <span>See which products AI assistants recommend, and what to fix.</span>\n      </span>\n    </a>\n    <a data-layout=\"flex column gap-16px\" data-cta=\"ghost r:16px\">\n      <span>\n        <img width=\"306\" height=\"305\" alt=\"visual-asset\" />\n      </span>\n      <span data-layout=\"flex column gap-6px\">\n        <span data-layout=\"flex gap-8px\">DAM</span>\n        <span>Every asset organized, connected and ready to share.</span>\n      </span>\n    </a>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Asymmetric Split Editorial Hero (4-column)",
+        "summary": "Live-rendered hero from furnitureconnect.com combining airy neutral stone/white surfaces (#fdfcfc) with disciplined bbhHegarty hierarchy and 8 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×1048px, padding 0px 0px) using 4-column composition on a crisp editorial light #fdfcfc canvas.",
+        "microDetails": [
+          "Display typography set in bbhHegarty at 88px (tracking normal) paired with #190b0c primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #7246e1 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Asymmetric Split Editorial Hero (4-column) inspired by furnitureconnect.com's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #fdfcfc with #190b0c ink. Set the primary heading in bbhHegarty (88px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #7246e1 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-inngest-com-navbar",
+      "siteUrl": "https://inngest.com",
+      "pageUrl": "https://inngest.com/",
+      "hostname": "inngest.com",
+      "siteTitle": "Durable Execution for Workflows & AI | Inngest",
+      "kind": "navbar",
+      "capturedAt": "2026-11-24T03:43:30.682Z",
+      "screenshotUrl": "/section-vault/inngest-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 88
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c1c1c",
+        "ink": "#f5f5f5",
+        "accent": "#f76246",
+        "borderColor": "#7c7c7c",
+        "width": 1440,
+        "height": 88,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "WhyteV1",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.16px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Platform",
+          "Use Cases",
+          "Customers",
+          "Resources"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (88px)",
+        "summary": "Live-rendered navbar from inngest.com combining high-contrast obsidian surfaces (#1c1c1c) with disciplined WhyteV1 hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×88px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #1c1c1c canvas.",
+        "microDetails": [
+          "Display typography set in WhyteV1 at 16px (tracking -0.16px) paired with #f5f5f5 primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #7c7c7c hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (88px) inspired by inngest.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #1c1c1c with #f5f5f5 ink. Set the primary heading in WhyteV1 (16px, letter-spacing -0.16px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f76246 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
+      ]
+    },
+    {
+      "id": "sec-inngest-com-cta-footer",
+      "siteUrl": "https://inngest.com",
+      "pageUrl": "https://inngest.com/",
+      "hostname": "inngest.com",
+      "siteTitle": "Durable Execution for Workflows & AI | Inngest",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-24T03:43:31.684Z",
+      "screenshotUrl": "/section-vault/inngest-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 886
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c1c1c",
+        "ink": "#ffffff",
+        "accent": "#212121",
+        "borderColor": "#e5e7eb",
+        "width": 1440,
+        "height": 886,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "WhyteV1",
+        "headlineSize": "26px",
+        "headlineTracking": "-0.26px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "All systems operational",
+          "Durable Execution",
+          "Queues & Flow Control",
+          "Observability"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <canvas width=\"1440\" height=\"886\" alt=\"visual-asset\" />\n  <div data-layout=\"flex column gap-48px\">\n    <div data-layout=\"flex gap-16px\">\n      <a data-layout=\"flex gap-10px\" data-cta=\"bg:#212121 r:6px\">\n        <span>All systems operational</span>\n      </a>\n    </div>\n    <div data-layout=\"grid cols-3 gap-48px\">\n        <h2 data-type=\"WhyteV1 26px/-0.26px\">Platform</h2>\n        <h2 data-type=\"WhyteV1 26px/-0.26px\">Use cases</h2>\n        <h2 data-type=\"WhyteV1 26px/-0.26px\">Resources</h2>\n        <h2 data-type=\"WhyteV1 26px/-0.26px\">Company</h2>\n        <h2 data-type=\"WhyteV1 26px/-0.26px\">Community</h2>\n      <div data-layout=\"flex gap-16px\">\n        <img width=\"86\" height=\"86\" alt=\"AICPA SOC 2 Type II compliance badge\" />\n        <p>Inngest is SOC 2 Type II compliant.</p>\n      </div>\n    </div>\n    <div data-layout=\"flex gap-16px\">\n      <p>© 2026 Inngest Inc. All rights reserved.</p>\n      <ul data-layout=\"flex gap-4px\">\n        <li>|</li>\n        <li>|</li>\n        <li>|</li>\n      </ul>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from inngest.com combining high-contrast obsidian surfaces (#1c1c1c) with disciplined WhyteV1 hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×886px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #1c1c1c canvas.",
+        "microDetails": [
+          "Display typography set in WhyteV1 at 26px (tracking -0.26px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #e5e7eb hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by inngest.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #1c1c1c with #ffffff ink. Set the primary heading in WhyteV1 (26px, letter-spacing -0.26px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #212121 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -5608,6 +6002,65 @@
         "ai-agents",
         "devtools",
         "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-furnitureconnect-com-pricing",
+      "siteUrl": "https://www.furnitureconnect.com",
+      "pageUrl": "https://www.furnitureconnect.com/pricing",
+      "hostname": "furnitureconnect.com",
+      "siteTitle": "AI Furniture Photography Pricing | Furniture Connect",
+      "kind": "pricing",
+      "capturedAt": "2026-11-24T03:41:22.003Z",
+      "screenshotUrl": "/section-vault/furnitureconnect-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 551
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#2a165f",
+        "ink": "#190b0c",
+        "accent": "#f5f4fe",
+        "borderColor": "#f5f4fe",
+        "width": 1440,
+        "height": 551,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 72px",
+        "maxWidth": "1440px",
+        "radiusSample": "16px",
+        "headlineFont": "bbhHegarty",
+        "headlineSize": "24px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 3,
+        "ctaTexts": [
+          "Start with Starter",
+          "Start with Growth",
+          "Talk to us"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"grid cols-3 gap-0px\">\n    <div data-layout=\"grid cols-1 gap-0px\">\n      <h2 data-type=\"bbhHegarty 24px/normal\">Starter</h2>\n      <p>For one person getting started</p>\n        <p>Or $990 billed yearly, saving 17%</p>\n      <p>500 credits per month</p>\n      <a data-layout=\"flex gap-6px\" data-cta=\"bg:#f5f4fe r:3.35544e+07px\">\n        <span data-layout=\"flex gap-6px\">Start with Starter</span>\n      </a>\n    </div>\n    <div data-layout=\"grid cols-1 gap-0px\">\n      <h2 data-type=\"bbhHegarty 24px/normal\">Growth</h2>\n      <p>For small teams selling on several channels</p>\n        <p>Or $3,990 billed yearly, saving 17%</p>\n      <p>2,500 credits per month</p>\n      <a data-layout=\"flex gap-6px\" data-cta=\"bg:#7246e1 r:3.35544e+07px\">\n        <span data-layout=\"flex gap-6px\">Start with Growth</span>\n      </a>\n    </div>\n    <div data-layout=\"grid cols-1 gap-0px\">\n      <h2 data-type=\"bbhHegarty 24px/normal\">Enterprise</h2>\n      <p>Unlimited catalog, set up around your team</p>\n      <div>\n        <p>Custom</p>\n        <p>Tailored packages</p>\n      </div>\n      <p>Credits sized to your team</p>\n      <a data-layout=\"flex gap-6px\" data-cta=\"bg:#002e25 r:3.35544e+07px\">\n        <span data-layout=\"flex gap-6px\">Talk to us</span>\n      </a>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "3-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from furnitureconnect.com combining high-contrast obsidian surfaces (#2a165f) with disciplined bbhHegarty hierarchy and 3 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×551px, padding 0px 72px) using 3-column composition on a deep low-glare dark #2a165f canvas.",
+        "microDetails": [
+          "Display typography set in bbhHegarty at 24px (tracking normal) paired with #190b0c primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #f5f4fe hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a 3-Tier Transparent Pricing Matrix inspired by furnitureconnect.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 72px, gap normal) on background #2a165f with #190b0c ink. Set the primary heading in bbhHegarty (24px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f5f4fe strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas",
+        "productivity"
       ]
     },
     {
@@ -8102,6 +8555,123 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by baseten.co's cta-footer architecture: use a block wrapper (max-width 1440px, padding 48px 12px, gap normal) on background #000000 with #000000 ink. Set the primary heading in geistMono (12px, letter-spacing 0.24px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-furnitureconnect-com-navbar",
+      "siteUrl": "https://www.furnitureconnect.com",
+      "pageUrl": "https://www.furnitureconnect.com/",
+      "hostname": "furnitureconnect.com",
+      "siteTitle": "The Agentic Catalog for Furniture Brands | Furniture Connect",
+      "kind": "navbar",
+      "capturedAt": "2026-11-24T03:41:19.817Z",
+      "screenshotUrl": "/section-vault/furnitureconnect-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 100
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fdfcfc",
+        "ink": "#190b0c",
+        "accent": "#190b0c",
+        "borderColor": "#7246e1",
+        "width": 1440,
+        "height": 100,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "20px",
+        "padding": "24px 32px",
+        "maxWidth": "1440px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "astaSans",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Skip to main content",
+          "Products",
+          "Solutions",
+          "Customers"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header data-layout=\"flex gap-20px\">\n  <a data-cta=\"bg:#190b0c r:3.35544e+07px\">Skip to main content</a>\n  <nav data-layout=\"flex gap-24px\">\n    <button data-layout=\"flex gap-4px\" data-cta=\"ghost r:2px\">Products</button>\n    <button data-layout=\"flex gap-4px\" data-cta=\"ghost r:2px\">Solutions</button>\n    <button data-layout=\"flex gap-4px\" data-cta=\"ghost r:2px\">Customers</button>\n    <button data-layout=\"flex gap-4px\" data-cta=\"ghost r:2px\">Resources</button>\n    <a>News</a>\n    <a>Pricing</a>\n  </nav>\n  <div data-layout=\"flex gap-17px\">\n    <a>Sign in</a>\n    <a data-layout=\"flex gap-6px\" data-cta=\"bg:#7246e1 r:3.35544e+07px\">\n      <span data-layout=\"flex gap-6px\">Get started</span>\n    </a>\n    <button data-layout=\"flex gap-4px\">\n      <span data-layout=\"flex gap-4px\">EN</span>\n    </button>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (100px)",
+        "summary": "Live-rendered navbar from furnitureconnect.com combining airy neutral stone/white surfaces (#fdfcfc) with disciplined astaSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×100px, padding 24px 32px, gap 20px) using centered single-rail composition on a crisp editorial light #fdfcfc canvas.",
+        "microDetails": [
+          "Display typography set in astaSans at 16px (tracking normal) paired with #190b0c primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #7246e1 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (100px) inspired by furnitureconnect.com's navbar architecture: use a flex wrapper (max-width 1440px, padding 24px 32px, gap 20px) on background #fdfcfc with #190b0c ink. Set the primary heading in astaSans (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #190b0c strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-furnitureconnect-com-cta-footer",
+      "siteUrl": "https://www.furnitureconnect.com",
+      "pageUrl": "https://www.furnitureconnect.com/",
+      "hostname": "furnitureconnect.com",
+      "siteTitle": "The Agentic Catalog for Furniture Brands | Furniture Connect",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-24T03:41:20.296Z",
+      "screenshotUrl": "/section-vault/furnitureconnect-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1001
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#2a165f",
+        "ink": "#fdfcfc",
+        "accent": "#fdfcfc",
+        "borderColor": "rgba(255,255,255,0.1)",
+        "width": 1440,
+        "height": 1001,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "2px",
+        "headlineFont": "astaSans",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "AI Studio",
+          "Catalog",
+          "AI Visibility",
+          "DAM"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n    <div data-layout=\"flex column gap-24px\">\n        <p>AI native studio, catalog and DAM for the furniture industry</p>\n    </div>\n  <div>\n    <div data-layout=\"flex gap-20px\">\n      <a data-layout=\"flex\">\n        <img width=\"41\" height=\"48\" alt=\"G2 Users Love Us\" />\n      </a>\n      <a data-layout=\"flex\">\n        <img width=\"42\" height=\"48\" alt=\"G2 High Performer, Fall 2026\" />\n      </a>\n      <a data-layout=\"flex\">\n        <img width=\"42\" height=\"48\" alt=\"G2 High Performer United Kingdom, Fall 2026\" />\n      </a>\n      <a data-layout=\"flex\">\n        <img width=\"82\" height=\"48\" alt=\"BFA British Furniture Association Supply Member\" />\n      </a>\n      <a data-layout=\"flex\">\n        <img width=\"69\" height=\"48\" alt=\"AHFA American Home Furnishings Alliance member\" />\n      </a>\n      <a data-layout=\"flex\">\n        <img width=\"48\" height=\"48\" alt=\"HFA Home Furnishings Association member\" />\n      </a>\n    </div>\n    <div data-layout=\"flex\">\n      <a>Add us as a preferred source on Google</a>\n    </div>\n  </div>\n  <div data-layout=\"flex gap-normal\">\n    <p data-layout=\"flex\">© 2026 Furniture Connect Limited. All rights reserved</p>\n    <nav data-layout=\"flex gap-normal\">\n      <a data-layout=\"flex\" data-cta=\"ghost r:2px\">Security</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:2px\">Trust Center</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:2px\">Privacy</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:2px\">Terms & conditions</a>\n      <a data-layout=\"flex\" data-cta=\"ghost r:2px\">Email policy</a>\n      <button data-layout=\"flex\" data-cta=\"ghost r:2px\">Cookie settings</button>\n    </nav>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from furnitureconnect.com combining high-contrast obsidian surfaces (#2a165f) with disciplined astaSans hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1001px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #2a165f canvas.",
+        "microDetails": [
+          "Display typography set in astaSans at 16px (tracking normal) paired with #fdfcfc primary ink.",
+          "Zero-clutter structural framing with 2px radii and subtle rgba(255,255,255,0.1) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by furnitureconnect.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #2a165f with #fdfcfc ink. Set the primary heading in astaSans (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #fdfcfc strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },
