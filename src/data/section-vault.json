@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-24T03:43:33.484Z",
+  "lastVisualScanAt": "2026-11-24T16:53:17.366Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 138,
+  "totalSections": 147,
   "countsByKind": {
-    "pricing": 25,
-    "bento-features": 16,
-    "hero": 36,
-    "cta-footer": 31,
-    "navbar": 30
+    "pricing": 27,
+    "bento-features": 17,
+    "hero": 38,
+    "cta-footer": 33,
+    "navbar": 32
   },
   "sections": [
     {
@@ -1683,6 +1683,96 @@
         "ai-agents",
         "devtools",
         "productivity"
+      ]
+    },
+    {
+      "id": "sec-terms-so-hero",
+      "siteUrl": "https://terms.so",
+      "pageUrl": "https://terms.so/",
+      "hostname": "terms.so",
+      "siteTitle": "Terms.so: Never touch DocuSign again.",
+      "kind": "hero",
+      "capturedAt": "2026-11-24T16:49:21.634Z",
+      "screenshotUrl": "/section-vault/terms-so-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 3730
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fefcfb",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#eeeeee",
+        "width": 1440,
+        "height": 3730,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 24px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "diatype",
+        "headlineSize": "56px",
+        "headlineTracking": "-2.8px",
+        "backdropFilter": "none",
+        "childCardCount": 8,
+        "ctaTexts": [
+          "Case Studies",
+          "Pricing",
+          "Login",
+          "Sign up"
+        ],
+        "activeAnimations": [
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          },
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          },
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          },
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          },
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          },
+          {
+            "name": "home-opening-dot",
+            "duration": 720,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n  <main data-layout=\"flex column gap-64px\">\n    <h1 data-type=\"diatype 56px/-2.8px\">\n      <span>\n        Sta t a dra t with AI.\n        <span>r</span>\n        <span>f</span>\n      </span>\n      <span>Chat about any contract.</span>\n      <span>Comment with counterpa</span>\n    </h1>\n    <div data-layout=\"flex gap-6px\">\n      <a data-layout=\"flex gap-4px\" data-cta=\"ghost r:8px\">Sign up</a>\n      <a data-layout=\"flex gap-4px\" data-cta=\"ghost r:8px\">\n        Watch a demo\n        <img width=\"18\" height=\"18\" alt=\"visual-asset\" />\n      </a>\n    </div>\n  </main>\n  <footer data-layout=\"grid cols-3 gap-48px\">\n    <div data-layout=\"flex column gap-20px\">\n      <p>Terms is a minimal document signing tool. Contracts are markdown you write and edit in the</p>\n    </div>\n    <nav data-layout=\"flex column gap-16px\">\n      <h2 data-type=\"diatype 12px/-0.12px\">Product</h2>\n    </nav>\n    <nav data-layout=\"flex column gap-16px\">\n      <h2 data-type=\"diatype 12px/-0.12px\">Company</h2>\n    </nav>\n  </footer>\n</div>",
+      "vision": {
+        "archetype": "Asymmetric Split Editorial Hero (4-column)",
+        "summary": "Live-rendered hero from terms.so combining airy neutral stone/white surfaces (#fefcfb) with disciplined diatype hierarchy and 8 structured sub-modules.",
+        "layoutMechanics": "FLEX container (1440×3730px, padding 0px 24px) using 4-column composition on a crisp editorial light #fefcfb canvas.",
+        "microDetails": [
+          "Display typography set in diatype at 56px (tracking -2.8px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #eeeeee hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Asymmetric Split Editorial Hero (4-column) inspired by terms.so's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 24px, gap normal) on background #fefcfb with #ffffff ink. Set the primary heading in diatype (56px, letter-spacing -2.8px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "docs"
       ]
     },
     {
@@ -3403,6 +3493,59 @@
       "tags": [
         "ai-agents",
         "productivity"
+      ]
+    },
+    {
+      "id": "sec-audienceful-com-pricing",
+      "siteUrl": "https://www.audienceful.com",
+      "pageUrl": "https://www.audienceful.com/pricing",
+      "hostname": "audienceful.com",
+      "siteTitle": "Pricing | Audienceful",
+      "kind": "pricing",
+      "capturedAt": "2026-11-24T16:49:16.267Z",
+      "screenshotUrl": "/section-vault/audienceful-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 466
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#262626",
+        "accent": "#262626",
+        "borderColor": "#e5e5e5",
+        "width": 1440,
+        "height": 466,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "inter",
+        "headlineSize": "72px",
+        "headlineTracking": "-2.52px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n        <p>Every plan includes the full editor, automations, forms, and managed deliverability. You o</p>\n</section>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from audienceful.com combining airy neutral stone/white surfaces (#ffffff) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×466px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in inter at 72px (tracking -2.52px) paired with #262626 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #e5e5e5 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by audienceful.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #262626 ink. Set the primary heading in inter (72px, letter-spacing -2.52px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #262626 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
       ]
     },
     {
@@ -5607,6 +5750,245 @@
       ]
     },
     {
+      "id": "sec-audienceful-com-navbar",
+      "siteUrl": "https://www.audienceful.com",
+      "pageUrl": "https://www.audienceful.com/",
+      "hostname": "audienceful.com",
+      "siteTitle": "Audienceful: Agentic Email Marketing Automation",
+      "kind": "navbar",
+      "capturedAt": "2026-11-24T16:49:13.464Z",
+      "screenshotUrl": "/section-vault/audienceful-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 56
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fdfcfc",
+        "ink": "#262626",
+        "accent": "#ffffff",
+        "borderColor": "#e5e5e5",
+        "width": 1440,
+        "height": 56,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "9999px",
+        "headlineFont": "inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "audienceful",
+          "Platform",
+          "Solutions",
+          "Integrations"
+        ],
+        "activeAnimations": [
+          {
+            "name": "pulse",
+            "duration": 2000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<nav>\n  <div data-layout=\"flex\">\n    <div data-layout=\"flex\">\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:9999px\">Login</a>\n      <a data-layout=\"flex gap-8px\" data-cta=\"bg:#0062ff r:9999px\">Start free</a>\n    </div>\n  </div>\n</nav>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (56px)",
+        "summary": "Live-rendered navbar from audienceful.com combining airy neutral stone/white surfaces (#fdfcfc) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×56px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #fdfcfc canvas.",
+        "microDetails": [
+          "Display typography set in inter at 16px (tracking normal) paired with #262626 primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle #e5e5e5 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (56px) inspired by audienceful.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #fdfcfc with #262626 ink. Set the primary heading in inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-audienceful-com-hero",
+      "siteUrl": "https://www.audienceful.com",
+      "pageUrl": "https://www.audienceful.com/",
+      "hostname": "audienceful.com",
+      "siteTitle": "Audienceful: Agentic Email Marketing Automation",
+      "kind": "hero",
+      "capturedAt": "2026-11-24T16:49:13.805Z",
+      "screenshotUrl": "/section-vault/audienceful-com-hero.jpg",
+      "dimensions": {
+        "width": 1302,
+        "height": 1911
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fdfcfc",
+        "ink": "#1c1917",
+        "accent": "#0062ff",
+        "borderColor": "#e5e5e5",
+        "width": 1302,
+        "height": 1911,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "64px 0px",
+        "maxWidth": "1302px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "inter",
+        "headlineSize": "84px",
+        "headlineTracking": "-2.52px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Try it for free"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div>\n  <div>\n    <h1 data-type=\"inter 84px/-2.52px\">\n      Email.\n      <span>Agentic</span>\n    </h1>\n    <p>\n      One platform for all Email Campaigns, , Newsletters, Forms and Transactional mail.\n      <span>Marketing Automation</span>\n    </p>\n    <div data-layout=\"flex gap-12px\">\n      <a data-layout=\"flex\" data-cta=\"bg:#0062ff r:3.35544e+07px\">Try it for free</a>\n    </div>\n  </div>\n    <div>\n        <img width=\"225\" height=\"495\" alt=\"Albertson House architecture studio email\" />\n        <img width=\"276\" height=\"607\" alt=\"Assembly v10 release notes email\" />\n        <img width=\"225\" height=\"571\" alt=\"Kismet skincare abandoned-cart email\" />\n        <img width=\"225\" height=\"571\" alt=\"Aether coffee maker launch email\" />\n        <img width=\"225\" height=\"571\" alt=\"Blur new-drop fashion email\" />\n        <img width=\"225\" height=\"495\" alt=\"Fuse product launch email introducing Fabric\" />\n    </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from audienceful.com combining airy neutral stone/white surfaces (#fdfcfc) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1302×1911px, padding 64px 0px) using centered single-rail composition on a crisp editorial light #fdfcfc canvas.",
+        "microDetails": [
+          "Display typography set in inter at 84px (tracking -2.52px) paired with #1c1917 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #e5e5e5 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by audienceful.com's hero architecture: use a block wrapper (max-width 1302px, padding 64px 0px, gap normal) on background #fdfcfc with #1c1917 ink. Set the primary heading in inter (84px, letter-spacing -2.52px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0062ff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-terms-so-navbar",
+      "siteUrl": "https://terms.so",
+      "pageUrl": "https://terms.so/",
+      "hostname": "terms.so",
+      "siteTitle": "Terms.so: Never touch DocuSign again.",
+      "kind": "navbar",
+      "capturedAt": "2026-11-24T16:49:20.985Z",
+      "screenshotUrl": "/section-vault/terms-so-navbar.jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 84
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fefcfb",
+        "ink": "#161512",
+        "accent": "#161512",
+        "borderColor": "#161512",
+        "width": 960,
+        "height": 84,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "16px",
+        "padding": "24px 0px",
+        "maxWidth": "960px",
+        "radiusSample": "8px",
+        "headlineFont": "diatype",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.16px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Case Studies",
+          "Pricing",
+          "Login",
+          "Sign up"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (84px)",
+        "summary": "Live-rendered navbar from terms.so combining airy neutral stone/white surfaces (#fefcfb) with disciplined diatype hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (960×84px, padding 24px 0px, gap 16px) using centered single-rail composition on a crisp editorial light #fefcfb canvas.",
+        "microDetails": [
+          "Display typography set in diatype at 16px (tracking -0.16px) paired with #161512 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #161512 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (84px) inspired by terms.so's navbar architecture: use a flex wrapper (max-width 960px, padding 24px 0px, gap 16px) on background #fefcfb with #161512 ink. Set the primary heading in diatype (16px, letter-spacing -0.16px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #161512 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "docs"
+      ]
+    },
+    {
+      "id": "sec-terms-so-cta-footer",
+      "siteUrl": "https://terms.so",
+      "pageUrl": "https://terms.so/",
+      "hostname": "terms.so",
+      "siteTitle": "Terms.so: Never touch DocuSign again.",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-24T16:49:23.299Z",
+      "screenshotUrl": "/section-vault/terms-so-cta-footer.jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 359
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fefcfb",
+        "ink": "#989490",
+        "accent": "#989490",
+        "borderColor": "#161512",
+        "width": 960,
+        "height": 359,
+        "layoutMode": "grid",
+        "gridColumns": "3 tracks",
+        "gap": "48px",
+        "padding": "96px 0px",
+        "maxWidth": "960px",
+        "radiusSample": "12px",
+        "headlineFont": "diatype",
+        "headlineSize": "12px",
+        "headlineTracking": "-0.12px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Sign up",
+          "Login",
+          "Pricing",
+          "API docs"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"grid cols-3 gap-48px\">\n  <div data-layout=\"flex column gap-20px\">\n    <p>Terms is a minimal document signing tool. Contracts are markdown you write and edit in the</p>\n  </div>\n  <nav data-layout=\"flex column gap-16px\">\n    <h2 data-type=\"diatype 12px/-0.12px\">Product</h2>\n    <ul data-layout=\"flex column gap-10px\">\n      <li>\n        <a>Sign up</a>\n      </li>\n      <li>\n        <a>Login</a>\n      </li>\n      <li>\n        <a>Pricing</a>\n      </li>\n      <li>\n        <a>API docs</a>\n      </li>\n      <li>\n        <a>Changelog</a>\n      </li>\n    </ul>\n  </nav>\n  <nav data-layout=\"flex column gap-16px\">\n    <h2 data-type=\"diatype 12px/-0.12px\">Company</h2>\n    <ul data-layout=\"flex column gap-10px\">\n      <li>\n        <a>Case Studies</a>\n      </li>\n      <li>\n        <a>Contact</a>\n      </li>\n      <li>\n        <a>Privacy Policy</a>\n      </li>\n      <li>\n        <a>Terms of Service</a>\n      </li>\n    </ul>\n  </nav>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from terms.so combining airy neutral stone/white surfaces (#fefcfb) with disciplined diatype hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (960×359px, padding 96px 0px, gap 48px) using centered single-rail composition on a crisp editorial light #fefcfb canvas.",
+        "microDetails": [
+          "Display typography set in diatype at 12px (tracking -0.12px) paired with #989490 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #161512 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by terms.so's cta-footer architecture: use a grid wrapper (max-width 960px, padding 96px 0px, gap 48px) on background #fefcfb with #989490 ink. Set the primary heading in diatype (12px, letter-spacing -0.12px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #989490 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools",
+        "fintech-saas",
+        "docs"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -6061,6 +6443,118 @@
         "ai-agents",
         "fintech-saas",
         "productivity"
+      ]
+    },
+    {
+      "id": "sec-audienceful-com-bento-features",
+      "siteUrl": "https://www.audienceful.com",
+      "pageUrl": "https://www.audienceful.com/",
+      "hostname": "audienceful.com",
+      "siteTitle": "Audienceful: Agentic Email Marketing Automation",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-24T16:49:14.177Z",
+      "screenshotUrl": "/section-vault/audienceful-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1173
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0b0b0b",
+        "ink": "#262626",
+        "accent": "#262626",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 1173,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "9999px",
+        "headlineFont": "inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Email Marketing",
+          "Marketing Automation",
+          "Transactional Email",
+          "AI Email Builder"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section>\n  <div>\n    <footer>\n      <div data-layout=\"flex gap-16px\">\n        <div data-layout=\"flex gap-16px\">© 2021– 2026 Audienceful</div>\n      </div>\n    </footer>\n      <svg>\n        <text>audienceful</text>\n      </svg>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from audienceful.com combining high-contrast obsidian surfaces (#0b0b0b) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1173px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #0b0b0b canvas.",
+        "microDetails": [
+          "Display typography set in inter at 16px (tracking normal) paired with #262626 primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by audienceful.com's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #0b0b0b with #262626 ink. Set the primary heading in inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #262626 strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-terms-so-pricing",
+      "siteUrl": "https://terms.so",
+      "pageUrl": "https://terms.so/",
+      "hostname": "terms.so",
+      "siteTitle": "Terms.so: Never touch DocuSign again.",
+      "kind": "pricing",
+      "capturedAt": "2026-11-24T16:49:22.602Z",
+      "screenshotUrl": "/section-vault/terms-so-pricing.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 800
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fefcfb",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1600,
+        "height": 800,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1600px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Mono",
+        "headlineSize": "11px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from terms.so combining airy neutral stone/white surfaces (#fefcfb) with disciplined Geist Mono hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1600×800px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #fefcfb canvas.",
+        "microDetails": [
+          "Display typography set in Geist Mono at 11px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by terms.so's pricing architecture: use a block wrapper (max-width 1600px, padding 0px 0px, gap normal) on background #fefcfb with #ffffff ink. Set the primary heading in Geist Mono (11px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "docs"
       ]
     },
     {
@@ -8672,6 +9166,64 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by furnitureconnect.com's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #2a165f with #fdfcfc ink. Set the primary heading in astaSans (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #fdfcfc strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-audienceful-com-cta-footer",
+      "siteUrl": "https://www.audienceful.com",
+      "pageUrl": "https://www.audienceful.com/",
+      "hostname": "audienceful.com",
+      "siteTitle": "Audienceful: Agentic Email Marketing Automation",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-24T16:49:14.459Z",
+      "screenshotUrl": "/section-vault/audienceful-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1304,
+        "height": 923
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0b0b0b",
+        "ink": "#262626",
+        "accent": "#262626",
+        "borderColor": "rgba(255,255,255,0.1)",
+        "width": 1304,
+        "height": 923,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1304px",
+        "radiusSample": "9999px",
+        "headlineFont": "inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Email Marketing",
+          "Marketing Automation",
+          "Transactional Email",
+          "AI Email Builder"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div data-layout=\"grid cols-5 gap-32px\">\n        <h4 data-type=\"inter 14px/normal\">Features</h4>\n        <h4 data-type=\"inter 14px/normal\">Integrations</h4>\n    <div>\n        <h4 data-type=\"inter 14px/normal\">Compare</h4>\n        <h4 data-type=\"inter 14px/normal\">Resources</h4>\n    </div>\n    <div>\n        <h4 data-type=\"inter 14px/normal\">Use Cases</h4>\n        <h4 data-type=\"inter 14px/normal\">Free Tools</h4>\n        <h4 data-type=\"inter 14px/normal\">Company</h4>\n    </div>\n  </div>\n  <div data-layout=\"flex gap-16px\">\n    <div data-layout=\"flex gap-16px\">© 2021– 2026 Audienceful</div>\n    <div data-layout=\"flex gap-16px\">\n        <div>Contact us:</div>\n        <button data-layout=\"inline-flex gap-8px\" data-cta=\"ghost r:9999px\">Support</button>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from audienceful.com combining high-contrast obsidian surfaces (#0b0b0b) with disciplined inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1304×923px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #0b0b0b canvas.",
+        "microDetails": [
+          "Display typography set in inter at 16px (tracking normal) paired with #262626 primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle rgba(255,255,255,0.1) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by audienceful.com's cta-footer architecture: use a block wrapper (max-width 1304px, padding 0px 0px, gap normal) on background #0b0b0b with #262626 ink. Set the primary heading in inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #262626 strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },
