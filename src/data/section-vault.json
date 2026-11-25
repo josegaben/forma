@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-25T01:51:21.684Z",
+  "lastVisualScanAt": "2026-11-25T16:39:51.626Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 152,
+  "totalSections": 159,
   "countsByKind": {
-    "pricing": 28,
+    "pricing": 29,
     "bento-features": 17,
-    "hero": 40,
-    "cta-footer": 34,
-    "navbar": 33
+    "hero": 42,
+    "cta-footer": 36,
+    "navbar": 35
   },
   "sections": [
     {
@@ -1864,6 +1864,85 @@
       ]
     },
     {
+      "id": "sec-zero-inc-hero",
+      "siteUrl": "https://zero.inc",
+      "pageUrl": "https://zero.inc/",
+      "hostname": "zero.inc",
+      "siteTitle": "Zero – AI-native CRM for Startups",
+      "kind": "hero",
+      "capturedAt": "2026-11-25T16:38:20.441Z",
+      "screenshotUrl": "/section-vault/zero-inc-hero.jpg",
+      "dimensions": {
+        "width": 1425,
+        "height": 855
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ded7da",
+        "ink": "#2e0000",
+        "accent": "#ffffff",
+        "borderColor": "#380505",
+        "width": 1425,
+        "height": 855,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1425px",
+        "radiusSample": "999px",
+        "headlineFont": "geomanist",
+        "headlineSize": "68px",
+        "headlineTracking": "-1.368px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start for free",
+          "Request demo",
+          "01Prospect",
+          "02Close"
+        ],
+        "activeAnimations": [
+          {
+            "name": "hQFWTd",
+            "duration": 380,
+            "easing": "linear"
+          },
+          {
+            "name": "hQFWTd",
+            "duration": 380,
+            "easing": "linear"
+          },
+          {
+            "name": "hQFWTd",
+            "duration": 380,
+            "easing": "linear"
+          },
+          {
+            "name": "hQFWTd",
+            "duration": 380,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"flex column\">\n      <div data-layout=\"grid cols-4 gap-4px\">\n        <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">Prospect</button>\n        <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">Close</button>\n        <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">Grow</button>\n        <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">Scale</button>\n      </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from zero.inc combining airy neutral stone/white surfaces (#ded7da) with disciplined geomanist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1425×855px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ded7da canvas.",
+        "microDetails": [
+          "Display typography set in geomanist at 68px (tracking -1.368px) paired with #2e0000 primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #380505 hairlines.",
+          "GPU-friendly motion choreography (4 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by zero.inc's hero architecture: use a block wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #ded7da with #2e0000 ink. Set the primary heading in geomanist (68px, letter-spacing -1.368px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
       "id": "sec-treg-to-hero",
       "siteUrl": "https://treg.to",
       "pageUrl": "https://treg.to/",
@@ -3684,6 +3763,62 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by posthog.com's pricing architecture: use a flex wrapper (max-width 977px, padding 40px 40px, gap 32px) on background #eef0e7 with #374151 ink. Set the primary heading in RoundHog (60px, letter-spacing -1.5px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #cd8407 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-zero-inc-pricing",
+      "siteUrl": "https://zero.inc",
+      "pageUrl": "https://zero.inc/pricing",
+      "hostname": "zero.inc",
+      "siteTitle": "CRM Pricing & Plans – Zero",
+      "kind": "pricing",
+      "capturedAt": "2026-11-25T16:38:46.607Z",
+      "screenshotUrl": "/section-vault/zero-inc-pricing.jpg",
+      "dimensions": {
+        "width": 1425,
+        "height": 393
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ece9ea",
+        "ink": "#2e0000",
+        "accent": "#2e0000",
+        "borderColor": "#2e0000",
+        "width": 1425,
+        "height": 393,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "132px 32px",
+        "maxWidth": "1425px",
+        "radiusSample": "999px",
+        "headlineFont": "geomanist",
+        "headlineSize": "54px",
+        "headlineTracking": "-1.62px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Monthly",
+          "Annual−20%"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <h1 data-type=\"geomanist 54px/-1.62px\">Your complete GTM stack in one place</h1>\n  <p>Find, win and grow customers with Zero. Replace your CRM and the tools around it. Put agen</p>\n  <div data-layout=\"flex gap-12px\">\n    <div data-layout=\"flex\">\n      <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">Monthly</button>\n      <button data-layout=\"flex gap-6.4px\" data-cta=\"ghost r:999px\">\n        Annual\n        <span data-layout=\"flex\">−20%</span>\n      </button>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from zero.inc combining airy neutral stone/white surfaces (#ece9ea) with disciplined geomanist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1425×393px, padding 132px 32px) using centered single-rail composition on a crisp editorial light #ece9ea canvas.",
+        "microDetails": [
+          "Display typography set in geomanist at 54px (tracking -1.62px) paired with #2e0000 primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #2e0000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by zero.inc's pricing architecture: use a flex wrapper (max-width 1425px, padding 132px 32px, gap normal) on background #ece9ea with #2e0000 ink. Set the primary heading in geomanist (54px, letter-spacing -1.62px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #2e0000 strictly for the primary focal action.",
         "visualCraftScore": 94,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -6129,6 +6264,62 @@
         "devtools",
         "fintech-saas",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-allo-joshpuckett-me-hero",
+      "siteUrl": "https://allo.joshpuckett.me",
+      "pageUrl": "https://allo.joshpuckett.me/",
+      "hostname": "allo.joshpuckett.me",
+      "siteTitle": "Allo, your friendly neighborhood font",
+      "kind": "hero",
+      "capturedAt": "2026-11-25T16:36:22.007Z",
+      "screenshotUrl": "/section-vault/allo-joshpuckett-me-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fcfcfc",
+        "ink": "#111111",
+        "accent": "#111111",
+        "borderColor": "#111111",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "40px 56px",
+        "maxWidth": "1440px",
+        "radiusSample": "6px",
+        "headlineFont": "Allo",
+        "headlineSize": "32px",
+        "headlineTracking": "-0.64px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Allo.",
+          "Get the font↓"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <header data-layout=\"flex gap-28px\">\n    <button data-cta=\"ghost r:6px\">\n      <span>\n        Allo\n        <span>.</span>\n      </span>\n    </button>\n    <a data-layout=\"flex gap-8px\" data-cta=\"bg:#111111 r:23px\">\n      <span>Get the font</span>\n      <span>↓</span>\n    </a>\n  </header>\n  <div data-layout=\"grid cols-1\">\n    <canvas width=\"1420\" height=\"826\" alt=\"visual-asset\" />\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from allo.joshpuckett.me combining airy neutral stone/white surfaces (#fcfcfc) with disciplined Allo hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 40px 56px) using centered single-rail composition on a crisp editorial light #fcfcfc canvas.",
+        "microDetails": [
+          "Display typography set in Allo at 32px (tracking -0.64px) paired with #111111 primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #111111 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by allo.joshpuckett.me's hero architecture: use a flex wrapper (max-width 1440px, padding 40px 56px, gap normal) on background #fcfcfc with #111111 ink. Set the primary heading in Allo (32px, letter-spacing -0.64px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #111111 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -9541,6 +9732,236 @@
       },
       "tags": [
         "devtools"
+      ]
+    },
+    {
+      "id": "sec-allo-joshpuckett-me-navbar",
+      "siteUrl": "https://allo.joshpuckett.me",
+      "pageUrl": "https://allo.joshpuckett.me/",
+      "hostname": "allo.joshpuckett.me",
+      "siteTitle": "Allo, your friendly neighborhood font",
+      "kind": "navbar",
+      "capturedAt": "2026-11-25T16:36:21.622Z",
+      "screenshotUrl": "/section-vault/allo-joshpuckett-me-navbar.jpg",
+      "dimensions": {
+        "width": 1328,
+        "height": 72
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fcfcfc",
+        "ink": "#111111",
+        "accent": "#111111",
+        "borderColor": "#111111",
+        "width": 1328,
+        "height": 72,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "28px",
+        "padding": "0px 0px",
+        "maxWidth": "1328px",
+        "radiusSample": "6px",
+        "headlineFont": "Allo",
+        "headlineSize": "15px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Allo.",
+          "Get the font↓"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header data-layout=\"flex gap-28px\">\n  <button data-cta=\"ghost r:6px\">\n    <span>\n      Allo\n      <span>.</span>\n    </span>\n  </button>\n  <a data-layout=\"flex gap-8px\" data-cta=\"bg:#111111 r:23px\">\n    <span>Get the font</span>\n    <span>↓</span>\n  </a>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (72px)",
+        "summary": "Live-rendered navbar from allo.joshpuckett.me combining airy neutral stone/white surfaces (#fcfcfc) with disciplined Allo hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1328×72px, padding 0px 0px, gap 28px) using centered single-rail composition on a crisp editorial light #fcfcfc canvas.",
+        "microDetails": [
+          "Display typography set in Allo at 15px (tracking normal) paired with #111111 primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #111111 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (72px) inspired by allo.joshpuckett.me's navbar architecture: use a flex wrapper (max-width 1328px, padding 0px 0px, gap 28px) on background #fcfcfc with #111111 ink. Set the primary heading in Allo (15px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #111111 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-allo-joshpuckett-me-cta-footer",
+      "siteUrl": "https://allo.joshpuckett.me",
+      "pageUrl": "https://allo.joshpuckett.me/",
+      "hostname": "allo.joshpuckett.me",
+      "siteTitle": "Allo, your friendly neighborhood font",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-25T16:36:22.854Z",
+      "screenshotUrl": "/section-vault/allo-joshpuckett-me-cta-footer.jpg",
+      "dimensions": {
+        "width": 1328,
+        "height": 523
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fcfcfc",
+        "ink": "#111111",
+        "accent": "#111111",
+        "borderColor": "rgba(0,0,0,0.08)",
+        "width": 1328,
+        "height": 523,
+        "layoutMode": "grid",
+        "gridColumns": "1 tracks",
+        "gap": "28px",
+        "padding": "48px 0px",
+        "maxWidth": "1328px",
+        "radiusSample": "12px",
+        "headlineFont": "Allo",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Inter",
+          "Rasmus Andersson",
+          "Seb McLauchlan",
+          "Kenney"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"grid cols-1 gap-28px\">\n  <div data-layout=\"grid cols-1 gap-18px\">\n    <p>Allo began from 4.1, which provided an incredible base to work from. Every one of Allo’s g</p>\n    <p>Allo also pays homage to Honk Sans by and aims to bring some of that same warmth and fun t</p>\n  </div>\n  <p>\n    —\n    <span>\n      <span>J</span>\n      <span>o</span>\n      <span>s</span>\n      <span>h</span>\n    </span>\n  </p>\n  <dl data-layout=\"grid cols-1 gap-10px\">\n    <div data-layout=\"grid cols-2 gap-12px\">\n      <dt>Sounds</dt>\n      <dd>\n        <span>· UI and interface packs, CC0</span>\n      </dd>\n    </div>\n    <div data-layout=\"grid cols-2 gap-12px\">\n      <dt>Typeface</dt>\n      <dd>\n        Allo, by\n        <span>· SIL Open Font License</span>\n      </dd>\n    </div>\n    <div data-layout=\"grid cols-2 gap-12px\">\n      <dt>Thanks</dt>\n      <dd>\n        , &\n        <span>for their collaboration along the way.</span>\n      </dd>\n    </div>\n  </dl>\n  <p>\n    <button>© 2026</button>\n  </p>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from allo.joshpuckett.me combining airy neutral stone/white surfaces (#fcfcfc) with disciplined Allo hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1328×523px, padding 48px 0px, gap 28px) using centered single-rail composition on a crisp editorial light #fcfcfc canvas.",
+        "microDetails": [
+          "Display typography set in Allo at 16px (tracking normal) paired with #111111 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle rgba(0,0,0,0.08) hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by allo.joshpuckett.me's cta-footer architecture: use a grid wrapper (max-width 1328px, padding 48px 0px, gap 28px) on background #fcfcfc with #111111 ink. Set the primary heading in Allo (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #111111 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-zero-inc-navbar",
+      "siteUrl": "https://zero.inc",
+      "pageUrl": "https://zero.inc/",
+      "hostname": "zero.inc",
+      "siteTitle": "Zero – AI-native CRM for Startups",
+      "kind": "navbar",
+      "capturedAt": "2026-11-25T16:37:53.058Z",
+      "screenshotUrl": "/section-vault/zero-inc-navbar.jpg",
+      "dimensions": {
+        "width": 1425,
+        "height": 58
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ece9ea",
+        "ink": "#f2efe8",
+        "accent": "#f6f5f6",
+        "borderColor": "#2e0000",
+        "width": 1425,
+        "height": 58,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "8px 72px",
+        "maxWidth": "1425px",
+        "radiusSample": "16px",
+        "headlineFont": "Geist",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Product",
+          "Customers",
+          "Careers",
+          "Pricing"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (58px)",
+        "summary": "Live-rendered navbar from zero.inc combining airy neutral stone/white surfaces (#ece9ea) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1425×58px, padding 8px 72px) using centered single-rail composition on a crisp editorial light #ece9ea canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 16px (tracking normal) paired with #f2efe8 primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #2e0000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (58px) inspired by zero.inc's navbar architecture: use a flex wrapper (max-width 1425px, padding 8px 72px, gap normal) on background #ece9ea with #f2efe8 ink. Set the primary heading in Geist (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f6f5f6 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-zero-inc-cta-footer",
+      "siteUrl": "https://zero.inc",
+      "pageUrl": "https://zero.inc/",
+      "hostname": "zero.inc",
+      "siteTitle": "Zero – AI-native CRM for Startups",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-25T16:38:42.655Z",
+      "screenshotUrl": "/section-vault/zero-inc-cta-footer.jpg",
+      "dimensions": {
+        "width": 1425,
+        "height": 734
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#2e0404",
+        "ink": "#f2efe8",
+        "accent": "#ffffff",
+        "borderColor": "#2e0000",
+        "width": 1425,
+        "height": 734,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1425px",
+        "radiusSample": "18px",
+        "headlineFont": "Geist",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Zero site",
+          "Log in",
+          "Start for free",
+          "Prospect"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <div data-layout=\"flex gap-12px\">\n      <p>© 2026 Technologies</p>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from zero.inc combining high-contrast obsidian surfaces (#2e0404) with disciplined Geist hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1425×734px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #2e0404 canvas.",
+        "microDetails": [
+          "Display typography set in Geist at 16px (tracking normal) paired with #f2efe8 primary ink.",
+          "Zero-clutter structural framing with 18px radii and subtle #2e0000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by zero.inc's cta-footer architecture: use a flex wrapper (max-width 1425px, padding 0px 0px, gap normal) on background #2e0404 with #f2efe8 ink. Set the primary heading in Geist (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     }
   ]
