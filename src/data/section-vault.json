@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-24T16:53:17.366Z",
+  "lastVisualScanAt": "2026-11-25T01:51:21.684Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 147,
+  "totalSections": 152,
   "countsByKind": {
-    "pricing": 27,
+    "pricing": 28,
     "bento-features": 17,
-    "hero": 38,
-    "cta-footer": 33,
-    "navbar": 32
+    "hero": 40,
+    "cta-footer": 34,
+    "navbar": 33
   },
   "sections": [
     {
@@ -1776,6 +1776,94 @@
       ]
     },
     {
+      "id": "sec-posthog-com-hero",
+      "siteUrl": "https://posthog.com",
+      "pageUrl": "https://posthog.com/",
+      "hostname": "posthog.com",
+      "siteTitle": "PostHog – Your product’s context layer",
+      "kind": "hero",
+      "capturedAt": "2026-11-25T01:51:19.052Z",
+      "screenshotUrl": "/section-vault/posthog-com-hero.jpg",
+      "dimensions": {
+        "width": 979,
+        "height": 214
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#d3dac6",
+        "ink": "#111827",
+        "accent": "#cd8407",
+        "borderColor": "#bfc1b7",
+        "width": 979,
+        "height": 214,
+        "layoutMode": "grid",
+        "gridColumns": "2 tracks",
+        "gap": "normal 32px",
+        "padding": "0px 0px",
+        "maxWidth": "979px",
+        "radiusSample": "6px",
+        "headlineFont": "RoundHog",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.9px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Get started",
+          "Install with AI"
+        ],
+        "activeAnimations": [
+          {
+            "name": "rough-notation-dash",
+            "duration": 231.17985981201178,
+            "easing": "linear"
+          },
+          {
+            "name": "rough-notation-dash",
+            "duration": 232.89996280439618,
+            "easing": "linear"
+          },
+          {
+            "name": "rough-notation-dash",
+            "duration": 167.10043113220976,
+            "easing": "linear"
+          },
+          {
+            "name": "rough-notation-dash",
+            "duration": 168.81974625138224,
+            "easing": "linear"
+          },
+          {
+            "name": "rough-notation-dash",
+            "duration": 396.5451678196561,
+            "easing": "linear"
+          },
+          {
+            "name": "rough-notation-dash",
+            "duration": 403.4548321803439,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"grid cols-2 gap-normal\">\n  <div>\n    <h1 data-type=\"RoundHog 36px/-0.9px\">\n      Your product's\n      <span>context layer</span>\n    </h1>\n    <p>\n      PostHog ingests and stores your so you and your can query and act on it.\n      <span>analytics, errors, replays, and business data</span>\n      <span>agents</span>\n    </p>\n    <p>Join 500,000+ teams already shipping with PostHog.</p>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from posthog.com combining airy neutral stone/white surfaces (#d3dac6) with disciplined RoundHog hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (979×214px, padding 0px 0px, gap normal 32px) using centered single-rail composition on a crisp editorial light #d3dac6 canvas.",
+        "microDetails": [
+          "Display typography set in RoundHog at 36px (tracking -0.9px) paired with #111827 primary ink.",
+          "Zero-clutter structural framing with 6px radii and subtle #bfc1b7 hairlines.",
+          "GPU-friendly motion choreography (6 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by posthog.com's hero architecture: use a grid wrapper (max-width 979px, padding 0px 0px, gap normal 32px) on background #d3dac6 with #111827 ink. Set the primary heading in RoundHog (36px, letter-spacing -0.9px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #cd8407 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
+      ]
+    },
+    {
       "id": "sec-treg-to-hero",
       "siteUrl": "https://treg.to",
       "pageUrl": "https://treg.to/",
@@ -3541,6 +3629,61 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by audienceful.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #262626 ink. Set the primary heading in inter (72px, letter-spacing -2.52px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #262626 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-posthog-com-pricing",
+      "siteUrl": "https://posthog.com",
+      "pageUrl": "https://posthog.com/pricing",
+      "hostname": "posthog.com",
+      "siteTitle": "PostHog pricing – Start free, scale when you need",
+      "kind": "pricing",
+      "capturedAt": "2026-11-25T01:51:21.470Z",
+      "screenshotUrl": "/section-vault/posthog-com-pricing.jpg",
+      "dimensions": {
+        "width": 977,
+        "height": 442
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eef0e7",
+        "ink": "#374151",
+        "accent": "#cd8407",
+        "borderColor": "#b17816",
+        "width": 977,
+        "height": 442,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "32px",
+        "padding": "40px 40px",
+        "maxWidth": "977px",
+        "radiusSample": "8px",
+        "headlineFont": "RoundHog",
+        "headlineSize": "60px",
+        "headlineTracking": "-1.5px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Get started - free"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex gap-32px\">\n  <div>\n    <h1 data-type=\"RoundHog 60px/-1.5px\">\n      97% of companies use PostHog\n      <span>for free.</span>\n    </h1>\n    <p>One day we’d like your money, but not today. Only add a card if you need more than the fre</p>\n    <div data-layout=\"flex gap-8px\">\n      <span>No credit card required</span>\n    </div>\n  </div>\n  <div>\n    <div>\n      <img width=\"42\" height=\"69\" alt=\"visual-asset\" />\n      <img width=\"37\" height=\"47\" alt=\"visual-asset\" />\n    </div>\n    <img width=\"320\" height=\"291\" alt=\"A boxed copy of PostHog 3000, 1990s shrink-wrapp\" />\n    <div>\n      <img width=\"133\" height=\"99\" alt=\"visual-asset\" />\n      <img width=\"84\" height=\"106\" alt=\"visual-asset\" />\n    </div>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from posthog.com combining airy neutral stone/white surfaces (#eef0e7) with disciplined RoundHog hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (977×442px, padding 40px 40px, gap 32px) using centered single-rail composition on a crisp editorial light #eef0e7 canvas.",
+        "microDetails": [
+          "Display typography set in RoundHog at 60px (tracking -1.5px) paired with #374151 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #b17816 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by posthog.com's pricing architecture: use a flex wrapper (max-width 977px, padding 40px 40px, gap 32px) on background #eef0e7 with #374151 ink. Set the primary heading in RoundHog (60px, letter-spacing -1.5px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #cd8407 strictly for the primary focal action.",
         "visualCraftScore": 94,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -9229,6 +9372,175 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-wam-studio-navbar",
+      "siteUrl": "https://wam.studio",
+      "pageUrl": "https://wam.studio/",
+      "hostname": "wam.studio",
+      "siteTitle": "Warren & Mahoney Architects | Warren and Mahoney",
+      "kind": "navbar",
+      "capturedAt": "2026-11-25T01:51:19.390Z",
+      "screenshotUrl": "/section-vault/wam-studio-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 64
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 64,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "2px",
+        "headlineFont": "die-grotesk-a",
+        "headlineSize": "20px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Work",
+          "Practice",
+          "People",
+          "News"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (64px)",
+        "summary": "Live-rendered navbar from wam.studio combining airy neutral stone/white surfaces (#ffffff) with disciplined die-grotesk-a hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×64px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in die-grotesk-a at 20px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 2px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (64px) inspired by wam.studio's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in die-grotesk-a (20px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-wam-studio-hero",
+      "siteUrl": "https://wam.studio",
+      "pageUrl": "https://wam.studio/",
+      "hostname": "wam.studio",
+      "siteTitle": "Warren & Mahoney Architects | Warren and Mahoney",
+      "kind": "hero",
+      "capturedAt": "2026-11-25T01:51:19.645Z",
+      "screenshotUrl": "/section-vault/wam-studio-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "die-grotesk-a",
+        "headlineSize": "20px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from wam.studio combining airy neutral stone/white surfaces (#ffffff) with disciplined die-grotesk-a hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×900px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in die-grotesk-a at 20px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by wam.studio's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in die-grotesk-a (20px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-wam-studio-cta-footer",
+      "siteUrl": "https://wam.studio",
+      "pageUrl": "https://wam.studio/",
+      "hostname": "wam.studio",
+      "siteTitle": "Warren & Mahoney Architects | Warren and Mahoney",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-25T01:51:20.024Z",
+      "screenshotUrl": "/section-vault/wam-studio-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1080
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#bebebe",
+        "accent": "#bebebe",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 1080,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "128px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "die-grotesk-a",
+        "headlineSize": "30px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Instagram",
+          "LinkedIn",
+          "Privacy Statement",
+          "Supplier Code of Conduct"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n    <div data-layout=\"flex\">\n      <div>\n        <h3 data-type=\"die-grotesk-a 30px/normal\">Follow</h3>\n        <a>Instagram</a>\n        <a>LinkedIn</a>\n      </div>\n    </div>\n  <div data-layout=\"flex\">\n    <div data-layout=\"flex gap-16px\">\n      <a>Privacy Statement</a>\n      <a>Supplier Code of Conduct</a>\n      <span>© 2026</span>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from wam.studio combining airy neutral stone/white surfaces (#ffffff) with disciplined die-grotesk-a hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×1080px, padding 128px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in die-grotesk-a at 30px (tracking normal) paired with #bebebe primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by wam.studio's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 128px 0px, gap normal) on background #ffffff with #bebebe ink. Set the primary heading in die-grotesk-a (30px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #bebebe strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
       ]
     }
   ]
