@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-26T01:29:13.770Z",
+  "lastVisualScanAt": "2026-11-26T16:12:21.273Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 165,
+  "totalSections": 171,
   "countsByKind": {
-    "pricing": 29,
+    "pricing": 30,
     "bento-features": 18,
-    "hero": 44,
-    "cta-footer": 38,
-    "navbar": 36
+    "hero": 46,
+    "cta-footer": 39,
+    "navbar": 38
   },
   "sections": [
     {
@@ -2007,6 +2007,76 @@
       ]
     },
     {
+      "id": "sec-amie-so-hero",
+      "siteUrl": "https://amie.so",
+      "pageUrl": "https://amie.so/",
+      "hostname": "amie.so",
+      "siteTitle": "Amie - AI Note Taker",
+      "kind": "hero",
+      "capturedAt": "2026-11-26T16:12:19.421Z",
+      "screenshotUrl": "/section-vault/amie-so-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 14147
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#000000",
+        "accent": "#11a8ff",
+        "borderColor": "#b5b5b7",
+        "width": 1440,
+        "height": 14147,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "8px",
+        "headlineFont": "Inter",
+        "headlineSize": "20px",
+        "headlineTracking": "-0.003px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Features",
+          "Pricing",
+          "Login",
+          "Get started"
+        ],
+        "activeAnimations": [
+          {
+            "name": "scrollX",
+            "duration": 70000,
+            "easing": "linear"
+          },
+          {
+            "name": "scrollX",
+            "duration": 70000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n  <div>\n    <div data-layout=\"flex column\">\n      <div data-layout=\"flex gap-12px\">\n        <span data-layout=\"flex gap-6px\">#1 Product of the Day</span>\n        <img width=\"181\" height=\"28\" alt=\"Featured on the App Store\" />\n      </div>\n        <div>Run your workday on autopilot with AI agents</div>\n      <p>Our MCP gives Claude or ChatGPT access to your meeting notes, calendar, emails and todos.</p>\n      <div data-layout=\"flex gap-10px\">\n        <a data-layout=\"flex\" data-cta=\"bg:#11a8ff r:12px\">Get started</a>\n        <button data-layout=\"flex gap-8px\" data-cta=\"bg:#ffffff r:12px\">Download</button>\n      </div>\n    </div>\n    <div data-layout=\"flex column gap-4px\">\n      <span>Trusted by teams at</span>\n    </div>\n    <div data-layout=\"flex column gap-32px\">\n        <div>Share summary. Keep CRM updated. Plan action items. Schedule next meeting.</div>\n    </div>\n    <div data-layout=\"flex column gap-32px\">\n      <div data-layout=\"flex column gap-8px\">\n        <span data-layout=\"flex gap-6px\">Meeting Notes</span>\n        <h4 data-type=\"Inter 40px/-0.5px\">Summarize any meeting, without a bot</h4>\n      </div>\n      <div data-layout=\"flex gap-8px\">\n        <span>Replaces:</span>\n      </div>\n      <div data-layout=\"flex column gap-8px\">\n        <h4 data-type=\"Inter 20px/-0.5px\">Why Amie?</h4>\n      </div>\n      <p>There are 27 meeting notes apps out there. If summaries is all you need, any of them will </p>\n      <p>If you want to use them to become better at your job, you'll need Amie. An app that knows </p>\n    </div>\n    <div data-layout=\"flex column gap-32px\">\n      <div data-layout=\"flex column gap-8px\">\n        <span data-layout=\"flex gap-6px\">AI Chat</span>\n        <h4 data-type=\"Inter 40px/-0.5px\">Ask Amie to do or find anything</h4>\n      </div>\n      <div data-layout=\"flex\">\n        <img width=\"300\" height=\"42\" alt=\"Chat review disclaimer\" />\n      </div>\n      <div data-layout=\"flex column gap-20px\">\n        <span>Nish really was too kind with his review.</span>\n      </div>\n      <div data-layout=\"flex column gap-8px\">\n        <h4 data-type=\"Inter 20px/-0.5px\">Chat Actions</h4>\n      </div>\n    </div>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from amie.so combining airy neutral stone/white surfaces (#fafafa) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×14147px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 20px (tracking -0.003px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #b5b5b7 hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by amie.so's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #fafafa with #000000 ink. Set the primary heading in Inter (20px, letter-spacing -0.003px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #11a8ff strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
+      ]
+    },
+    {
       "id": "sec-treg-to-hero",
       "siteUrl": "https://treg.to",
       "pageUrl": "https://treg.to/",
@@ -3957,6 +4027,62 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-amie-so-pricing",
+      "siteUrl": "https://amie.so",
+      "pageUrl": "https://amie.so/pricing",
+      "hostname": "amie.so",
+      "siteTitle": "Amie - Pricing",
+      "kind": "pricing",
+      "capturedAt": "2026-11-26T16:12:21.214Z",
+      "screenshotUrl": "/section-vault/amie-so-pricing.jpg",
+      "dimensions": {
+        "width": 976,
+        "height": 265
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#171717",
+        "accent": "#171717",
+        "borderColor": "#cdcdcd",
+        "width": 976,
+        "height": 265,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "48px 0px",
+        "maxWidth": "976px",
+        "radiusSample": "9999px",
+        "headlineFont": "Inter",
+        "headlineSize": "56px",
+        "headlineTracking": "-0.7px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Bill monthly",
+          "Bill yearly"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<div data-layout=\"flex column\">\n  <div data-layout=\"flex column\">\n    <h1 data-type=\"Inter 56px/-0.7px\">\n      Which plan is right for you?\n      <span>Use our 7 day free trial.</span>\n    </h1>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from amie.so combining airy neutral stone/white surfaces (#fafafa) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (976×265px, padding 48px 0px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 56px (tracking -0.7px) paired with #171717 primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle #cdcdcd hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by amie.so's pricing architecture: use a flex wrapper (max-width 976px, padding 48px 0px, gap normal) on background #fafafa with #171717 ink. Set the primary heading in Inter (56px, letter-spacing -0.7px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #171717 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "fintech-saas"
       ]
     },
     {
@@ -6630,6 +6756,123 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-amie-so-navbar",
+      "siteUrl": "https://amie.so",
+      "pageUrl": "https://amie.so/",
+      "hostname": "amie.so",
+      "siteTitle": "Amie - AI Note Taker",
+      "kind": "navbar",
+      "capturedAt": "2026-11-26T16:12:19.178Z",
+      "screenshotUrl": "/section-vault/amie-so-navbar.jpg",
+      "dimensions": {
+        "width": 1024,
+        "height": 59
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#000000",
+        "accent": "#11a8ff",
+        "borderColor": "#cdcdcd",
+        "width": 1024,
+        "height": 59,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 24px",
+        "maxWidth": "1024px",
+        "radiusSample": "8px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.003px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Features",
+          "Pricing",
+          "Login",
+          "Get started"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<nav data-layout=\"flex\">\n    <div data-layout=\"flex gap-6px\">\n      <a data-layout=\"flex\" data-cta=\"ghost r:8px\">Login</a>\n      <a data-layout=\"flex\" data-cta=\"bg:#11a8ff r:8px\">Get started</a>\n    </div>\n</nav>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (59px)",
+        "summary": "Live-rendered navbar from amie.so combining airy neutral stone/white surfaces (#fafafa) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1024×59px, padding 0px 24px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking -0.003px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 8px radii and subtle #cdcdcd hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (59px) inspired by amie.so's navbar architecture: use a flex wrapper (max-width 1024px, padding 0px 24px, gap normal) on background #fafafa with #000000 ink. Set the primary heading in Inter (16px, letter-spacing -0.003px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #11a8ff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-amie-so-cta-footer",
+      "siteUrl": "https://amie.so",
+      "pageUrl": "https://amie.so/",
+      "hostname": "amie.so",
+      "siteTitle": "Amie - AI Note Taker",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-26T16:12:19.686Z",
+      "screenshotUrl": "/section-vault/amie-so-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 577
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#fafafa",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#cdcdcd",
+        "width": 1440,
+        "height": 577,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "40px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.003px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Blog",
+          "Our Story",
+          "Calendar",
+          "Changelog"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n  <div>\n    <div data-layout=\"flex\">\n      <div data-layout=\"flex column gap-12px\">\n        <a>Blog</a>\n        <a>Our Story</a>\n        <a>Calendar</a>\n        <a>Changelog</a>\n        <a>Tools</a>\n        <a>Templates</a>\n      </div>\n      <div data-layout=\"flex column gap-12px\">\n        <a>Contact us</a>\n        <a>Download</a>\n        <a>Affiliates</a>\n        <a>Reviews</a>\n        <a>Art</a>\n      </div>\n      <div data-layout=\"flex column gap-12px\">\n        <a>LinkedIn</a>\n        <a>Instagram</a>\n        <a>x.com</a>\n      </div>\n    </div>\n    <div data-layout=\"flex gap-24px\">\n      <div data-layout=\"flex gap-24px\">\n        <a>Privacy Policy</a>\n        <a>Terms of use</a>\n        <a>Imprint</a>\n        <div>© Amie 2026</div>\n      </div>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from amie.so combining airy neutral stone/white surfaces (#fafafa) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×577px, padding 40px 0px) using centered single-rail composition on a crisp editorial light #fafafa canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking -0.003px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #cdcdcd hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by amie.so's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 40px 0px, gap normal) on background #fafafa with #000000 ink. Set the primary heading in Inter (16px, letter-spacing -0.003px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "productivity"
       ]
     },
     {
@@ -10323,6 +10566,117 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by coryetzkorn.com's cta-footer architecture: use a grid wrapper (max-width 1536px, padding 80px 64px, gap 64px) on background #ffffff with #8a8a8a ink. Set the primary heading in -apple-system (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #8a8a8a strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-peststopboys-co-uk-navbar",
+      "siteUrl": "https://peststopboys.co.uk",
+      "pageUrl": "https://peststopboys.co.uk/",
+      "hostname": "peststopboys.co.uk",
+      "siteTitle": "Brighton Pest Control - Pest Stop Boys",
+      "kind": "navbar",
+      "capturedAt": "2026-11-26T16:12:19.220Z",
+      "screenshotUrl": "/section-vault/peststopboys-co-uk-navbar.jpg",
+      "dimensions": {
+        "width": 1345,
+        "height": 65
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1865f6",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1345,
+        "height": 65,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1345px",
+        "radiusSample": "12px",
+        "headlineFont": "Siaga",
+        "headlineSize": "14px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Home",
+          "About",
+          "Services",
+          "Commercial Pest Control"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<nav data-layout=\"flex\">\n  <ul data-layout=\"flex\">\n    <li>\n      <a>Home</a>\n    </li>\n    <li>\n      <a>About</a>\n    </li>\n    <li>\n      <a>Services</a>\n    </li>\n    <li>\n      <a>Pests</a>\n    </li>\n    <li>\n      <a>Locations</a>\n    </li>\n    <li>\n      <a>Contact</a>\n    </li>\n  </ul>\n</nav>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (65px)",
+        "summary": "Live-rendered navbar from peststopboys.co.uk combining high-contrast obsidian surfaces (#1865f6) with disciplined Siaga hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1345×65px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #1865f6 canvas.",
+        "microDetails": [
+          "Display typography set in Siaga at 14px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (65px) inspired by peststopboys.co.uk's navbar architecture: use a flex wrapper (max-width 1345px, padding 0px 0px, gap normal) on background #1865f6 with #ffffff ink. Set the primary heading in Siaga (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-peststopboys-co-uk-hero",
+      "siteUrl": "https://peststopboys.co.uk",
+      "pageUrl": "https://peststopboys.co.uk/",
+      "hostname": "peststopboys.co.uk",
+      "siteTitle": "Brighton Pest Control - Pest Stop Boys",
+      "kind": "hero",
+      "capturedAt": "2026-11-26T16:12:19.532Z",
+      "screenshotUrl": "/section-vault/peststopboys-co-uk-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#808080",
+        "accent": "#808080",
+        "borderColor": "#808080",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Siaga",
+        "headlineSize": "14px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from peststopboys.co.uk combining airy neutral stone/white surfaces (#ffffff) with disciplined Siaga hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Siaga at 14px (tracking normal) paired with #808080 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #808080 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by peststopboys.co.uk's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #808080 ink. Set the primary heading in Siaga (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #808080 strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },
