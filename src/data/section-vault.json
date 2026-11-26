@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-25T16:39:51.626Z",
+  "lastVisualScanAt": "2026-11-26T01:29:13.770Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 159,
+  "totalSections": 165,
   "countsByKind": {
     "pricing": 29,
-    "bento-features": 17,
-    "hero": 42,
-    "cta-footer": 36,
-    "navbar": 35
+    "bento-features": 18,
+    "hero": 44,
+    "cta-footer": 38,
+    "navbar": 36
   },
   "sections": [
     {
@@ -1943,6 +1943,70 @@
       ]
     },
     {
+      "id": "sec-ecouter-ai-navbar",
+      "siteUrl": "https://ecouter.ai",
+      "pageUrl": "https://ecouter.ai/",
+      "hostname": "ecouter.ai",
+      "siteTitle": "Écouter - Understand your customers",
+      "kind": "navbar",
+      "capturedAt": "2026-11-26T01:29:12.744Z",
+      "screenshotUrl": "/section-vault/ecouter-ai-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 110
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#ffffff",
+        "accent": "#0b0b0b",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 110,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "99px",
+        "headlineFont": "Die Grotesk",
+        "headlineSize": "16px",
+        "headlineTracking": "-0.16px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Solutions",
+          "Products",
+          "Resources",
+          "About"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+          }
+        ]
+      },
+      "cleanDom": "<header>\n  <div data-layout=\"grid cols-1\">\n    <a data-layout=\"flex gap-12px\">\n      <img width=\"22\" height=\"22\" alt=\"visual-asset\" />\n      <span>Écouter released CustomerVoice 2.3</span>\n      <span data-layout=\"flex gap-6px\">Request access</span>\n    </a>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (110px)",
+        "summary": "Live-rendered navbar from ecouter.ai combining airy neutral stone/white surfaces (#ffffff) with disciplined Die Grotesk hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×110px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Die Grotesk at 16px (tracking -0.16px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 99px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing cubic-bezier(0.16, 1, 0.3, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (110px) inspired by ecouter.ai's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #ffffff ink. Set the primary heading in Die Grotesk (16px, letter-spacing -0.16px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0b0b0b strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
       "id": "sec-treg-to-hero",
       "siteUrl": "https://treg.to",
       "pageUrl": "https://treg.to/",
@@ -3824,6 +3888,75 @@
       },
       "tags": [
         "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-ecouter-ai-bento-features",
+      "siteUrl": "https://ecouter.ai",
+      "pageUrl": "https://ecouter.ai/",
+      "hostname": "ecouter.ai",
+      "siteTitle": "Écouter - Understand your customers",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-26T01:29:13.309Z",
+      "screenshotUrl": "/section-vault/ecouter-ai-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1287
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#1c3621",
+        "ink": "#ecd9e6",
+        "accent": "#ecd9e6",
+        "borderColor": "#ecd9e6",
+        "width": 1440,
+        "height": 1287,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "140px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Die Grotesk",
+        "headlineSize": "12px",
+        "headlineTracking": "1.68px",
+        "backdropFilter": "none",
+        "childCardCount": 3,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 1600,
+            "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 600,
+            "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+          },
+          {
+            "name": "marquee",
+            "duration": 50000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section>\n  <div data-layout=\"grid cols-1 gap-56px\">\n    <header data-layout=\"grid cols-1 gap-20px\">\n      <div data-layout=\"flex gap-24px\">\n        <h2 data-type=\"Die Grotesk 12px/1.68px\">Trusted by</h2>\n        <p>Consumer & industry leaders</p>\n      </div>\n    </header>\n    <h2 data-type=\"Inter Tight 50px/-2.016px\">\n      You’re in safe hands\n      <em>trusted by leaders & innovators</em>\n    </h2>\n    <ul data-layout=\"grid cols-3 gap-56px\">\n      <li data-layout=\"grid cols-1 gap-14px\">\n        <p>Customer responses more than five times longer than average.</p>\n      </li>\n      <li data-layout=\"grid cols-1 gap-14px\">\n        <p>Results in hours, not days.</p>\n      </li>\n      <li data-layout=\"grid cols-1 gap-14px\">\n        <p>Millions of possible respondents.</p>\n      </li>\n    </ul>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Modular 3-Cell Bento Architecture",
+        "summary": "Live-rendered bento-features from ecouter.ai combining high-contrast obsidian surfaces (#1c3621) with disciplined Die Grotesk hierarchy and 3 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×1287px, padding 140px 0px) using 3-column composition on a deep low-glare dark #1c3621 canvas.",
+        "microDetails": [
+          "Display typography set in Die Grotesk at 12px (tracking 1.68px) paired with #ecd9e6 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ecd9e6 hairlines.",
+          "GPU-friendly motion choreography (3 live WAAPI timelines, primary easing cubic-bezier(0.16, 1, 0.3, 1))."
+        ],
+        "agentRecreationPrompt": "Build a Modular 3-Cell Bento Architecture inspired by ecouter.ai's bento-features architecture: use a block wrapper (max-width 1440px, padding 140px 0px, gap normal) on background #1c3621 with #ecd9e6 ink. Set the primary heading in Die Grotesk (12px, letter-spacing 1.68px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ecd9e6 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     },
     {
@@ -6320,6 +6453,183 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-ecouter-ai-hero",
+      "siteUrl": "https://ecouter.ai",
+      "pageUrl": "https://ecouter.ai/",
+      "hostname": "ecouter.ai",
+      "siteTitle": "Écouter - Understand your customers",
+      "kind": "hero",
+      "capturedAt": "2026-11-26T01:29:13.009Z",
+      "screenshotUrl": "/section-vault/ecouter-ai-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0b0b0b",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter Tight",
+        "headlineSize": "89px",
+        "headlineTracking": "-4.0176px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Discover more"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex\">\n  <img width=\"1440\" height=\"900\" alt=\"visual-asset\" />\n  <video width=\"1440\" height=\"900\" alt=\"visual-asset\" />\n  <div data-layout=\"grid cols-1 gap-36px\">\n    <h1 data-type=\"Inter Tight 89px/-4.0176px\">\n      Understand your\n      <em>customers</em>\n    </h1>\n    <p>Real human interviews that reveal what people think, why they think it, and what to do nex</p>\n    <a data-layout=\"flex gap-16px\">\n      <span>Discover more</span>\n    </a>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from ecouter.ai combining high-contrast obsidian surfaces (#0b0b0b) with disciplined Inter Tight hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #0b0b0b canvas.",
+        "microDetails": [
+          "Display typography set in Inter Tight at 89px (tracking -4.0176px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by ecouter.ai's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #0b0b0b with #ffffff ink. Set the primary heading in Inter Tight (89px, letter-spacing -4.0176px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-ecouter-ai-cta-footer",
+      "siteUrl": "https://ecouter.ai",
+      "pageUrl": "https://ecouter.ai/",
+      "hostname": "ecouter.ai",
+      "siteTitle": "Écouter - Understand your customers",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-26T01:29:13.603Z",
+      "screenshotUrl": "/section-vault/ecouter-ai-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1068
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0b0b0b",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 1068,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "140px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "99px",
+        "headlineFont": "Inter Tight",
+        "headlineSize": "66px",
+        "headlineTracking": "-2.9808px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Request demo",
+          "For participants",
+          "For brands",
+          "Platform"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer>\n  <div>\n    <div data-layout=\"flex gap-32px\">\n      <p>\n        Hear what your customers\n        <em>really mean</em>\n      </p>\n      <a data-layout=\"flex\" data-cta=\"bg:#ffffff r:99px\">\n        <span>Request demo</span>\n      </a>\n    </div>\n    <div data-layout=\"grid cols-5 gap-32px\">\n      <p data-layout=\"grid cols-1\">\n        <span>Human & AI-powered</span>\n        <em>qualitative research</em>\n      </p>\n      <div data-layout=\"grid cols-1 gap-18px\">\n        <p>Products</p>\n      </div>\n      <div data-layout=\"grid cols-1 gap-18px\">\n        <p>Solutions</p>\n      </div>\n      <div data-layout=\"grid cols-1 gap-18px\">\n        <p>Resources</p>\n      </div>\n      <div data-layout=\"grid cols-1 gap-18px\">\n        <p>Company</p>\n      </div>\n    </div>\n    <div data-layout=\"flex gap-16px\">\n      <p>\n        © 2026 Écouter\n        <span>All rights reserved.</span>\n      </p>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from ecouter.ai combining high-contrast obsidian surfaces (#0b0b0b) with disciplined Inter Tight hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1068px, padding 140px 0px) using centered single-rail composition on a deep low-glare dark #0b0b0b canvas.",
+        "microDetails": [
+          "Display typography set in Inter Tight at 66px (tracking -2.9808px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 99px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by ecouter.ai's cta-footer architecture: use a block wrapper (max-width 1440px, padding 140px 0px, gap normal) on background #0b0b0b with #ffffff ink. Set the primary heading in Inter Tight (66px, letter-spacing -2.9808px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-coryetzkorn-com-hero",
+      "siteUrl": "https://www.coryetzkorn.com",
+      "pageUrl": "https://www.coryetzkorn.com/",
+      "hostname": "coryetzkorn.com",
+      "siteTitle": "Cory Etzkorn",
+      "kind": "hero",
+      "capturedAt": "2026-11-26T01:29:12.418Z",
+      "screenshotUrl": "/section-vault/coryetzkorn-com-hero.jpg",
+      "dimensions": {
+        "width": 1312,
+        "height": 1412
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#050505",
+        "accent": "#f6f6f6",
+        "borderColor": "#050505",
+        "width": 1312,
+        "height": 1412,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1312px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "-apple-system",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Notion",
+          "The Wall Street Journal",
+          "Fuzzco",
+          "small talk labs"
+        ],
+        "activeAnimations": [
+          {
+            "name": "page-section-enter",
+            "duration": 260,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div>\n  <section data-layout=\"grid cols-4 gap-48px\">\n      <header>\n        <img width=\"64\" height=\"64\" alt=\"Cory Etzkorn\" />\n      </header>\n    <div>\n      <div>\n        <p>Hi, I’m Cory. I’m a designer and software engineer in New York City with 15+ years of expe</p>\n        <p>Today I run two companies. At , I’m building , a dating app where you talk with an AI matc</p>\n      </div>\n        <a data-layout=\"inline-flex\" data-cta=\"bg:#f6f6f6 r:3.35544e+07px\">Work with me</a>\n    </div>\n  </section>\n  <section>\n    <nav data-layout=\"flex column gap-80px\">\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2026</h3>\n      </div>\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2025</h3>\n      </div>\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2024</h3>\n      </div>\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2023</h3>\n      </div>\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2021</h3>\n      </div>\n      <div data-layout=\"grid cols-4 gap-12px\">\n        <h3 data-type=\"-apple-system 16px/normal\">2019</h3>\n      </div>\n    </nav>\n  </section>\n</div>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from coryetzkorn.com combining airy neutral stone/white surfaces (#ffffff) with disciplined -apple-system hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1312×1412px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in -apple-system at 16px (tracking normal) paired with #050505 primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #050505 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by coryetzkorn.com's hero architecture: use a block wrapper (max-width 1312px, padding 0px 0px, gap normal) on background #ffffff with #050505 ink. Set the primary heading in -apple-system (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #f6f6f6 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     },
     {
@@ -9962,6 +10272,62 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-coryetzkorn-com-cta-footer",
+      "siteUrl": "https://www.coryetzkorn.com",
+      "pageUrl": "https://www.coryetzkorn.com/",
+      "hostname": "coryetzkorn.com",
+      "siteTitle": "Cory Etzkorn",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-26T01:29:12.658Z",
+      "screenshotUrl": "/section-vault/coryetzkorn-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 196
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#8a8a8a",
+        "accent": "#8a8a8a",
+        "borderColor": "#8a8a8a",
+        "width": 1440,
+        "height": 196,
+        "layoutMode": "grid",
+        "gridColumns": "4 tracks",
+        "gap": "64px",
+        "padding": "80px 64px",
+        "maxWidth": "1536px",
+        "radiusSample": "3.35544e+07px",
+        "headlineFont": "-apple-system",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "cory@mythicalcreature.nyc",
+          "Made in NYC"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"grid cols-4 gap-64px\">\n  <div data-layout=\"flex gap-normal\">\n    <a>cory@mythicalcreature.nyc</a>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from coryetzkorn.com combining airy neutral stone/white surfaces (#ffffff) with disciplined -apple-system hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1440×196px, padding 80px 64px, gap 64px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in -apple-system at 16px (tracking normal) paired with #8a8a8a primary ink.",
+          "Zero-clutter structural framing with 3.35544e+07px radii and subtle #8a8a8a hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by coryetzkorn.com's cta-footer architecture: use a grid wrapper (max-width 1536px, padding 80px 64px, gap 64px) on background #ffffff with #8a8a8a ink. Set the primary heading in -apple-system (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #8a8a8a strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     }
   ]
