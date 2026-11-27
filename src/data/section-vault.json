@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-27T01:24:48.577Z",
+  "lastVisualScanAt": "2026-11-27T15:59:21.019Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 177,
+  "totalSections": 180,
   "countsByKind": {
     "pricing": 31,
     "bento-features": 18,
-    "hero": 48,
-    "cta-footer": 41,
-    "navbar": 39
+    "hero": 49,
+    "cta-footer": 42,
+    "navbar": 40
   },
   "sections": [
     {
@@ -2074,6 +2074,68 @@
       "tags": [
         "ai-agents",
         "productivity"
+      ]
+    },
+    {
+      "id": "sec-favorit-shop-navbar",
+      "siteUrl": "https://www.favorit.shop",
+      "pageUrl": "https://www.favorit.shop/",
+      "hostname": "favorit.shop",
+      "siteTitle": "Favorit",
+      "kind": "navbar",
+      "capturedAt": "2026-11-27T15:59:20.270Z",
+      "screenshotUrl": "/section-vault/favorit-shop-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 51
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eae9e5",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#767676",
+        "width": 1440,
+        "height": 51,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "0px",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "17px",
+        "headlineFont": "Favorit Kasper SemiBold",
+        "headlineSize": "18px",
+        "headlineTracking": "-0.36px",
+        "backdropFilter": "blur(10px)",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Menu",
+          "Favorit®"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 1000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Translucent Frosted Header Rail (51px)",
+        "summary": "Live-rendered navbar from favorit.shop combining airy neutral stone/white surfaces (#eae9e5) with disciplined Favorit Kasper SemiBold hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×51px, padding 0px 0px, gap 0px) using centered single-rail composition on a crisp editorial light #eae9e5 canvas.",
+        "microDetails": [
+          "Display typography set in Favorit Kasper SemiBold at 18px (tracking -0.36px) paired with #000000 primary ink.",
+          "Optical depth via blur(10px) glass layer and hairline #767676 dividers.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Translucent Frosted Header Rail (51px) inspired by favorit.shop's navbar architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap 0px) on background #eae9e5 with #000000 ink. Set the primary heading in Favorit Kasper SemiBold (18px, letter-spacing -0.36px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 95,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -7123,6 +7185,64 @@
       ]
     },
     {
+      "id": "sec-favorit-shop-cta-footer",
+      "siteUrl": "https://www.favorit.shop",
+      "pageUrl": "https://www.favorit.shop/",
+      "hostname": "favorit.shop",
+      "siteTitle": "Favorit",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-27T15:59:20.540Z",
+      "screenshotUrl": "/section-vault/favorit-shop-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 182
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eae9e5",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#767676",
+        "width": 1440,
+        "height": 182,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "0px",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "17px",
+        "headlineFont": "Favorit Kasper SemiBold",
+        "headlineSize": "18px",
+        "headlineTracking": "-0.36px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Sign up",
+          "Legal Notice",
+          "Shipping & Returns",
+          "Terms & Conditions"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from favorit.shop combining airy neutral stone/white surfaces (#eae9e5) with disciplined Favorit Kasper SemiBold hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×182px, padding 0px 0px, gap 0px) using centered single-rail composition on a crisp editorial light #eae9e5 canvas.",
+        "microDetails": [
+          "Display typography set in Favorit Kasper SemiBold at 18px (tracking -0.36px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 17px radii and subtle #767676 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by favorit.shop's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap 0px) on background #eae9e5 with #000000 ink. Set the primary heading in Favorit Kasper SemiBold (18px, letter-spacing -0.36px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -11044,6 +11164,59 @@
       },
       "tags": [
         "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-teriksandersstudio-com-hero",
+      "siteUrl": "https://teriksandersstudio.com",
+      "pageUrl": "https://teriksandersstudio.com/",
+      "hostname": "teriksandersstudio.com",
+      "siteTitle": "Teri Sanders | New York Visual Artist & Portrait Painter",
+      "kind": "hero",
+      "capturedAt": "2026-11-27T15:59:19.700Z",
+      "screenshotUrl": "/section-vault/teriksandersstudio-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f6f1eb",
+        "ink": "#251605",
+        "accent": "#251605",
+        "borderColor": "#251605",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "60px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Graphik",
+        "headlineSize": "15px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column\">\n  <div data-layout=\"flex column gap-19.5px\">\n      <div>My work explores presence, character, and the quiet emotional weight carried by people and</div>\n    <img width=\"1401\" height=\"154\" alt=\"visual-asset\" />\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from teriksandersstudio.com combining airy neutral stone/white surfaces (#f6f1eb) with disciplined Graphik hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×900px, padding 60px 0px) using centered single-rail composition on a crisp editorial light #f6f1eb canvas.",
+        "microDetails": [
+          "Display typography set in Graphik at 15px (tracking normal) paired with #251605 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #251605 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by teriksandersstudio.com's hero architecture: use a flex wrapper (max-width 1440px, padding 60px 0px, gap normal) on background #f6f1eb with #251605 ink. Set the primary heading in Graphik (15px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #251605 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
       ]
     }
   ]
