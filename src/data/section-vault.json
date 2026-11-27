@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-26T16:12:21.273Z",
+  "lastVisualScanAt": "2026-11-27T01:24:48.577Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 171,
+  "totalSections": 177,
   "countsByKind": {
-    "pricing": 30,
+    "pricing": 31,
     "bento-features": 18,
-    "hero": 46,
-    "cta-footer": 39,
-    "navbar": 38
+    "hero": 48,
+    "cta-footer": 41,
+    "navbar": 39
   },
   "sections": [
     {
@@ -4086,6 +4086,75 @@
       ]
     },
     {
+      "id": "sec-mareksevcik-com-pricing",
+      "siteUrl": "https://www.mareksevcik.com",
+      "pageUrl": "https://www.mareksevcik.com/",
+      "hostname": "mareksevcik.com",
+      "siteTitle": "Product & Innovation Design Portfolio | Marek Ševčík",
+      "kind": "pricing",
+      "capturedAt": "2026-11-27T01:22:37.335Z",
+      "screenshotUrl": "/section-vault/mareksevcik-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 943
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#1e1e1e",
+        "accent": "#1e1e1e",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 943,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Variable",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 6,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 2400,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 2400,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          },
+          {
+            "name": "transition",
+            "duration": 2400,
+            "easing": "cubic-bezier(0.33, 1, 0.68, 1)"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "6-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from mareksevcik.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist Variable hierarchy and 6 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×943px, padding 0px 0px) using 4-column composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist Variable at 16px (tracking normal) paired with #1e1e1e primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #1e1e1e hairlines.",
+          "GPU-friendly motion choreography (3 live WAAPI timelines, primary easing cubic-bezier(0.33, 1, 0.68, 1))."
+        ],
+        "agentRecreationPrompt": "Build a 6-Tier Transparent Pricing Matrix inspired by mareksevcik.com's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #1e1e1e ink. Set the primary heading in Geist Variable (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #1e1e1e strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
       "id": "sec-linear-app-cta-footer",
       "siteUrl": "https://linear.app",
       "pageUrl": "https://linear.app/",
@@ -6873,6 +6942,184 @@
       "tags": [
         "ai-agents",
         "productivity"
+      ]
+    },
+    {
+      "id": "sec-dateofbirth-com-au-hero",
+      "siteUrl": "https://www.dateofbirth.com.au",
+      "pageUrl": "https://www.dateofbirth.com.au/",
+      "hostname": "dateofbirth.com.au",
+      "siteTitle": "Branding & Design Agency Melbourne | Date Of Birth",
+      "kind": "hero",
+      "capturedAt": "2026-11-27T01:22:31.999Z",
+      "screenshotUrl": "/section-vault/dateofbirth-com-au-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 7447
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#f5f5f7",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 7447,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "32px",
+        "headlineFont": "Founders Grotesk Condensed",
+        "headlineSize": "148px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 12,
+        "ctaTexts": [
+          "View all",
+          "Read More News",
+          "Start a ProjectNew Beginnings",
+          "Work"
+        ],
+        "activeAnimations": [
+          {
+            "name": "wobble",
+            "duration": 2000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div>\n        <div>Read</div>\n</div>",
+      "vision": {
+        "archetype": "Asymmetric Split Editorial Hero (4-column)",
+        "summary": "Live-rendered hero from dateofbirth.com.au combining airy neutral stone/white surfaces (#f5f5f7) with disciplined Founders Grotesk Condensed hierarchy and 12 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×7447px, padding 0px 0px) using 4-column composition on a crisp editorial light #f5f5f7 canvas.",
+        "microDetails": [
+          "Display typography set in Founders Grotesk Condensed at 148px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 32px radii and subtle #000000 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Asymmetric Split Editorial Hero (4-column) inspired by dateofbirth.com.au's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #f5f5f7 with #000000 ink. Set the primary heading in Founders Grotesk Condensed (148px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-dateofbirth-com-au-cta-footer",
+      "siteUrl": "https://www.dateofbirth.com.au",
+      "pageUrl": "https://www.dateofbirth.com.au/",
+      "hostname": "dateofbirth.com.au",
+      "siteTitle": "Branding & Design Agency Melbourne | Date Of Birth",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-27T01:22:32.837Z",
+      "screenshotUrl": "/section-vault/dateofbirth-com-au-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 525
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 525,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "1440px",
+        "headlineFont": "Nb Akademie",
+        "headlineSize": "14px",
+        "headlineTracking": "-0.5px",
+        "backdropFilter": "blur(28.8px)",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Work",
+          "Agency",
+          "Services",
+          "News"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from dateofbirth.com.au combining airy neutral stone/white surfaces (#ffffff) with disciplined Nb Akademie hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×525px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Nb Akademie at 14px (tracking -0.5px) paired with #000000 primary ink.",
+          "Optical depth via blur(28.8px) glass layer and hairline #000000 dividers.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by dateofbirth.com.au's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in Nb Akademie (14px, letter-spacing -0.5px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-mareksevcik-com-hero",
+      "siteUrl": "https://www.mareksevcik.com",
+      "pageUrl": "https://www.mareksevcik.com/",
+      "hostname": "mareksevcik.com",
+      "siteTitle": "Product & Innovation Design Portfolio | Marek Ševčík",
+      "kind": "hero",
+      "capturedAt": "2026-11-27T01:22:36.885Z",
+      "screenshotUrl": "/section-vault/mareksevcik-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 475
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#000000",
+        "accent": "#000000",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 475,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "128px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Variable",
+        "headlineSize": "52px",
+        "headlineTracking": "-0.5px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "About meAbout me",
+          "Resumé PDF (opens in a new tab)"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from mareksevcik.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist Variable hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×475px, padding 128px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist Variable at 52px (tracking -0.5px) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #1e1e1e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by mareksevcik.com's hero architecture: use a block wrapper (max-width 1440px, padding 128px 0px, gap normal) on background #ffffff with #000000 ink. Set the primary heading in Geist Variable (52px, letter-spacing -0.5px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -10677,6 +10924,121 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by peststopboys.co.uk's hero architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #808080 ink. Set the primary heading in Siaga (14px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #808080 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-mareksevcik-com-navbar",
+      "siteUrl": "https://www.mareksevcik.com",
+      "pageUrl": "https://www.mareksevcik.com/",
+      "hostname": "mareksevcik.com",
+      "siteTitle": "Product & Innovation Design Portfolio | Marek Ševčík",
+      "kind": "navbar",
+      "capturedAt": "2026-11-27T01:22:36.643Z",
+      "screenshotUrl": "/section-vault/mareksevcik-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 44
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#1e1e1e",
+        "accent": "#1e1e1e",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 44,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Variable",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Marek Ševčík",
+          "Portfolio",
+          "About me"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (44px)",
+        "summary": "Live-rendered navbar from mareksevcik.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist Variable hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×44px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist Variable at 16px (tracking normal) paired with #1e1e1e primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #1e1e1e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (44px) inspired by mareksevcik.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #ffffff with #1e1e1e ink. Set the primary heading in Geist Variable (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #1e1e1e strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-mareksevcik-com-cta-footer",
+      "siteUrl": "https://www.mareksevcik.com",
+      "pageUrl": "https://www.mareksevcik.com/",
+      "hostname": "mareksevcik.com",
+      "siteTitle": "Product & Innovation Design Portfolio | Marek Ševčík",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-27T01:22:37.584Z",
+      "screenshotUrl": "/section-vault/mareksevcik-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 200
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#ffffff",
+        "ink": "#1e1e1e",
+        "accent": "#1e1e1e",
+        "borderColor": "#1e1e1e",
+        "width": 1440,
+        "height": 200,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "30px 10px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Geist Variable",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Privacy",
+          "Portfolio",
+          "About me",
+          "Resumé PDF (opens in a new tab)"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer role=\"contentinfo\" data-layout=\"flex column\">\n  <div data-layout=\"grid cols-3\">\n    <div data-layout=\"flex\">\n      <p>\n        © 2026 Marek Ševčík\n        <span>·</span>\n        <a>Privacy</a>\n      </p>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from mareksevcik.com combining airy neutral stone/white surfaces (#ffffff) with disciplined Geist Variable hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×200px, padding 30px 10px) using centered single-rail composition on a crisp editorial light #ffffff canvas.",
+        "microDetails": [
+          "Display typography set in Geist Variable at 16px (tracking normal) paired with #1e1e1e primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #1e1e1e hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by mareksevcik.com's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 30px 10px, gap normal) on background #ffffff with #1e1e1e ink. Set the primary heading in Geist Variable (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #1e1e1e strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },
