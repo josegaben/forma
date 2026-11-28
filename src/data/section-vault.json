@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-28T01:00:11.097Z",
+  "lastVisualScanAt": "2026-11-28T14:53:56.256Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 189,
+  "totalSections": 199,
   "countsByKind": {
-    "pricing": 33,
-    "bento-features": 20,
-    "hero": 50,
-    "cta-footer": 44,
-    "navbar": 42
+    "pricing": 34,
+    "bento-features": 22,
+    "hero": 53,
+    "cta-footer": 46,
+    "navbar": 44
   },
   "sections": [
     {
@@ -714,6 +714,144 @@
       "tags": [
         "ai-agents",
         "devtools",
+        "fintech-saas"
+      ]
+    },
+    {
+      "id": "sec-limeduo-com-hero",
+      "siteUrl": "https://limeduo.com",
+      "pageUrl": "https://limeduo.com/",
+      "hostname": "limeduo.com",
+      "siteTitle": "Calgary web design studio for small business | Lime Duo",
+      "kind": "hero",
+      "capturedAt": "2026-11-28T14:53:53.956Z",
+      "screenshotUrl": "/section-vault/limeduo-com-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 318
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0a0a0a",
+        "ink": "#ffffff",
+        "accent": "#d6fa50",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 318,
+        "layoutMode": "grid",
+        "gridColumns": "12 tracks",
+        "gap": "normal 23.04px",
+        "padding": "0px 58px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Onest",
+        "headlineSize": "49px",
+        "headlineTracking": "-1.4688px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start a project",
+          "See the work"
+        ],
+        "activeAnimations": [
+          {
+            "name": "Chip-module__wX9HSa__pulse",
+            "duration": 2000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div data-layout=\"grid cols-12 gap-normal\">\n  <div>\n    <h1 data-type=\"Onest 49px/-1.4688px\">\n      Digital products that bring in clients.\n      <span>Web design studio · Calgary</span>\n    </h1>\n    <p>Built start to finish for small businesses worldwide. You work with us directly.</p>\n  </div>\n  <div data-layout=\"flex gap-16px\">\n    <a data-layout=\"flex gap-16px\" data-cta=\"bg:#d6fa50 r:999px\">\n      <span>Start a project</span>\n    </a>\n    <a data-layout=\"flex gap-16px\" data-cta=\"ghost r:999px\">\n      <span>See the work</span>\n    </a>\n    <span data-layout=\"flex\">\n      <span data-layout=\"flex gap-8px\">\n        <span>Open for new projects</span>\n      </span>\n    </span>\n  </div>\n</div>",
+      "vision": {
+        "archetype": "Agentic Hero with Live CLI / Interactive Surface (centered single-rail)",
+        "summary": "Live-rendered hero from limeduo.com combining high-contrast obsidian surfaces (#0a0a0a) with disciplined Onest hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1440×318px, padding 0px 58px, gap normal 23.04px) using centered single-rail composition on a deep low-glare dark #0a0a0a canvas.",
+        "microDetails": [
+          "Display typography set in Onest at 49px (tracking -1.4688px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Agentic Hero with Live CLI / Interactive Surface (centered single-rail) inspired by limeduo.com's hero architecture: use a grid wrapper (max-width 1440px, padding 0px 58px, gap normal 23.04px) on background #0a0a0a with #ffffff ink. Set the primary heading in Onest (49px, letter-spacing -1.4688px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #d6fa50 strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-limeduo-com-pricing",
+      "siteUrl": "https://limeduo.com",
+      "pageUrl": "https://limeduo.com/pricing",
+      "hostname": "limeduo.com",
+      "siteTitle": "Web design prices in Calgary: from $1,499 CAD · Lime Duo",
+      "kind": "pricing",
+      "capturedAt": "2026-11-28T14:53:56.160Z",
+      "screenshotUrl": "/section-vault/limeduo-com-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#d6fa50",
+        "ink": "#0a0a0a",
+        "accent": "#0a0a0a",
+        "borderColor": "#2a2a2a",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "grid",
+        "gridColumns": "1 tracks",
+        "gap": "normal",
+        "padding": "0px 58px",
+        "maxWidth": "1440px",
+        "radiusSample": "30px",
+        "headlineFont": "Onest",
+        "headlineSize": "49px",
+        "headlineTracking": "-1.4688px",
+        "backdropFilter": "none",
+        "childCardCount": 3,
+        "ctaTexts": [
+          "Start a project"
+        ],
+        "activeAnimations": [
+          {
+            "name": "PriceBoard-module__BFWYoW__arrive",
+            "duration": 700,
+            "easing": "linear"
+          },
+          {
+            "name": "PriceBoard-module__BFWYoW__arrive",
+            "duration": 700,
+            "easing": "linear"
+          },
+          {
+            "name": "PriceBoard-module__BFWYoW__arrive",
+            "duration": 700,
+            "easing": "linear"
+          },
+          {
+            "name": "PriceBoard-module__BFWYoW__arrive",
+            "duration": 700,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<section data-layout=\"grid cols-1\">\n  <div data-layout=\"grid cols-12 gap-24px\">\n    <div>\n      <h1 data-type=\"Onest 49px/-1.4688px\">Website pricing</h1>\n      <p>Three website packages, each with a starting price and a timeline. Everything else is quot</p>\n    </div>\n    <div data-layout=\"flex\">\n      <a data-layout=\"flex gap-16px\" data-cta=\"bg:#0a0a0a r:999px\">\n        <span>Start a project</span>\n      </a>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "3-Tier Transparent Pricing Matrix",
+        "summary": "Live-rendered pricing from limeduo.com combining airy neutral stone/white surfaces (#d6fa50) with disciplined Onest hierarchy and 3 structured sub-modules.",
+        "layoutMechanics": "GRID container (1440×900px, padding 0px 58px) using 3-column composition on a crisp editorial light #d6fa50 canvas.",
+        "microDetails": [
+          "Display typography set in Onest at 49px (tracking -1.4688px) paired with #0a0a0a primary ink.",
+          "Zero-clutter structural framing with 30px radii and subtle #2a2a2a hairlines.",
+          "GPU-friendly motion choreography (4 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a 3-Tier Transparent Pricing Matrix inspired by limeduo.com's pricing architecture: use a grid wrapper (max-width 1440px, padding 0px 58px, gap normal) on background #d6fa50 with #0a0a0a ink. Set the primary heading in Onest (49px, letter-spacing -1.4688px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #0a0a0a strictly for the primary focal action.",
+        "visualCraftScore": 97,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
         "fintech-saas"
       ]
     },
@@ -4469,6 +4607,59 @@
       ]
     },
     {
+      "id": "sec-slowrat-com-bento-features",
+      "siteUrl": "https://slowrat.com",
+      "pageUrl": "https://slowrat.com/",
+      "hostname": "slowrat.com",
+      "siteTitle": "SLOWRAT • Brand Identity & Web Design Studio in Prague",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-28T14:53:53.654Z",
+      "screenshotUrl": "/section-vault/slowrat-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1400,
+        "height": 546
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeebe1",
+        "ink": "#2d2d2d",
+        "accent": "#2d2d2d",
+        "borderColor": "#000000",
+        "width": 1400,
+        "height": 546,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "30px",
+        "padding": "100px 0px",
+        "maxWidth": "1400px",
+        "radiusSample": "12px",
+        "headlineFont": "SuisseIntl-Bold ¶",
+        "headlineSize": "43px",
+        "headlineTracking": "-0.86px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex column gap-30px\">\n  <div data-layout=\"flex\">\n    <div data-layout=\"flex column gap-4px\">\n      <div data-layout=\"flex column\">\n        <p>What we do</p>\n      </div>\n    </div>\n    <div data-layout=\"flex column\">\n      <p>← OUR CLIENTS →</p>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from slowrat.com combining airy neutral stone/white surfaces (#eeebe1) with disciplined SuisseIntl-Bold ¶ hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1400×546px, padding 100px 0px, gap 30px) using centered single-rail composition on a crisp editorial light #eeebe1 canvas.",
+        "microDetails": [
+          "Display typography set in SuisseIntl-Bold ¶ at 43px (tracking -0.86px) paired with #2d2d2d primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by slowrat.com's bento-features architecture: use a flex wrapper (max-width 1400px, padding 100px 0px, gap 30px) on background #eeebe1 with #2d2d2d ink. Set the primary heading in SuisseIntl-Bold ¶ (43px, letter-spacing -0.86px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #2d2d2d strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
       "id": "sec-linear-app-cta-footer",
       "siteUrl": "https://linear.app",
       "pageUrl": "https://linear.app/",
@@ -7614,6 +7805,247 @@
       ]
     },
     {
+      "id": "sec-kate-fm-hero",
+      "siteUrl": "https://kate.fm",
+      "pageUrl": "https://kate.fm/",
+      "hostname": "kate.fm",
+      "siteTitle": "kate fm — creative developer",
+      "kind": "hero",
+      "capturedAt": "2026-11-28T14:53:42.450Z",
+      "screenshotUrl": "/section-vault/kate-fm-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 900
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#000000",
+        "ink": "#eeeeee",
+        "accent": "#eeeeee",
+        "borderColor": "#ffffff",
+        "width": 1440,
+        "height": 900,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "50%",
+        "headlineFont": "Geist Mono",
+        "headlineSize": "32px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "kate fm on X",
+          "kate fm on Instagram",
+          "am@kate.fm",
+          "X ↗kate fm on X"
+        ],
+        "activeAnimations": [
+          {
+            "name": "wd-settle-in",
+            "duration": 300,
+            "easing": "linear"
+          },
+          {
+            "name": "transition",
+            "duration": 800,
+            "easing": "ease-in-out"
+          }
+        ]
+      },
+      "cleanDom": "<body>\n  <div>\n        <canvas width=\"1432\" height=\"853\" alt=\"visual-asset\" />\n        <canvas width=\"1467\" height=\"887\" alt=\"visual-asset\" />\n  </div>\n    <canvas width=\"1440\" height=\"900\" alt=\"visual-asset\" />\n</body>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from kate.fm combining high-contrast obsidian surfaces (#000000) with disciplined Geist Mono hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×900px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #000000 canvas.",
+        "microDetails": [
+          "Display typography set in Geist Mono at 32px (tracking normal) paired with #eeeeee primary ink.",
+          "Zero-clutter structural framing with 50% radii and subtle #ffffff hairlines.",
+          "GPU-friendly motion choreography (2 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by kate.fm's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #000000 with #eeeeee ink. Set the primary heading in Geist Mono (32px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #eeeeee strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-slowrat-com-hero",
+      "siteUrl": "https://slowrat.com",
+      "pageUrl": "https://slowrat.com/",
+      "hostname": "slowrat.com",
+      "siteTitle": "SLOWRAT • Brand Identity & Web Design Studio in Prague",
+      "kind": "hero",
+      "capturedAt": "2026-11-28T14:53:53.375Z",
+      "screenshotUrl": "/section-vault/slowrat-com-hero.jpg",
+      "dimensions": {
+        "width": 1400,
+        "height": 450
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeebe1",
+        "ink": "#2d2d2d",
+        "accent": "#2d2d2d",
+        "borderColor": "#000000",
+        "width": 1400,
+        "height": 450,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "50px",
+        "padding": "7px 100px",
+        "maxWidth": "1400px",
+        "radiusSample": "4px",
+        "headlineFont": "SuisseIntl-Bold ¶",
+        "headlineSize": "43px",
+        "headlineTracking": "-0.86px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "We should talk."
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"flex gap-50px\">\n  <div data-layout=\"flex column gap-24px\">\n    <div data-layout=\"flex column\">\n      <p>Your company has evolved, but your brand hasn't?</p>\n    </div>\n  </div>\n  <div data-layout=\"flex column gap-15px\">\n    <div data-layout=\"flex column\">\n      <h1 data-type=\"SuisseIntl-Bold ¶ 43px/-0.86px\">We make brands and websites for companies ready to be taken seriously.</h1>\n    </div>\n  </div>\n  <div data-layout=\"flex column gap-16px\">\n    <div data-layout=\"flex column\">\n      <p>Strategy, design, and code. No middlemen, no handoffs, no gap between what’s designed and </p>\n    </div>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from slowrat.com combining airy neutral stone/white surfaces (#eeebe1) with disciplined SuisseIntl-Bold ¶ hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1400×450px, padding 7px 100px, gap 50px) using centered single-rail composition on a crisp editorial light #eeebe1 canvas.",
+        "microDetails": [
+          "Display typography set in SuisseIntl-Bold ¶ at 43px (tracking -0.86px) paired with #2d2d2d primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by slowrat.com's hero architecture: use a flex wrapper (max-width 1400px, padding 7px 100px, gap 50px) on background #eeebe1 with #2d2d2d ink. Set the primary heading in SuisseIntl-Bold ¶ (43px, letter-spacing -0.86px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #2d2d2d strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-slowrat-com-cta-footer",
+      "siteUrl": "https://slowrat.com",
+      "pageUrl": "https://slowrat.com/",
+      "hostname": "slowrat.com",
+      "siteTitle": "SLOWRAT • Brand Identity & Web Design Studio in Prague",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-28T14:53:53.949Z",
+      "screenshotUrl": "/section-vault/slowrat-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 512
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeebe1",
+        "ink": "#2d2d2d",
+        "accent": "#2d2d2d",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 512,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "0px",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "SuisseIntl-Bold ¶",
+        "headlineSize": "50px",
+        "headlineTracking": "-1px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start a conversation",
+          "Book a video call",
+          "hello@slowrat.com",
+          "@slowrat_design"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"flex column\">\n  <div data-layout=\"flex column gap-30px\">\n    <div data-layout=\"flex column gap-10px\">\n      <div data-layout=\"flex column\">\n        <p>Your move</p>\n      </div>\n    </div>\n    <div data-layout=\"flex gap-20px\">\n      <div data-layout=\"flex column\">\n        <p>Brand Identity & Web Design Studio</p>\n      </div>\n      <div data-layout=\"flex column\">\n        <p>Mail → Instagram → LinkedIn →</p>\n      </div>\n    </div>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from slowrat.com combining airy neutral stone/white surfaces (#eeebe1) with disciplined SuisseIntl-Bold ¶ hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×512px, padding 0px 0px, gap 0px) using centered single-rail composition on a crisp editorial light #eeebe1 canvas.",
+        "microDetails": [
+          "Display typography set in SuisseIntl-Bold ¶ at 50px (tracking -1px) paired with #2d2d2d primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by slowrat.com's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap 0px) on background #eeebe1 with #2d2d2d ink. Set the primary heading in SuisseIntl-Bold ¶ (50px, letter-spacing -1px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #2d2d2d strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-limeduo-com-cta-footer",
+      "siteUrl": "https://limeduo.com",
+      "pageUrl": "https://limeduo.com/",
+      "hostname": "limeduo.com",
+      "siteTitle": "Calgary web design studio for small business | Lime Duo",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-28T14:53:54.567Z",
+      "screenshotUrl": "/section-vault/limeduo-com-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1088
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0a0a0a",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#2a2a2a",
+        "width": 1440,
+        "height": 1088,
+        "layoutMode": "grid",
+        "gridColumns": "1 tracks",
+        "gap": "112px normal",
+        "padding": "96px 58px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "Onest",
+        "headlineSize": "15px",
+        "headlineTracking": "-0.075px",
+        "backdropFilter": "none",
+        "childCardCount": 5,
+        "ctaTexts": [
+          "hello@limeduo.com",
+          "+1 587 664 4142",
+          "+1 587 664 4142",
+          "@LimeDuoDigital"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<footer data-layout=\"grid cols-1 gap-112px\">\n  <div data-layout=\"grid cols-3 gap-0px\">\n    <ul role=\"list\">\n      <li data-layout=\"grid cols-2\">\n        <span>Email</span>\n        <a data-layout=\"flex\">hello@limeduo.com</a>\n      </li>\n      <li data-layout=\"grid cols-2\">\n        <span>Phone</span>\n        <a data-layout=\"flex\">+1 587 664 4142</a>\n      </li>\n      <li data-layout=\"grid cols-2\">\n        <span>WhatsApp</span>\n        <a data-layout=\"flex\">+1 587 664 4142</a>\n      </li>\n      <li data-layout=\"grid cols-2\">\n        <span>Telegram</span>\n        <a data-layout=\"flex\">@LimeDuoDigital</a>\n      </li>\n      <li data-layout=\"grid cols-2\">\n        <span>Instagram</span>\n        <a data-layout=\"flex\">@limeduodigital</a>\n      </li>\n    </ul>\n    <p data-layout=\"flex gap-normal\">\n      <span>Calgary, Canada</span>\n      <span>·</span>\n      <span>08:53 AM</span>\n    </p>\n    <a data-layout=\"flex\">Privacy policy</a>\n    <a data-layout=\"flex\">Terms of use</a>\n  </div>\n</footer>",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from limeduo.com combining high-contrast obsidian surfaces (#0a0a0a) with disciplined Onest hierarchy and 5 structured sub-modules.",
+        "layoutMechanics": "GRID container (1440×1088px, padding 96px 58px, gap 112px normal) using 4-column composition on a deep low-glare dark #0a0a0a canvas.",
+        "microDetails": [
+          "Display typography set in Onest at 15px (tracking -0.075px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #2a2a2a hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by limeduo.com's cta-footer architecture: use a grid wrapper (max-width 1440px, padding 96px 58px, gap 112px normal) on background #0a0a0a with #ffffff ink. Set the primary heading in Onest (15px, letter-spacing -0.075px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "ai-agents",
+        "devtools"
+      ]
+    },
+    {
       "id": "sec-zed-dev-bento-features",
       "siteUrl": "https://zed.dev",
       "pageUrl": "https://zed.dev/",
@@ -8180,6 +8612,59 @@
       "tags": [
         "ai-agents",
         "docs"
+      ]
+    },
+    {
+      "id": "sec-limeduo-com-bento-features",
+      "siteUrl": "https://limeduo.com",
+      "pageUrl": "https://limeduo.com/",
+      "hostname": "limeduo.com",
+      "siteTitle": "Calgary web design studio for small business | Lime Duo",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-28T14:53:54.291Z",
+      "screenshotUrl": "/section-vault/limeduo-com-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1049
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0a0a0a",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#2a2a2a",
+        "width": 1440,
+        "height": 1049,
+        "layoutMode": "grid",
+        "gridColumns": "1 tracks",
+        "gap": "normal",
+        "padding": "173px 58px",
+        "maxWidth": "1440px",
+        "radiusSample": "4px",
+        "headlineFont": "Onest",
+        "headlineSize": "27px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "<section data-layout=\"grid cols-1\">\n  <div data-layout=\"grid cols-12 gap-32px\">\n    <p>We stand behind every project ourselves. In touch from the first call to launch.</p>\n    <p data-layout=\"grid cols-1 gap-4px\">\n      <span data-layout=\"flex gap-12px\">Calgary, Alberta</span>\n      <span>Working worldwide</span>\n    </p>\n  </div>\n</section>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from limeduo.com combining high-contrast obsidian surfaces (#0a0a0a) with disciplined Onest hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "GRID container (1440×1049px, padding 173px 58px) using centered single-rail composition on a deep low-glare dark #0a0a0a canvas.",
+        "microDetails": [
+          "Display typography set in Onest at 27px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 4px radii and subtle #2a2a2a hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by limeduo.com's bento-features architecture: use a grid wrapper (max-width 1440px, padding 173px 58px, gap normal) on background #0a0a0a with #ffffff ink. Set the primary heading in Onest (27px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 91,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     },
     {
@@ -11757,6 +12242,122 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by turso.tech's cta-footer architecture: use a block wrapper (max-width 1280px, padding 0px 0px, gap normal) on background #101317 with #ffffff ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-slowrat-com-navbar",
+      "siteUrl": "https://slowrat.com",
+      "pageUrl": "https://slowrat.com/",
+      "hostname": "slowrat.com",
+      "siteTitle": "SLOWRAT • Brand Identity & Web Design Studio in Prague",
+      "kind": "navbar",
+      "capturedAt": "2026-11-28T14:53:53.125Z",
+      "screenshotUrl": "/section-vault/slowrat-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 48
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeebe1",
+        "ink": "#000000",
+        "accent": "#2d2d2d",
+        "borderColor": "#000000",
+        "width": 1440,
+        "height": 48,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "100%",
+        "radiusSample": "20px",
+        "headlineFont": "sans-serif",
+        "headlineSize": "12px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "SERVICES",
+          "WORK",
+          "ABOUT",
+          "CONTACT"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (48px)",
+        "summary": "Live-rendered navbar from slowrat.com combining airy neutral stone/white surfaces (#eeebe1) with disciplined sans-serif hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1440×48px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeebe1 canvas.",
+        "microDetails": [
+          "Display typography set in sans-serif at 12px (tracking normal) paired with #000000 primary ink.",
+          "Zero-clutter structural framing with 20px radii and subtle #000000 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (48px) inspired by slowrat.com's navbar architecture: use a flex wrapper (max-width 100%, padding 0px 0px, gap normal) on background #eeebe1 with #000000 ink. Set the primary heading in sans-serif (12px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #2d2d2d strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-limeduo-com-navbar",
+      "siteUrl": "https://limeduo.com",
+      "pageUrl": "https://limeduo.com/",
+      "hostname": "limeduo.com",
+      "siteTitle": "Calgary web design studio for small business | Lime Duo",
+      "kind": "navbar",
+      "capturedAt": "2026-11-28T14:53:53.590Z",
+      "screenshotUrl": "/section-vault/limeduo-com-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 72
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0a0a0a",
+        "ink": "#ffffff",
+        "accent": "#d6fa50",
+        "borderColor": "#0a0a0a",
+        "width": 1440,
+        "height": 72,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "999px",
+        "headlineFont": "Onest",
+        "headlineSize": "18px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 2,
+        "ctaTexts": [
+          "Skip to content",
+          "Lime Duo",
+          "Services",
+          "Websites & e-commerce"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<header>\n  <div data-layout=\"grid cols-3 gap-normal\">\n    <a data-layout=\"flex\">Lime Duo</a>\n  </div>\n</header>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (72px)",
+        "summary": "Live-rendered navbar from limeduo.com combining high-contrast obsidian surfaces (#0a0a0a) with disciplined Onest hierarchy and 2 structured sub-modules.",
+        "layoutMechanics": "BLOCK container (1440×72px, padding 0px 0px) using 2-column split composition on a deep low-glare dark #0a0a0a canvas.",
+        "microDetails": [
+          "Display typography set in Onest at 18px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 999px radii and subtle #0a0a0a hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (72px) inspired by limeduo.com's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #0a0a0a with #ffffff ink. Set the primary heading in Onest (18px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #d6fa50 strictly for the primary focal action.",
         "visualCraftScore": 89,
         "analysisEngine": "playwright-computed-geometry"
       },

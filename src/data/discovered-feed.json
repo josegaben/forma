@@ -1,5 +1,5 @@
 {
-  "lastCrawlAt": "2026-11-28T00:56:33.700Z",
+  "lastCrawlAt": "2026-11-28T14:51:19.461Z",
   "totalIndexed": 64,
   "galleriesMonitored": [
     "deadsimplesites.com",
@@ -23,7 +23,7 @@
       "title": "Trigger.dev | The open source platform for durable AI agents",
       "description": "Trigger.dev is the open source platform for durable AI agents and workflows in TypeScript. Long-running tasks with retries, queues, and LLM observability.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-28T00:56:21.745Z",
+      "scrapedAt": "2026-11-28T14:51:07.816Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -144,7 +144,7 @@
       "title": "Mintlify - The documentation platform for agents",
       "description": "Self-updating documentation for startups, enterprises, and agents.",
       "sourceGallery": "curated.design",
-      "scrapedAt": "2026-11-28T00:56:20.564Z",
+      "scrapedAt": "2026-11-28T14:51:06.563Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -206,7 +206,7 @@
       "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
       "description": "Stripe is a financial services platform that helps all types of businesses accept payments, build flexible billing models, and manage money movement.",
       "sourceGallery": "awwwards.com",
-      "scrapedAt": "2026-11-28T00:56:20.187Z",
+      "scrapedAt": "2026-11-28T14:51:06.126Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -267,7 +267,7 @@
       "title": "Clerk | Authentication and User Management",
       "description": "The easiest way to add authentication and user management to your application. Purpose-built for React, Next.js, Remix, and “The Modern Web”.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-28T00:56:21.097Z",
+      "scrapedAt": "2026-11-28T14:51:07.114Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -328,7 +328,7 @@
       "title": "AI Coding Agent for Building Ambitious Software | Cursor",
       "description": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-28T00:56:21.119Z",
+      "scrapedAt": "2026-11-28T14:51:07.278Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -389,7 +389,7 @@
       "title": "Plain — Support infrastructure for humans &amp; agents",
       "description": "Plain is the agentic platform to orchestrate customer work. Turn every conversation into faster answers, better products, and customers who stay. Trusted by B2B",
       "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-28T00:56:21.910Z",
+      "scrapedAt": "2026-11-28T14:51:07.867Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -450,7 +450,7 @@
       "title": "Cosmos",
       "description": "Your space for inspiration",
       "sourceGallery": "curated.design",
-      "scrapedAt": "2026-11-28T00:56:22.745Z",
+      "scrapedAt": "2026-11-28T14:51:08.718Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -512,7 +512,7 @@
       "title": "Neon — Postgres backends for apps and agents",
       "description": "The backend for apps and agents. Build with Lakebase Postgres, Auth, Functions, Storage, and an AI Gateway: instant, branchable, serverless.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:22.724Z",
+      "scrapedAt": "2026-11-28T14:51:08.690Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -571,7 +571,7 @@
       "title": "Lucky Air Balloon — Build Roblox games with AI",
       "description": "Learn AI by building real Roblox games. Describe your game, LAB",
       "sourceGallery": "footer.design",
-      "scrapedAt": "2026-11-28T00:56:23.479Z",
+      "scrapedAt": "2026-11-28T14:51:16.851Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -691,7 +691,7 @@
       "title": "Platform, inference, services, and Resizes AI | Resizes",
       "description": "Resizes is a Gijón platform engineering company. It builds Agentic, Platform, and Inference, delivers Kubernetes and GitOps, and publishes Resizes AI.",
       "sourceGallery": "resiz.es",
-      "scrapedAt": "2026-11-28T00:56:19.765Z",
+      "scrapedAt": "2026-11-28T14:51:05.269Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -738,7 +738,7 @@
       "title": "Daylight | A More Caring Computer",
       "description": "Daylight Computer (DC1) is a new kind of calm computer, designed for deep work and health.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-28T00:56:20.089Z",
+      "scrapedAt": "2026-11-28T14:51:05.994Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -799,7 +799,7 @@
       "title": "PlanetScale - the world’s fastest and most scalable cloud hosting for Vi",
       "description": "PlanetScale offers the world’s fastest and most scalable cloud hosting for Vitess, Neki, and Postgres.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:20.901Z",
+      "scrapedAt": "2026-11-28T14:51:06.948Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -841,7 +841,7 @@
       "title": "Agentic Infrastructure - Vercel",
       "description": "The autonomous stack for every app and agent.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-28T00:56:20.025Z",
+      "scrapedAt": "2026-11-28T14:51:05.907Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -901,7 +901,7 @@
       "title": "Zed — Your last next editor",
       "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-28T00:56:19.351Z",
+      "scrapedAt": "2026-11-28T14:51:05.144Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -961,7 +961,7 @@
       "title": "Supabase | The Postgres Development Platform",
       "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:20.259Z",
+      "scrapedAt": "2026-11-28T14:51:05.985Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -1023,7 +1023,7 @@
       "title": "Liveblocks | Realtime and sync for the agentic web",
       "description": "Liveblocks provides the infrastructure to handle concurrent edits on shared data, so people and AI agents can collaborate without breaking your app.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-28T00:56:22.670Z",
+      "scrapedAt": "2026-11-28T14:51:08.665Z",
       "craftScore": 99,
       "grade": "A+",
       "strengths": [
@@ -1383,7 +1383,7 @@
       "title": "Vitrine: your references, ready for you and your AI agent",
       "description": "A Mac canvas for your design references. You and your agent pick from them, so what you build looks like your taste, not the default vibe-coded look.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:23.135Z",
+      "scrapedAt": "2026-11-28T14:51:08.758Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -1431,7 +1431,7 @@
       "title": "The platform for inference, training, and execution | Baseten",
       "description": "Train, serve, and scale open-source and custom AI models on the fastest, most reliable inference platform.",
       "sourceGallery": "footer.design",
-      "scrapedAt": "2026-11-28T00:56:23.646Z",
+      "scrapedAt": "2026-11-28T14:51:16.966Z",
       "craftScore": 98,
       "grade": "A+",
       "strengths": [
@@ -1721,7 +1721,7 @@
       "title": "Midday — The business stack for modern founders",
       "description": "Invoicing, automatic reconciliation, time tracking, documents, and financial exports in one place. The business stack that replaces the tools you&#x27;ve outgro",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-28T00:56:19.929Z",
+      "scrapedAt": "2026-11-28T14:51:05.785Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1779,7 +1779,7 @@
       "title": "Emil Kowalski",
       "description": "Design engineer working at Linear.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-28T00:56:20.854Z",
+      "scrapedAt": "2026-11-28T14:51:07.119Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1837,7 +1837,7 @@
       "title": "One Page Love — One Page Website Inspiration and Templates",
       "description": "One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.",
       "sourceGallery": "onepagelove.com",
-      "scrapedAt": "2026-11-28T00:56:31.478Z",
+      "scrapedAt": "2026-11-28T14:51:17.289Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1893,7 +1893,7 @@
       "title": "Bryn Taylor · Freelance Product &amp; Website Designer",
       "description": "Freelance product &amp; website designer with 12+ years experience. Worked with Monzo, Pleo, Mastercard &amp; Trustpilot. Based in Copenhagen, available worldwi",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-28T00:56:31.994Z",
+      "scrapedAt": "2026-11-28T14:51:17.702Z",
       "craftScore": 96,
       "grade": "A+",
       "strengths": [
@@ -1951,7 +1951,7 @@
       "title": "Railway | The all-in-one intelligent cloud provider",
       "description": "Railway is a full-stack cloud for deploying web apps, servers, databases, and more with automatic scaling, monitoring, and security.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:21.314Z",
+      "scrapedAt": "2026-11-28T14:51:07.132Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2012,7 +2012,7 @@
       "title": "Dub - The Modern Link Attribution Platform",
       "description": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:19.311Z",
+      "scrapedAt": "2026-11-28T14:51:05.258Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2073,7 +2073,7 @@
       "title": "Resend · Email for developers",
       "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:19.272Z",
+      "scrapedAt": "2026-11-28T14:51:05.191Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2136,7 +2136,7 @@
       "title": "Mathias Adolfsson - Independent Creative Engineer",
       "description": "I",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:23.514Z",
+      "scrapedAt": "2026-11-28T14:51:15.938Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2182,7 +2182,7 @@
       "title": "Durable Execution for Workflows &amp; AI | Inngest",
       "description": "Build reliable background jobs, workflows, and AI agents without extra infrastructure. Automatic retries, flow control, and step-level observability.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:22.035Z",
+      "scrapedAt": "2026-11-28T14:51:07.927Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2241,7 +2241,7 @@
       "title": "PostHog – Your product’s context layer",
       "description": "PostHog automatically diagnoses problems, fixes bugs, and generates pull requests – all without you having to prompt it.",
       "sourceGallery": "saaslandingpage.com",
-      "scrapedAt": "2026-11-28T00:56:21.524Z",
+      "scrapedAt": "2026-11-28T14:51:07.495Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2300,7 +2300,7 @@
       "title": "Warren &amp; Mahoney Architects | Warren and Mahoney",
       "description": "We are an architecture practice based in Australia and New Zealand with approximately 350 highly engaged people from 35 countries, all eager to explore how desi",
       "sourceGallery": "httpster.net",
-      "scrapedAt": "2026-11-28T00:56:31.369Z",
+      "scrapedAt": "2026-11-28T14:51:16.585Z",
       "craftScore": 95,
       "grade": "A+",
       "strengths": [
@@ -2405,7 +2405,7 @@
       "title": "P de Pablo · Pablo González, Creative Director and Designer",
       "description": "P de Pablo is the studio of Pablo González, a creative director and designer building brand identities, visual systems and digital products for technology compa",
       "sourceGallery": "pdepablo.com",
-      "scrapedAt": "2026-11-28T00:56:19.193Z",
+      "scrapedAt": "2026-11-28T14:51:05.091Z",
       "craftScore": 93,
       "grade": "A+",
       "strengths": [
@@ -2604,7 +2604,7 @@
       "title": "A farewell to Arc",
       "description": "Arc is sunsetting on December 22, 2026. What happens next and the transition to Dia.",
       "sourceGallery": "awwwards.com",
-      "scrapedAt": "2026-11-28T00:56:22.181Z",
+      "scrapedAt": "2026-11-28T14:51:08.094Z",
       "craftScore": 91,
       "grade": "A+",
       "strengths": [
@@ -2661,7 +2661,7 @@
       "title": "Amie - AI Note Taker",
       "description": "Turn meeting notes into automated workflows. Handle meetings, summaries, todos and emails (soon) with your AI personal assistant.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-28T00:56:21.712Z",
+      "scrapedAt": "2026-11-28T14:51:07.822Z",
       "craftScore": 90,
       "grade": "A+",
       "strengths": [
@@ -2718,7 +2718,7 @@
       "title": "Raycast - Your shortcut to everything",
       "description": "A fast, keyboard-first launcher for Mac and Windows. Raycast brings your apps, files, AI, snippets and thousands of extensions into one shortcut.",
       "sourceGallery": "21st.dev",
-      "scrapedAt": "2026-11-28T00:56:19.758Z",
+      "scrapedAt": "2026-11-28T14:51:05.542Z",
       "craftScore": 89,
       "grade": "A",
       "strengths": [
@@ -2777,7 +2777,7 @@
       "title": "treg.to: OpenRouter for agent tools and data, pay per call",
       "description": "One MCP server, one key: 4,200+ tools across 141 providers for SEO, enrichment, ads, social and scraping data at the provider",
       "sourceGallery": "treg.to",
-      "scrapedAt": "2026-11-28T00:56:19.170Z",
+      "scrapedAt": "2026-11-28T14:51:05.263Z",
       "craftScore": 88,
       "grade": "A",
       "strengths": [
@@ -2889,7 +2889,7 @@
       "title": "Cal.com | Scheduling Software for Online Bookings",
       "description": "The highest-rated scheduling system that helps you grow your business and better find time.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:20.224Z",
+      "scrapedAt": "2026-11-28T14:51:06.018Z",
       "craftScore": 87,
       "grade": "A",
       "strengths": [
@@ -2951,7 +2951,7 @@
       "title": "Attio: The CRM for agentic revenue",
       "description": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:20.827Z",
+      "scrapedAt": "2026-11-28T14:51:06.883Z",
       "craftScore": 87,
       "grade": "A",
       "strengths": [
@@ -3063,67 +3063,13 @@
       "honorsReducedMotion": false
     },
     {
-      "id": "live-turso-tech",
-      "url": "https://turso.tech/",
-      "hostname": "turso.tech",
-      "title": "Turso - Millions of Databases. One Architecture.",
-      "description": "Turso is the SQLite-based database architecture for millions of databases. Spin up a database for every user, agent, and tenant, with embedded replication, per-",
-      "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:21.585Z",
-      "craftScore": 87,
-      "grade": "A",
-      "strengths": [
-        "Custom motion curves (custom cubic-bezier)",
-        "Uses tabular-nums for numeric alignment",
-        "Tokenized CSS architecture (60+ custom properties)"
-      ],
-      "mode": "light",
-      "bg": "#ff8f40",
-      "ink": "#283945",
-      "accent": "#4ff8d2",
-      "palette": [
-        "#4ff8d2",
-        "#283945",
-        "#111827",
-        "#ff8f40",
-        "#fff"
-      ],
-      "primaryFont": "__Inter_d8ebd1",
-      "primaryEasing": "cubic-bezier(.4,0,.2,1)",
-      "bezierCurves": [
-        {
-          "curve": "cubic-bezier(.4,0,.2,1)",
-          "count": 16,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(0,0,.2,1)",
-          "count": 2,
-          "feel": "custom cubic-bezier"
-        },
-        {
-          "curve": "cubic-bezier(.4,.1,.25,1)",
-          "count": 1,
-          "feel": "custom cubic-bezier"
-        }
-      ],
-      "keyframes": [
-        "ping",
-        "spin",
-        "bounceLinear",
-        "floating"
-      ],
-      "motionEngines": [],
-      "honorsReducedMotion": false
-    },
-    {
       "id": "live-slowrat-com",
       "url": "https://slowrat.com/",
       "hostname": "slowrat.com",
       "title": "SLOWRAT • Brand Identity &amp; Web Design Studio in Prague",
       "description": "We design brands and build websites for companies ready to be taken seriously. Strategy, design, and code – no handoffs. Based in Prague, working across Europe.",
       "sourceGallery": "minimal.gallery",
-      "scrapedAt": "2026-11-28T00:56:30.813Z",
+      "scrapedAt": "2026-11-28T14:51:16.896Z",
       "craftScore": 87,
       "grade": "A",
       "strengths": [
@@ -3159,7 +3105,7 @@
       "title": "Calgary web design studio for small business | Lime Duo",
       "description": "Lime Duo is a Calgary web design studio: custom websites, online stores, branding, SEO and AI chatbots for small businesses across Canada. From $1,499 CAD.",
       "sourceGallery": "darkmodedesign.com",
-      "scrapedAt": "2026-11-28T00:56:22.451Z",
+      "scrapedAt": "2026-11-28T14:51:15.877Z",
       "craftScore": 85,
       "grade": "A",
       "strengths": [
@@ -3193,7 +3139,7 @@
       "title": "Campsite — Work communication for distributed teams",
       "description": "Campsite is designed for distributed teams to cut through the noise of daily work — move faster with more transparent, organized, and thoughtful conversations.",
       "sourceGallery": "refero.design",
-      "scrapedAt": "2026-11-28T00:56:21.723Z",
+      "scrapedAt": "2026-11-28T14:51:07.757Z",
       "craftScore": 85,
       "grade": "A",
       "strengths": [
@@ -3249,7 +3195,7 @@
       "title": "The best SaaS app UI and UX examples for design inspiration - Saas Inter",
       "description": "The largest gallery of SaaS app UI and UX examples for design inspiration.",
       "sourceGallery": "saaslandingpage.com",
-      "scrapedAt": "2026-11-28T00:56:23.408Z",
+      "scrapedAt": "2026-11-28T14:51:15.757Z",
       "craftScore": 85,
       "grade": "A",
       "strengths": [
@@ -3299,7 +3245,7 @@
       "title": "Bento Grids",
       "description": "BentoGrids is a curated collection of bento designs for your inspiration.",
       "sourceGallery": "bentogrids.com",
-      "scrapedAt": "2026-11-28T00:56:23.553Z",
+      "scrapedAt": "2026-11-28T14:51:16.905Z",
       "craftScore": 85,
       "grade": "A",
       "strengths": [
@@ -3406,7 +3352,7 @@
       "title": "Longitude | Hospitality Branding Agency for Hotels &amp; Resorts",
       "description": "Longitude is a hotel branding agency delivering strategy, naming, design, and websites that help boutique hotels attract guests and boost direct bookings.",
       "sourceGallery": "a1.gallery",
-      "scrapedAt": "2026-11-28T00:56:32.303Z",
+      "scrapedAt": "2026-11-28T14:51:17.472Z",
       "craftScore": 85,
       "grade": "A",
       "strengths": [
@@ -3459,7 +3405,7 @@
       "title": "Fey joined Wealthsimple",
       "description": "Fey, the financial research platform built for the modern investor, has joined Wealthsimple — now helping shape the future of investing and banking.",
       "sourceGallery": "godly.website",
-      "scrapedAt": "2026-11-28T00:56:20.696Z",
+      "scrapedAt": "2026-11-28T14:51:06.936Z",
       "craftScore": 82,
       "grade": "A",
       "strengths": [
@@ -3500,7 +3446,7 @@
       "title": "Rauno Freiberg",
       "description": "Extracted design & motion genome from rauno.me",
       "sourceGallery": "deadsimplesites.com",
-      "scrapedAt": "2026-11-28T00:56:20.910Z",
+      "scrapedAt": "2026-11-28T14:51:06.976Z",
       "craftScore": 82,
       "grade": "A",
       "strengths": [
@@ -3542,7 +3488,7 @@
       "title": "WorkOS — Your app, Enterprise Ready.",
       "description": "Extracted design & motion genome from workos.com",
       "sourceGallery": "landings.dev",
-      "scrapedAt": "2026-11-28T00:56:22.248Z",
+      "scrapedAt": "2026-11-28T14:51:08.306Z",
       "craftScore": 82,
       "grade": "A",
       "strengths": [
@@ -3584,6 +3530,42 @@
       ],
       "motionEngines": [],
       "honorsReducedMotion": false
+    },
+    {
+      "id": "live-linear-app",
+      "url": "https://linear.app/",
+      "hostname": "linear.app",
+      "title": "Linear – The system for product development",
+      "description": "Purpose-built for planning and building products with AI agents.",
+      "sourceGallery": "a1.gallery",
+      "scrapedAt": "2026-11-28T14:51:05.159Z",
+      "craftScore": 82,
+      "grade": "A",
+      "strengths": [
+        "Honors @media (prefers-reduced-motion)",
+        "Uses tabular-nums for numeric alignment",
+        "OpenType features enabled (var(--font-monospace-settings))"
+      ],
+      "mode": "dark",
+      "bg": "#000",
+      "ink": "#f5f5f4",
+      "accent": "#f5f5f4",
+      "palette": [
+        "#000"
+      ],
+      "primaryFont": "var(--font-monospace)",
+      "primaryEasing": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "bezierCurves": [],
+      "keyframes": [
+        "grid-dot-0-0-upDown",
+        "grid-dot-0-1-upDown",
+        "grid-dot-0-2-upDown",
+        "grid-dot-0-3-upDown",
+        "grid-dot-0-4-upDown",
+        "grid-dot-1-0-upDown"
+      ],
+      "motionEngines": [],
+      "honorsReducedMotion": true
     }
   ]
 }
