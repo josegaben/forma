@@ -1,13 +1,13 @@
 {
-  "lastVisualScanAt": "2026-11-27T15:59:21.019Z",
+  "lastVisualScanAt": "2026-11-28T01:00:11.097Z",
   "visionEngine": "playwright-computed-geometry (set GEMINI_API_KEY for Gemini 4 Hydrogen Vision)",
-  "totalSections": 180,
+  "totalSections": 189,
   "countsByKind": {
-    "pricing": 31,
-    "bento-features": 18,
-    "hero": 49,
-    "cta-footer": 42,
-    "navbar": 40
+    "pricing": 33,
+    "bento-features": 20,
+    "hero": 50,
+    "cta-footer": 44,
+    "navbar": 42
   },
   "sections": [
     {
@@ -4217,6 +4217,258 @@
       ]
     },
     {
+      "id": "sec-plantstotherescue-co-pricing",
+      "siteUrl": "https://plantstotherescue.co",
+      "pageUrl": "https://plantstotherescue.co/",
+      "hostname": "plantstotherescue.co",
+      "siteTitle": "Plants to the Rescue. 100% Organic Plant Tinctures.",
+      "kind": "pricing",
+      "capturedAt": "2026-11-28T01:00:10.487Z",
+      "screenshotUrl": "/section-vault/plantstotherescue-co-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 484
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeede7",
+        "ink": "#503217",
+        "accent": "#503217",
+        "borderColor": "#503217",
+        "width": 1440,
+        "height": 484,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "SHOP ALL",
+          "Calm $38.00",
+          "Sleep $37.00",
+          "Shroom Boost $54.00"
+        ],
+        "activeAnimations": [
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from plantstotherescue.co combining airy neutral stone/white surfaces (#eeede7) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×484px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeede7 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #503217 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #503217 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by plantstotherescue.co's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #eeede7 with #503217 ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #503217 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-plantstotherescue-co-bento-features",
+      "siteUrl": "https://plantstotherescue.co",
+      "pageUrl": "https://plantstotherescue.co/",
+      "hostname": "plantstotherescue.co",
+      "siteTitle": "Plants to the Rescue. 100% Organic Plant Tinctures.",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-28T01:00:10.752Z",
+      "screenshotUrl": "/section-vault/plantstotherescue-co-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 553
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeede7",
+        "ink": "#503217",
+        "accent": "#503217",
+        "borderColor": "#503217",
+        "width": 1440,
+        "height": 553,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": [
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          },
+          {
+            "name": "heroFadeIn",
+            "duration": 1000,
+            "easing": "linear"
+          }
+        ]
+      },
+      "cleanDom": "<div>\n        <h2 data-type=\"Times New Roman 50px/normal\">Herbal support, whenever you need it</h2>\n</div>",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from plantstotherescue.co combining airy neutral stone/white surfaces (#eeede7) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×553px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeede7 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #503217 primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #503217 hairlines.",
+          "GPU-friendly motion choreography (5 live WAAPI timelines, primary easing linear)."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by plantstotherescue.co's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #eeede7 with #503217 ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #503217 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-turso-tech-pricing",
+      "siteUrl": "https://turso.tech",
+      "pageUrl": "https://turso.tech/",
+      "hostname": "turso.tech",
+      "siteTitle": "Turso - Millions of Databases. One Architecture.",
+      "kind": "pricing",
+      "capturedAt": "2026-11-28T01:00:10.175Z",
+      "screenshotUrl": "/section-vault/turso-tech-pricing.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 564
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#101317",
+        "ink": "#ffffff",
+        "accent": "#4ff8d2",
+        "borderColor": "#283945",
+        "width": 1440,
+        "height": 564,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "16px",
+        "headlineFont": "Inter",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.9px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Talk to sales",
+          "See enterprise capabilities→"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Structured Usage & Plan Comparison Grid",
+        "summary": "Live-rendered pricing from turso.tech combining high-contrast obsidian surfaces (#101317) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×564px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #101317 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 36px (tracking -0.9px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #283945 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Structured Usage & Plan Comparison Grid inspired by turso.tech's pricing architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #101317 with #ffffff ink. Set the primary heading in Inter (36px, letter-spacing -0.9px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #4ff8d2 strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-turso-tech-bento-features",
+      "siteUrl": "https://turso.tech",
+      "pageUrl": "https://turso.tech/",
+      "hostname": "turso.tech",
+      "siteTitle": "Turso - Millions of Databases. One Architecture.",
+      "kind": "bento-features",
+      "capturedAt": "2026-11-28T01:00:10.410Z",
+      "screenshotUrl": "/section-vault/turso-tech-bento-features.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 1029
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#101317",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#283945",
+        "width": 1440,
+        "height": 1029,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "16px",
+        "headlineFont": "Inter",
+        "headlineSize": "36px",
+        "headlineTracking": "-0.9px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Editorial Feature Showcase Split",
+        "summary": "Live-rendered bento-features from turso.tech combining high-contrast obsidian surfaces (#101317) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×1029px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #101317 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 36px (tracking -0.9px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 16px radii and subtle #283945 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Editorial Feature Showcase Split inspired by turso.tech's bento-features architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #101317 with #ffffff ink. Set the primary heading in Inter (36px, letter-spacing -0.9px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 94,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
       "id": "sec-linear-app-cta-footer",
       "siteUrl": "https://linear.app",
       "pageUrl": "https://linear.app/",
@@ -7235,6 +7487,125 @@
           "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
         ],
         "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by favorit.shop's cta-footer architecture: use a flex wrapper (max-width 1440px, padding 0px 0px, gap 0px) on background #eae9e5 with #000000 ink. Set the primary heading in Favorit Kasper SemiBold (18px, letter-spacing -0.36px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #000000 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-plantstotherescue-co-cta-footer",
+      "siteUrl": "https://plantstotherescue.co",
+      "pageUrl": "https://plantstotherescue.co/",
+      "hostname": "plantstotherescue.co",
+      "siteTitle": "Plants to the Rescue. 100% Organic Plant Tinctures.",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-28T01:00:10.976Z",
+      "screenshotUrl": "/section-vault/plantstotherescue-co-cta-footer.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 463
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeede7",
+        "ink": "#503217",
+        "accent": "#503217",
+        "borderColor": "#503217",
+        "width": 1440,
+        "height": 463,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "3px",
+        "headlineFont": "Times New Roman",
+        "headlineSize": "40px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "subscribe",
+          "Instagram",
+          "Facebook",
+          "TikTok"
+        ],
+        "activeAnimations": [
+          {
+            "name": "transition",
+            "duration": 500,
+            "easing": "ease-in"
+          }
+        ]
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from plantstotherescue.co combining airy neutral stone/white surfaces (#eeede7) with disciplined Times New Roman hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×463px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeede7 canvas.",
+        "microDetails": [
+          "Display typography set in Times New Roman at 40px (tracking normal) paired with #503217 primary ink.",
+          "Zero-clutter structural framing with 3px radii and subtle #503217 hairlines.",
+          "GPU-friendly motion choreography (1 live WAAPI timelines, primary easing ease-in)."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by plantstotherescue.co's cta-footer architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #eeede7 with #503217 ink. Set the primary heading in Times New Roman (40px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #503217 strictly for the primary focal action.",
+        "visualCraftScore": 92,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-turso-tech-hero",
+      "siteUrl": "https://turso.tech",
+      "pageUrl": "https://turso.tech/",
+      "hostname": "turso.tech",
+      "siteTitle": "Turso - Millions of Databases. One Architecture.",
+      "kind": "hero",
+      "capturedAt": "2026-11-28T01:00:09.895Z",
+      "screenshotUrl": "/section-vault/turso-tech-hero.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 693
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#101317",
+        "ink": "#ffffff",
+        "accent": "#4ff8d2",
+        "borderColor": "#283945",
+        "width": 1440,
+        "height": 693,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "9999px",
+        "headlineFont": "Inter",
+        "headlineSize": "60px",
+        "headlineTracking": "-1.5px",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Start for free now"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "High-Contrast Centered Display Hero",
+        "summary": "Live-rendered hero from turso.tech combining high-contrast obsidian surfaces (#101317) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×693px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #101317 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 60px (tracking -1.5px) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle #283945 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a High-Contrast Centered Display Hero inspired by turso.tech's hero architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #101317 with #ffffff ink. Set the primary heading in Inter (60px, letter-spacing -1.5px), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #4ff8d2 strictly for the primary focal action.",
         "visualCraftScore": 92,
         "analysisEngine": "playwright-computed-geometry"
       },
@@ -11217,6 +11588,180 @@
       },
       "tags": [
         "ai-agents"
+      ]
+    },
+    {
+      "id": "sec-plantstotherescue-co-navbar",
+      "siteUrl": "https://plantstotherescue.co",
+      "pageUrl": "https://plantstotherescue.co/",
+      "hostname": "plantstotherescue.co",
+      "siteTitle": "Plants to the Rescue. 100% Organic Plant Tinctures.",
+      "kind": "navbar",
+      "capturedAt": "2026-11-28T01:00:10.211Z",
+      "screenshotUrl": "/section-vault/plantstotherescue-co-navbar.jpg",
+      "dimensions": {
+        "width": 1440,
+        "height": 89
+      },
+      "computedSpec": {
+        "mode": "light",
+        "bg": "#eeede7",
+        "ink": "#503217",
+        "accent": "#503217",
+        "borderColor": "#d1cdc4",
+        "width": 1440,
+        "height": 89,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1440px",
+        "radiusSample": "2px",
+        "headlineFont": "Times New Roman",
+        "headlineSize": "40px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Clear",
+          "USD $",
+          "Austria (EUR €)",
+          "Belgium (EUR €)"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (89px)",
+        "summary": "Live-rendered navbar from plantstotherescue.co combining airy neutral stone/white surfaces (#eeede7) with disciplined Times New Roman hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1440×89px, padding 0px 0px) using centered single-rail composition on a crisp editorial light #eeede7 canvas.",
+        "microDetails": [
+          "Display typography set in Times New Roman at 40px (tracking normal) paired with #503217 primary ink.",
+          "Zero-clutter structural framing with 2px radii and subtle #d1cdc4 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (89px) inspired by plantstotherescue.co's navbar architecture: use a block wrapper (max-width 1440px, padding 0px 0px, gap normal) on background #eeede7 with #503217 ink. Set the primary heading in Times New Roman (40px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #503217 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
+      ]
+    },
+    {
+      "id": "sec-turso-tech-navbar",
+      "siteUrl": "https://turso.tech",
+      "pageUrl": "https://turso.tech/",
+      "hostname": "turso.tech",
+      "siteTitle": "Turso - Millions of Databases. One Architecture.",
+      "kind": "navbar",
+      "capturedAt": "2026-11-28T01:00:09.693Z",
+      "screenshotUrl": "/section-vault/turso-tech-navbar.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 84
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#0d1318",
+        "ink": "#ffffff",
+        "accent": "#4ff8d2",
+        "borderColor": "#283945",
+        "width": 1280,
+        "height": 84,
+        "layoutMode": "flex",
+        "gridColumns": null,
+        "gap": "24px",
+        "padding": "20px 24px",
+        "maxWidth": "1280px",
+        "radiusSample": "9999px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Turso",
+          "Product",
+          "Solutions",
+          "Customers"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "<nav data-layout=\"flex gap-24px\">\n  <div data-layout=\"flex gap-40px\">\n    <div data-layout=\"flex gap-4px\">\n      <a data-cta=\"ghost r:9999px\">Customers</a>\n      <a data-cta=\"ghost r:9999px\">Blog</a>\n    </div>\n  </div>\n  <div data-layout=\"flex gap-16px\">\n    <a data-cta=\"ghost r:9999px\">Login</a>\n    <a data-cta=\"bg:#4ff8d2 r:9999px\">Try Cloud free</a>\n  </div>\n</nav>",
+      "vision": {
+        "archetype": "Minimal Hairline Top Navigation Bar (84px)",
+        "summary": "Live-rendered navbar from turso.tech combining high-contrast obsidian surfaces (#0d1318) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "FLEX container (1280×84px, padding 20px 24px, gap 24px) using centered single-rail composition on a deep low-glare dark #0d1318 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 9999px radii and subtle #283945 hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Minimal Hairline Top Navigation Bar (84px) inspired by turso.tech's navbar architecture: use a flex wrapper (max-width 1280px, padding 20px 24px, gap 24px) on background #0d1318 with #ffffff ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #4ff8d2 strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "id": "sec-turso-tech-cta-footer",
+      "siteUrl": "https://turso.tech",
+      "pageUrl": "https://turso.tech/",
+      "hostname": "turso.tech",
+      "siteTitle": "Turso - Millions of Databases. One Architecture.",
+      "kind": "cta-footer",
+      "capturedAt": "2026-11-28T01:00:10.645Z",
+      "screenshotUrl": "/section-vault/turso-tech-cta-footer.jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 574
+      },
+      "computedSpec": {
+        "mode": "dark",
+        "bg": "#101317",
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "borderColor": "#ffffff",
+        "width": 1280,
+        "height": 574,
+        "layoutMode": "block",
+        "gridColumns": null,
+        "gap": "normal",
+        "padding": "0px 0px",
+        "maxWidth": "1280px",
+        "radiusSample": "12px",
+        "headlineFont": "Inter",
+        "headlineSize": "16px",
+        "headlineTracking": "normal",
+        "backdropFilter": "none",
+        "childCardCount": 0,
+        "ctaTexts": [
+          "Quickstart",
+          "Documentation",
+          "Pricing",
+          "API Status"
+        ],
+        "activeAnimations": []
+      },
+      "cleanDom": "",
+      "vision": {
+        "archetype": "Architectural Conversion Band & Multi-Column Sitemap Footer",
+        "summary": "Live-rendered cta-footer from turso.tech combining high-contrast obsidian surfaces (#101317) with disciplined Inter hierarchy and focused single-axis alignment.",
+        "layoutMechanics": "BLOCK container (1280×574px, padding 0px 0px) using centered single-rail composition on a deep low-glare dark #101317 canvas.",
+        "microDetails": [
+          "Display typography set in Inter at 16px (tracking normal) paired with #ffffff primary ink.",
+          "Zero-clutter structural framing with 12px radii and subtle #ffffff hairlines.",
+          "Restraint-first static precision with instant hover feedback and zero distracting scroll-jacking."
+        ],
+        "agentRecreationPrompt": "Build a Architectural Conversion Band & Multi-Column Sitemap Footer inspired by turso.tech's cta-footer architecture: use a block wrapper (max-width 1280px, padding 0px 0px, gap normal) on background #101317 with #ffffff ink. Set the primary heading in Inter (16px, letter-spacing normal), preserve the exact semantic DOM hierarchy from the Clean DOM Blueprint, and reserve #ffffff strictly for the primary focal action.",
+        "visualCraftScore": 89,
+        "analysisEngine": "playwright-computed-geometry"
+      },
+      "tags": [
+        "modern-saas"
       ]
     }
   ]
